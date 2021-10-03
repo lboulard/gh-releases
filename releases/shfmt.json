@@ -1,0 +1,70 @@
+{
+  "name": "tools.shfmt",
+  "project": "mvdan/sh",
+  "url": "https://github.com/mvdan/sh",
+  "releases": [
+    {
+      "title": "",
+      "description": "This release drops support for Go 1.15,\r\nwhich allows the code to start benefitting from `io/fs`.\r\n\r\n- **cmd/shfmt**\r\n  - Walks directories ~10% faster thanks to `filepath.WalkDir`\r\n- **syntax**\r\n  - Add `Quote` to mirror `strconv.Quote` for shell syntax\r\n  - Skip null characters when parsing, just like Bash\r\n  - Rewrite fuzzers with Go 1.18's native fuzzing\r\n- **fileutil**\r\n  - Add `CouldBeScript2` using `io/fs.DirEntry`\r\n- **expand**\r\n  - Skip or stop at null characters, just like Bash\r\n- **interp**\r\n  - Set `GID` just like `UID`\r\n  - Add support for `read -p`\r\n  - Add support for `pwd` flags\r\n  - Create random FIFOs for process substitutions more robustly\r\n  - Avoid leaking an open file when interpreting `$(<file)`\r\n\r\nBinaries built on `go version go1.17.1 linux/amd64` via [a shell script](https://github.com/mvdan/dotfiles/blob/d70a29339db0c6871a3cafd6d9818373deb3be20/.bin/go-cross).\r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!",
+      "tag": "v3.4.0",
+      "assets": [
+        {
+          "name": "shfmt_v3.4.0_darwin_amd64",
+          "size": 2843312,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_darwin_amd64",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:5f79d7e026892c483300c4a3d02129fccb06134660d32d715734b9167c104cfa"
+        },
+        {
+          "name": "shfmt_v3.4.0_darwin_arm64",
+          "size": 2998290,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_darwin_arm64",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:d7610e752061d3d6fa7aa68289a1be761ab930784023556a7fbf65576522b34b"
+        },
+        {
+          "name": "shfmt_v3.4.0_linux_386",
+          "size": 2379776,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_linux_386",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:d6cd6a8775c65c7323813b77e57f5f43911a4bf5a322f80a0a614f2e6fb28ab2"
+        },
+        {
+          "name": "shfmt_v3.4.0_linux_amd64",
+          "size": 2650112,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_linux_amd64",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:5cd7a2b57a0592f919ca2e4249bd567ae3426801a28ae94d0b26f8f2c4ce17f9"
+        },
+        {
+          "name": "shfmt_v3.4.0_linux_arm",
+          "size": 2555904,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_linux_arm",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:8bb7069a68053c13e6ae925a1396a65a0c7246c4070ce33cbc93ba22d50dd388"
+        },
+        {
+          "name": "shfmt_v3.4.0_linux_arm64",
+          "size": 2752512,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_linux_arm64",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:c7a0fcd70f69ad136bee7352b42e0b52060c46bc547baf6e06926fcb0509c37e"
+        },
+        {
+          "name": "shfmt_v3.4.0_windows_386.exe",
+          "size": 2664960,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_windows_386.exe",
+          "content_type": "application/x-ms-dos-executable",
+          "checksum": "sha256:4bb6841e0eaa1abacefa6df0b0517f5fcb7ea9ec2778d7eb30c43d6cafc69834"
+        },
+        {
+          "name": "shfmt_v3.4.0_windows_amd64.exe",
+          "size": 2919936,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_windows_amd64.exe",
+          "content_type": "application/x-ms-dos-executable",
+          "checksum": "sha256:c735bb0099cc215c2f859179dcabc8be63672ab4a577c2f610142379bdd7396d"
+        }
+      ]
+    }
+  ]
+}

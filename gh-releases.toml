@@ -1,0 +1,24 @@
+[gh]
+username = "lboulard"
+outdir = "releases"
+
+# https://github.com/mvdan/sh/releases
+[gh.tools.shfmt]
+project = "mvdan/sh"
+output = "shfmt.json"
+
+# https://github.com/sharkdp/bat/releases
+[gh.tools.batcat]
+project = "sharkdp/bat"
+output = "batcat.json"
+
+# https://github.com/casey/just/releases
+[gh.tools.just]
+project = "casey/just"
+output = "just-makelike.json"
+
+# https://github.com/go-task/task/releases
+[gh.tools.task]
+project = "go-task/task"
+output = "go-task.json"
+count = 5

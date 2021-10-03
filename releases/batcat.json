@@ -1,0 +1,126 @@
+{
+  "name": "tools.batcat",
+  "project": "sharkdp/bat",
+  "url": "https://github.com/sharkdp/bat",
+  "releases": [
+    {
+      "title": "v0.18.3",
+      "description": "## Bugfixes\r\n\r\n- Bump `git2` dependency to fix build with Rust 1.54, see #1761\r\n",
+      "tag": "v0.18.3",
+      "assets": [
+        {
+          "name": "bat-musl_0.18.3_amd64.deb",
+          "size": 2055780,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-musl_0.18.3_amd64.deb",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:724815bb60cc79d1e68479355b21ecce958fce5b78edc4ea65a71b63b0bc2ac9"
+        },
+        {
+          "name": "bat-musl_0.18.3_i686.deb",
+          "size": 2108760,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-musl_0.18.3_i686.deb",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:8664afeabf36234cd687d15832d92d3b493b6d17dae121c282ca7dc3cd09f62c"
+        },
+        {
+          "name": "bat-v0.18.3-aarch64-unknown-linux-gnu.tar.gz",
+          "size": 2353064,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-aarch64-unknown-linux-gnu.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:bca66e2e99e3ae38c34189daba03408eebf54c7366e987524bb1549a1539271c"
+        },
+        {
+          "name": "bat-v0.18.3-arm-unknown-linux-gnueabihf.tar.gz",
+          "size": 2421431,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-arm-unknown-linux-gnueabihf.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:e55540ccad4c86572d1715cc69b85b9ad940d881fa9e37c673695797f6bcd88b"
+        },
+        {
+          "name": "bat-v0.18.3-i686-pc-windows-msvc.zip",
+          "size": 2476830,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-i686-pc-windows-msvc.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:8985059cc3b9e1d30abaa7f9862602b69c4fe7231523dcad3ce3d40ce1c33b37"
+        },
+        {
+          "name": "bat-v0.18.3-i686-unknown-linux-gnu.tar.gz",
+          "size": 2545728,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-i686-unknown-linux-gnu.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:32fe08b21f4e1b0e5c494f5eeda90ae04a5b8221801b2142288270d5616787dd"
+        },
+        {
+          "name": "bat-v0.18.3-i686-unknown-linux-musl.tar.gz",
+          "size": 2553222,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-i686-unknown-linux-musl.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:8a2725c4f45ec4fc6a867a7b1ca8179e590bca1dfceb3870100790fb27f517e2"
+        },
+        {
+          "name": "bat-v0.18.3-x86_64-apple-darwin.tar.gz",
+          "size": 2357719,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-x86_64-apple-darwin.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:c3641b5b36c5c4ec80dea50c2d9793010042ff7504f70266e4a18c6dcf0ef751"
+        },
+        {
+          "name": "bat-v0.18.3-x86_64-pc-windows-gnu.zip",
+          "size": 2702388,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-x86_64-pc-windows-gnu.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:113ee91b2a8b6c43ee3a438bf70d850fdbe54f482bd6b8372df99a77317a96f5"
+        },
+        {
+          "name": "bat-v0.18.3-x86_64-pc-windows-msvc.zip",
+          "size": 2642667,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-x86_64-pc-windows-msvc.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:cbb1a937e288e0ebdf7b1975cc64bd0f82209ebd6b77393302460396ddd242ab"
+        },
+        {
+          "name": "bat-v0.18.3-x86_64-unknown-linux-gnu.tar.gz",
+          "size": 2487461,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-x86_64-unknown-linux-gnu.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:44735f2a98fdf8342f343516b6a0f6e783ee1acb918e850be2096bdb805519c1"
+        },
+        {
+          "name": "bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz",
+          "size": 2507743,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:7e3529d98c991554ac971a6e632f9f966533dc930a200547ead8b4332a0d23e5"
+        },
+        {
+          "name": "bat_0.18.3_amd64.deb",
+          "size": 2025940,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_amd64.deb",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:3e85d15e5757d9f56af8f15bb99a56aaaab33ed541fa3ff1e1c585f5733845c3"
+        },
+        {
+          "name": "bat_0.18.3_arm64.deb",
+          "size": 1840120,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_arm64.deb",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:9ef7441decfd5070b1efa621728a808cce0e3fe830fcd47699a985d75bc921ad"
+        },
+        {
+          "name": "bat_0.18.3_armhf.deb",
+          "size": 1877252,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_armhf.deb",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:58966bdb85d9ed8971127f86055e51a6544b63d48701360ff025384c72893779"
+        },
+        {
+          "name": "bat_0.18.3_i686.deb",
+          "size": 2090564,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_i686.deb",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:156f3e28a4b052ff64f02f531aa0c83c90f80925e119de23284c4ba7afc25b8f"
+        }
+      ]
+    }
+  ]
+}

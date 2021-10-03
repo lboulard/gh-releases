@@ -1,0 +1,12 @@
+*~
+*.bak
+*.orig
+*.sw[a-z]
+\#*\#
+
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+*.log

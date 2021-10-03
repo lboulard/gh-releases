@@ -1,0 +1,49 @@
+{
+  "name": "tools.just",
+  "project": "casey/just",
+  "url": "https://github.com/casey/just",
+  "releases": [
+    {
+      "title": "0.10.2",
+      "description": "\n\n\n\n",
+      "tag": "0.10.2",
+      "assets": [
+        {
+          "name": "CHANGELOG.md",
+          "size": 23133,
+          "url": "https://github.com/casey/just/releases/download/0.10.2/CHANGELOG.md",
+          "content_type": "text/markdown",
+          "checksum": "sha256:99fe792bdb4bc6e67ef32fce305701f997e93259d5f94c125eb49a53cab0d26a"
+        },
+        {
+          "name": "just-0.10.2-aarch64-unknown-linux-gnu.tar.gz",
+          "size": 1467766,
+          "url": "https://github.com/casey/just/releases/download/0.10.2/just-0.10.2-aarch64-unknown-linux-gnu.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:d1ddbe6170f80cb103bc710d70e12d0a1f6ae9c1c4a6630e136bddcd3d92d53c"
+        },
+        {
+          "name": "just-0.10.2-x86_64-apple-darwin.tar.gz",
+          "size": 1122315,
+          "url": "https://github.com/casey/just/releases/download/0.10.2/just-0.10.2-x86_64-apple-darwin.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:49ad6c74eba74870dbf2b245c3748a1d7ce20da48b9be52e883819585cb95d15"
+        },
+        {
+          "name": "just-0.10.2-x86_64-pc-windows-msvc.zip",
+          "size": 1031157,
+          "url": "https://github.com/casey/just/releases/download/0.10.2/just-0.10.2-x86_64-pc-windows-msvc.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:745c0bad2d771c7a471a561b03141f5fe0a4bcb1a9d2fe8026d8306ffb80ce35"
+        },
+        {
+          "name": "just-0.10.2-x86_64-unknown-linux-musl.tar.gz",
+          "size": 1687146,
+          "url": "https://github.com/casey/just/releases/download/0.10.2/just-0.10.2-x86_64-unknown-linux-musl.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:280a6edf58076e90d2002b44d38f93dcd708209c446dbcc38344ed6d21a8aaf7"
+        }
+      ]
+    }
+  ]
+}
