@@ -3,8 +3,8 @@ import hashlib
 import requests
 
 
-def _get_sha256(url, timeout=None):
-    response = requests.get(url, stream=True, timeout=timeout)
+def _get_sha256(url, timeout=None, session=None):
+    response = (session if session else requests).get(url, stream=True, timeout=timeout)
     sha256 = hashlib.new("SHA256")
     size = 0
     if response.status_code == 200:
@@ -20,10 +20,10 @@ def _get_sha256(url, timeout=None):
     return (size, sha256.hexdigest().lower() if sha256 else None)
 
 
-def get_sha256(url):
+def get_sha256(url, session=None):
     for tentative in range(3, 0, -1):
         try:
-            return _get_sha256(url, timeout=5)
+            return _get_sha256(url, timeout=5, session=session)
         except requests.exceptions.Timeout as e:
             if tentative == 1:
                 raise

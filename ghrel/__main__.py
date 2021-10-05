@@ -5,6 +5,7 @@ import os
 import os.path
 import sys
 
+import requests
 import tomli
 from github import Github
 
@@ -14,12 +15,12 @@ from .sha256 import get_sha256
 # https://pygithub.readthedocs.io/en/latest/
 
 
-def make_checksums(name, releases):
+def make_checksums(name, releases, session=None):
     for release in releases:
         title = release.title or release.tag
         for asset in release.assets:
             print(f"{name}: SHA256 {title} / {asset.name}")
-            size, sha256 = get_sha256(asset.url)
+            size, sha256 = get_sha256(asset.url, session=session)
             if size != asset.size:
                 print(
                     f"{name}: SHA256 {title} / {asset.name} size {size} != {asset.size} mismatch"
@@ -32,6 +33,7 @@ def make_checksums(name, releases):
 class GithubWorker:
     def __init__(self):
         self.g = Github()
+        self.session = requests.Session()
 
     def _get_assets(self, release, gh_release):
         for gh_asset in gh_release.get_assets():
@@ -56,7 +58,7 @@ class GithubWorker:
                 continue
             if len(releases) == count:
                 break
-        make_checksums(name, releases)
+        make_checksums(name, releases, session=self.session)
         return dict(
             name=name, project=repo.full_name, url=repo.html_url, releases=releases
         )
