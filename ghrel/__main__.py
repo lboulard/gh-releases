@@ -31,8 +31,8 @@ def make_checksums(name, releases, session=None):
 
 
 class GithubWorker:
-    def __init__(self):
-        self.g = Github()
+    def __init__(self, access_token=None):
+        self.g = Github(access_token if access_token else None)
         self.session = requests.Session()
 
     def _get_assets(self, release, gh_release):
@@ -73,7 +73,7 @@ def run(projects, outdir, count=1):
     failed = False
     mk_outdir = not os.path.exists(outdir)
     stderr = sys.stderr
-    gw = GithubWorker()
+    gw = GithubWorker(os.getenv("GITHUB_TOKEN"))
     for name, args in projects.items():
         output = name + ".json"
         if "output" in args:
