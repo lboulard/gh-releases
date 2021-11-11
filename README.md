@@ -36,5 +36,5 @@ From created virtual environment, run module as main program.
 # All Unix
 .venv/bin/python -m ghrel gh-releases.toml
 # Windows
-.venv\Scrips\python -m ghrel gh-releases.toml
+.venv\Scripts\python -m ghrel gh-releases.toml
 ```
