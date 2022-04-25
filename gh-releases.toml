@@ -21,4 +21,3 @@ output = "just-makelike.json"
 [gh.tools.task]
 project = "go-task/task"
 output = "go-task.json"
-count = 5
