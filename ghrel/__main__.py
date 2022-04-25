@@ -87,8 +87,8 @@ def run(projects, outdir, count=1):
             failed = True
             continue
         output_path = os.path.join(outdir, output)
-        print(f"{name}: ... getting releases")
         count = args.get("count", count)
+        print(f"{name}: ... getting {count} release{'s' if count > 1 else ''}")
         releases = gw.get_releases(name, args["project"], count)
         print(f"{name}: writing {output_path}")
         if mk_outdir:
