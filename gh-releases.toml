@@ -36,3 +36,8 @@ output = "glow.json"
 [gh.tools.lazygit]
 project = "jesseduffield/lazygit"
 output = "lazygit.json"
+
+# https://shellcheck.net/
+[gh.tools.shellcheck]
+project = "koalaman/shellcheck"
+output = "shellcheck.json"
