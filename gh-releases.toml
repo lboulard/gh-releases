@@ -21,3 +21,8 @@ output = "just-makelike.json"
 [gh.tools.task]
 project = "go-task/task"
 output = "go-task.json"
+
+# https://github.com/dandavison/delta
+[gh.tools.delta]
+project = "dandavison/delta"
+output = "delta.json"
