@@ -26,3 +26,8 @@ output = "go-task.json"
 [gh.tools.delta]
 project = "dandavison/delta"
 output = "delta.json"
+
+# https://github.com/charmbracelet/glow
+[gh.tools.glow]
+project = "charmbracelet/glow"
+output = "glow.json"

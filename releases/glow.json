@@ -1,0 +1,280 @@
+{
+  "name": "tools.glow",
+  "project": "charmbracelet/glow",
+  "url": "https://github.com/charmbracelet/glow",
+  "releases": [
+    {
+      "title": "v1.4.1",
+      "description": "This bugfix release prevents a data race and improves compatibility with rxvt-based terminals.\r\n\r\n### Fixes\r\n4863f57 Bump bubbletea, glamour, and go-runewidth deps\r\n92b8607 Bump termenv to v0.8.1\r\n\r\n* * *\r\n\r\nThoughts? Questions? Feel free to reach out on [Twitter](https://twitter.com/charmcli) and [The Fediverse](https://mastodon.technology/@charm).\r\n\r\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge-unrounded.jpg\" width=\"400\"></a>\r\n",
+      "tag": "v1.4.1",
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 3424,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/checksums.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "checksum": "sha256:768f12e11cc788dd149dd7f80bc309237f2058937e4b2f87c68283b3bd12bcb4"
+        },
+        {
+          "name": "checksums.txt.sig",
+          "size": 566,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/checksums.txt.sig",
+          "content_type": "application/pgp-signature",
+          "checksum": "sha256:57f47095a97cc45fd231e249e837b7f8dc2b3c0f38d7833b5eda0daa62e9b093"
+        },
+        {
+          "name": "glow_1.4.1_Darwin_arm64.tar.gz",
+          "size": 5744466,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_Darwin_arm64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:9b8abcc23a06ce21171eb9b6275100092266469e5dbdb3654a0af5823ee435cc"
+        },
+        {
+          "name": "glow_1.4.1_Darwin_x86_64.tar.gz",
+          "size": 5867997,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_Darwin_x86_64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:002d3640659e86a89ec5ea75cfbf2c40576781433a1cd87258e6cd1cab0bb1a0"
+        },
+        {
+          "name": "glow_1.4.1_freebsd_arm64.tar.gz",
+          "size": 5170659,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_freebsd_arm64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:86c49e5da9c2e9ab07bcd2dc2712eaf01b980c032c2eb33841c5e2da6335ab91"
+        },
+        {
+          "name": "glow_1.4.1_freebsd_armv6.tar.gz",
+          "size": 5539972,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_freebsd_armv6.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:5f31f3fcfb8c93c94e2cdbae8d3032e04cfd9a893fad502b51d352e88a8ea317"
+        },
+        {
+          "name": "glow_1.4.1_freebsd_armv7.tar.gz",
+          "size": 5520958,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_freebsd_armv7.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:70063736109f0a979d1058ace612dd6e2f4730c529f6f1b1eb417144c9c0ffe4"
+        },
+        {
+          "name": "glow_1.4.1_freebsd_i386.tar.gz",
+          "size": 5241896,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_freebsd_i386.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:cf9f9eec3d9c52f9e633d76b18f64615b40e43ef3f003be7d330d04934a6c3b2"
+        },
+        {
+          "name": "glow_1.4.1_freebsd_x86_64.tar.gz",
+          "size": 5712290,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_freebsd_x86_64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:b134bbdf4defe23fd6d50837e705195d04207f9d16fd15958a44080004b8c83f"
+        },
+        {
+          "name": "glow_1.4.1_linux_386.apk",
+          "size": 5256496,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_386.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:6cb454d2bae35eea33f497423e80ba58ccb188f9ed3861bc068551b095e62676"
+        },
+        {
+          "name": "glow_1.4.1_linux_386.deb",
+          "size": 5256758,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_386.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:7fbbffae274eed1fc0c6f3b99c1b56698361f32d947cc9a52b1c4458a243a488"
+        },
+        {
+          "name": "glow_1.4.1_linux_386.rpm",
+          "size": 5238939,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_386.rpm",
+          "content_type": "application/x-redhat-package-manager",
+          "checksum": "sha256:21030ffa3ad44ec63ccc5470eb32438e96ab4aa43a12093da2bc1c3e0f4dfc06"
+        },
+        {
+          "name": "glow_1.4.1_linux_amd64.apk",
+          "size": 5729327,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_amd64.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:b46ae43df911e09c2a9990eed3bb378a5235ca93bf7e4d0cb2f7c33c783e388b"
+        },
+        {
+          "name": "glow_1.4.1_linux_amd64.deb",
+          "size": 5729224,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_amd64.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:1a57e45edeb0bfb78225a498c9764d8dc6796487a823098da4018f2fd9ad69df"
+        },
+        {
+          "name": "glow_1.4.1_linux_amd64.rpm",
+          "size": 5703235,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_amd64.rpm",
+          "content_type": "application/x-redhat-package-manager",
+          "checksum": "sha256:9c333008836a1805a848823febe89233f1174b41ce02ecda23a774054db63669"
+        },
+        {
+          "name": "glow_1.4.1_linux_arm64.apk",
+          "size": 5207401,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_arm64.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:988af54047fca79583b7f7c3e7a3429c122753387995c9bf018ba1a2cf9588d3"
+        },
+        {
+          "name": "glow_1.4.1_linux_arm64.deb",
+          "size": 5207408,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_arm64.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:cc5e94e86c06192d04d2c714618e9e5b813eb946dd6f6ac2dab3082edcd084f8"
+        },
+        {
+          "name": "glow_1.4.1_linux_arm64.rpm",
+          "size": 5194564,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_arm64.rpm",
+          "content_type": "application/x-redhat-package-manager",
+          "checksum": "sha256:bf02db14e2762e5da19721c399aa3f887e14e73e2bb7bb4e9f47d6d98709d1fb"
+        },
+        {
+          "name": "glow_1.4.1_linux_arm64.tar.gz",
+          "size": 5195128,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_arm64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:f0fd0bc75244875e0e69d1d6bc36e6988b30d90c4bd0c476a611fd8f826c1a51"
+        },
+        {
+          "name": "glow_1.4.1_linux_armv6.apk",
+          "size": 5545119,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_armv6.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:5fcf02d74571d24dcc6ec0278027fc65f14350227b46270ab0dac052718e8fc9"
+        },
+        {
+          "name": "glow_1.4.1_linux_armv6.deb",
+          "size": 5545012,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_armv6.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:6f88595591a2d58f812cdbf8c6ee0a8c6a4af11ac822a15ac3c054791354e097"
+        },
+        {
+          "name": "glow_1.4.1_linux_armv6.rpm",
+          "size": 5530890,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_armv6.rpm",
+          "content_type": "application/x-redhat-package-manager",
+          "checksum": "sha256:4ce79f56bea305d478d747bf11710e70a31ee3b788260a301413e37e6f61ef94"
+        },
+        {
+          "name": "glow_1.4.1_linux_armv6.tar.gz",
+          "size": 5533843,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_armv6.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:7a8afd80022c0a1fde522c72f4a3511d3dad9f7d209e7afeee533d57694bf98b"
+        },
+        {
+          "name": "glow_1.4.1_linux_armv7.apk",
+          "size": 5527021,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_armv7.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:76c7fb7b2e70b862cdcc318d873df843d3a680d339e1738983b1ec9f81dbc3c6"
+        },
+        {
+          "name": "glow_1.4.1_linux_armv7.deb",
+          "size": 5527244,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_armv7.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:df3d0c3216dd78e34c69b75534e033dd9f9979e276d53ae6f08228eef95e6ecd"
+        },
+        {
+          "name": "glow_1.4.1_linux_armv7.rpm",
+          "size": 5514088,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_armv7.rpm",
+          "content_type": "application/x-redhat-package-manager",
+          "checksum": "sha256:e8c9cc2e27760c46dff4f852874098104db69ce24719b8bffa48eed6b4b91a47"
+        },
+        {
+          "name": "glow_1.4.1_linux_armv7.tar.gz",
+          "size": 5515014,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_armv7.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:6e409c3f31a22fd4022e48852cb090d320f633fae5b3f49f54ea579d516853d7"
+        },
+        {
+          "name": "glow_1.4.1_linux_i386.tar.gz",
+          "size": 5242701,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_i386.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:06c2c30c7d90b6befe26c6fcb1cd9daff0581383fea5665891e9fa46ebdd36f0"
+        },
+        {
+          "name": "glow_1.4.1_linux_x86_64.tar.gz",
+          "size": 5706374,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_x86_64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:ab7b4cf9ae6e20d6c898688c5f33876297f9ef04616cbceff8e0379df9d06321"
+        },
+        {
+          "name": "glow_1.4.1_openbsd_arm64.tar.gz",
+          "size": 5172207,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_openbsd_arm64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:9925f388ce2f3040f8c97a80624354e2d2457544712d7a1b681dfbe966e8c11c"
+        },
+        {
+          "name": "glow_1.4.1_openbsd_armv6.tar.gz",
+          "size": 5527133,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_openbsd_armv6.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:b93978383251a83bd13683882bd6efb5cdd6d4fdde31d1fa464eac1481024c12"
+        },
+        {
+          "name": "glow_1.4.1_openbsd_armv7.tar.gz",
+          "size": 5511217,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_openbsd_armv7.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:0565ad13475fa52b67e337dcbc9c16d65ac6d51105d266113636595f5336b381"
+        },
+        {
+          "name": "glow_1.4.1_openbsd_i386.tar.gz",
+          "size": 5231434,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_openbsd_i386.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:4c7b6862236aba688d0775d0e3e2a0f7d9707f031567186db050bbec565c8978"
+        },
+        {
+          "name": "glow_1.4.1_openbsd_x86_64.tar.gz",
+          "size": 5709359,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_openbsd_x86_64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:972379602d0bddca0abc0c368513b4243ec1a56461e38de99f8afcba7325c436"
+        },
+        {
+          "name": "glow_1.4.1_Windows_armv6.zip",
+          "size": 5678774,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_Windows_armv6.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:55f040de7af5ac2275b825eb7c0dbc63c54ad8964fd1cd302968c8dd6780ee03"
+        },
+        {
+          "name": "glow_1.4.1_Windows_armv7.zip",
+          "size": 5655771,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_Windows_armv7.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:14ba56800071e2a46f16f054560571b54db068a2e4f971defe1f3612ab6699cb"
+        },
+        {
+          "name": "glow_1.4.1_Windows_i386.zip",
+          "size": 5541521,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_Windows_i386.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:7505ac497ecf213889585924becb141b702e384490daea7e5a1c2738ceccfa1d"
+        },
+        {
+          "name": "glow_1.4.1_Windows_x86_64.zip",
+          "size": 5791172,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_Windows_x86_64.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:47ae32251af83da3034f245ac04fe948c5e8bd7cf21f58e9d8068817231a28c5"
+        }
+      ]
+    }
+  ]
+}
