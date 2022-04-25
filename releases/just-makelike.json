@@ -4,44 +4,58 @@
   "url": "https://github.com/casey/just",
   "releases": [
     {
-      "title": "0.10.3",
-      "description": "\n\n\n\n",
-      "tag": "0.10.3",
+      "title": "1.1.2",
+      "description": "\n\n\n\n\n\n",
+      "tag": "1.1.2",
       "assets": [
         {
           "name": "CHANGELOG.md",
-          "size": 24085,
-          "url": "https://github.com/casey/just/releases/download/0.10.3/CHANGELOG.md",
+          "size": 28167,
+          "url": "https://github.com/casey/just/releases/download/1.1.2/CHANGELOG.md",
           "content_type": "text/markdown",
-          "checksum": "sha256:9d31d4bd18d694db83da773906732b72f8f412ec13bcd6abcf11d2055bcde062"
+          "checksum": "sha256:8d845137530bb626b16e2b6e35c864b69960b675db77879337f73394ade918e0"
         },
         {
-          "name": "just-0.10.3-aarch64-unknown-linux-gnu.tar.gz",
-          "size": 1473492,
-          "url": "https://github.com/casey/just/releases/download/0.10.3/just-0.10.3-aarch64-unknown-linux-gnu.tar.gz",
+          "name": "just-1.1.2-aarch64-apple-darwin.tar.gz",
+          "size": 1071673,
+          "url": "https://github.com/casey/just/releases/download/1.1.2/just-1.1.2-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:dadd1b1275902207b91c280696bfb541ec8bf705325254b2684f9be793645177"
+          "checksum": "sha256:9c16dc0ad44bdee332af8459489faedd7b215c5fcc61b3b004c4b96b7687524d"
         },
         {
-          "name": "just-0.10.3-x86_64-apple-darwin.tar.gz",
-          "size": 1124303,
-          "url": "https://github.com/casey/just/releases/download/0.10.3/just-0.10.3-x86_64-apple-darwin.tar.gz",
+          "name": "just-1.1.2-aarch64-unknown-linux-musl.tar.gz",
+          "size": 1607996,
+          "url": "https://github.com/casey/just/releases/download/1.1.2/just-1.1.2-aarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:d7d9c24554abda2c2c5a4adba6b5763be1e1b44f3472f1be152c922ee0c62f84"
+          "checksum": "sha256:1038be03bcc5554b1daac07354235eaa945eb6aea5100b1013c1624cb8e1dfeb"
         },
         {
-          "name": "just-0.10.3-x86_64-pc-windows-msvc.zip",
-          "size": 1037904,
-          "url": "https://github.com/casey/just/releases/download/0.10.3/just-0.10.3-x86_64-pc-windows-msvc.zip",
+          "name": "just-1.1.2-armv7-unknown-linux-musleabihf.tar.gz",
+          "size": 1757996,
+          "url": "https://github.com/casey/just/releases/download/1.1.2/just-1.1.2-armv7-unknown-linux-musleabihf.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:b315fff9d72f64453544828c47c78be2318e4ddc6c13747b6f2e542c5224a380"
+        },
+        {
+          "name": "just-1.1.2-x86_64-apple-darwin.tar.gz",
+          "size": 1162165,
+          "url": "https://github.com/casey/just/releases/download/1.1.2/just-1.1.2-x86_64-apple-darwin.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:6d5cc5466eb495d2c567d96d29e188311e11b70a52251ea7b9ef551efc9a1e25"
+        },
+        {
+          "name": "just-1.1.2-x86_64-pc-windows-msvc.zip",
+          "size": 1067756,
+          "url": "https://github.com/casey/just/releases/download/1.1.2/just-1.1.2-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:ffcf9b0a31666419cdedf059966463824347e57692ceac1e2470b48e94d0e494"
+          "checksum": "sha256:fd961ac0df25306b3b18bb1e7849e3e6e9e61dcb3755105ced617e3838ef5e88"
         },
         {
-          "name": "just-0.10.3-x86_64-unknown-linux-musl.tar.gz",
-          "size": 1688488,
-          "url": "https://github.com/casey/just/releases/download/0.10.3/just-0.10.3-x86_64-unknown-linux-musl.tar.gz",
+          "name": "just-1.1.2-x86_64-unknown-linux-musl.tar.gz",
+          "size": 1685132,
+          "url": "https://github.com/casey/just/releases/download/1.1.2/just-1.1.2-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:0f43a286dfe67ed94034843cb72cec61a024303118ec19bd618bc4e15a0970ac"
+          "checksum": "sha256:7d4d620ea73b58233b170ecc93dd1ef59336eeb9b59f94dc5ca7e06ed520e0cb"
         }
       ]
     }
