@@ -5,64 +5,64 @@
   "releases": [
     {
       "title": "",
-      "description": "This release drops support for Go 1.15,\r\nwhich allows the code to start benefitting from `io/fs`.\r\n\r\n- **cmd/shfmt**\r\n  - Walks directories ~10% faster thanks to `filepath.WalkDir`\r\n- **syntax**\r\n  - Add `Quote` to mirror `strconv.Quote` for shell syntax\r\n  - Skip null characters when parsing, just like Bash\r\n  - Rewrite fuzzers with Go 1.18's native fuzzing\r\n- **fileutil**\r\n  - Add `CouldBeScript2` using `io/fs.DirEntry`\r\n- **expand**\r\n  - Skip or stop at null characters, just like Bash\r\n- **interp**\r\n  - Set `GID` just like `UID`\r\n  - Add support for `read -p`\r\n  - Add support for `pwd` flags\r\n  - Create random FIFOs for process substitutions more robustly\r\n  - Avoid leaking an open file when interpreting `$(<file)`\r\n\r\nBinaries built on `go version go1.17.1 linux/amd64` via [a shell script](https://github.com/mvdan/dotfiles/blob/d70a29339db0c6871a3cafd6d9818373deb3be20/.bin/go-cross).\r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!",
-      "tag": "v3.4.0",
+      "description": "- **cmd/shfmt**\r\n  - New Docker `v3` tag to track the latest stable version\r\n  - Don't duplicate errors when walking directories\r\n- **interp**\r\n  - Properly handle empty paths in the `test` builtin\r\n  - Allow unsetting global vars from inside a function again\r\n  - Use `%w` to wrap errors in `Dir`\r\n\r\nBinaries built on `go version go1.17.7 linux/amd64` via [a shell script](https://github.com/mvdan/dotfiles/blob/c511a4944f3f05a562a5f147c68f22254ab44db7/.bin/go-cross).\r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!",
+      "tag": "v3.4.3",
       "assets": [
         {
-          "name": "shfmt_v3.4.0_darwin_amd64",
-          "size": 2843312,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_darwin_amd64",
+          "name": "shfmt_v3.4.3_darwin_amd64",
+          "size": 2843392,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.3/shfmt_v3.4.3_darwin_amd64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:5f79d7e026892c483300c4a3d02129fccb06134660d32d715734b9167c104cfa"
+          "checksum": "sha256:22af685075e0448861c5db111e70cc399bdc95cdd7def943bc5adb6783f3e530"
         },
         {
-          "name": "shfmt_v3.4.0_darwin_arm64",
-          "size": 2998290,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_darwin_arm64",
+          "name": "shfmt_v3.4.3_darwin_arm64",
+          "size": 2998418,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.3/shfmt_v3.4.3_darwin_arm64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d7610e752061d3d6fa7aa68289a1be761ab930784023556a7fbf65576522b34b"
+          "checksum": "sha256:4006b3910bdea1e3eb3b02021f5ab1ca23bd09776d042e11321df95023faae79"
         },
         {
-          "name": "shfmt_v3.4.0_linux_386",
+          "name": "shfmt_v3.4.3_linux_386",
           "size": 2379776,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_linux_386",
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.3/shfmt_v3.4.3_linux_386",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d6cd6a8775c65c7323813b77e57f5f43911a4bf5a322f80a0a614f2e6fb28ab2"
+          "checksum": "sha256:107712fbbec6c90b1781b762042218bbcb43f553e7085f1de800d6a7f16d29b8"
         },
         {
-          "name": "shfmt_v3.4.0_linux_amd64",
+          "name": "shfmt_v3.4.3_linux_amd64",
           "size": 2650112,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_linux_amd64",
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.3/shfmt_v3.4.3_linux_amd64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:5cd7a2b57a0592f919ca2e4249bd567ae3426801a28ae94d0b26f8f2c4ce17f9"
+          "checksum": "sha256:713ef49db9a60a00636814a507da851b58da6b4b98a3627188fba0a61b60f9a8"
         },
         {
-          "name": "shfmt_v3.4.0_linux_arm",
+          "name": "shfmt_v3.4.3_linux_arm",
           "size": 2555904,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_linux_arm",
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.3/shfmt_v3.4.3_linux_arm",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:8bb7069a68053c13e6ae925a1396a65a0c7246c4070ce33cbc93ba22d50dd388"
+          "checksum": "sha256:31efacbcb61b00d4375b193da5af4a7213cf585bb4e19b649531240a2ab9e7ff"
         },
         {
-          "name": "shfmt_v3.4.0_linux_arm64",
+          "name": "shfmt_v3.4.3_linux_arm64",
           "size": 2752512,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_linux_arm64",
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.3/shfmt_v3.4.3_linux_arm64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c7a0fcd70f69ad136bee7352b42e0b52060c46bc547baf6e06926fcb0509c37e"
+          "checksum": "sha256:b4f5d7b53012a1a7fdac5df8f13d829d82bc7ace53da4a09c532ac562589b106"
         },
         {
-          "name": "shfmt_v3.4.0_windows_386.exe",
-          "size": 2664960,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_windows_386.exe",
+          "name": "shfmt_v3.4.3_windows_386.exe",
+          "size": 2665472,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.3/shfmt_v3.4.3_windows_386.exe",
           "content_type": "application/x-ms-dos-executable",
-          "checksum": "sha256:4bb6841e0eaa1abacefa6df0b0517f5fcb7ea9ec2778d7eb30c43d6cafc69834"
+          "checksum": "sha256:cfaa0b820cf5d70ae2ce2f8ae51607acfd6cb546b4dc9c1193a839337a2a2cc4"
         },
         {
-          "name": "shfmt_v3.4.0_windows_amd64.exe",
-          "size": 2919936,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.4.0/shfmt_v3.4.0_windows_amd64.exe",
+          "name": "shfmt_v3.4.3_windows_amd64.exe",
+          "size": 2920960,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.4.3/shfmt_v3.4.3_windows_amd64.exe",
           "content_type": "application/x-ms-dos-executable",
-          "checksum": "sha256:c735bb0099cc215c2f859179dcabc8be63672ab4a577c2f610142379bdd7396d"
+          "checksum": "sha256:a6c317a68dddf8efa9fd87d985a807cf7ab2423871d390aac4d3775691565835"
         }
       ]
     }
