@@ -31,3 +31,8 @@ output = "delta.json"
 [gh.tools.glow]
 project = "charmbracelet/glow"
 output = "glow.json"
+
+# https://github.com/jesseduffield/lazygit
+[gh.tools.lazygit]
+project = "jesseduffield/lazygit"
+output = "lazygit.json"
