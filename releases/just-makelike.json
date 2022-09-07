@@ -4,58 +4,58 @@
   "url": "https://github.com/casey/just",
   "releases": [
     {
-      "title": "1.2.0",
-      "description": "\n\n\n\n\n\n",
-      "tag": "1.2.0",
+      "title": "1.4.0",
+      "description": "\n\n\n\n\n",
+      "tag": "1.4.0",
       "assets": [
         {
           "name": "CHANGELOG.md",
-          "size": 29283,
-          "url": "https://github.com/casey/just/releases/download/1.2.0/CHANGELOG.md",
+          "size": 31569,
+          "url": "https://github.com/casey/just/releases/download/1.4.0/CHANGELOG.md",
           "content_type": "text/markdown",
-          "checksum": "sha256:36ab15e7c16fd6262c705e73d5a858ead9234278eca2e960b4ecf6ff51bb26c8"
+          "checksum": "sha256:033bd887a8f3a41107fcdd43a859314c1f17328f953b34e3760da14ef75debe2"
         },
         {
-          "name": "just-1.2.0-aarch64-apple-darwin.tar.gz",
-          "size": 1109119,
-          "url": "https://github.com/casey/just/releases/download/1.2.0/just-1.2.0-aarch64-apple-darwin.tar.gz",
+          "name": "just-1.4.0-aarch64-apple-darwin.tar.gz",
+          "size": 1131354,
+          "url": "https://github.com/casey/just/releases/download/1.4.0/just-1.4.0-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:9792a345dadec8346241e38d4c0df8580980c19977f33a1944c4a107e4cb26f8"
+          "checksum": "sha256:feba9e66c97b6dbade1154ca44b9cedc062a731dac06f75b81d198512be77c66"
         },
         {
-          "name": "just-1.2.0-aarch64-unknown-linux-musl.tar.gz",
-          "size": 1652824,
-          "url": "https://github.com/casey/just/releases/download/1.2.0/just-1.2.0-aarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.4.0-aarch64-unknown-linux-musl.tar.gz",
+          "size": 1680950,
+          "url": "https://github.com/casey/just/releases/download/1.4.0/just-1.4.0-aarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:73f4f43fcae7b78f707cd1e146b4246e75d6897bdf18fa2b3adaef7e2300d405"
+          "checksum": "sha256:5bca3c27768c36fb78737ea1a979f3875bc7a5a58136a86ef0b2299fe39529ed"
         },
         {
-          "name": "just-1.2.0-armv7-unknown-linux-musleabihf.tar.gz",
-          "size": 1769694,
-          "url": "https://github.com/casey/just/releases/download/1.2.0/just-1.2.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.4.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "size": 1788204,
+          "url": "https://github.com/casey/just/releases/download/1.4.0/just-1.4.0-armv7-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:42b7e4f7f83c2b88785a1852ba4dc563f692c6528e304d5d459e2e8499049930"
+          "checksum": "sha256:72a6e0f1a0b07b1d7713b7dae256d78c88f0327badae0becf3f1394c5ead5649"
         },
         {
-          "name": "just-1.2.0-x86_64-apple-darwin.tar.gz",
-          "size": 1208630,
-          "url": "https://github.com/casey/just/releases/download/1.2.0/just-1.2.0-x86_64-apple-darwin.tar.gz",
+          "name": "just-1.4.0-x86_64-apple-darwin.tar.gz",
+          "size": 1219532,
+          "url": "https://github.com/casey/just/releases/download/1.4.0/just-1.4.0-x86_64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:33275874e88ff4c87b04417258296c20be49cd7c63c457bafd3255f814c15118"
+          "checksum": "sha256:e7a1917dad906ebf44b75bd5dabda63c25584136039289ca7b4af40a960a7ab9"
         },
         {
-          "name": "just-1.2.0-x86_64-pc-windows-msvc.zip",
-          "size": 1093272,
-          "url": "https://github.com/casey/just/releases/download/1.2.0/just-1.2.0-x86_64-pc-windows-msvc.zip",
+          "name": "just-1.4.0-x86_64-pc-windows-msvc.zip",
+          "size": 1105137,
+          "url": "https://github.com/casey/just/releases/download/1.4.0/just-1.4.0-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:59c037709cfdb98e1be1e43075ebf3a7c1cd08920dc088df68676a9c3168d57b"
+          "checksum": "sha256:daa1b1408b12fcec48301f898612050e97266aef3cbc689f247a3a0db5980ddb"
         },
         {
-          "name": "just-1.2.0-x86_64-unknown-linux-musl.tar.gz",
-          "size": 1727008,
-          "url": "https://github.com/casey/just/releases/download/1.2.0/just-1.2.0-x86_64-unknown-linux-musl.tar.gz",
+          "name": "just-1.4.0-x86_64-unknown-linux-musl.tar.gz",
+          "size": 1740630,
+          "url": "https://github.com/casey/just/releases/download/1.4.0/just-1.4.0-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:7102b1ba543745774df500db962dec2e3a01aa2553dd0c3f334e8fdadea41d25"
+          "checksum": "sha256:006a30ceb69f9c93e2dc1d8bac3845395ef5ddb4e6eead762a8cf29e68f6e2a4"
         }
       ]
     }
