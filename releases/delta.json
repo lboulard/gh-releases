@@ -4,93 +4,93 @@
   "url": "https://github.com/dandavison/delta",
   "releases": [
     {
-      "title": "0.13.0",
-      "description": "## What's Changed\r\n* Update bat dependency so that delta is compatible with latest bat release (#1075)\r\n* Flush line buffers in additional locations by @dandavison in https://github.com/dandavison/delta/pull/1003\r\n* Reorganize wrapping utilities by @dandavison in https://github.com/dandavison/delta/pull/1008\r\n* Bump regex to fix CVE-2022-24713 by @msirringhaus in https://github.com/dandavison/delta/pull/1015\r\n* Apply file-transformation to diff header in addition to hunk header by @dandavison in https://github.com/dandavison/delta/pull/1012\r\n* Add support for irreversible-delete by @wescande in https://github.com/dandavison/delta/pull/945\r\n* Add custom env struct to store env at init by @wescande in https://github.com/dandavison/delta/pull/1025\r\n* Apply hyperlinks to diff stat file paths by @dandavison in https://github.com/dandavison/delta/pull/1035\r\n* Add link to `bat` on README by @eloyesp in https://github.com/dandavison/delta/pull/1052\r\n* Add chameleon theme to themes.gitconfig by @AirOnSkin in https://github.com/dandavison/delta/pull/1062\r\n* Add 'light = false' w/ comment in gitconfig by @toolness in https://github.com/dandavison/delta/pull/1073\r\n\r\n## New Contributors\r\n* @wescande made their first contribution in https://github.com/dandavison/delta/pull/945\r\n* @eloyesp made their first contribution in https://github.com/dandavison/delta/pull/1052\r\n* @AirOnSkin made their first contribution in https://github.com/dandavison/delta/pull/1062\r\n* @toolness made their first contribution in https://github.com/dandavison/delta/pull/1073\r\n\r\n**Full Changelog**: https://github.com/dandavison/delta/compare/0.12.1...0.13.0",
-      "tag": "0.13.0",
+      "title": "0.14.0",
+      "description": "## What's Changed\r\n* Update color-moved-support.md by @hangtwenty in https://github.com/dandavison/delta/pull/1082\r\n* Tweak some words improved representation by @ydah in https://github.com/dandavison/delta/pull/1078\r\n* Only trigger `git show` handler if a file extension was parsed by @dandavison in https://github.com/dandavison/delta/pull/1106\r\n* Fix commit hyperlink formatting by @dandavison in https://github.com/dandavison/delta/pull/1110\r\n* Avoid lockup when running without arguments and stdin is connected to a tty by @dotdash in https://github.com/dandavison/delta/pull/1112\r\n* Fix whole-file changes being attributed to the wrong commit in \"git log\" output by @dotdash in https://github.com/dandavison/delta/pull/1111\r\n* Update README.md to include git 2.37.0 workaround by @cwlbraa in https://github.com/dandavison/delta/pull/1116\r\n* Don't attempt to process ANSI sequences in non-UTF8 input by @dandavison in https://github.com/dandavison/delta/pull/1117\r\n* Update clap by @dandavison in https://github.com/dandavison/delta/pull/1119\r\n* Recreate highlighter on each line of `git show $commit:$path` output by @dandavison in https://github.com/dandavison/delta/pull/1127\r\n* Fix git-grep match-highlighting at line-start by @jdpopkin in https://github.com/dandavison/delta/pull/1057\r\n* Update to chameleon theme by @AirOnSkin in https://github.com/dandavison/delta/pull/1138\r\n* Fix typos by @kianmeng in https://github.com/dandavison/delta/pull/1151\r\n* Support configurable timestamps in git blame output (#1157)  by @mliszcz in https://github.com/dandavison/delta/pull/1158\r\n* Added auto completions for fish shell by @exploide in https://github.com/dandavison/delta/pull/1165\r\n\r\n## New Contributors\r\n* @hangtwenty made their first contribution in https://github.com/dandavison/delta/pull/1082\r\n* @ydah made their first contribution in https://github.com/dandavison/delta/pull/1078\r\n* @dotdash made their first contribution in https://github.com/dandavison/delta/pull/1112\r\n* @cwlbraa made their first contribution in https://github.com/dandavison/delta/pull/1116\r\n* @kianmeng made their first contribution in https://github.com/dandavison/delta/pull/1151\r\n* @mliszcz made their first contribution in https://github.com/dandavison/delta/pull/1158\r\n* @exploide made their first contribution in https://github.com/dandavison/delta/pull/1165\r\n\r\n**Full Changelog**: https://github.com/dandavison/delta/compare/0.13.0...0.14.0",
+      "tag": "0.14.0",
       "assets": [
         {
-          "name": "delta-0.13.0-aarch64-unknown-linux-gnu.tar.gz",
-          "size": 2610753,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/delta-0.13.0-aarch64-unknown-linux-gnu.tar.gz",
+          "name": "delta-0.14.0-aarch64-unknown-linux-gnu.tar.gz",
+          "size": 2641326,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/delta-0.14.0-aarch64-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:95e3f7e2118160e5f91b98551bc6fdd628a05e1f49ac643a0ce2bf58d3bb2f05"
+          "checksum": "sha256:3c2579f1b12dd4bce301b27de84796a8a131513157748809a5a99efe2ebf9d65"
         },
         {
-          "name": "delta-0.13.0-arm-unknown-linux-gnueabihf.tar.gz",
-          "size": 2626300,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/delta-0.13.0-arm-unknown-linux-gnueabihf.tar.gz",
+          "name": "delta-0.14.0-arm-unknown-linux-gnueabihf.tar.gz",
+          "size": 2646190,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/delta-0.14.0-arm-unknown-linux-gnueabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:1d7ee6e1af30c5170ad241063fce33678dbbd501b81eb07066704e1d0ffa9371"
+          "checksum": "sha256:0101b3637c297eab9cffe2bbd6dc76e716331226dfdc4097ba9b25ce37df9880"
         },
         {
-          "name": "delta-0.13.0-i686-unknown-linux-gnu.tar.gz",
-          "size": 2930001,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/delta-0.13.0-i686-unknown-linux-gnu.tar.gz",
+          "name": "delta-0.14.0-i686-unknown-linux-gnu.tar.gz",
+          "size": 2971617,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/delta-0.14.0-i686-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:7dd973f417cc89b663d0f94751f30684983b31a9f073a0e3040067516d258a02"
+          "checksum": "sha256:1fad6a4ed43dc89b2dd5196585e1d4951770f68c084b2a79e182ccfa8277d73a"
         },
         {
-          "name": "delta-0.13.0-x86_64-apple-darwin.tar.gz",
-          "size": 2622305,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/delta-0.13.0-x86_64-apple-darwin.tar.gz",
+          "name": "delta-0.14.0-x86_64-apple-darwin.tar.gz",
+          "size": 2662787,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/delta-0.14.0-x86_64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:68392c4a7f03931ca624de05239e4ce39e64198fb045add63d961d4b2cf2e9cf"
+          "checksum": "sha256:7dfa3b25c793de6cf58316c3c3aa90cdd4f856da837c35775e1e49b753deba53"
         },
         {
-          "name": "delta-0.13.0-x86_64-pc-windows-msvc.zip",
-          "size": 2920603,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/delta-0.13.0-x86_64-pc-windows-msvc.zip",
+          "name": "delta-0.14.0-x86_64-pc-windows-msvc.zip",
+          "size": 2945649,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/delta-0.14.0-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:ee8f3856e4f4e6ce079ce23e9eb665e38833c518f47d9b7565b315abe9283161"
+          "checksum": "sha256:9410455a4f80210ba718d745aea16ab0d88e089e18d51195cf31dbca58d80690"
         },
         {
-          "name": "delta-0.13.0-x86_64-unknown-linux-gnu.tar.gz",
-          "size": 2736617,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/delta-0.13.0-x86_64-unknown-linux-gnu.tar.gz",
+          "name": "delta-0.14.0-x86_64-unknown-linux-gnu.tar.gz",
+          "size": 2774390,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/delta-0.14.0-x86_64-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:69ddecc92e86b77016692589c094bf3a32e7cb8a0dfd9f97f253c173cce830e9"
+          "checksum": "sha256:a24e3994b798aa46b5415481bf6a77ca65c51da70f3a199ce2db279c3e31caee"
         },
         {
-          "name": "delta-0.13.0-x86_64-unknown-linux-musl.tar.gz",
-          "size": 2777833,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/delta-0.13.0-x86_64-unknown-linux-musl.tar.gz",
+          "name": "delta-0.14.0-x86_64-unknown-linux-musl.tar.gz",
+          "size": 2854450,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/delta-0.14.0-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:c54d1f9f17fbd9d6a2a1d3165b42a46327091eb69ca7341478b132086434c12a"
+          "checksum": "sha256:ecfbc3e4508646ec985fbcb5a3a89480f25f0c044d02b2308c2053aba8f42ef9"
         },
         {
-          "name": "git-delta-musl_0.13.0_amd64.deb",
-          "size": 2210768,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/git-delta-musl_0.13.0_amd64.deb",
+          "name": "git-delta-musl_0.14.0_amd64.deb",
+          "size": 2253632,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/git-delta-musl_0.14.0_amd64.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d0a49a2177553ac1fed5eda3e95e6d5cc47517d655f5c961dc627e2c735ae05c"
+          "checksum": "sha256:5594883fb5c5fa38c258c70a7ecbc4390464d6795df2ea25ad5827abaad972ba"
         },
         {
-          "name": "git-delta_0.13.0_amd64.deb",
-          "size": 2164460,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/git-delta_0.13.0_amd64.deb",
+          "name": "git-delta_0.14.0_amd64.deb",
+          "size": 2186812,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_amd64.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a4169392c657ba8e9d0f9ff51a10daff746aab3bd75a3fd05f2f0d286315e588"
+          "checksum": "sha256:77020b6bdea08cfd2f9ffcbacbde337f0a1bbb11444be0f115bef04a356c0969"
         },
         {
-          "name": "git-delta_0.13.0_arm64.deb",
-          "size": 2000972,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/git-delta_0.13.0_arm64.deb",
+          "name": "git-delta_0.14.0_arm64.deb",
+          "size": 2018000,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_arm64.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c1320b4050420bada4071b1ecdcdaa4d7c25becf3213e4e00c976d7e871a9ba1"
+          "checksum": "sha256:979aa945f3e0793c26cecfed4699e8d60d618b33926bf060cf106f252fef3fee"
         },
         {
-          "name": "git-delta_0.13.0_armhf.deb",
-          "size": 1995832,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/git-delta_0.13.0_armhf.deb",
+          "name": "git-delta_0.14.0_armhf.deb",
+          "size": 2007420,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_armhf.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:1b4708a39badfc0bce0ee1240044535e07e53a7426388c8a873a582a42aeaef5"
+          "checksum": "sha256:2d59525a30425b6cc4a8c4411dc1a9cbbfd593aea7ee386336a98daa5c246a1d"
         },
         {
-          "name": "git-delta_0.13.0_i386.deb",
-          "size": 2328032,
-          "url": "https://github.com/dandavison/delta/releases/download/0.13.0/git-delta_0.13.0_i386.deb",
+          "name": "git-delta_0.14.0_i386.deb",
+          "size": 2356752,
+          "url": "https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_i386.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c4c30ff31de3b7eaca3128165904a0f5f1b875a74c0b4ebeeb6945e33f2b845a"
+          "checksum": "sha256:599d26d39d16cd8fd2e6d217b4d7cbe94e102afa52831b10f1ccd3b2c24e705a"
         }
       ]
     }
