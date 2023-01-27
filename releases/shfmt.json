@@ -4,65 +4,72 @@
   "url": "https://github.com/mvdan/sh",
   "releases": [
     {
-      "title": "v3.5.1",
-      "description": "This release was tagged two weeks ago; we forgot to do the GitHub release with prebuilt binaries.\r\n\r\n- **cmd/shfmt**\r\n  - Fix the Docker publishing script bug which broke 3.5.0 - [#860]\r\n- **interp**\r\n  - Support multi-line strings when pattern matching in `[[` - [#861]\r\n  - Invalid glob words are no longer removed with `nullglob` - [#862]\r\n- **pattern**\r\n  - `Regexp` now returns the typed error `SyntaxError` - [#862]\r\n\r\n[#860]: https://github.com/mvdan/sh/pull/860\r\n[#861]: https://github.com/mvdan/sh/pull/861\r\n[#862]: https://github.com/mvdan/sh/pull/862\r\n\r\nBinaries built on `go version go1.18.3 linux/amd64` via [a shell script](https://github.com/mvdan/dotfiles/blob/c511a4944f3f05a562a5f147c68f22254ab44db7/.bin/go-cross).\r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!",
-      "tag": "v3.5.1",
+      "title": "v3.6.0",
+      "description": "This release drops support for Go 1.17 and includes many features and fixes.\r\n\r\n- **cmd/shfmt**\r\n  - Implement `--from-json` as the reverse of `--to-json` - [#900]\r\n  - Improve the quality of the `--to-json` output - [#900]\r\n  - Provide detected language when erroring with `-ln=auto` - [#803]\r\n- **syntax**\r\n  - Don't require peeking two bytes after `echo *` - [#835]\r\n  - Simplify `${name:-}` to the equivalent `${name-}` - [#849]\r\n  - Don't print trailing whitespaces on nested subshells - [#814]\r\n  - Don't print extra newlines in some case clauses - [#779]\r\n  - Don't indent comments preceding case clause items - [#917]\r\n  - Allow escaped newlines before unquoted words again - [#873]\r\n  - Parse a redirections edge case without spaces - [#879]\r\n  - Give a helpful error when `<<<` is used in POSIX mode - [#881]\r\n  - Forbid `${!foo*}` and `${!foo@}` in mksh mode - [#929]\r\n  - Batch allocations less aggressively in the parser\r\n- **syntax/typedjson**\r\n  - Expose `--from-json` and `--to-json` as Go APIs - [#885]\r\n- **expand**\r\n  - Improve support for expanding array keys and values - [#884]\r\n  - Don't panic on unsupported syntax nodes - [#841]\r\n  - Don't panic on division by zero - [#892]\r\n  - Properly expand unquoted parameters with spaces - [#886]\r\n  - Trim spaces when converting strings to integers - [#928]\r\n- **interp**\r\n  - Add initial implementation for `mapfile` and `readarray` - [#863]\r\n  - Improve matching patterns against multiple lines - [#866]\r\n  - Support `%b` in the `printf` builtin - [#955]\r\n  - Display all Bash options in `shopt` - [#877]\r\n- **pattern**\r\n  - Add `EntireString` to match the entire string using `^$` - [#866]\r\n\r\n[3.6.0]: https://github.com/mvdan/sh/releases/tag/v3.6.0\r\n[#779]: https://github.com/mvdan/sh/issues/779\r\n[#803]: https://github.com/mvdan/sh/issues/803\r\n[#814]: https://github.com/mvdan/sh/issues/814\r\n[#835]: https://github.com/mvdan/sh/issues/835\r\n[#841]: https://github.com/mvdan/sh/issues/841\r\n[#849]: https://github.com/mvdan/sh/pull/849\r\n[#863]: https://github.com/mvdan/sh/pull/863\r\n[#866]: https://github.com/mvdan/sh/pull/866\r\n[#873]: https://github.com/mvdan/sh/issues/873\r\n[#877]: https://github.com/mvdan/sh/issues/877\r\n[#879]: https://github.com/mvdan/sh/pull/879\r\n[#881]: https://github.com/mvdan/sh/issues/881\r\n[#884]: https://github.com/mvdan/sh/issues/884\r\n[#885]: https://github.com/mvdan/sh/issues/885\r\n[#886]: https://github.com/mvdan/sh/issues/886\r\n[#892]: https://github.com/mvdan/sh/issues/892\r\n[#900]: https://github.com/mvdan/sh/pull/900\r\n[#917]: https://github.com/mvdan/sh/pull/917\r\n[#928]: https://github.com/mvdan/sh/issues/928\r\n[#929]: https://github.com/mvdan/sh/pull/929\r\n[#955]: https://github.com/mvdan/sh/pull/955\r\n\r\nA special thanks to all the contributors to this release!\r\n@fauust @graf0 @hristiy4n @ihar-orca @lollipopman @mkhl @przmv @reubeno @riacataquian @scop @tmillr\r\n\r\nBinaries built on `go version go1.19.4 linux/amd64` with:\r\n\r\n\tCGO_ENABLED=0 go build -trimpath -ldflags=\"-w -s -X=main.version=v3.6.0\"\r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!",
+      "tag": "v3.6.0",
       "assets": [
         {
-          "name": "shfmt_v3.5.1_darwin_amd64",
-          "size": 2826432,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.5.1/shfmt_v3.5.1_darwin_amd64",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:09bece33040785cae8c7ecac65ba76e6747c8e3547c8eb55426eb6177361b902"
+          "name": "sha256sums.txt",
+          "size": 736,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.6.0/sha256sums.txt",
+          "content_type": "text/plain",
+          "checksum": "sha256:9cefc290f708ab4385b23af3f6faf76df78ccaad8502df988573b09dd3839e17"
         },
         {
-          "name": "shfmt_v3.5.1_darwin_arm64",
-          "size": 2866066,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.5.1/shfmt_v3.5.1_darwin_arm64",
+          "name": "shfmt_v3.6.0_darwin_amd64",
+          "size": 3047552,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.6.0/shfmt_v3.6.0_darwin_amd64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:7acde1d2c35219b7f8bf8c15c9ee87d91af76b0ea15f65404b7e458991921d78"
+          "checksum": "sha256:b8c9c025b498e2816b62f0b717f6032e9ab49e725a45b8205f52f66318f17185"
         },
         {
-          "name": "shfmt_v3.5.1_linux_386",
-          "size": 2494464,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.5.1/shfmt_v3.5.1_linux_386",
+          "name": "shfmt_v3.6.0_darwin_arm64",
+          "size": 3065202,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.6.0/shfmt_v3.6.0_darwin_arm64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a8022b48722150bf0437577d9a28ddb89dfffb5cea4c26ee1d3a341cc0197256"
+          "checksum": "sha256:633f242246ee0a866c5f5df25cbf61b6af0d5e143555aca32950059cf13d91e0"
         },
         {
-          "name": "shfmt_v3.5.1_linux_amd64",
-          "size": 2641920,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.5.1/shfmt_v3.5.1_linux_amd64",
+          "name": "shfmt_v3.6.0_linux_386",
+          "size": 2695168,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.6.0/shfmt_v3.6.0_linux_386",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:56099a689b68534f98e1f8f05d3df6750ab53e3db68f514ee45595bf5b79d158"
+          "checksum": "sha256:9d771620e94f7834ebff12859dbeea0a160fcfab0ba3a2301cab258b6af3fd7d"
         },
         {
-          "name": "shfmt_v3.5.1_linux_arm",
-          "size": 2686976,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.5.1/shfmt_v3.5.1_linux_arm",
+          "name": "shfmt_v3.6.0_linux_amd64",
+          "size": 2850816,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.6.0/shfmt_v3.6.0_linux_amd64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:72e15f623862779633b226c08c3caeabe32eee3c683e181d6c2e96646e4a3f38"
+          "checksum": "sha256:5741a02a641de7e56b8da170e71a97e58050d66a3cf485fb268d6a5a8bb74afb"
         },
         {
-          "name": "shfmt_v3.5.1_linux_arm64",
-          "size": 2621440,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.5.1/shfmt_v3.5.1_linux_arm64",
+          "name": "shfmt_v3.6.0_linux_arm",
+          "size": 2883584,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.6.0/shfmt_v3.6.0_linux_arm",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:09d7902de04d52ebe0b332d84a9746d195f7e930806bdc2436f84d0de6a2d368"
+          "checksum": "sha256:4bff0195b081ab09e14f8a118e1e2183c4aaca8566db2d1c287c9c990bf43919"
         },
         {
-          "name": "shfmt_v3.5.1_windows_386.exe",
-          "size": 2757120,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.5.1/shfmt_v3.5.1_windows_386.exe",
+          "name": "shfmt_v3.6.0_linux_arm64",
+          "size": 2818048,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.6.0/shfmt_v3.6.0_linux_arm64",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:fb1cf0af3dbe9aac7d98e38e3c7426765208ecfe23cb2da51037bb234776fd70"
+        },
+        {
+          "name": "shfmt_v3.6.0_windows_386.exe",
+          "size": 2988544,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.6.0/shfmt_v3.6.0_windows_386.exe",
           "content_type": "application/x-ms-dos-executable",
-          "checksum": "sha256:50df493c1ac1d849bb0acaf7c88b4a3cc79b0e13bce801c917a305599245c345"
+          "checksum": "sha256:3753abfaca1beaf80a81e084c7947e60e2a08076270950d76197f4997fc122d0"
         },
         {
-          "name": "shfmt_v3.5.1_windows_amd64.exe",
-          "size": 2886656,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.5.1/shfmt_v3.5.1_windows_amd64.exe",
+          "name": "shfmt_v3.6.0_windows_amd64.exe",
+          "size": 3123200,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.6.0/shfmt_v3.6.0_windows_amd64.exe",
           "content_type": "application/x-ms-dos-executable",
-          "checksum": "sha256:f759493bc55a4ea181442eb7d79b527ff6c15d62ec567b8b86a5df6a086c9c46"
+          "checksum": "sha256:18122d910ba434be366588f37c302c309cde4ca5403f93285254a3cf96839d01"
         }
       ]
     }
