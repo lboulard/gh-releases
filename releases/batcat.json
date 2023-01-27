@@ -4,128 +4,128 @@
   "url": "https://github.com/sharkdp/bat",
   "releases": [
     {
-      "title": "v0.22.0",
-      "description": "## Features\r\n\r\n- Make the default macOS theme depend on Dark Mode. See #2197, #1746 (@Enselic)\r\n- Support for separate system and user config files. See #668 (@patrickpichler)\r\n\r\n## Bugfixes\r\n\r\n- Prevent fork nightmare with `PAGER=batcat`. See #2235 (@johnmatthiggins)\r\n- Make `--no-paging`/`-P` override `--paging=...` if passed as a later arg, see #2201 (@themkat)\r\n- `--map-syntax` and `--ignored-suffix` now works together, see #2093 (@czzrr)\r\n- Strips byte order mark from output when in non-loop-through mode. See #1922 (@dag-h)\r\n\r\n## Other\r\n\r\n- Relaxed glibc requirements on amd64, see #2106 and #2194 (@sharkdp)\r\n- Improved fish completions. See #2275 (@zgracem)\r\n- Stop pre-processing ANSI escape characters. Syntax highlighting on ANSI escaped input is not supported. See #2185 and #2189 (@Enselic)\r\n\r\n## Syntaxes\r\n\r\n- NSE (Nmap Scripting Engine) is mapped to Lua, see #2151 (@Cre3per)\r\n- Correctly color `fstab` dump and pass fields, see #2246 (@yuvalmo)\r\n- Update `Command Help` syntax, see #2255\r\n- `Julia`: Fix syntax highlighting for function name starting with `struct`, see #2230\r\n- Minor update to `LiveScript`, see #2291\r\n- Associate `.mts` and `.cts` files with the `TypeScript` syntax. See #2236 (@kidonng)\r\n- Fish history is mapped to YAML. See #2237 (@kidonng)\r\n\r\n## `bat` as a library\r\n\r\n- Make `bat::PrettyPrinter::syntaxes()` iterate over new `bat::Syntax` struct instead of `&syntect::parsing::SyntaxReference`. See #2222 (@Enselic)\r\n- Clear highlights after printing, see #1919 and #1920 (@rhysd)",
-      "tag": "v0.22.0",
+      "title": "v0.22.1",
+      "description": "## Bugfixes\r\n\r\n- Bring back pre-processing of ANSI escape characters to so that some common `bat` use cases starts working again. See [#2308](https://github.com/sharkdp/bat/pull/2308) (@Enselic)\r\n",
+      "tag": "v0.22.1",
       "assets": [
         {
-          "name": "bat-musl_0.22.0_amd64.deb",
-          "size": 2288904,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-musl_0.22.0_amd64.deb",
+          "name": "bat-musl_0.22.1_amd64.deb",
+          "size": 2293192,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-musl_0.22.1_amd64.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:05b98ada8d9877718f1109b6f12d757d6ff15143c60dcd918913012770220e28"
+          "checksum": "sha256:095fa945b775be944f660875cfe80218898c210615b6584faea31a4060ba3463"
         },
         {
-          "name": "bat-musl_0.22.0_i686.deb",
-          "size": 2327656,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-musl_0.22.0_i686.deb",
+          "name": "bat-musl_0.22.1_i686.deb",
+          "size": 2332552,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-musl_0.22.1_i686.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:e12ae516d29e242b4bd8a16ec6aa436bf6896d98766e0371c0725a34cc0a39d7"
+          "checksum": "sha256:1bdfa1b47a709c893fbb10b0bd26ed0aec465cc235afbb408c900800ec1a33e2"
         },
         {
-          "name": "bat-v0.22.0-aarch64-unknown-linux-gnu.tar.gz",
-          "size": 2623701,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-aarch64-unknown-linux-gnu.tar.gz",
+          "name": "bat-v0.22.1-aarch64-unknown-linux-gnu.tar.gz",
+          "size": 2630079,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-aarch64-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:87cc4150dd56c9df4922cca37733a7a38e907306b60604bfba3adb3f07abad85"
+          "checksum": "sha256:0ea8fd167291f258fc01174efcc249c188d1b16e543327dc4fe091e5692fba74"
         },
         {
-          "name": "bat-v0.22.0-arm-unknown-linux-gnueabihf.tar.gz",
-          "size": 2663905,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-arm-unknown-linux-gnueabihf.tar.gz",
+          "name": "bat-v0.22.1-arm-unknown-linux-gnueabihf.tar.gz",
+          "size": 2670791,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-arm-unknown-linux-gnueabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:d6fe73d0840d136fbb9290bd451ce8f3bcb923460f3dce8d9a754ab533d45b41"
+          "checksum": "sha256:1e390f9af728142afb1e454965b4722ce35165dcc7f8d9ca1e902deb9b3f8ff2"
         },
         {
-          "name": "bat-v0.22.0-arm-unknown-linux-musleabihf.tar.gz",
-          "size": 2684932,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-arm-unknown-linux-musleabihf.tar.gz",
+          "name": "bat-v0.22.1-arm-unknown-linux-musleabihf.tar.gz",
+          "size": 2691640,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-arm-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:be8e38cdc5b3bfd668b84a4c22bc18f7ea54df707920a33d76cd94412ae652d9"
+          "checksum": "sha256:779d60f04a316d3e74c17b3c137ac01d764547b514223aea6d01dc1457d001fc"
         },
         {
-          "name": "bat-v0.22.0-i686-pc-windows-msvc.zip",
-          "size": 2759622,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-i686-pc-windows-msvc.zip",
+          "name": "bat-v0.22.1-i686-pc-windows-msvc.zip",
+          "size": 2764246,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-i686-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:21221ca0d3d7efe0859f99d316b8aca3e0a6317f7356b6d9045f0fa30fd00504"
+          "checksum": "sha256:7b66cd89dddf6872164cd925d4c26a14d4a7dbb6a98983eb8542677cd823358e"
         },
         {
-          "name": "bat-v0.22.0-i686-unknown-linux-gnu.tar.gz",
-          "size": 2825869,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-i686-unknown-linux-gnu.tar.gz",
+          "name": "bat-v0.22.1-i686-unknown-linux-gnu.tar.gz",
+          "size": 2832982,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-i686-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:3b4e940371699bf311503e746b01f4604a55b76659f720657efb52d69cd394c1"
+          "checksum": "sha256:dc57b012470cfa9e7f4f0aa1c491c779f23a10bb504f59b798234aab5d33e790"
         },
         {
-          "name": "bat-v0.22.0-i686-unknown-linux-musl.tar.gz",
-          "size": 2813901,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-i686-unknown-linux-musl.tar.gz",
+          "name": "bat-v0.22.1-i686-unknown-linux-musl.tar.gz",
+          "size": 2820077,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-i686-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:4f9277bf03a350078ef8384722b1ea03f15f2a788dcd409db1bace142535e6a1"
+          "checksum": "sha256:32ff92b8a0adf94bf717776ca3756a71e7229ee352db254babefd59e4e4a31c1"
         },
         {
-          "name": "bat-v0.22.0-x86_64-apple-darwin.tar.gz",
-          "size": 2615041,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-x86_64-apple-darwin.tar.gz",
+          "name": "bat-v0.22.1-x86_64-apple-darwin.tar.gz",
+          "size": 2621936,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-x86_64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:d285675a0a9777c3a79998dcd3d8ffe0b7d3cb047e4084896799750891090eff"
+          "checksum": "sha256:c7da22f4738eba19c4143d4465a3028eb7d3d54208508badc74f648099e7479f"
         },
         {
-          "name": "bat-v0.22.0-x86_64-pc-windows-gnu.zip",
-          "size": 2991279,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-x86_64-pc-windows-gnu.zip",
+          "name": "bat-v0.22.1-x86_64-pc-windows-gnu.zip",
+          "size": 2996592,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-x86_64-pc-windows-gnu.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:829512f7da4f55594dc5d21f72dddc955d11b1b60dcffcab7168cbc688e7124c"
+          "checksum": "sha256:da7b1b3005d505a09092dfc113704c21618e6c781d1a7aa6281a033a435c9d4c"
         },
         {
-          "name": "bat-v0.22.0-x86_64-pc-windows-msvc.zip",
-          "size": 2944024,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-x86_64-pc-windows-msvc.zip",
+          "name": "bat-v0.22.1-x86_64-pc-windows-msvc.zip",
+          "size": 2950762,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:19521b6da4c6892000dfdd5e1014beffbad9c5862f1e7e599e1a98ef0a8f7248"
+          "checksum": "sha256:d14028b3579df7a5e1b85e5b565fffd33b5e4096df0c719f98f8381ce1dcce6d"
         },
         {
-          "name": "bat-v0.22.0-x86_64-unknown-linux-gnu.tar.gz",
-          "size": 2777044,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-x86_64-unknown-linux-gnu.tar.gz",
+          "name": "bat-v0.22.1-x86_64-unknown-linux-gnu.tar.gz",
+          "size": 2782660,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-x86_64-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:3e23983782417430b724e481598268106f5bb0f161a31f543e827b3a86215a9f"
+          "checksum": "sha256:eb81510a3d14d3a15353cb9c5edb2e037fbce07ee8e986c8c63c94ad55368acf"
         },
         {
-          "name": "bat-v0.22.0-x86_64-unknown-linux-musl.tar.gz",
-          "size": 2807972,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat-v0.22.0-x86_64-unknown-linux-musl.tar.gz",
+          "name": "bat-v0.22.1-x86_64-unknown-linux-musl.tar.gz",
+          "size": 2814475,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:773f819f2ed488e5a4856448017290c1e236611ed357d7c51dd2df931ae49b98"
+          "checksum": "sha256:917844685025552d9fb3d66e233ce55d3b3c2ea85a6c0ad3dc703705adea9525"
         },
         {
-          "name": "bat_0.22.0_amd64.deb",
-          "size": 2260960,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat_0.22.0_amd64.deb",
+          "name": "bat_0.22.1_amd64.deb",
+          "size": 2265720,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat_0.22.1_amd64.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:8c876b12991613e00970c6682d3394b6d810002d84b49e022ca8182abffe5657"
+          "checksum": "sha256:1d1b629247ac23d870cfde9f8eebbb4af7468f5c7c0914d9246c50bf0c72c1fd"
         },
         {
-          "name": "bat_0.22.0_arm64.deb",
-          "size": 2060104,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat_0.22.0_arm64.deb",
+          "name": "bat_0.22.1_arm64.deb",
+          "size": 2063532,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat_0.22.1_arm64.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:456b4b1c6c0ed32de3e52a2fad5b28a6b8d8d7a8b9f902317b26716b1efbd373"
+          "checksum": "sha256:84538a4a5752529d5ddb9c9935910ed39675aae2d4668cac80493e36ce153518"
         },
         {
-          "name": "bat_0.22.0_armhf.deb",
-          "size": 2078524,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat_0.22.0_armhf.deb",
+          "name": "bat_0.22.1_armhf.deb",
+          "size": 2107672,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat_0.22.1_armhf.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d10aba5d577840d9848b0eb245ef2721c8f070020c09bfc79acb91cde03eef58"
+          "checksum": "sha256:8d7976a7690adc48e17b1882ce478d29bd4cbe44842d06d672935b164e9e9cfa"
         },
         {
-          "name": "bat_0.22.0_i686.deb",
-          "size": 2324796,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.0/bat_0.22.0_i686.deb",
+          "name": "bat_0.22.1_i686.deb",
+          "size": 2329668,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat_0.22.1_i686.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:42ebfe8ad1a7b8bbcf8aa677a501e2826bd829cecc736c688b4f01d0452d9816"
+          "checksum": "sha256:33c328d1a868d1b61ba223105a6100e1f18e4db160936aa8be42531a340a932e"
         }
       ]
     }
