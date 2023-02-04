@@ -6,9 +6,9 @@ import os.path
 import sys
 
 import click
-import requests
 import tomli
 from github import Github
+from requests_cache import CachedSession
 
 from .model import Asset, Release, ReleaseJsonEncoder
 from .sha256 import get_sha256
@@ -34,7 +34,7 @@ def make_checksums(name, releases, session=None):
 class GithubWorker:
     def __init__(self, access_token=None):
         self.g = Github(access_token if access_token else None)
-        self.session = requests.Session()
+        self.session = CachedSession("gh-release", backend="sqlite", use_cache_dir=True)
 
     def _get_assets(self, release, gh_release):
         for gh_asset in gh_release.get_assets():
@@ -106,10 +106,7 @@ def recurs_projects(gh_configs):
             nested_projects, nested_values = recurs_projects(value)
             if nested_projects:
                 nested_dict = {key + "." + k: v for k, v in nested_projects.items()}
-                projects = {
-                    **projects,
-                    **nested_dict,
-                }
+                projects = {**projects, **nested_dict}
             elif nested_values:
                 projects[key] = nested_values
             else:
@@ -123,9 +120,10 @@ def get_projects(gh_configs):
     projects, values = recurs_projects(gh_configs)
     return projects
 
+
 @click.command()
 @click.option("--select", "-f", multiple=True, help="only fetch this tool")
-@click.argument('configs', nargs=-1, type=click.File('rb'))
+@click.argument("configs", nargs=-1, type=click.File("rb"))
 def main(select, configs):
     for config_file in configs:
         config = tomli.load(config_file)
