@@ -1,0 +1,63 @@
+{
+  "name": "tools.age",
+  "project": "FiloSottile/age",
+  "url": "https://github.com/FiloSottile/age",
+  "releases": [
+    {
+      "title": "age v1.1.1",
+      "description": "age v1.1.1 is a patch release to fix `go install filippo.io/age/...@latest`.\r\n\r\nSee [the release notes for v1.1.0 for changes since v1.0.0](https://github.com/FiloSottile/age/releases/tag/v1.1.0).",
+      "tag": "v1.1.1",
+      "assets": [
+        {
+          "name": "age-v1.1.1-darwin-amd64.tar.gz",
+          "size": 4280542,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.1.1/age-v1.1.1-darwin-amd64.tar.gz",
+          "content_type": "application/x-gtar",
+          "checksum": "sha256:81bdfa27906288b1b0d1952202a34c8020da9b01008761ca91100c87d416227c"
+        },
+        {
+          "name": "age-v1.1.1-darwin-arm64.tar.gz",
+          "size": 4125524,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.1.1/age-v1.1.1-darwin-arm64.tar.gz",
+          "content_type": "application/x-gtar",
+          "checksum": "sha256:83d21b5c9fa9995973652c36f9e71ed63cc3bc2083c4b178682e5eafb38bf4e0"
+        },
+        {
+          "name": "age-v1.1.1-freebsd-amd64.tar.gz",
+          "size": 4345197,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.1.1/age-v1.1.1-freebsd-amd64.tar.gz",
+          "content_type": "application/x-gtar",
+          "checksum": "sha256:1cdb24496d64a326a757ade5368f10473e1b4cf0af6b0278fbed80383084ce15"
+        },
+        {
+          "name": "age-v1.1.1-linux-amd64.tar.gz",
+          "size": 4465769,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.1.1/age-v1.1.1-linux-amd64.tar.gz",
+          "content_type": "application/x-gtar",
+          "checksum": "sha256:cf16cbb108fc56e2064b00ba2b65d9fb1b8d7002ca5e38260ee1cc34f6aaa8f9"
+        },
+        {
+          "name": "age-v1.1.1-linux-arm.tar.gz",
+          "size": 4351382,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.1.1/age-v1.1.1-linux-arm.tar.gz",
+          "content_type": "application/x-gtar",
+          "checksum": "sha256:85ebbda1c751aee8d3ebf68586e19992a49f991c212466bbaad61cb22ade9c40"
+        },
+        {
+          "name": "age-v1.1.1-linux-arm64.tar.gz",
+          "size": 4186850,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.1.1/age-v1.1.1-linux-arm64.tar.gz",
+          "content_type": "application/x-gtar",
+          "checksum": "sha256:f0dbf4364f5ba44e37ad85af9fdd3716bd410018ce344d317b174d206b03e6fc"
+        },
+        {
+          "name": "age-v1.1.1-windows-amd64.zip",
+          "size": 4902965,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.1.1/age-v1.1.1-windows-amd64.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:9038bd9d76ee65fe6b303d905c19488af098b8c8b29f4e408fe44cd03f13700b"
+        }
+      ]
+    }
+  ]
+}

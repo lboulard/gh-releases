@@ -41,3 +41,8 @@ output = "lazygit.json"
 [gh.tools.shellcheck]
 project = "koalaman/shellcheck"
 output = "shellcheck.json"
+
+# https://age-encryption.org/
+[gh.tools.age]
+project = "FiloSottile/age"
+output = "age-encryption.json"
