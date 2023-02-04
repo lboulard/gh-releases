@@ -5,6 +5,7 @@ import os
 import os.path
 import sys
 
+import click
 import requests
 import tomli
 from github import Github
@@ -122,19 +123,21 @@ def get_projects(gh_configs):
     projects, values = recurs_projects(gh_configs)
     return projects
 
-
-def main():
-    if len(sys.argv) > 1:
-        for config_file in sys.argv[1:]:
-            with open(config_file, "rb") as f:
-                config = tomli.load(f)
-            if "gh" in config:
-                gh_config = config["gh"]
-                outdir = gh_config.get("outdir", "")
-                projects = get_projects(gh_config)
-                failed = run(projects, outdir, gh_config.get("count", 1))
-            else:
-                print(f"{config_file}: nothing to do", file=os.stderr)
+@click.command()
+@click.option("--select", "-f", multiple=True, help="only fetch this tool")
+@click.argument('configs', nargs=-1, type=click.File('rb'))
+def main(select, configs):
+    for config_file in configs:
+        config = tomli.load(config_file)
+        if "gh" in config:
+            gh_config = config["gh"]
+            outdir = gh_config.get("outdir", "")
+            projects = get_projects(gh_config)
+            if select:
+                projects = {k: p for k, p in projects.items() if k in select}
+            failed = run(projects, outdir, gh_config.get("count", 1))
+        else:
+            print(f"{config_file}: nothing to do", file=os.stderr)
 
 
 if __name__ == "__main__":
