@@ -30,6 +30,9 @@ pip install -r requirements.txt
 
 ## Run program
 
+Define a `GITHUB_TOKEN` environment variable to avoid rejection by GitHub
+services. Else, query operations will fail quickly.
+
 From created virtual environment, run module as main program.
 
 ```py
