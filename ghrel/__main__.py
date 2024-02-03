@@ -74,7 +74,12 @@ def run(projects, outdir, count=1):
     failed = False
     mk_outdir = not os.path.exists(outdir)
     stderr = sys.stderr
-    gw = GithubWorker(os.getenv("GITHUB_TOKEN"))
+    github_token = os.getenv("GITHUB_TOKEN")
+    if not github_token:
+        print(
+            "**WARNING using GitHub as guest, please provide GITHUB_TOKEN", file=stderr
+        )
+    gw = GithubWorker(github_token)
     for name, args in projects.items():
         output = name + ".json"
         if "output" in args:
