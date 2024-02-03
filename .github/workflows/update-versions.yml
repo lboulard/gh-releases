@@ -1,0 +1,46 @@
+name: Update each project to latest version
+run-name: ${{ github.actor }} updates each projects to latest version
+
+on:
+  schedule:
+    - cron: '0 5 * * 1,4'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Update files
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      run: python -m ghrel gh-releases.toml
+
+    - name: Commit and push changes
+      env:
+        CI_USER_NAME: Laurent Boulard (CI)
+        CI_USER_EMAIL: laurent.boulard@gmail.com
+      run: |
+        git config --local user.name "${{ env.CI_USER_NAME }}"
+        git config --local user.email "${{ env.CI_USER_EMAIL}}"
+        for project in $(git diff --name-only HEAD -- releases); do
+          git add "$project"
+          msg="$(jq -r '"Update \(.name) to version \(.releases[0].tag|ltrimstr("v"))"' "$project")"
+          echo "$msg"
+          git commit -m "$msg"
+        done
+        git push
