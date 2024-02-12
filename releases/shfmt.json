@@ -4,65 +4,72 @@
   "url": "https://github.com/mvdan/sh",
   "releases": [
     {
-      "title": "v3.7.0",
-      "description": "This release drops support for Go 1.18 and includes many features and fixes.\r\n\r\n- **syntax**\r\n  - Correctly parse `$foo#bar` as a single word - #1003\r\n  - Make `&>` redirect operators an error in POSIX mode - #991\r\n  - Avoid producing invalid shell when minifying some heredocs - #923\r\n  - Revert the simplification of `${foo:-}` into `${foo-}` - #970\r\n- **interp**\r\n  - Add `ExecHandlers` to support layering multiple middlewares - #964\r\n  - Add initial support for the `select` clause - #969\r\n  - Support combining the `errexit` and `pipefail` options - #870\r\n  - Set `EUID` just like `UID` - #958\r\n  - Replace panics on unimplemented builtins with errors - #999\r\n  - Tweak build tags to support building for `js/wasm` - #983\r\n- **syntax/typedjson**\r\n  - Avoid `reflect.Value.MethodByName` to reduce binary sizes - #961\r\n\r\nA special thanks to all the contributors to this release! @riacataquian @anderbubble @teefill @diamondburned\r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!\r\n\r\nBinaries built on `go version go1.20.5 linux/amd64` with:\r\n\r\n\tCGO_ENABLED=0 go build -trimpath -ldflags=\"-w -s -X=main.version=v3.7.0\"",
-      "tag": "v3.7.0",
+      "title": "v3.8.0",
+      "description": "This release drops support for Go 1.19 and 1.20 and includes many features and bugfixes, such as improving EditorConfig support in `shfmt`.\r\n\r\n- **cmd/shfmt**\r\n  - Support EditorConfig language sections such as `[[shell]]` - #664\r\n  - Add `--apply-ignore` for tools and editors - #1037\r\n- **syntax**\r\n  - Allow formatting redirects before all command argumetnts - #942\r\n  - Support brace expansions with uppercase letters - #1042\r\n  - Unescape backquotes in single quotes within backquotes - #1041\r\n  - Better error when using `function` in POSIX mode - #993\r\n  - Better column numbers for escapes inside backquotes - #1028\r\n- **interp**\r\n  - Support parentheses in classic test commands - #1036\r\n  - Determine access to a directory via `unix.Access` - #1033\r\n  - Support subshells with `FuncEnviron` as `Env` - #1043\r\n  - Add support for `fs.DirEntry` via `ReadDirHandler2`\r\n- **expand**\r\n  - Add support for `fs.DirEntry` via `ReadDir2`\r\n  - Support zero-padding in brace expansions - #1042\r\n\r\nA special thanks to all the contributors to this release! @theclapp @slabstone @MaienM \r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!\r\n\r\nBinaries built on `go version go1.22.0 linux/amd64` with:\r\n\r\n\tCGO_ENABLED=0 go build -trimpath -ldflags=\"-w -s -X=main.version=v3.8.0\"",
+      "tag": "v3.8.0",
       "assets": [
         {
-          "name": "shfmt_v3.7.0_darwin_amd64",
-          "size": 3101472,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.7.0/shfmt_v3.7.0_darwin_amd64",
+          "name": "sha256sums.txt",
+          "size": 736,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/sha256sums.txt",
+          "content_type": "text/plain",
+          "checksum": "sha256:0b863687fd5dc77b1df2b0af5d2d6174af76a145a01c3fb32ca0170f69e48067"
+        },
+        {
+          "name": "shfmt_v3.8.0_darwin_amd64",
+          "size": 2747696,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_darwin_amd64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:ae1d1ab961c113fb3dc2ff1150f33c3548983550d91da889b3171a5bcfaab14f"
+          "checksum": "sha256:c0218b47a0301bb006f49fad85d2c08de23df303472834faf5639d04121320f8"
         },
         {
-          "name": "shfmt_v3.7.0_darwin_arm64",
-          "size": 3138130,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.7.0/shfmt_v3.7.0_darwin_arm64",
+          "name": "shfmt_v3.8.0_darwin_arm64",
+          "size": 2736466,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_darwin_arm64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:ad7ff6f666adba3d801eb17365a15539f07296718d39fb62cc2fde6b527178aa"
+          "checksum": "sha256:1481240d2a90d4f0b530688d76d4f9117d17a756b6027cfa42b96f0707317f83"
         },
         {
-          "name": "shfmt_v3.7.0_linux_386",
-          "size": 2756608,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.7.0/shfmt_v3.7.0_linux_386",
+          "name": "shfmt_v3.8.0_linux_386",
+          "size": 2547864,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_linux_386",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:9f0b53d765e11c519be1866c5c3e4614f3f4bac4c982c935f879f561c38f17c1"
+          "checksum": "sha256:e281dee51898a2ae3b05569e97a27e8d34c4f1ae000aa1dd829f9c9eb26b6c50"
         },
         {
-          "name": "shfmt_v3.7.0_linux_amd64",
-          "size": 2899968,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.7.0/shfmt_v3.7.0_linux_amd64",
+          "name": "shfmt_v3.8.0_linux_amd64",
+          "size": 2703512,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_linux_amd64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:0264c424278b18e22453fe523ec01a19805ce3b8ebf18eaf3aadc1edc23f42e3"
+          "checksum": "sha256:27b3c6f9d9592fc5b4856c341d1ff2c88856709b9e76469313642a1d7b558fe0"
         },
         {
-          "name": "shfmt_v3.7.0_linux_arm",
-          "size": 2949120,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.7.0/shfmt_v3.7.0_linux_arm",
+          "name": "shfmt_v3.8.0_linux_arm",
+          "size": 2687128,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_linux_arm",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:3d1f5a1aede8161293bc42007af5b983f16d62857736c789f062346ed839f299"
+          "checksum": "sha256:eb6918775a741eba70d12cd6574a50c4ccaa5c930bbdb118b5428418fedcea3e"
         },
         {
-          "name": "shfmt_v3.7.0_linux_arm64",
-          "size": 2883584,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.7.0/shfmt_v3.7.0_linux_arm64",
+          "name": "shfmt_v3.8.0_linux_arm64",
+          "size": 2687128,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_linux_arm64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:111612560d15bd53d8e8f8f85731176ce12f3b418ec473d39a40ed6bbec772de"
+          "checksum": "sha256:27e1f69b0d57c584bcbf5c882b4c4f78ffcf945d0efef45c1fbfc6692213c7c3"
         },
         {
-          "name": "shfmt_v3.7.0_windows_386.exe",
-          "size": 3014656,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.7.0/shfmt_v3.7.0_windows_386.exe",
-          "content_type": "application/x-ms-dos-executable",
-          "checksum": "sha256:8bd0422554dd6ce5e07d9d17d020d89254b5c056009005df824e39a8cbdcf6aa"
+          "name": "shfmt_v3.8.0_windows_386.exe",
+          "size": 2685440,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_windows_386.exe",
+          "content_type": "application/x-msdownload",
+          "checksum": "sha256:7bca75d21d99a256b79db258c8e6411a99b6f6a990c937663621650cec95ede2"
         },
         {
-          "name": "shfmt_v3.7.0_windows_amd64.exe",
-          "size": 3129856,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.7.0/shfmt_v3.7.0_windows_amd64.exe",
-          "content_type": "application/x-ms-dos-executable",
-          "checksum": "sha256:2807b4af91fbbd961b68716de06c044f1b4f897457fc89fba216e5e2e351c64f"
+          "name": "shfmt_v3.8.0_windows_amd64.exe",
+          "size": 2874368,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_windows_amd64.exe",
+          "content_type": "application/x-msdownload",
+          "checksum": "sha256:91230a6d2d4dbb52e9c0bb134acba526f7880bfd3dfd1ffdde66e9f393d7a646"
         }
       ]
     }
