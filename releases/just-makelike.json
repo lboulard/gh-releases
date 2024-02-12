@@ -4,65 +4,65 @@
   "url": "https://github.com/casey/just",
   "releases": [
     {
-      "title": "1.23.0",
-      "description": "### Added\r\n- Allow setting custom confirm prompt ([#1834](https://github.com/casey/just/pull/1834) by [CramBL](https://github.com/CramBL))\r\n- Add `set quiet` and `[no-quiet]` ([#1704](https://github.com/casey/just/pull/1704) by [dharrigan](https://github.com/dharrigan))\r\n- Add `just_pid` function ([#1833](https://github.com/casey/just/pull/1833) by [Swordelf2](https://github.com/Swordelf2))\r\n- Add functions to return XDG base directories ([#1822](https://github.com/casey/just/pull/1822) by [tgross35](https://github.com/tgross35))\r\n- Add `--no-deps` to skip running recipe dependencies ([#1819](https://github.com/casey/just/pull/1819) by [ngharrington](https://github.com/ngharrington))\r\n\r\n### Fixed\r\n- Run imports in working directory of importer ([#1817](https://github.com/casey/just/pull/1817))\r\n\r\n### Misc\r\n- Include completion scripts in releases ([#1837](https://github.com/casey/just/pull/1837))\r\n- Tweak readme table formatting ([#1836](https://github.com/casey/just/pull/1836))\r\n- Don't abbreviate just in README ([#1831](https://github.com/casey/just/pull/1831) by [thled](https://github.com/thled))\r\n- Ignore [private] recipes in just --list ([#1816](https://github.com/casey/just/pull/1816) by [crdx](https://github.com/crdx))\r\n- Add a dash to tempdir prefix ([#1828](https://github.com/casey/just/pull/1828))\n\n\n",
-      "tag": "1.23.0",
+      "title": "1.24.0",
+      "description": "### Added\r\n- Support recipe paths containing `::` in Bash completion script ([#1863](https://github.com/casey/just/pull/1863) by [crdx](https://github.com/crdx))\r\n- Add function to canonicalize paths ([#1859](https://github.com/casey/just/pull/1859))\r\n\r\n### Misc\r\n- Document installing just on Github Actions in readme ([#1867](https://github.com/casey/just/pull/1867) by [cclauss](https://github.com/cclauss))\r\n- Use unlikely-to-be-set variable name in env tests ([#1882](https://github.com/casey/just/pull/1882))\r\n- Skip write_error test if running as root ([#1881](https://github.com/casey/just/pull/1881))\r\n- Convert run_shebang into integration test ([#1880](https://github.com/casey/just/pull/1880))\r\n- Install mdbook with cargo in CI workflow ([#1877](https://github.com/casey/just/pull/1877))\r\n- Remove deprecated actions-rs/toolchain ([#1874](https://github.com/casey/just/pull/1874) by [cclauss](https://github.com/cclauss))\r\n- Fix Gentoo package link ([#1875](https://github.com/casey/just/pull/1875) by [vozbu](https://github.com/vozbu))\r\n- Fix typos found by codespell ([#1872](https://github.com/casey/just/pull/1872) by [cclauss](https://github.com/cclauss))\r\n- Replace deprecated set-output command in Github Actions workflows ([#1869](https://github.com/casey/just/pull/1869) by [cclauss](https://github.com/cclauss))\r\n- Update `actions/checkout` and `softprops/action-gh-release` ([#1871](https://github.com/casey/just/pull/1871) by [app/dependabot](https://github.com/app/dependabot))\r\n- Keep GitHub Actions up to date with Dependabot ([#1868](https://github.com/casey/just/pull/1868) by [cclauss](https://github.com/cclauss))\r\n- Add contrib directory ([#1870](https://github.com/casey/just/pull/1870))\r\n- Fix install script ([#1844](https://github.com/casey/just/pull/1844))\r\n",
+      "tag": "1.24.0",
       "assets": [
         {
           "name": "CHANGELOG.md",
-          "size": 77286,
-          "url": "https://github.com/casey/just/releases/download/1.23.0/CHANGELOG.md",
+          "size": 79214,
+          "url": "https://github.com/casey/just/releases/download/1.24.0/CHANGELOG.md",
           "content_type": "text/markdown",
-          "checksum": "sha256:4fa0eb5bd7a82ca47d3380f96e91201b52ffe731809cf10487c7d7765e5d79e0"
+          "checksum": "sha256:3206849641f869061809139c29f080450e1062161ff03d63ab8fc21e92efdc0d"
         },
         {
-          "name": "just-1.23.0-aarch64-apple-darwin.tar.gz",
-          "size": 1495372,
-          "url": "https://github.com/casey/just/releases/download/1.23.0/just-1.23.0-aarch64-apple-darwin.tar.gz",
+          "name": "just-1.24.0-aarch64-apple-darwin.tar.gz",
+          "size": 1502629,
+          "url": "https://github.com/casey/just/releases/download/1.24.0/just-1.24.0-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:f2cad733beae1ac5256c419aaa5f4af79b06c5891eb4a0355abda4e0b281be95"
+          "checksum": "sha256:90a00ed4ec8b229aa82cc7c62143f09c468998909f0f673c04580b0eebce37a6"
         },
         {
-          "name": "just-1.23.0-aarch64-unknown-linux-musl.tar.gz",
-          "size": 2169452,
-          "url": "https://github.com/casey/just/releases/download/1.23.0/just-1.23.0-aarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.24.0-aarch64-unknown-linux-musl.tar.gz",
+          "size": 2180963,
+          "url": "https://github.com/casey/just/releases/download/1.24.0/just-1.24.0-aarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:04e36a418874d90b754ddaef16415c55148b114e31c9b1af2ba86da9e6fc2b17"
+          "checksum": "sha256:3cf0913a14f369dd6e927a7ba9d6c483a4d05df2cc353ed6aed593c6a50c667c"
         },
         {
-          "name": "just-1.23.0-arm-unknown-linux-musleabihf.tar.gz",
-          "size": 2334831,
-          "url": "https://github.com/casey/just/releases/download/1.23.0/just-1.23.0-arm-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.24.0-arm-unknown-linux-musleabihf.tar.gz",
+          "size": 2339427,
+          "url": "https://github.com/casey/just/releases/download/1.24.0/just-1.24.0-arm-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:548b91913bd8b3974e3f4b4e8b0682c951e2da2f44f850cfc8ec54faa7f16ab7"
+          "checksum": "sha256:41a9806a4dd01fcd1e06766c77b4b7ba21249782b7101fa1582bc68ac34c73db"
         },
         {
-          "name": "just-1.23.0-armv7-unknown-linux-musleabihf.tar.gz",
-          "size": 2293598,
-          "url": "https://github.com/casey/just/releases/download/1.23.0/just-1.23.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.24.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "size": 2301056,
+          "url": "https://github.com/casey/just/releases/download/1.24.0/just-1.24.0-armv7-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:1dbf953f4ae29652422e246340691b86a59a83af34382ab2b1d91c078f9f2ae8"
+          "checksum": "sha256:ea37b08d0180411159530e3987d2da8bda9db47b44394992b9f429f5e17429ce"
         },
         {
-          "name": "just-1.23.0-x86_64-apple-darwin.tar.gz",
-          "size": 1591814,
-          "url": "https://github.com/casey/just/releases/download/1.23.0/just-1.23.0-x86_64-apple-darwin.tar.gz",
+          "name": "just-1.24.0-x86_64-apple-darwin.tar.gz",
+          "size": 1613339,
+          "url": "https://github.com/casey/just/releases/download/1.24.0/just-1.24.0-x86_64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:08447ef729ed651d1317c4bcdcd20eb21e2e59cf5d1a8138ea98f82a5c3d8431"
+          "checksum": "sha256:cf35f104d834e9c3331f6b1b00bec6b2f0a99c129fdd27230fccb96b2c2063f1"
         },
         {
-          "name": "just-1.23.0-x86_64-pc-windows-msvc.zip",
-          "size": 1476550,
-          "url": "https://github.com/casey/just/releases/download/1.23.0/just-1.23.0-x86_64-pc-windows-msvc.zip",
+          "name": "just-1.24.0-x86_64-pc-windows-msvc.zip",
+          "size": 1485728,
+          "url": "https://github.com/casey/just/releases/download/1.24.0/just-1.24.0-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:7fe14ff1a8a87ac76c610ba871ce621897eee2dd783569040194e4ca295538e8"
+          "checksum": "sha256:325ed382221ac9189ec9beedcf4b97e6fc229b4e49ede7ca36e47a5b651bb09c"
         },
         {
-          "name": "just-1.23.0-x86_64-unknown-linux-musl.tar.gz",
-          "size": 2260890,
-          "url": "https://github.com/casey/just/releases/download/1.23.0/just-1.23.0-x86_64-unknown-linux-musl.tar.gz",
+          "name": "just-1.24.0-x86_64-unknown-linux-musl.tar.gz",
+          "size": 2267998,
+          "url": "https://github.com/casey/just/releases/download/1.24.0/just-1.24.0-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:8d8bce1af9c9dd618369302755c66cc940999ff42c3a3e66692cf56c235dd9e2"
+          "checksum": "sha256:2dec2a689872f7baf2b0a59c663463a33ac866272758d7d7c8c2b62ab5b32238"
         }
       ]
     }
