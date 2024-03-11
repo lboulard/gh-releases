@@ -4,44 +4,51 @@
   "url": "https://github.com/koalaman/shellcheck",
   "releases": [
     {
-      "title": "Stable version 0.9.0",
-      "description": "This release is dedicated to Mindustry: the most fun you can\nhave with open source (outside of shell scripting of course).",
-      "tag": "v0.9.0",
+      "title": "Stable version v0.10.0",
+      "description": "This release is dedicated to LLMs, for finally fulfilling the promise of\n1960s scifi: systems you can hack using logic games and creative lies.",
+      "tag": "v0.10.0",
       "assets": [
         {
-          "name": "shellcheck-v0.9.0.darwin.x86_64.tar.xz",
-          "size": 4204804,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.9.0/shellcheck-v0.9.0.darwin.x86_64.tar.xz",
+          "name": "shellcheck-v0.10.0.darwin.aarch64.tar.xz",
+          "size": 7205756,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.darwin.aarch64.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:7d3730694707605d6e60cec4efcb79a0632d61babc035aa16cda1b897536acf5"
+          "checksum": "sha256:bbd2f14826328eee7679da7221f2bc3afb011f6a928b848c80c321f6046ddf81"
         },
         {
-          "name": "shellcheck-v0.9.0.linux.aarch64.tar.xz",
-          "size": 3110236,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.9.0/shellcheck-v0.9.0.linux.aarch64.tar.xz",
+          "name": "shellcheck-v0.10.0.darwin.x86_64.tar.xz",
+          "size": 4371632,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.darwin.x86_64.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:179c579ef3481317d130adebede74a34dbbc2df961a70916dd4039ebf0735fae"
+          "checksum": "sha256:ef27684f23279d112d8ad84e0823642e43f838993bbb8c0963db9b58a90464c2"
         },
         {
-          "name": "shellcheck-v0.9.0.linux.armv6hf.tar.xz",
-          "size": 1330204,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.9.0/shellcheck-v0.9.0.linux.armv6hf.tar.xz",
+          "name": "shellcheck-v0.10.0.linux.aarch64.tar.xz",
+          "size": 4291764,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.linux.aarch64.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:03deed9ded9dd66434ccf9649815bcde7d275d6c9f6dcf665b83391673512c75"
+          "checksum": "sha256:324a7e89de8fa2aed0d0c28f3dab59cf84c6d74264022c00c22af665ed1a09bb"
         },
         {
-          "name": "shellcheck-v0.9.0.linux.x86_64.tar.xz",
-          "size": 2351560,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.9.0/shellcheck-v0.9.0.linux.x86_64.tar.xz",
+          "name": "shellcheck-v0.10.0.linux.armv6hf.tar.xz",
+          "size": 1328236,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.linux.armv6hf.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:700324c6dd0ebea0117591c6cc9d7350d9c7c5c287acbad7630fa17b1d4d9e2f"
+          "checksum": "sha256:1c89cb51e1412b580d7ba8aac240251ffb0b829788f83d2daa4a82da42d275e4"
         },
         {
-          "name": "shellcheck-v0.9.0.zip",
-          "size": 1628800,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.9.0/shellcheck-v0.9.0.zip",
+          "name": "shellcheck-v0.10.0.linux.x86_64.tar.xz",
+          "size": 2404716,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.linux.x86_64.tar.xz",
+          "content_type": "application/x-xz",
+          "checksum": "sha256:6c881ab0698e4e6ea235245f22832860544f17ba386442fe7e9d629f8cbedf87"
+        },
+        {
+          "name": "shellcheck-v0.10.0.zip",
+          "size": 1628090,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:ae58191b1ea4ffd9e5b15da9134146e636440302ce3e2f46863e8d71c8be1bbb"
+          "checksum": "sha256:eb6cd53a54ea97a56540e9d296ce7e2fa68715aa507ff23574646c1e12b2e143"
         }
       ]
     }
