@@ -35,7 +35,9 @@ class GithubWorker:
     def __init__(self, access_token=None):
         auth = Auth.Token(access_token) if access_token else None
         self.g = Github(auth=auth)
-        self.session = CachedSession("gh-releases", backend="sqlite", use_cache_dir=True)
+        self.session = CachedSession(
+            "gh-releases", backend="sqlite", use_cache_dir=True
+        )
 
     def _get_assets(self, release, gh_release):
         for gh_asset in gh_release.get_assets():

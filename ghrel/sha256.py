@@ -1,7 +1,7 @@
 import hashlib
+import sys
 
 import requests
-import sys
 
 
 def _get_sha256(url, timeout=None, session=None):
