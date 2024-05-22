@@ -7,7 +7,7 @@ import sys
 
 import click
 import tomli
-from github import Github
+from github import Auth, Github
 from requests_cache import CachedSession
 
 from .model import Asset, Release, ReleaseJsonEncoder
@@ -33,7 +33,8 @@ def make_checksums(name, releases, session=None):
 
 class GithubWorker:
     def __init__(self, access_token=None):
-        self.g = Github(access_token if access_token else None)
+        auth = Auth.Token(access_token) if access_token else None
+        self.g = Github(auth=auth)
         self.session = CachedSession("gh-releases", backend="sqlite", use_cache_dir=True)
 
     def _get_assets(self, release, gh_release):
