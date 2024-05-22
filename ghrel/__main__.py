@@ -89,7 +89,7 @@ def run(projects, outdir, count=1):
             failed = True
             continue
         if not "project" in args:
-            printf(f"{name}: * ERROR missing project name", file=stderr)
+            print(f"{name}: * ERROR missing project name", file=stderr)
             failed = True
             continue
         output_path = os.path.join(outdir, output)
