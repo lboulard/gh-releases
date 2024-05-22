@@ -54,7 +54,7 @@ class GithubWorker:
             if not release.assets:
                 print(
                     f"{name}: ** WARNING skipping {release.tag}, no assets found",
-                    file=os.stderr,
+                    file=sys.stderr,
                 )
                 continue
             if len(releases) == count:
@@ -140,7 +140,7 @@ def main(select, configs):
                 projects = {k: p for k, p in projects.items() if k in select}
             failed = run(projects, outdir, gh_config.get("count", 1))
         else:
-            print(f"{config_file}: nothing to do", file=os.stderr)
+            print(f"{config_file}: nothing to do", file=sys.stderr)
 
 
 if __name__ == "__main__":
