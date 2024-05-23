@@ -6,22 +6,35 @@ import os.path
 import sys
 
 import click
+import requests
 import tomli
 from github import Auth, Github
-from requests_cache import CachedSession
 
 from .model import Asset, Release, ReleaseJsonEncoder
-from .sha256 import get_sha256
+from .sha256 import Cache, get_sha256
 
 # https://pygithub.readthedocs.io/en/latest/
 
+DEBUG_HTTP = False
+if DEBUG_HTTP:
+    import logging
+    from http.client import HTTPConnection
 
-def make_checksums(name, releases, session=None):
+    HTTPConnection.debuglevel = 1
+
+    logging.basicConfig()
+    logging.getLogger().setLevel(logging.DEBUG)
+    requests_log = logging.getLogger("requests.packages.urllib3")
+    requests_log.setLevel(logging.DEBUG)
+    requests_log.propagate = True
+
+
+def make_checksums(name, releases, session=None, cache=None):
     for release in releases:
         title = release.title or release.tag
         for asset in release.assets:
             print(f"{name}: SHA256 {title} / {asset.name}")
-            size, sha256 = get_sha256(asset.url, session=session)
+            size, sha256 = get_sha256(asset.url, session=session, cache=cache)
             if size != asset.size:
                 print(
                     f"{name}: SHA256 {title} / {asset.name} size {size} != {asset.size} mismatch"
@@ -35,9 +48,9 @@ class GithubWorker:
     def __init__(self, access_token=None):
         auth = Auth.Token(access_token) if access_token else None
         self.g = Github(auth=auth)
-        self.session = CachedSession(
-            "gh-releases", backend="sqlite", use_cache_dir=True
-        )
+        self.session = requests.Session()
+        self.session.headers["Authorization"] = f"token {access_token}"
+        self.cache = Cache()
 
     def _get_assets(self, release, gh_release):
         for gh_asset in gh_release.get_assets():
@@ -62,7 +75,10 @@ class GithubWorker:
                 continue
             if len(releases) == count:
                 break
-        make_checksums(name, releases, session=self.session)
+        try:
+            make_checksums(name, releases, session=self.session, cache=self.cache)
+        finally:
+            self.cache.commit()
         return dict(
             name=name, project=repo.full_name, url=repo.html_url, releases=releases
         )
