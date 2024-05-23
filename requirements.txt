@@ -4,12 +4,6 @@
 #
 #    pip-compile
 #
-attrs==23.2.0
-    # via
-    #   cattrs
-    #   requests-cache
-cattrs==23.2.3
-    # via requests-cache
 certifi==2024.2.2
     # via requests
 cffi==1.16.0
@@ -26,14 +20,10 @@ cryptography==42.0.7
     # via pyjwt
 deprecated==1.2.14
     # via pygithub
-exceptiongroup==1.2.1
-    # via cattrs
 idna==3.7
     # via requests
 platformdirs==4.2.2
-    # via
-    #   -r requirements.in
-    #   requests-cache
+    # via -r requirements.in
 pycparser==2.22
     # via cffi
 pygithub==2.3.0
@@ -46,23 +36,13 @@ requests==2.32.2
     # via
     #   -r requirements.in
     #   pygithub
-    #   requests-cache
-requests-cache==1.2.0
-    # via -r requirements.in
-six==1.16.0
-    # via url-normalize
 tomli==2.0.1
     # via -r requirements.in
 typing-extensions==4.11.0
-    # via
-    #   cattrs
-    #   pygithub
-url-normalize==1.4.3
-    # via requests-cache
+    # via pygithub
 urllib3==2.2.1
     # via
     #   pygithub
     #   requests
-    #   requests-cache
 wrapt==1.16.0
     # via deprecated

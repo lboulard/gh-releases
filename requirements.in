@@ -1,6 +1,5 @@
 PyGithub
 requests
-requests-cache
 platformdirs
 tomli
 click
