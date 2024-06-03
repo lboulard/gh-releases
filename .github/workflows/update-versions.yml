@@ -25,24 +25,19 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Restore cached checksums
-      id: gh-cache-restore
-      uses: actions/cache/restore@v4
+    - name: Cache checksums
+      id: gh-cache
+      uses: actions/cache@v4
       with:
         path: ~/.cache/gh-releases
         key: ${{ runner.os }}-gh
+        restore-keys: ${{ runner.os }}-gh
+        save-always: true
 
     - name: Update files
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       run: python -m ghrel gh-releases.toml
-
-    - name: Save checksums database
-      id: gh-cache-save
-      uses: actions/cache/save@v4
-      with:
-        path: ~/.cache/gh-releases
-        key: ${{ steps.gh-cache-restore.outputs.cache-primary-key }}
 
     - name: Commit and push changes
       env:
