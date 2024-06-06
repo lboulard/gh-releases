@@ -81,6 +81,10 @@ class Cache:
         self._modified = False
         self._con = None
 
+    @property
+    def path(self):
+        return self._path
+
     def _create_table(self):
         """create a database table if it does not exist already"""
         self._con.executescript(

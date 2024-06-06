@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json
+import logging
 import os
 import os.path
 import sys
@@ -99,6 +100,7 @@ def run(projects, outdir, count=1):
             "**WARNING using GitHub as guest, please provide GITHUB_TOKEN", file=stderr
         )
     gw = GithubWorker(github_token)
+    logging.info(f"cache path: {gw.cache.path}")
     for name, args in projects.items():
         output = name + ".json"
         if "output" in args:
