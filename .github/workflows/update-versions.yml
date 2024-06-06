@@ -35,7 +35,7 @@ jobs:
     - name: Update files
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      run: python -m ghrel gh-releases.toml
+      run: python -m ghrel gh-releases.toml --log INFO
 
     - name: Commit and push changes
       env:
