@@ -150,7 +150,24 @@ def get_projects(gh_configs):
 @click.command()
 @click.option("--select", "-f", multiple=True, help="only fetch this tool")
 @click.argument("configs", nargs=-1, type=click.File("rb"))
-def main(select, configs):
+@click.option(
+    "--log-level",
+    "--log",
+    "-d",
+    type=click.Choice(
+        ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"], case_sensitive=False
+    ),
+    metavar="loglevel",
+    help="set logging level",
+)
+def main(select, log_level, configs):
+    #
+    if log_level is not None:
+        numeric_level = getattr(logging, log_level.upper(), None)
+        if not isinstance(numeric_level, int):
+            raise ValueError("Invalid log level: %s" % log_level)
+        logging.basicConfig(level=numeric_level)
+    #
     for config_file in configs:
         config = tomli.load(config_file)
         if "gh" in config:
