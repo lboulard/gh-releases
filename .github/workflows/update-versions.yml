@@ -30,9 +30,7 @@ jobs:
       uses: actions/cache@v4
       with:
         path: ~/.cache/gh-releases
-        key: ${{ runner.os }}-gh
-        restore-keys: ${{ runner.os }}-gh
-        save-always: true
+        key: ${{ runner.os }}-gh-${{ hashFiles('releases/*.json') }}
 
     - name: Update files
       env:
