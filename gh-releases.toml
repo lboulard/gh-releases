@@ -46,3 +46,8 @@ output = "shellcheck.json"
 [gh.tools.age]
 project = "FiloSottile/age"
 output = "age-encryption.json"
+
+# https://github.com/junegunn/fzf
+[gh.tools.fzf]
+project = "junegunn/fzf"
+output = "fzf.json"
