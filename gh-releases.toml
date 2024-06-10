@@ -51,3 +51,13 @@ output = "age-encryption.json"
 [gh.tools.fzf]
 project = "junegunn/fzf"
 output = "fzf.json"
+
+# https://github.com/uncrustify/uncrustify
+[gh.dev.uncrustify]
+project = "uncrustify"
+output = "uncrustify.json"
+
+# https://github.com/watchexec/watchexec
+[gh.tools.fzf]
+project = "watchexec/watchexec"
+output = "watchexec.json"
