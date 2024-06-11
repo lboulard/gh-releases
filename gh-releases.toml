@@ -58,6 +58,6 @@ project = "uncrustify"
 output = "uncrustify.json"
 
 # https://github.com/watchexec/watchexec
-[gh.tools.fzf]
+[gh.tools.watchexec]
 project = "watchexec/watchexec"
 output = "watchexec.json"
