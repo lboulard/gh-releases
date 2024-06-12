@@ -1,0 +1,140 @@
+{
+  "name": "tools.fzf",
+  "project": "junegunn/fzf",
+  "url": "https://github.com/junegunn/fzf",
+  "releases": [
+    {
+      "title": "0.53.0",
+      "description": "- Multi-line display\n    - See [Processing multi-line items](https://junegunn.github.io/fzf/tips/processing-multi-line-items/)\n    - fzf can now display multi-line items\n      ```sh\n      # All bash functions, highlighted\n      declare -f | perl -0777 -pe 's/^}\\n/}\\0/gm' |\n        bat --plain --language bash --color always |\n        fzf --read0 --ansi --reverse --multi --highlight-line\n\n      # Ripgrep multi-line output\n      rg --pretty bash | perl -0777 -pe 's/\\n\\n/\\n\\0/gm' |\n        fzf --read0 --ansi --multi --highlight-line --reverse --tmux 70%\n      ```\n        - To disable multi-line display, use `--no-multi-line`\n    - CTRL-R bindings of bash, zsh, and fish have been updated to leverage multi-line display\n    - The default `--pointer` and `--marker` have been changed from `>` to Unicode bar characters as they look better with multi-line items\n    - Added `--marker-multi-line` to customize the select marker for multi-line entries with the default set to `\u257b\u2503\u2579`\n      ```\n      \u257bFirst line\n      \u2503...\n      \u2579Last line\n      ```\n- Native tmux integration\n    - Added `--tmux` option to replace fzf-tmux script and simplify distribution\n      ```sh\n      # --tmux [center|top|bottom|left|right][,SIZE[%]][,SIZE[%]]\n      # Center, 100% width and 70% height\n      fzf --tmux 100%,70% --border horizontal --padding 1,2\n\n      # Left, 30% width\n      fzf --tmux left,30%\n\n      # Bottom, 50% height\n      fzf --tmux bottom,50%\n      ```\n        - To keep the implementation simple, it only uses popups. You need tmux 3.3 or later.\n    - To use `--tmux` in Vim plugin:\n      ```vim\n      let g:fzf_layout = { 'tmux': '100%,70%' }\n      ```\n- Added support for endless input streams\n    - See [Browsing log stream with fzf](https://junegunn.github.io/fzf/tips/browsing-log-streams/)\n    - Added `--tail=NUM` option to limit the number of items to keep in memory. This is useful when you want to browse an endless stream of data (e.g. log stream) with fzf while limiting memory usage.\n      ```sh\n      # Interactive filtering of a log stream\n      tail -f *.log | fzf --tail 100000 --tac --no-sort --exact\n      ```\n- Better Windows Support\n    - fzf now works on Git bash (mintty) out of the box via winpty integration\n    - Many fixes and improvements for Windows\n- man page is now embedded in the binary; `fzf --man` to see it\n- Changed the default `--scroll-off` to 3, as we think it's a better default\n- Process started by `execute` action now directly writes to and reads from `/dev/tty`. Manual `/dev/tty` redirection for interactive programs is no longer required.\n  ```sh\n  # Vim will work fine without /dev/tty redirection\n  ls | fzf --bind 'space:execute:vim {}' > selected\n  ```\n- Added `print(...)` action to queue an arbitrary string to be printed on exit. This was mainly added to work around the limitation of `--expect` where it's not compatible with `--bind` on the same key and it would ignore other actions bound to it.\n  ```sh\n  # This doesn't work as expected because --expect is not compatible with --bind\n  fzf --multi --expect ctrl-y --bind 'ctrl-y:select-all'\n\n  # This is something you can do instead\n  fzf --multi --bind 'enter:print()+accept,ctrl-y:select-all+print(ctrl-y)+accept'\n  ```\n    - We also considered making them compatible, but realized that some users may have been relying on the current behavior.\n- [`NO_COLOR`](https://no-color.org/) environment variable is now respected. If the variable is set, fzf defaults to `--no-color` unless otherwise specified.\n\n",
+      "tag": "0.53.0",
+      "assets": [
+        {
+          "name": "fzf-0.53.0-darwin_amd64.zip",
+          "size": 1621998,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-darwin_amd64.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:6c92db23607d142954c3a395037151f84d98661d8c17f8e8826eae11a063fe46"
+        },
+        {
+          "name": "fzf-0.53.0-darwin_arm64.zip",
+          "size": 1537163,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-darwin_arm64.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:0fe4f83d1719a4f909461d5e73b63501ae2a46092f7a915bc51aba436bb46eb8"
+        },
+        {
+          "name": "fzf-0.53.0-freebsd_amd64.tar.gz",
+          "size": 1543439,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-freebsd_amd64.tar.gz",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:1501f530cc452e53adf4ba3c1f9805e1c229980e67f15de37f4858401c0df8b3"
+        },
+        {
+          "name": "fzf-0.53.0-linux_amd64.tar.gz",
+          "size": 1551909,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-linux_amd64.tar.gz",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:af2663c3309967dc191d21537e53c2e9f8a37f490a32456b9498a006f05e3796"
+        },
+        {
+          "name": "fzf-0.53.0-linux_arm64.tar.gz",
+          "size": 1441767,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-linux_arm64.tar.gz",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:45b4cf8db6433d45cbcb65ffa6b52fd9ea7697fff3209705331514379d94a43b"
+        },
+        {
+          "name": "fzf-0.53.0-linux_armv5.tar.gz",
+          "size": 1512803,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-linux_armv5.tar.gz",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:72a6ffcb1320572e768daf0077f2e8516994746fe357a67b866731887981e22a"
+        },
+        {
+          "name": "fzf-0.53.0-linux_armv6.tar.gz",
+          "size": 1504192,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-linux_armv6.tar.gz",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:1eaafd042935c83b1dc693c18c5f0f218913702e862cc8e9b29a98b898c84513"
+        },
+        {
+          "name": "fzf-0.53.0-linux_armv7.tar.gz",
+          "size": 1501944,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-linux_armv7.tar.gz",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:71b986c3a57144ac902b13231f33345c111ffd6689b884b3af6f2f609e3d5013"
+        },
+        {
+          "name": "fzf-0.53.0-linux_loong64.tar.gz",
+          "size": 1507383,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-linux_loong64.tar.gz",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:9fe4fe299962942500c1a19a649808b09d92405b2cf4e058d075e3920fc562a6"
+        },
+        {
+          "name": "fzf-0.53.0-linux_ppc64le.tar.gz",
+          "size": 1431180,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-linux_ppc64le.tar.gz",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:d53c8fcb42315adc96df0d14080c8eecebfbd14a3cc9124a8b58aeb710c6a0dd"
+        },
+        {
+          "name": "fzf-0.53.0-linux_s390x.tar.gz",
+          "size": 1518398,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-linux_s390x.tar.gz",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:87c9de52a4528e80c99fc120bed028ea48c9d2a1f10fc0f526e9328ad17aa5d1"
+        },
+        {
+          "name": "fzf-0.53.0-openbsd_amd64.tar.gz",
+          "size": 1548622,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-openbsd_amd64.tar.gz",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:b3f8918268e07aa50daa22cc95950735b5faf61cabd2c5f9531ffb287277d679"
+        },
+        {
+          "name": "fzf-0.53.0-windows_amd64.zip",
+          "size": 1763887,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-windows_amd64.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:e977de12c1ab80f72e49e2fc8eceb5f5623338200a87b2aafab2e87ebd85efbe"
+        },
+        {
+          "name": "fzf-0.53.0-windows_arm64.zip",
+          "size": 1641734,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-windows_arm64.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:01f9a486f0f79358ae66e30950daabf8e83c47c0c0f8d3b54a130b48839bff22"
+        },
+        {
+          "name": "fzf-0.53.0-windows_armv5.zip",
+          "size": 1736653,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-windows_armv5.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:3533c611b61a011a8a75da5a096ea0b4f7bc2f0a8009e7311e7f0bf97f6afb63"
+        },
+        {
+          "name": "fzf-0.53.0-windows_armv6.zip",
+          "size": 1725185,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-windows_armv6.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:98e472e6ca200f5e5211a29435b38fc988121292f88a6df9ddf1651848c2ba68"
+        },
+        {
+          "name": "fzf-0.53.0-windows_armv7.zip",
+          "size": 1718859,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf-0.53.0-windows_armv7.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:9d8061c42aeb7409d3f8ee9927dc4e69d34cb564614f3e92a3c6617320d920e0"
+        },
+        {
+          "name": "fzf_0.53.0_checksums.txt",
+          "size": 1631,
+          "url": "https://github.com/junegunn/fzf/releases/download/0.53.0/fzf_0.53.0_checksums.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "checksum": "sha256:c9661d714ed13fcd92b02f8c04404050335265fd2ee690858b0859af1087277c"
+        }
+      ]
+    }
+  ]
+}
