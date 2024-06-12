@@ -44,9 +44,21 @@ jobs:
       run: |
         git config --local user.name "${{ env.CI_USER_NAME }}"
         git config --local user.email "${{ env.CI_USER_EMAIL}}"
-        for project in $(git diff --name-only HEAD -- releases); do
+        for project in $(git diff --diff-filter=D --name-only HEAD -- releases); do
+          git add "$project"
+          msg="Removing $project"
+          echo "$msg"
+          git commit -m "$msg"
+        done
+        for project in $(git diff --diff-filter=M --name-only HEAD -- releases); do
           git add "$project"
           msg="$(jq -r '"Update \(.project) to version \(.releases[0].tag|ltrimstr("v"))"' "$project")"
+          echo "$msg"
+          git commit -m "$msg"
+        done
+        for project in $(git ls-files -o HEAD -- releases); do
+          git add "$project"
+          msg="$(jq -r '"New \(.project) to version \(.releases[0].tag|ltrimstr("v"))"' "$project")"
           echo "$msg"
           git commit -m "$msg"
         done
