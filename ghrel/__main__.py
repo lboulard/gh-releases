@@ -10,6 +10,12 @@ import click
 import requests
 import tomli
 from github import Auth, Github
+from github.GithubException import (
+    BadCredentialsException,
+    GithubException,
+    RateLimitExceededException,
+    TwoFactorException,
+)
 
 from .model import Asset, Release, ReleaseJsonEncoder
 from .sha256 import Cache, get_sha256
@@ -116,7 +122,17 @@ def run(projects, outdir, count=1):
         output_path = os.path.join(outdir, output)
         count = args.get("count", count)
         print(f"{name}: ... getting {count} release{'s' if count > 1 else ''}")
-        releases = gw.get_releases(name, args["project"], count)
+        try:
+            releases = gw.get_releases(name, args["project"], count)
+        except (BadCredentialsException, TwoFactorException) as e:
+            print("FATAL: GitHub API failed by raising unrecoverable exception")
+            print(e)
+            failed = True
+            break
+        except (GithubException, RateLimitExceededException) as e:
+            print("ERROR: GitHub API failed by raising exception")
+            print(e)
+            continue
         print(f"{name}: writing {output_path}")
         if mk_outdir:
             os.makedirs(outdir, exist_ok=True)
