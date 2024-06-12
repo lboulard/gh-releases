@@ -54,7 +54,7 @@ output = "fzf.json"
 
 # https://github.com/uncrustify/uncrustify
 [gh.dev.uncrustify]
-project = "uncrustify"
+project = "uncrustify/uncrustify"
 output = "uncrustify.json"
 
 # https://github.com/watchexec/watchexec
