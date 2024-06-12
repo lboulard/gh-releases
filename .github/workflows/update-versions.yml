@@ -31,6 +31,8 @@ jobs:
       with:
         path: ~/.cache/gh-releases
         key: ${{ runner.os }}-gh-${{ hashFiles('releases/*.json') }}
+        restore-keys: |
+          ${{ runner.os }}-gh-
 
     - name: Update files
       env:
