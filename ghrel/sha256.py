@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import os
 import pathlib
+import random
 import sqlite3
 import sys
 from dataclasses import dataclass
@@ -236,14 +237,22 @@ def _get_sha256(
 def get_sha256(
     url, session, cache=None
 ):  # type: (str, requests.Session, Cache|None) -> (int, str | None)
-    for tentative in range(3, 0, -1):
+    delay, slip = 60, 0
+    for tentative in (3, 2, 1, 0):
         try:
             return _get_sha256(url, timeout=30, session=session, cache=cache)
         except requests.exceptions.Timeout as e:
-            if tentative == 1:
+            if tentative == 0:
                 raise
+            # safety belt: min 30s, max 10mn
+            delay = max(10*60, min(30, delay))
+            # introduce jitter of 30 seconds
+            wait = int(random.uniform(delay - 15, delay + 15)) + slip
+            slip = delay - wait
+            delay *= 2
             print(" ** %s" % str(e))
             print(
-                " ** %d tentative%s left, retrying ..."
-                % (tentative - 1, "s" if (tentative - 1) > 1 else "")
+                " ** %d tentative%s left, retrying in %s..."
+                % (tentative, "s" if tentative > 1 else "", timedelta(seconds=wait))
             )
+            time.sleep(wait)
