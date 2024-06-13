@@ -238,7 +238,7 @@ def get_sha256(
 ):  # type: (str, requests.Session, Cache|None) -> (int, str | None)
     for tentative in range(3, 0, -1):
         try:
-            return _get_sha256(url, timeout=5, session=session, cache=cache)
+            return _get_sha256(url, timeout=30, session=session, cache=cache)
         except requests.exceptions.Timeout as e:
             if tentative == 1:
                 raise
