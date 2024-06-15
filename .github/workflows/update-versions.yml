@@ -45,7 +45,7 @@ jobs:
       uses: actions/cache/save@v4
       with:
         path: ~/.cache/gh-releases
-        key: ${{ steps.gh-cache.outputs.cache-primary-key }}
+        key: ${{ runner.os }}-gh-${{ hashFiles('releases/*.json') }}
 
     - name: Commit and push changes
       if: always()
