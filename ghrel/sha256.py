@@ -195,9 +195,6 @@ expireDate = EXCLUDED.expireDate;
         if self._con is not None:
             self._con.close()
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.close()
-
 
 def _get_sha256(
     url, timeout=None, session=None, cache=None

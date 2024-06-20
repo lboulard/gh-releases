@@ -62,6 +62,16 @@ class GithubWorker:
         self.session.headers["Authorization"] = f"token {access_token}"
         self.cache = Cache()
 
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.close()
+
+    def close(self):
+        self.cache.commit()
+        self.cache.close()
+
     def _get_assets(self, release, gh_release):
         for gh_asset in gh_release.get_assets():
             asset = Asset(from_gh_asset=gh_asset)
@@ -85,10 +95,7 @@ class GithubWorker:
                 continue
             if len(releases) == count:
                 break
-        try:
-            make_checksums(name, releases, session=self.session, cache=self.cache)
-        finally:
-            self.cache.commit()
+        make_checksums(name, releases, session=self.session, cache=self.cache)
         return dict(
             name=name, project=repo.full_name, url=repo.html_url, releases=releases
         )
@@ -97,6 +104,34 @@ class GithubWorker:
 def save_to(output_path, releases):
     with open(output_path, "w+") as w:
         json.dump(releases, w, cls=ReleaseJsonEncoder)
+
+
+def get_releases(gw, name, args, count):
+    count = args.get("count", count)
+    print(f"{name}: ... getting {count} release{'s' if count > 1 else ''}")
+    try:
+        releases = gw.get_releases(name, args["project"], count)
+        return True, releases
+    except (BadCredentialsException, TwoFactorException) as e:
+        print("FATAL: GitHub API failed by raising unrecoverable exception")
+        print(e)
+    except (GithubException, RateLimitExceededException) as e:
+        print("ERROR: GitHub API failed by raising exception")
+        print(e)
+    return False
+
+
+def get_output(name, args):
+    output = name + ".json"
+    if "output" in args:
+        output = args["output"]
+    if not output:
+        print(f"{name}: ** ERROR missing output filename", file=sys.stderr)
+        return None
+    if not "project" in args:
+        print(f"{name}: * ERROR missing project name", file=sys.stderr)
+        return None
+    return output
 
 
 def run(projects, outdir, count=1):
@@ -108,40 +143,24 @@ def run(projects, outdir, count=1):
         print(
             "**WARNING using GitHub as guest, please provide GITHUB_TOKEN", file=stderr
         )
-    gw = GithubWorker(github_token)
-    logging.info(f"cache path: {gw.cache.path}")
-    for name, args in projects.items():
-        output = name + ".json"
-        if "output" in args:
-            output = args["output"]
-        if not output:
-            print(f"{name}: ** ERROR missing output filename", file=stderr)
-            failed = True
-            continue
-        if not "project" in args:
-            print(f"{name}: * ERROR missing project name", file=stderr)
-            failed = True
-            continue
-        output_path = os.path.join(outdir, output)
-        count = args.get("count", count)
-        print(f"{name}: ... getting {count} release{'s' if count > 1 else ''}")
-        try:
-            releases = gw.get_releases(name, args["project"], count)
-        except (BadCredentialsException, TwoFactorException) as e:
-            print("FATAL: GitHub API failed by raising unrecoverable exception")
-            print(e)
-            failed = True
-            break
-        except (GithubException, RateLimitExceededException) as e:
-            print("ERROR: GitHub API failed by raising exception")
-            print(e)
-            continue
-        print(f"{name}: writing {output_path}")
-        if mk_outdir:
-            os.makedirs(outdir, exist_ok=True)
-            mk_outdir = False
-        save_to(output_path, releases)
-    return failed
+    with GithubWorker(github_token) as gw:
+        logging.info(f"cache path: {gw.cache.path}")
+        for name, args in projects.items():
+            output = get_output(name, args)
+            if not output:
+                failed = True
+                continue
+            done, releases = get_releases(gw, name, args, count)
+            if not done:
+                failed = True
+                break
+            output_path = os.path.join(outdir, output)
+            print(f"{name}: writing {output_path}")
+            if mk_outdir:
+                os.makedirs(outdir, exist_ok=True)
+                mk_outdir = False
+            save_to(output_path, releases)
+        return failed
 
 
 def recurs_projects(gh_configs):
