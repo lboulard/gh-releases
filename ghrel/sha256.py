@@ -223,6 +223,7 @@ def _get_sha256(
                 sha256.update(chunk)
             checksum = sha256.hexdigest().lower()
             if cache:
+                logging.info(f"# cache save {url}")
                 cache.insert(url, size, response, checksum)
         elif response.status_code == 304:
             if entry:
