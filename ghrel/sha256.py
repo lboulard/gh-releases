@@ -172,7 +172,7 @@ expireDate = EXCLUDED.expireDate;
 
     def insert(
         self, url, size, response, checksum
-    ):  # type: (str, int, requests.Response, str) -> None
+    ):  # type: (str, int, requests.Response, str) -> bool
         if not self._loaded:
             self._load()
         etag = response.headers.get("Etag")
@@ -184,6 +184,8 @@ expireDate = EXCLUDED.expireDate;
             expire = guess_expire(response)
             entry = Entry(url, checksum, size, etag, modified_time, expire)
             self._update_entry(entry)
+            return True
+        return False
 
     def commit(self):
         if self._modified and self._con:
@@ -223,8 +225,10 @@ def _get_sha256(
                 sha256.update(chunk)
             checksum = sha256.hexdigest().lower()
             if cache:
-                logging.info(f"# cache save {url}")
-                cache.insert(url, size, response, checksum)
+                if cache.insert(url, size, response, checksum):
+                    logging.info(f"# cache save {url}")
+                else:
+                    logging.warning(f"# cache save failed for {url}")
         elif response.status_code == 304:
             if entry:
                 from_cache = True
