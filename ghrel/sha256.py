@@ -212,6 +212,7 @@ def _get_sha256(
             headers["If-Modified-Since"] = to_http_date(entry.last_modified)
     if session is None:
         session = requests
+    from_cache = False
     with session.get(url, stream=True, timeout=timeout, headers=headers) as response:
         sha256 = hashlib.new("SHA256")
         checksum, size = None, -1
@@ -225,6 +226,7 @@ def _get_sha256(
                 cache.insert(url, size, response, checksum)
         elif response.status_code == 304:
             if entry:
+                from_cache = True
                 checksum, size = entry.checksum, entry.size
         else:
             print(
@@ -232,7 +234,7 @@ def _get_sha256(
                 % (url, response.status_code, response.reason),
                 file=sys.stderr,
             )
-        return size, checksum
+        return from_cache, size, checksum
 
 
 def get_sha256(

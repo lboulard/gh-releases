@@ -41,14 +41,17 @@ def make_checksums(name, releases, session=None, cache=None):
         title = release.title or release.tag
         for asset in release.assets:
             print(f"{name}: SHA256 {title} / {asset.name}")
-            size, sha256 = get_sha256(asset.url, session=session, cache=cache)
+            from_cache, size, sha256 = get_sha256(
+                asset.url, session=session, cache=cache
+            )
             if size != asset.size:
                 print(
                     f"{name}: SHA256 {title} / {asset.name} size {size} != {asset.size} mismatch"
                 )
             elif sha256:
+                hint = " (no change)" if from_cache else ""
                 asset.checksum = "sha256:" + sha256
-                print(f"{name}: SHA256 {title} / {asset.name} sha256:{sha256}")
+                print(f"{name}: SHA256 {title} / {asset.name} sha256:{sha256}{hint}")
 
 
 class GithubWorker:
