@@ -251,7 +251,7 @@ def get_sha256(
             if tentative == 0:
                 raise
             # safety belt: min 30s, max 10mn
-            delay = max(10*60, min(30, delay))
+            delay = max(10 * 60, min(30, delay))
             # introduce jitter of 30 seconds
             wait = int(random.uniform(delay - 15, delay + 15)) + slip
             slip = delay - wait
