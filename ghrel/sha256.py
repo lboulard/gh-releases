@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import logging
 import os
 import pathlib
 import random
@@ -207,6 +208,7 @@ def _get_sha256(
     }
     entry = cache.get(url) if cache else None
     if entry and not entry.expired():
+        logging.info(f"# cache hit for {url}")
         headers["If-None-Match"] = entry.etag
         if entry.last_modified:
             headers["If-Modified-Since"] = to_http_date(entry.last_modified)
@@ -214,6 +216,7 @@ def _get_sha256(
         session = requests
     from_cache = False
     with session.get(url, stream=True, timeout=timeout, headers=headers) as response:
+        logging.info(f"# {response}")
         sha256 = hashlib.new("SHA256")
         checksum, size = None, -1
         if response.status_code == 200:
