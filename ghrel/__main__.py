@@ -187,6 +187,7 @@ def main(select, log_level, configs):
             raise ValueError("Invalid log level: %s" % log_level)
         logging.basicConfig(level=numeric_level)
     #
+    exit_code = 0
     for config_file in configs:
         config = tomli.load(config_file)
         if "gh" in config:
@@ -196,8 +197,11 @@ def main(select, log_level, configs):
             if select:
                 projects = {k: p for k, p in projects.items() if k in select}
             failed = run(projects, outdir, gh_config.get("count", 1))
+            if failed:
+                exit_code = 1
         else:
             print(f"{config_file}: nothing to do", file=sys.stderr)
+    sys.exit(exit_code)
 
 
 if __name__ == "__main__":
