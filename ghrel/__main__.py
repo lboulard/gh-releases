@@ -18,7 +18,8 @@ from github.GithubException import (
 )
 
 from .model import Asset, Release, ReleaseJsonEncoder
-from .sha256 import Cache, get_sha256
+from .sha256 import get_sha256
+from ghrel.cache import Cache
 
 # https://pygithub.readthedocs.io/en/latest/
 
