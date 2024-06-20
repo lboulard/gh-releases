@@ -48,10 +48,12 @@ def _get_sha256(
                 else:
                     logging.warning(f"# cache save failed for {url}")
         elif response.status_code == 304:
+            _ = response.content
             if entry:
                 from_cache = True
                 checksum, size = entry.checksum, entry.size
         else:
+            _ = response.content
             print(
                 "ERROR: %s returned %d (%s)"
                 % (url, response.status_code, response.reason),
