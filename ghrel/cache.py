@@ -78,8 +78,10 @@ COMMIT;
 
     def _connect(self):
         self._con = sqlite3.connect(
-            self._path, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES
+            self._path,
+            detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES,
         )
+        self._con.execute("PRAGMA journal_mode=WAL")
 
     def _load(self):
         self._path.parent.mkdir(parents=True, exist_ok=True)
