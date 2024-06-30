@@ -5,7 +5,7 @@
   "releases": [
     {
       "title": "Stable version v0.10.0",
-      "description": "This release is dedicated to LLMs, for finally fulfilling the promise of\n1960s scifi: systems you can hack using logic games and creative lies.",
+      "description": "This release is dedicated to LLMs, for finally fulfilling the promise of\r\n1960s scifi: systems you can hack using logic games and creative lies.",
       "tag": "v0.10.0",
       "assets": [
         {
@@ -35,6 +35,13 @@
           "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.linux.armv6hf.tar.xz",
           "content_type": "application/x-xz",
           "checksum": "sha256:1c89cb51e1412b580d7ba8aac240251ffb0b829788f83d2daa4a82da42d275e4"
+        },
+        {
+          "name": "shellcheck-v0.10.0.linux.riscv64.tar.xz",
+          "size": 9868420,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.linux.riscv64.tar.xz",
+          "content_type": "application/x-xz",
+          "checksum": "sha256:be1f2028951783424c7a5dc744ac0bab8d5b181189e80f640cc56f481f1e371e"
         },
         {
           "name": "shellcheck-v0.10.0.linux.x86_64.tar.xz",
