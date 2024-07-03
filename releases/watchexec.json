@@ -4,793 +4,793 @@
   "url": "https://github.com/watchexec/watchexec",
   "releases": [
     {
-      "title": "CLI v2.1.1",
-      "description": "- Regression: `-w, --watch` was accidentally set to behave as `-W` (#828)",
-      "tag": "v2.1.1",
+      "title": "CLI v2.1.2",
+      "description": "- New feature: `--watch-file` (#849)\r\n- Fix: manpage entry in deb/rpm packagings",
+      "tag": "v2.1.2",
       "assets": [
         {
           "name": "B3SUMS",
           "size": 3052,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/B3SUMS",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/B3SUMS",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:747993eaa81c378c5f7edbee75491d98504b1956c0548db8445fe209a78e283e"
+          "checksum": "sha256:5004421017896a4be4fbab5a3a9bc89f831298158815206c1b355b657af7e393"
         },
         {
           "name": "dist-manifest.json",
           "size": 7392,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/dist-manifest.json",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/dist-manifest.json",
           "content_type": "application/json",
-          "checksum": "sha256:68f0f9f9abaa92696ce21af3da4b4c69d08fd0abe03fdfd4e047edcd35832f2e"
+          "checksum": "sha256:710b6695ec51b47c28a3bbdb0ad962f5c230c5fc67ac0dbcafa32548a210696a"
         },
         {
           "name": "SHA256SUMS",
           "size": 3052,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/SHA256SUMS",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/SHA256SUMS",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:fdb622f354edea1df64bbf8b312fd04a0a24e1d6bbed06cbd3f1421ac2b28d50"
+          "checksum": "sha256:5fd2d1a6feaf07a967e20aaa219b91a7f5573de3a4811fa81929fedc357044e2"
         },
         {
           "name": "SHA512SUMS",
           "size": 4780,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/SHA512SUMS",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/SHA512SUMS",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:f3d2e74c7b30402306a7e826a44a063da656c31aca9c2d78a54ef87de18393a7"
+          "checksum": "sha256:0cd3813fd9015440427ff0bec9ae424feb4b00213c9449663186fc0987412449"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-apple-darwin.tar.xz",
-          "size": 2185872,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-apple-darwin.tar.xz",
+          "name": "watchexec-2.1.2-aarch64-apple-darwin.tar.xz",
+          "size": 2104040,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-apple-darwin.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:a246a791d5967168ba0fc9cc4348a64c709daed091fb110922837b65739bab2a"
+          "checksum": "sha256:424d6f1474467a745c683d391fc52c099f1fb0f8ea4b7952d8f214bd7b1f7e69"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-apple-darwin.tar.xz.b3",
+          "name": "watchexec-2.1.2-aarch64-apple-darwin.tar.xz.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-apple-darwin.tar.xz.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-apple-darwin.tar.xz.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:bfe136ac6b1eba33a31105ef6254ca8e6dead8cd7b6b8152fcf26ffd9a12864e"
+          "checksum": "sha256:8e202d31b665f1bff55cd9ab949890a47dc2e0c653f926bebddb6949fd98a47e"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-apple-darwin.tar.xz.sha256",
+          "name": "watchexec-2.1.2-aarch64-apple-darwin.tar.xz.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-apple-darwin.tar.xz.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-apple-darwin.tar.xz.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:fa17bd68e3e5f21dedcf529671a95c58caa1867096bae41623ed8abc22545980"
+          "checksum": "sha256:b104fba57cfa31f748f6d88e58a419d2379c3ba57ecd1587aeff2c02abca78f0"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-apple-darwin.tar.xz.sha512",
+          "name": "watchexec-2.1.2-aarch64-apple-darwin.tar.xz.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-apple-darwin.tar.xz.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-apple-darwin.tar.xz.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:0df007423eba6a25ded84a6a64dc5f70813874cf89ca223807ea41086340a84a"
+          "checksum": "sha256:74f871a1c3769f379026258a7853d42bdb3dd37f02a1089c9a4ea26f3c2f74f9"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.deb",
-          "size": 2780748,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.deb",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.deb",
+          "size": 2669876,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:61049b01d0e5c129048493af1e7c5af6cfb5fe9f4b4be1ba998688111932d5b8"
+          "checksum": "sha256:74dd4d4eb22cf9d3a9cdb99b39c177035df31c436addd7f088712b05d0ce7234"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.deb.b3",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.deb.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.deb.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.deb.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a6d97ad3590d55730b5ac982dd3a597c594cd8368ccf3411540d57efca690ac3"
+          "checksum": "sha256:491b388e93db425c184b66fcab2f8b8a849050197a3b8eaaa147135a6c589ef3"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.deb.sha256",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.deb.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.deb.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.deb.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:bc506bc1971b56cddec7b718653a8519f869fc0fce61f203b6af94a9bcbc8e07"
+          "checksum": "sha256:77f9e9e1d9a1228355180940d320e195e472e406dd689af4b898bccce3888cdf"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.deb.sha512",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.deb.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.deb.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.deb.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:22a5bd6527fca9a586d251d6adf37b1289fb949cbaa953525d4bd7a1db901bfe"
+          "checksum": "sha256:5117db8b69018eb883870b42346b5d0be3959a4483bd2229eb6c31a8b3ea6b5b"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.rpm",
-          "size": 3262795,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.rpm",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.rpm",
+          "size": 3121106,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.rpm",
           "content_type": "application/x-redhat-package-manager",
-          "checksum": "sha256:d321d4f19e2065f41d1d29ef399bfa23cb175c5603859b1bcc0f943a28cfbd60"
+          "checksum": "sha256:51dcbfdfbd9dc3f9b9ec018379ce0505e93984782d775255742acc2bb7f19845"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.rpm.b3",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.rpm.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.rpm.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.rpm.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:09d41598b84296addc0e3f8699927a7bcfab8556f35833cfe3fbf99c2232087d"
+          "checksum": "sha256:6e0759766eaa99cfc976e38e0e29ef8d243d7d16d1c1078d3a285be467e7215d"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.rpm.sha256",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.rpm.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.rpm.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.rpm.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:824eb73a7736d02ab6b84e3827c0b31d4dbf4b218acef9a15c1a03b0ba8da251"
+          "checksum": "sha256:ff4ca242573ef6755ab2ea072e2ddcdcc244851278f590f264bad7d02c461521"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.rpm.sha512",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.rpm.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.rpm.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.rpm.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:9563b527a6814b5781ed74ddb3303f3ed4b0b8315c26268ccc4dcc5368cfe5b0"
+          "checksum": "sha256:dafa0a0b99c49319e43aed9103d7307b19d39d480138cc1d053de66f133cc7ab"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.tar.xz",
-          "size": 2775664,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.tar.xz",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.tar.xz",
+          "size": 2658416,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:0e001e8dd0cb2b11cd201a9e1f30a5e2c8675c317d9164785acf06b7d75b668e"
+          "checksum": "sha256:ac8a77465ba4482da6b8bca862c4020fc379a47b94ff50c1ba7674c83dd4e742"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.tar.xz.b3",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.tar.xz.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.tar.xz.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.tar.xz.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:4f6fad1df3a1dfa26cb5a4e5b13a91c741ba42bd8165ac1124cee86112d34126"
+          "checksum": "sha256:1a36e3f707757595731b73e06615b87323fc38c530038f0ced8177ce5e695209"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.tar.xz.sha256",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.tar.xz.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.tar.xz.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.tar.xz.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:f15dd960483c71e707924d22d771801106dc12baaf54b049705a97b71946ad0f"
+          "checksum": "sha256:18f97de0d32eba4185b42e843a9f0097961d3432ede36d0f415290d655391ab0"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-gnu.tar.xz.sha512",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-gnu.tar.xz.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-gnu.tar.xz.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-gnu.tar.xz.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:474389f99548bf12540349bf24dd3db51b7d71c4a56b5d603c913a198713b878"
+          "checksum": "sha256:4ebaf0138684ef9ec538accf419f33edf663248d1495534848519d96eed71441"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.deb",
-          "size": 2820576,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.deb",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.deb",
+          "size": 2717012,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:184edb04202bb007b7c5b807ec81b5e94ec19338cab57b812730711ed6ac40f0"
+          "checksum": "sha256:900488702c0f293ba32ac172c2dbea1c0013b1c26cee53fcb79cd707759b02ab"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.deb.b3",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.deb.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.deb.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.deb.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:64dbf122f26ba7ea4947bada3038097a2ff7251e1a5d3d62b261fb0581fc5760"
+          "checksum": "sha256:1048b3cd0a7aa499e12e09249fc5d4d9f1c7bff7c4cb9c28648505dc43cb4e69"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.deb.sha256",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.deb.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.deb.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.deb.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:8b72561d62e4fdf1449efe42931fa3e37b64a6a5a431abb7db6a59a573361584"
+          "checksum": "sha256:3ace0ae96a69ffba171969d4b1bcd337485c2d69e278f27a3b8ddbd2e9588169"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.deb.sha512",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.deb.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.deb.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.deb.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:832bf273c3135a63a70566729068811d432da477fb19be23bcbf0dac06afa54d"
+          "checksum": "sha256:0a5c351b70764e38f83f70c68e4841a660d50b2cbd6700e4f791f8774832734a"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.rpm",
-          "size": 3287387,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.rpm",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.rpm",
+          "size": 3163000,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.rpm",
           "content_type": "application/x-redhat-package-manager",
-          "checksum": "sha256:b9525cb63f8282eba46c070593d0f927eabeb7fb09b6692dd951590ad0e387f5"
+          "checksum": "sha256:6cdca9d26f78ebb8c6888f5fee4f760f07e260d4d034fd6013701cc1f42522f9"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.rpm.b3",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.rpm.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.rpm.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.rpm.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:f0ff9aeb167de36d9e4ffaa1a9f4e5ed8823b7a39857829e74f52b0e62c1a831"
+          "checksum": "sha256:a9e26237ce68cde333bfc54829ae39e0def4f4838160ffcdebe0bff37cc612e4"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.rpm.sha256",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.rpm.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.rpm.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.rpm.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:e090201d83a4be84538624df239504a5a2725ffd06960a17ca90ee1c382e5fb1"
+          "checksum": "sha256:8835106c0310dc4042f95f8a1022a7b0fc06d0b4c729463d8e07e7c39fc56d84"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.rpm.sha512",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.rpm.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.rpm.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.rpm.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d03dd91c21771c98bb671b215c76de418033e8d837d6f5f04c58616cbaa6063f"
+          "checksum": "sha256:5d7ff2cdea69edf371a7154137cd56a594e6da2f5cb97be1bf2de324b5d77fbf"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.tar.xz",
-          "size": 2808880,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.tar.xz",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.tar.xz",
+          "size": 2705676,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:5e782466fc4d1463ebcb9a21c18c7045059c88fb55bd90feee526b48a0a07963"
+          "checksum": "sha256:01a704801dbc2d056973079655e9cf72bec4bd2b86a449f9f1e8b99e9bfdb020"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.tar.xz.b3",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.tar.xz.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.tar.xz.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.tar.xz.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:60505aa8871cf684cad0c470488a0b2038b3a0c7db7eb434e7e3f501ec3fb3a6"
+          "checksum": "sha256:be550a7df7028a64e6542e821a88d012467b109eb5632dfdc9b365c612c7d9f8"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.tar.xz.sha256",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.tar.xz.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.tar.xz.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.tar.xz.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:4e2eb355d62ebffe14cb7bec4de79ef5b21ab193ba8c0b61dcd1b36c8a6eecf8"
+          "checksum": "sha256:4b0fef3a928b61816966e2bdaad5561deeb7d5b3d4100a926a71e11646973df9"
         },
         {
-          "name": "watchexec-2.1.1-aarch64-unknown-linux-musl.tar.xz.sha512",
+          "name": "watchexec-2.1.2-aarch64-unknown-linux-musl.tar.xz.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-aarch64-unknown-linux-musl.tar.xz.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-aarch64-unknown-linux-musl.tar.xz.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:84950afa93b6b0ba0c34c3743f9e063038214be9348e70259d6e0c00fc255b62"
+          "checksum": "sha256:0bf056278712057a03e7fcfc36c6f1ff93f7a3952131998824950772d32186d1"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.deb",
-          "size": 2817664,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.deb",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.deb",
+          "size": 2742180,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a1717d8fdf6c1be6a6730d7daa71a46cf810399249e33cf67daf083e13eaadd8"
+          "checksum": "sha256:22c73afbd0314146be69b01fa59088f8e0e28445695f962669230bf779c2439b"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.deb.b3",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.deb.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.deb.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.deb.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c46e9af20cf0ce20d40e87905f7c8a772905dcd93c107d3a7a6f3af5fc7f7ec8"
+          "checksum": "sha256:156f24db536bbe1acb76e20849756a560af43204e1fbe4cae1bd4ae0f4136038"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.deb.sha256",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.deb.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.deb.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.deb.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:55c43d881ab8d8b1c3b35b8d828712342f120f2f1e14c7304385dd69897cc257"
+          "checksum": "sha256:ae39cb7ce07940edd71275784d880cfd8562df94ea4ef22f62a3eb4cce2aa093"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.deb.sha512",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.deb.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.deb.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.deb.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:7df17767068c7d39a7d057066717b19e94a2faf8c84c218c7de20557b4c292f9"
+          "checksum": "sha256:2f7b90a37dfbfe451123dac5706c3e82d9391716bb32d9570fce2b2ef4a91faa"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.rpm",
-          "size": 3319364,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.rpm",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.rpm",
+          "size": 3205603,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.rpm",
           "content_type": "application/x-redhat-package-manager",
-          "checksum": "sha256:ef1f054274d16f60ac3d0c9fe61c14f5c1cf0bdebde8e11bcc76d131ee061d35"
+          "checksum": "sha256:abf8c78091fca58c8b55f0d7b29d6906a7cc7439f1486185bbf8487d411cc1f3"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.rpm.b3",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.rpm.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.rpm.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.rpm.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:8c56d5d41a587e91ae9011a6ecd37ec22d9548ad7bdaa53c9e88767d3f34fb6f"
+          "checksum": "sha256:926769f63a7fa1b7c0c59d9e3fdb98fc73d8069662791a16db9f2d2d5b437dec"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.rpm.sha256",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.rpm.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.rpm.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.rpm.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c29aaf1030f59ca282de4596155639ba2245514245c36cf1a7df5ddaaef3a5f5"
+          "checksum": "sha256:bdc4d50d1b5f5aea688222ba35929c9d54f45019f031044f24678a0509e7358f"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.rpm.sha512",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.rpm.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.rpm.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.rpm.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:84171dd8dda78d619353ec4b6717ea0787f9b2ff6b888f682f50c69fa481b990"
+          "checksum": "sha256:2d47a16ca8b44adecfe3b591e7a0061a01bce4ba3fdf73b27f8700d7b3b82fe3"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.tar.xz",
-          "size": 2812580,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.tar.xz",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.tar.xz",
+          "size": 2731812,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:3161abb87765918b5f61c29ac5072a401646e17710a80f00cf215f171924f6f2"
+          "checksum": "sha256:8e182f1eb5bf2f5fc8abd09e872e5409baf07af33a14fe4a0db4538d8f81f413"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.tar.xz.b3",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.tar.xz.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.tar.xz.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.tar.xz.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:29286aaf82b1217300defec7fa76a5c9254ad07d44daa77c13b26d3718954d2a"
+          "checksum": "sha256:1881813f8ee625b56226a445024a7486fd3b79ce71bdea538808f623158faa32"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.tar.xz.sha256",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.tar.xz.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.tar.xz.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.tar.xz.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:eec5a8cedd156aa664559fef00975c400d246638937c4318c42617881683f775"
+          "checksum": "sha256:05833077a184cdd13ced7fa640d2719e0f950ece33e78c6315b2712f730e16f0"
         },
         {
-          "name": "watchexec-2.1.1-armv7-unknown-linux-gnueabihf.tar.xz.sha512",
+          "name": "watchexec-2.1.2-armv7-unknown-linux-gnueabihf.tar.xz.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-armv7-unknown-linux-gnueabihf.tar.xz.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-armv7-unknown-linux-gnueabihf.tar.xz.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:abeffde6cdb5ee93c585b2bbd182f535892bd0c8f598c376c5bb740bf427aca9"
+          "checksum": "sha256:2814a86898700181614201d523879ae6308e0a4beeadf7b2c566f3c730d510a4"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.deb",
-          "size": 3234320,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.deb",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.deb",
+          "size": 3163532,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:dc2d94746f786b7aacff11049f7845968b1f33e92e75e8fe6a968a8ccd85840f"
+          "checksum": "sha256:732ce5e32ec22cc2502b98629140a2de4a32217d2ea445765714eb29910377d5"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.deb.b3",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.deb.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.deb.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.deb.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:30309b47ece239acc3604809236dfe9d30e23b7ff7398ab3ee69e48704644c56"
+          "checksum": "sha256:ff7860a7499b7119ef5c0788e41c47333c6c9464ab56e20a70ceac7c1aee0991"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.deb.sha256",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.deb.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.deb.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.deb.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:3677b72ae20b5ec5a44b12cae1fa355c941134c4e7aabfda36a7d2c6c204bb6d"
+          "checksum": "sha256:8e4ae517515a7063b5d5326d5f0c0c7d63ef8722b671299fb192c06349592d1b"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.deb.sha512",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.deb.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.deb.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.deb.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:b5803cefced1a02403d07f2dafac818f316d3213cbb07eda86208d2f79266b5f"
+          "checksum": "sha256:bd3b63e99b3e9883ab6cbb68ea22a35f81e1357bcff6f05005b965b9855194ad"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.rpm",
-          "size": 3497616,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.rpm",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.rpm",
+          "size": 3410677,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.rpm",
           "content_type": "application/x-redhat-package-manager",
-          "checksum": "sha256:031bf87d673903c83ec438d4da2321985a3c76b97ac2bdccd687d26df996b7d2"
+          "checksum": "sha256:df169d781a7daf38d15c5ca8ebd34572248d6adc53e954c34fd722bc84397611"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.rpm.b3",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.rpm.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.rpm.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.rpm.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:9438ecf2c5eafb1c01184ce5a146e1c0583bde8deaf619f2dab8e09b6ac9c3de"
+          "checksum": "sha256:01f934358f9b2b60712193884942acd3dd3ebd087248fe765bbd324710b7b522"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.rpm.sha256",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.rpm.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.rpm.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.rpm.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:5b71eedbcdafa58140da4d3cf0e972ff2b0cf2f244664e018279d7f805c5a669"
+          "checksum": "sha256:3382a42b11f0f5f0f07269fe904865d9e178aaaee35e9b8194dd3443d0a9d30b"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.rpm.sha512",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.rpm.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.rpm.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.rpm.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c8eb46bd4c2e83d5fa3c96402f3b0b0a6ce4ea1b42164450caf3b12951bfbe59"
+          "checksum": "sha256:d1e27a2e193d44b7b34e3da6a8d991e3c4339ab159233e758701f077f5d13de1"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.tar.xz",
-          "size": 3229944,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.tar.xz",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.tar.xz",
+          "size": 3152656,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:340e1507c2dc946816f304858eff499f29d92f5d66cad389b98c825a63030baf"
+          "checksum": "sha256:3cb7c800309dccea0a8ae5df3023c7b6235e7e8e8aaf114b2ba347bbb2ded6b4"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.tar.xz.b3",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.tar.xz.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.tar.xz.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.tar.xz.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c77b7686246a9f2408e07e0da833e1236a63d24a06f9a84c27450bd50fc64c94"
+          "checksum": "sha256:efdc106d47dc7ad49b2e95d96b6c4707c585e651f7a633cbfa30fa5f7a4dfae4"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.tar.xz.sha256",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.tar.xz.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.tar.xz.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.tar.xz.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:1f883789219b04f869a5a53fe585a82b5b472a9095bd9b3a33fe63cc1cd8f7f8"
+          "checksum": "sha256:188de64a26bc7fc444b3794838ed18c5f394aec66b081922188ff60ec59d0c1b"
         },
         {
-          "name": "watchexec-2.1.1-i686-unknown-linux-musl.tar.xz.sha512",
+          "name": "watchexec-2.1.2-i686-unknown-linux-musl.tar.xz.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-i686-unknown-linux-musl.tar.xz.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-i686-unknown-linux-musl.tar.xz.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:3a90b15115be1032548ec537b6862480f58511cc9355d9af27157bab9ed5c908"
+          "checksum": "sha256:cff129fd9decfe470663857e7412566d2d5b71b31b290d521b17a28b3a3d0c1d"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.deb",
-          "size": 2958540,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.deb",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.deb",
+          "size": 2865192,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:9499dfc4733170f728eab20cfab038468870f524fa53d612edc85a3033f61041"
+          "checksum": "sha256:446ba9eed5381d956e9408aa4c66be101b7799b567342a43447598811f208a13"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.deb.b3",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.deb.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.deb.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.deb.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:b2e3fc6e605d1017b08b87cc35f77dbdf82e347cf533cfdaf5090768f461e919"
+          "checksum": "sha256:b66c4075c0c724f2ae79a30e4b33995f15fd2629c04b0475228f945271a567ff"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.deb.sha256",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.deb.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.deb.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.deb.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:b08f94bc0c3a021a01f7c8554e75339ea52430bc1f00305b5edd98ebcaaed7c2"
+          "checksum": "sha256:368170841323886fcb73a01c94b93d13e0d248a0d06ec38cd7c33fa292f412e5"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.deb.sha512",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.deb.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.deb.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.deb.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:8276efbf486bacd6f52be23d559670c473759268772cda5af4c8d396b30323e9"
+          "checksum": "sha256:280c1b825fcc366e2a252de3ee4d97163e4e2b1e1e4c3d511cc465cc7402924c"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.rpm",
-          "size": 3459051,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.rpm",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.rpm",
+          "size": 3332505,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.rpm",
           "content_type": "application/x-redhat-package-manager",
-          "checksum": "sha256:fed0704ac63a727e6977bd4fb531e7c2dbb165f2a42ceb13c2fcc18e4e0f46a4"
+          "checksum": "sha256:711cb4be0b6a1de6b420da8925e1c336513e7fbd2730ebee8aee81b85df6f56c"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.rpm.b3",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.rpm.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.rpm.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.rpm.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:9523cdab96bbde103449ce3270301b44a88e97f7f345cef19865591b68dda774"
+          "checksum": "sha256:c586b147c3af75f07de62f90ac9a97540042bb5edd72aa81499e7118b4a8773a"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.rpm.sha256",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.rpm.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.rpm.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.rpm.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c984b8759ea86f52b25884dada396c29742e837ba8419b04e8026ef1eb64e837"
+          "checksum": "sha256:dd7413b675799563b54d442563d09cc17ad8a9f5c1791aa9671460084eb506d7"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.rpm.sha512",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.rpm.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.rpm.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.rpm.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a1e5204f6bfb93339bdccf01596c4706769e1bc1df4aaba2dd9d685ed3574674"
+          "checksum": "sha256:35389c40ef295ec5226d0b912b4c950ae2a3dd12b6870b5fbf1d04da91f12655"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.tar.xz",
-          "size": 2954916,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.tar.xz",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.tar.xz",
+          "size": 2856248,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:d62123b78c043f88e703c8c90d1d58513115b04bb6163ae3ed5cd2d029d04897"
+          "checksum": "sha256:1e2de815bbe199c99c206ad771e99681f37bdc50d175906e043a4bc491e3e9ea"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.tar.xz.b3",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.tar.xz.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.tar.xz.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.tar.xz.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:77ce2a15156ed923009c3bfb87edcf1dc553e4aca76a65bba34c2c07f41b6818"
+          "checksum": "sha256:f1414333f7c712c0ec105f9a3d3bd4a4225ffb12ec950537ea20e2d81f77e740"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.tar.xz.sha256",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.tar.xz.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.tar.xz.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.tar.xz.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:5c360ee4be5dfe16ab8bdda1852749148545ec324e962f075eea4f9c4db056b8"
+          "checksum": "sha256:dfbc594d25307d5edec74c97928d98abf03dfb2d5affb72b5a15cb2cc30c0c90"
         },
         {
-          "name": "watchexec-2.1.1-powerpc64le-unknown-linux-gnu.tar.xz.sha512",
+          "name": "watchexec-2.1.2-powerpc64le-unknown-linux-gnu.tar.xz.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-powerpc64le-unknown-linux-gnu.tar.xz.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-powerpc64le-unknown-linux-gnu.tar.xz.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:b1e57b40c2b9014f787bbc05fef50acc9458dd041889128b7e599a8044b31f7f"
+          "checksum": "sha256:cf5346668ed08341d3e4ad5e5d0e3d155278e6fae7a0c9675a4481c8be4f3b5d"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.deb",
-          "size": 3695884,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.deb",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.deb",
+          "size": 3496680,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d0913a04ac96417dc75d741daa24aa49fe5cc1e2099cdaae5b59f6b791dad65c"
+          "checksum": "sha256:945ab1607da2b12bf317e1839958ed71c111f2de218f25b15919218ec8f5eb57"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.deb.b3",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.deb.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.deb.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.deb.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:224c56fc18c035ede9069480622b140f70172b491be3950499cd727deff218e0"
+          "checksum": "sha256:a4f14b02545b5e583e986210b7f1d49974cf06683f552ea08f600af898b5db2a"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.deb.sha256",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.deb.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.deb.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.deb.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:17e099d67b38efe5c9ef26e5d09c695709b64a00375f3bc897e577b1c61ab733"
+          "checksum": "sha256:b7152ba29040c18d5332858c78feff600bb15f1e584c59fd039e4a2e7dfd697f"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.deb.sha512",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.deb.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.deb.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.deb.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:2e86af2742e13a9a1eec506c4ae8f540d5c332067b959d9c3cc058048c7e4ed9"
+          "checksum": "sha256:c5f6e2475e4aa5b08db0d7f1664220f87d390403fa09debfc926e8a77d5c414e"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.rpm",
-          "size": 4272398,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.rpm",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.rpm",
+          "size": 4011229,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.rpm",
           "content_type": "application/x-redhat-package-manager",
-          "checksum": "sha256:e6de1c90814546167275c395000400653da2e678edf2203354fc8a7406174af1"
+          "checksum": "sha256:8032263b3583bcf0988f4af81a42b359848f670aeb92a26a6fabb625747e2e83"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.rpm.b3",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.rpm.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.rpm.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.rpm.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d8f7e928b682f17a56ab28e66cb2b94689d64180990e76d9aacd55571f1d92cd"
+          "checksum": "sha256:c6f4db4fe0c60b0cae884833a739bd85c97c7e08f6e486b2b94986b8aa322635"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.rpm.sha256",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.rpm.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.rpm.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.rpm.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:3c6736195c5ed1f4f39f88dd11f69e366a71b756ddb43bd16799f7bb623e0799"
+          "checksum": "sha256:a026b6347fc00ce2c5064fb15acbd6b31fd7260f8761e90d9d42a1f26a049f2c"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.rpm.sha512",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.rpm.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.rpm.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.rpm.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:eb3327e9bce1d59327edc1b6d26cb981c8d632f5b710413568be8040d2be188d"
+          "checksum": "sha256:02744bf452e2c6b1b32d1ff77b4caf72cf2b8a958329e2c36c79ca878c46d17a"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.tar.xz",
-          "size": 3692092,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.tar.xz",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.tar.xz",
+          "size": 3487048,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:b9c212ce96ccc1b9d07ddc302ef32c69bd90138bd7eace9f79402198fcf717ae"
+          "checksum": "sha256:1665d4ed751a14702f6043610f0602c7a6dc8a6b903a896120b5d0b96b506a1d"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.tar.xz.b3",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.tar.xz.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.tar.xz.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.tar.xz.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:3e046df41bea1eba25896134fc1de4ca5a2496508d17635b03c5c805f282dadd"
+          "checksum": "sha256:e6a00fb06410595c24de5482cc416c5eb98de3e8dac00a231893f6c6a0c699e6"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.tar.xz.sha256",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.tar.xz.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.tar.xz.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.tar.xz.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:fbebd060ec87cdd07c3e9fa1f226e3bcb807db3aca5e543c3a4e9600c26d100d"
+          "checksum": "sha256:c5ddf1d1710b5a9180a2b3282c5575030ba6a70282233f774fb5e01f38bb0bdc"
         },
         {
-          "name": "watchexec-2.1.1-s390x-unknown-linux-gnu.tar.xz.sha512",
+          "name": "watchexec-2.1.2-s390x-unknown-linux-gnu.tar.xz.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-s390x-unknown-linux-gnu.tar.xz.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-s390x-unknown-linux-gnu.tar.xz.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:62347d133e4b328aa261ff05fa24121dc36d11c39c7ca71b1c09b0354f92e197"
+          "checksum": "sha256:9fab6c137345ac7fbb266f412d6a5cf6aa2e7550b6654dce9be95375c955e5af"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-apple-darwin.tar.xz",
-          "size": 2515412,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-apple-darwin.tar.xz",
+          "name": "watchexec-2.1.2-x86_64-apple-darwin.tar.xz",
+          "size": 2419080,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-apple-darwin.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:1b0a08f87be88f8572e5ed3f232317c2ae987eb8ae50b703b76e37f07b3ecce5"
+          "checksum": "sha256:9c3b0b4e0143db4cfe1c72100271220929484e66af6520c2436140c0148adad6"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-apple-darwin.tar.xz.b3",
+          "name": "watchexec-2.1.2-x86_64-apple-darwin.tar.xz.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-apple-darwin.tar.xz.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-apple-darwin.tar.xz.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:7b526529f5facc03f1958568f52a100b7c2756c6f9531713138b9fe280654cb6"
+          "checksum": "sha256:baf9769e83af16eeffb0ac9b0aa50b6ec0f7835605873103070b607ce6fd3442"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-apple-darwin.tar.xz.sha256",
+          "name": "watchexec-2.1.2-x86_64-apple-darwin.tar.xz.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-apple-darwin.tar.xz.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-apple-darwin.tar.xz.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:9c7d2ac1eb25eac77738ab0bd25cceb56cf4dd46420a6b4f2e7e5fcb04125be6"
+          "checksum": "sha256:7e65e8fcd5553f044211996a80e21dff2608109ca1b787c4862b8220719dc3dd"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-apple-darwin.tar.xz.sha512",
+          "name": "watchexec-2.1.2-x86_64-apple-darwin.tar.xz.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-apple-darwin.tar.xz.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-apple-darwin.tar.xz.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:da5509c0ed8651675182623d437e32821e0bc34d7b4767dd709a3dff471a0bc2"
+          "checksum": "sha256:bde31f3ca345ae07171d02ad1c602d16591b11d717698644c1a7dcb4109c8cb3"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-pc-windows-msvc.zip",
-          "size": 3785175,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-pc-windows-msvc.zip",
+          "name": "watchexec-2.1.2-x86_64-pc-windows-msvc.zip",
+          "size": 3655650,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:54b88e07fff20c58f57eb34a82b1201f292818ef8f0b3ba0ac17468a7f46cfd9"
+          "checksum": "sha256:458b4b98be3c37d36a33fd9621a18b98c903deed3bc0585e5bb3589e4fd58f6f"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-pc-windows-msvc.zip.b3",
+          "name": "watchexec-2.1.2-x86_64-pc-windows-msvc.zip.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-pc-windows-msvc.zip.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-pc-windows-msvc.zip.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:7604c8e84749c3066c6559d15828db7dd7d976dad0cb587b5357eda6342a93e4"
+          "checksum": "sha256:5caeeca9a3b622eb3702bbc2437da8d29b1db93603b5152d9ef0f8f71c0130c4"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-pc-windows-msvc.zip.sha256",
+          "name": "watchexec-2.1.2-x86_64-pc-windows-msvc.zip.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-pc-windows-msvc.zip.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-pc-windows-msvc.zip.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:4bdeef23ad334a55e5a3476b50dee45c85a706008f6f35e2d0efe11d749f36d3"
+          "checksum": "sha256:6de92d87178bf38915bb243a4f7c8b5adb56393cbb903deb8b6ab8d1f1f99e6a"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-pc-windows-msvc.zip.sha512",
+          "name": "watchexec-2.1.2-x86_64-pc-windows-msvc.zip.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-pc-windows-msvc.zip.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-pc-windows-msvc.zip.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:3369a0f5618a953251ae0ae48b1e3b13e3fe7b35279d5cc460151bcdc3252287"
+          "checksum": "sha256:2864788359b4b5ff0c4dc05a6c52e6c0aad34ad3346566447a7c3c490768f759"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.deb",
-          "size": 3157664,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.deb",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.deb",
+          "size": 3071340,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:fcb8f17d132b82e190a9d716a2a5ac536c88019550b08775dcbd39e13bda5ea9"
+          "checksum": "sha256:367cecdfd5474828bc993510634310ca0a193c06811a17998e66ca532f8658d0"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.deb.b3",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.deb.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.deb.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.deb.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:8087ceb772ba3c7a7a9ac20b75b08126621f323fb0020a5b06ccfb5afe2c2986"
+          "checksum": "sha256:95f4e0e8e02932ff0a428e43b78bfbcb5876256d4717deeaefb4bd0d9cff8fdf"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.deb.sha256",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.deb.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.deb.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.deb.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:bc49ea631da3f8bc8b9afea0ec8d1375a8772686ec4e8f2cf7790798a88cc557"
+          "checksum": "sha256:bd293c90c27f231e3854520a3be3210733f05a693ae71f6d8789205e4a101847"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.deb.sha512",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.deb.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.deb.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.deb.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:26c4acc46b440d5b25ea6747adca301e7864dc86aba8b50832f4e568043d1202"
+          "checksum": "sha256:13c5d81511b602d248edd344969762acdd72dc1a1bf9cb08ec2a53debcf5387c"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.rpm",
-          "size": 3423300,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.rpm",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.rpm",
+          "size": 3321539,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.rpm",
           "content_type": "application/x-redhat-package-manager",
-          "checksum": "sha256:ffbd3115d8b22ab93064fa71532a2ab9fa9908edcf19458fc06ef94c089ffe70"
+          "checksum": "sha256:df28d0a25e5ed0435dd99ce54447734b8090b31db6f369688a498c7ea9b7a7a1"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.rpm.b3",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.rpm.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.rpm.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.rpm.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:9ae545adbd13392284d8c5961886fac5f6171f2bb26ab4ac96c65e96f422cb0c"
+          "checksum": "sha256:a77cf03b00e0cea60245ca08a08b55429c73f91301c13a9f16a0de9882f41cf0"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.rpm.sha256",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.rpm.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.rpm.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.rpm.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a56165606197aefc5e470175c9a8532e4ca167f48fb05b0a718e768ee6e3ca12"
+          "checksum": "sha256:ccbd58d3f37e5a22dd6af046eed2265509ab128f04903ac41624ee99bea0e9e2"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.rpm.sha512",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.rpm.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.rpm.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.rpm.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:00c0cd27c742ae5fae9fea4b066d8987b3830e2d5e3c64979ad34fe38ed95360"
+          "checksum": "sha256:e6733060e44e04fa7c3fbb43ae8d7e790f6129a4a3db682643e6d746a0116e75"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.tar.xz",
-          "size": 3154324,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.tar.xz",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.tar.xz",
+          "size": 3061984,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:b9c111194a0986a121cfc10e8efd2a183f03ce95ccb3b82e6f53e98a5baf0b8b"
+          "checksum": "sha256:81d3dc1df7fb21f380ff642ccc5a69c0a32f9798328ecf9432a910067d9b234e"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.tar.xz.b3",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.tar.xz.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.tar.xz.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.tar.xz.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:9d240458a5b564bbdb8b881803de9290d1387f2111fb9a4ddf454557c62f130a"
+          "checksum": "sha256:8847a6f0a213ad9aace633cec2a72ac7ba24ef043abf5699b84a397aef3a7b79"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.tar.xz.sha256",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.tar.xz.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.tar.xz.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.tar.xz.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:add2f96a7f2db656fc0eae5e66b34db3e4f67d00e82cad1cad118416df1d59fa"
+          "checksum": "sha256:35b631503b9982d9f8e095918897ecd9adfaffc3dba88c5859dfa262c76f6749"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-gnu.tar.xz.sha512",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-gnu.tar.xz.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-gnu.tar.xz.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-gnu.tar.xz.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:bc40810621019866c5ec5c87f456e7775b75c90b4b5bca299aa83a7b0a35b4cc"
+          "checksum": "sha256:938190d2a2eeef21456767e76d9c2e29582e17f40bc3627d6c51a54dfef3b73a"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.deb",
-          "size": 3270192,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.deb",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.deb",
+          "size": 3188188,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:95e27599c1f73192a8e0c9ac352b3de528f91b613ec4f7c219759c7e8d558406"
+          "checksum": "sha256:1e85faf0fba4224c159f70e3957828869c6d0c47bd405f4f939720f8ef512807"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.deb.b3",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.deb.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.deb.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.deb.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:e19ef0863884bef20d64653b5ce524b171c844574c6b0ba6c7acb22e635e79b0"
+          "checksum": "sha256:d96234e9cb44ab75f3d7d5d2c9f01f6f5df082377cff35158ed226a53e48866d"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.deb.sha256",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.deb.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.deb.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.deb.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c6ff6434a15bb4029054925715e9ffe2c60a80ff423d778865f5c1ad964f313d"
+          "checksum": "sha256:46ecd6ed1a0d043c27d7bd2083f01bef141d41bcbcc357e0a2b31f838d6dc5f3"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.deb.sha512",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.deb.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.deb.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.deb.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a40a8fc2e1a44f6944e28ed3cdb3978709669457f1b12eb41f8b333a3a77cc95"
+          "checksum": "sha256:397153e089dde4564f42cbc23730a7d9b077d8b4efb9275cc03afa3aa103b2c7"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.rpm",
-          "size": 3552762,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.rpm",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.rpm",
+          "size": 3452521,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.rpm",
           "content_type": "application/x-redhat-package-manager",
-          "checksum": "sha256:1f2543417abe0db1d233aaff4678866028ea1e1c31309dc4a9ca5c9f9bcd7aff"
+          "checksum": "sha256:17ab0d4776d9b3d5a79c87df02970e73162201496c27d4e99e7453c5fdfa8c7d"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.rpm.b3",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.rpm.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.rpm.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.rpm.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:b0133c382452938fd567ab14511bd5a3e0c2726ed2e180b4596529048740ff18"
+          "checksum": "sha256:07870775cc4c5c664fe668b72c17f45c8b92f65441420f06c7329babba8015f2"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.rpm.sha256",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.rpm.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.rpm.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.rpm.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:786cb2d11a6655ea20ea3f69ae9b3cabf1e970a56e02b670374bc9918c76a48d"
+          "checksum": "sha256:d878798c3e19436fef0260890219453a3e05953a9a46515f53a044404e72b82f"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.rpm.sha512",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.rpm.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.rpm.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.rpm.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:b238d01e9d774abed2c37922fe0808acb26432a6fbf9f459088689bf8a4747fb"
+          "checksum": "sha256:afc138ce896edd311c51198383c8b2ac20824bb5edeba82ff02c52b6c38902f3"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.tar.xz",
-          "size": 3265912,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.tar.xz",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.tar.xz",
+          "size": 3179804,
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:aefbb131d885cfc906cf7c9850666df41f5f8fb02a81404f24249cd047abd5bf"
+          "checksum": "sha256:f0c712f5d3fb9ecc16eb748a5126e010f9130e9a4c08f49b545dd2611590bdf1"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.tar.xz.b3",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.tar.xz.b3",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.tar.xz.b3",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.tar.xz.b3",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:33614124940cc805a7cb0b89e65c380f47910cba1d6eb50b211eba4206212c1b"
+          "checksum": "sha256:a1a2c9c6616a89f80ba7e800ce43d0e142924db689de800c722505029cdcfb0d"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.tar.xz.sha256",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.tar.xz.sha256",
           "size": 65,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.tar.xz.sha256",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.tar.xz.sha256",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:35e63f60152353d8c1e9efe60f83e29a26ed21e7bd5d90b3bfef3b89a8794f44"
+          "checksum": "sha256:5dd9b882c5474463377715ac8ba507a8c5caf30e2d51a34d0e2e13fb10982fb8"
         },
         {
-          "name": "watchexec-2.1.1-x86_64-unknown-linux-musl.tar.xz.sha512",
+          "name": "watchexec-2.1.2-x86_64-unknown-linux-musl.tar.xz.sha512",
           "size": 129,
-          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.1/watchexec-2.1.1-x86_64-unknown-linux-musl.tar.xz.sha512",
+          "url": "https://github.com/watchexec/watchexec/releases/download/v2.1.2/watchexec-2.1.2-x86_64-unknown-linux-musl.tar.xz.sha512",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c8a6107e437cb2a56c6a3037c011b48ddba3551159278a82b0d7093b1a93e9cc"
+          "checksum": "sha256:44ef9318dff94db945c5b2a142f60ae870dae6195b2bc2767bc0d2ed46ccf44a"
         }
       ]
     }
