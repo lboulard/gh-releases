@@ -1,63 +1,62 @@
 [gh]
-username = "lboulard"
-outdir = "releases"
+path = "releases"
 
 # https://github.com/mvdan/sh/releases
 [gh.tools.shfmt]
 project = "mvdan/sh"
-output = "shfmt.json"
+json = "shfmt.json"
 
 # https://github.com/sharkdp/bat/releases
 [gh.tools.batcat]
 project = "sharkdp/bat"
-output = "batcat.json"
+json = "batcat.json"
 
 # https://github.com/casey/just/releases
 [gh.tools.just]
 project = "casey/just"
-output = "just-makelike.json"
+json = "just-makelike.json"
 
 # https://github.com/go-task/task/releases
 [gh.tools.task]
 project = "go-task/task"
-output = "go-task.json"
+json = "go-task.json"
 
 # https://github.com/dandavison/delta
 [gh.tools.delta]
 project = "dandavison/delta"
-output = "delta.json"
+json = "delta.json"
 
 # https://github.com/charmbracelet/glow
 [gh.tools.glow]
 project = "charmbracelet/glow"
-output = "glow.json"
+json = "glow.json"
 
 # https://github.com/jesseduffield/lazygit
 [gh.tools.lazygit]
 project = "jesseduffield/lazygit"
-output = "lazygit.json"
+json = "lazygit.json"
 
 # https://shellcheck.net/
 [gh.tools.shellcheck]
 project = "koalaman/shellcheck"
-output = "shellcheck.json"
+json = "shellcheck.json"
 
 # https://age-encryption.org/
 [gh.tools.age]
 project = "FiloSottile/age"
-output = "age-encryption.json"
+json = "age-encryption.json"
 
 # https://github.com/junegunn/fzf
 [gh.tools.fzf]
 project = "junegunn/fzf"
-output = "fzf.json"
+json = "fzf.json"
 
 # https://github.com/uncrustify/uncrustify
 [gh.dev.uncrustify]
 project = "uncrustify/uncrustify"
-output = "uncrustify.json"
+json = "uncrustify.json"
 
 # https://github.com/watchexec/watchexec
 [gh.tools.watchexec]
 project = "watchexec/watchexec"
-output = "watchexec.json"
+json = "watchexec.json"

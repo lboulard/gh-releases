@@ -133,8 +133,8 @@ def get_releases(gw, name, args, count):
 
 def get_output(name, args):
     output = name + ".json"
-    if "output" in args:
-        output = args["output"]
+    if "json" in args:
+        output = args["json"]
     if not output:
         print(f"{name}: ** ERROR missing output filename", file=sys.stderr)
         return None
@@ -221,7 +221,7 @@ def main(select, log_level, configs):
         config = tomli.load(config_file)
         if "gh" in config:
             gh_config = config["gh"]
-            outdir = gh_config.get("outdir", "")
+            outdir = gh_config.get("path", "")
             projects = get_projects(gh_config)
             if select:
                 projects = {k: p for k, p in projects.items() if k in select}
