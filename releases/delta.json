@@ -83,7 +83,7 @@
           "size": 2287756,
           "url": "https://github.com/dandavison/delta/releases/download/0.17.0/git-delta_0.17.0_arm64.deb",
           "content_type": "application/octet-stream",
-          "checksum": ""
+          "checksum": "sha256:5068020bdc6454928586f65c2529990d40730b6a573363bf8af16dd86cbbe0a9"
         },
         {
           "name": "git-delta_0.17.0_armhf.deb",
