@@ -38,9 +38,14 @@ if DEBUG_HTTP:
 
 
 def make_checksums(name, releases, session=None, cache=None):
+    # fails when no releases exists
+    ok = False
     for release in releases:
+        ok = True
         title = release.title or release.tag
         for asset in release.assets:
+            if not ok:
+                break
             from_cache, size, sha256 = False, -1, ""
             ex = None
             try:
@@ -51,17 +56,24 @@ def make_checksums(name, releases, session=None, cache=None):
                     asset.checksum = "sha256:" + sha256
             except Exception as e:
                 ex = e
+                ok = False
             finally:
                 print(f"{name}: SHA256 {title} / {asset.name}", end="")
                 if size != asset.size:
                     print(f" size {size} != {asset.size} mismatch", flush=True)
+                    ok = False
                 elif sha256:
                     hint = " (no change)" if from_cache else ""
                     print(f" sha256:{sha256}{hint}", flush=True)
                 elif ex:
                     print(str(ex), flush=True)
+                    ok = False
                 else:
                     print(flush=True)
+                    ok = False
+        if not ok:
+            break
+    return ok
 
 
 class GithubWorker:
@@ -105,10 +117,11 @@ class GithubWorker:
                 continue
             if len(releases) == count:
                 break
-        make_checksums(name, releases, session=self.session, cache=self.cache)
-        return dict(
-            name=name, project=repo.full_name, url=repo.html_url, releases=releases
-        )
+        if make_checksums(name, releases, session=self.session, cache=self.cache):
+            return dict(
+                name=name, project=repo.full_name, url=repo.html_url, releases=releases
+            )
+        return None
 
 
 def save_to(output_path, releases):
@@ -121,14 +134,14 @@ def get_releases(gw, name, args, count):
     print(f"{name}: ... getting {count} release{'s' if count > 1 else ''}")
     try:
         releases = gw.get_releases(name, args["project"], count)
-        return True, releases
+        return bool(releases), releases
     except (BadCredentialsException, TwoFactorException) as e:
         print("FATAL: GitHub API failed by raising unrecoverable exception")
         print(e)
     except (GithubException, RateLimitExceededException) as e:
         print("ERROR: GitHub API failed by raising exception")
         print(e)
-    return False
+    return False, None
 
 
 def get_output(name, args):
