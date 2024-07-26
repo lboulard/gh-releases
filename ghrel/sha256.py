@@ -16,6 +16,18 @@ def to_http_date(date):  # type: (datetime) -> str
     return date.strftime("%a, %d %b %Y %H:%M:%S GMT")
 
 
+class AuthenticationException(Exception):
+    pass
+
+
+class GetSha256Exception(Exception):
+    pass
+
+
+class GatewayException(Exception):
+    pass
+
+
 def _get_sha256(
     url, timeout=None, session=None, cache=None
 ):  # type: (str, int, requests.Session | None, Cache|None) -> (int, str | None)
@@ -54,11 +66,17 @@ def _get_sha256(
                 checksum, size = entry.checksum, entry.size
         else:
             _ = response.content
-            print(
-                "ERROR: %s returned %d (%s)"
-                % (url, response.status_code, response.reason),
-                file=sys.stderr,
+            message = "ERROR: %s returned %d (%s)" % (
+                url,
+                response.status_code,
+                response.reason,
             )
+            print(message, file=sys.stderr)
+            if response.status_code == 403:
+                raise AuthenticationException(message)
+            elif response.status_code in range(500, 600):
+                raise GatewayException(message)
+            raise GetSha256Exception(message)
         return from_cache, size, checksum
 
 
@@ -72,15 +90,21 @@ def get_sha256(
         except requests.exceptions.Timeout as e:
             if tentative == 0:
                 raise
-            # safety belt: min 30s, max 10mn
-            delay = max(10 * 60, min(30, delay))
-            # introduce jitter of 30 seconds
-            wait = int(random.uniform(delay - 15, delay + 15)) + slip
-            slip = delay - wait
-            delay *= 2
-            print(" ** %s" % str(e))
-            print(
-                " ** %d tentative%s left, retrying in %s..."
-                % (tentative, "s" if tentative > 1 else "", timedelta(seconds=wait))
-            )
-            time.sleep(wait)
+        except AuthenticationException as e:
+            if tentative == 0:
+                raise
+        except GatewayException as e:
+            if tentative == 0:
+                raise
+        # safety belt: min 30s, max 10mn
+        delay = max(10 * 60, min(30, delay))
+        # introduce jitter of 30 seconds
+        wait = int(random.uniform(delay - 15, delay + 15)) + slip
+        slip = delay - wait
+        delay *= 2
+        print(" ** %s" % str(e))
+        print(
+            " ** %d tentative%s left, retrying in %s..."
+            % (tentative, "s" if tentative > 1 else "", timedelta(seconds=wait))
+        )
+        time.sleep(wait)
