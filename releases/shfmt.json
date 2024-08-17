@@ -4,72 +4,72 @@
   "url": "https://github.com/mvdan/sh",
   "releases": [
     {
-      "title": "v3.8.0",
-      "description": "This release drops support for Go 1.19 and 1.20 and includes many features and bugfixes, such as improving EditorConfig support in `shfmt`.\r\n\r\n- **cmd/shfmt**\r\n  - Support EditorConfig language sections such as `[[shell]]` - #664\r\n  - Add `--apply-ignore` for tools and editors - #1037\r\n- **syntax**\r\n  - Allow formatting redirects before all command argumetnts - #942\r\n  - Support brace expansions with uppercase letters - #1042\r\n  - Unescape backquotes in single quotes within backquotes - #1041\r\n  - Better error when using `function` in POSIX mode - #993\r\n  - Better column numbers for escapes inside backquotes - #1028\r\n- **interp**\r\n  - Support parentheses in classic test commands - #1036\r\n  - Determine access to a directory via `unix.Access` - #1033\r\n  - Support subshells with `FuncEnviron` as `Env` - #1043\r\n  - Add support for `fs.DirEntry` via `ReadDirHandler2`\r\n- **expand**\r\n  - Add support for `fs.DirEntry` via `ReadDir2`\r\n  - Support zero-padding in brace expansions - #1042\r\n\r\nA special thanks to all the contributors to this release! @theclapp @slabstone @MaienM \r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!\r\n\r\nBinaries built on `go version go1.22.0 linux/amd64` with:\r\n\r\n\tCGO_ENABLED=0 go build -trimpath -ldflags=\"-w -s -X=main.version=v3.8.0\"",
-      "tag": "v3.8.0",
+      "title": "",
+      "description": "This release drops support for Go 1.21 and includes many fixes.\r\n\r\n- **cmd/shfmt**\r\n  - Switch the diff implementation to remove one dependency\r\n- **syntax**\r\n  - Protect against overflows in position offset integers\r\n- **interp**\r\n  - Use `os.Pipe` for stdin to prevent draining by subprocesses - #1085\r\n  - Support cancelling reads in builtins when stdin is a file - #1066\r\n  - Support the `nocaseglob` bash option - #1073\r\n  - Support the Bash 5.2 `@k` parameter expansion operator\r\n  - Support the `test -O` and `test -G` operators on non-Windows - #1080\r\n  - Support the `read -s` builtin flag - #1063\r\n- **expand**\r\n  - Add support for case insensitive globbing - #1073\r\n  - Don't panic when pattern words are nil - #1076\r\n\r\nA special thanks to @theclapp for their contributors to this release!\r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!\r\n\r\nBinaries built on `go version go1.23.0 linux/amd64` with:\r\n\r\n\tCGO_ENABLED=0 go build -trimpath -ldflags=\"-w -s -X=main.version=v3.9.0\"",
+      "tag": "v3.9.0",
       "assets": [
         {
           "name": "sha256sums.txt",
           "size": 736,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/sha256sums.txt",
+          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/sha256sums.txt",
           "content_type": "text/plain",
-          "checksum": "sha256:0b863687fd5dc77b1df2b0af5d2d6174af76a145a01c3fb32ca0170f69e48067"
+          "checksum": "sha256:a96172626532925725c7741fee51a91a68edd80930bd7dadb5396b5ed923a20c"
         },
         {
-          "name": "shfmt_v3.8.0_darwin_amd64",
-          "size": 2747696,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_darwin_amd64",
+          "name": "shfmt_v3.9.0_darwin_amd64",
+          "size": 2863408,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_darwin_amd64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c0218b47a0301bb006f49fad85d2c08de23df303472834faf5639d04121320f8"
+          "checksum": "sha256:3e1ac72e91ba88ce483766e57a1aa41fa502a0f9d5a47f5f5cd3663badcecee4"
         },
         {
-          "name": "shfmt_v3.8.0_darwin_arm64",
-          "size": 2736466,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_darwin_arm64",
+          "name": "shfmt_v3.9.0_darwin_arm64",
+          "size": 2836610,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_darwin_arm64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:1481240d2a90d4f0b530688d76d4f9117d17a756b6027cfa42b96f0707317f83"
+          "checksum": "sha256:7d89694369a516b2d5a68b31f8be2da04c91f50fb7cdd8e41003081b814ba3e8"
         },
         {
-          "name": "shfmt_v3.8.0_linux_386",
-          "size": 2547864,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_linux_386",
+          "name": "shfmt_v3.9.0_linux_386",
+          "size": 2650264,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_linux_386",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:e281dee51898a2ae3b05569e97a27e8d34c4f1ae000aa1dd829f9c9eb26b6c50"
+          "checksum": "sha256:cfc2001f820d67224d78fdad3f26e35f4ebd2e7c2f9509522cb55c9b9eb896b3"
         },
         {
-          "name": "shfmt_v3.8.0_linux_amd64",
-          "size": 2703512,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_linux_amd64",
+          "name": "shfmt_v3.9.0_linux_amd64",
+          "size": 2826392,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_linux_amd64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:27b3c6f9d9592fc5b4856c341d1ff2c88856709b9e76469313642a1d7b558fe0"
+          "checksum": "sha256:d99b06506aee2ac9113daec3049922e70dc8cffb84658e3ae512c6a6cbe101b6"
         },
         {
-          "name": "shfmt_v3.8.0_linux_arm",
-          "size": 2687128,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_linux_arm",
+          "name": "shfmt_v3.9.0_linux_arm",
+          "size": 2818200,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_linux_arm",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:eb6918775a741eba70d12cd6574a50c4ccaa5c930bbdb118b5428418fedcea3e"
+          "checksum": "sha256:8415577278cb535fbb348ab4db02123ad885d3539519a40f84ba4092ced52993"
         },
         {
-          "name": "shfmt_v3.8.0_linux_arm64",
-          "size": 2687128,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_linux_arm64",
+          "name": "shfmt_v3.9.0_linux_arm64",
+          "size": 2818200,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_linux_arm64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:27e1f69b0d57c584bcbf5c882b4c4f78ffcf945d0efef45c1fbfc6692213c7c3"
+          "checksum": "sha256:5e511463068f3d27ae1b087fb597fb9e8ad865be2ac501964a222a834fc1c463"
         },
         {
-          "name": "shfmt_v3.8.0_windows_386.exe",
-          "size": 2685440,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_windows_386.exe",
+          "name": "shfmt_v3.9.0_windows_386.exe",
+          "size": 2857984,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_windows_386.exe",
           "content_type": "application/x-msdownload",
-          "checksum": "sha256:7bca75d21d99a256b79db258c8e6411a99b6f6a990c937663621650cec95ede2"
+          "checksum": "sha256:61ad0af789b3ed158f5d593d7ee3301318b7cba2d84c265d8c30af0837315f28"
         },
         {
-          "name": "shfmt_v3.8.0_windows_amd64.exe",
-          "size": 2874368,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_windows_amd64.exe",
+          "name": "shfmt_v3.9.0_windows_amd64.exe",
+          "size": 3072000,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_windows_amd64.exe",
           "content_type": "application/x-msdownload",
-          "checksum": "sha256:91230a6d2d4dbb52e9c0bb134acba526f7880bfd3dfd1ffdde66e9f393d7a646"
+          "checksum": "sha256:4ea136134248ac8ebbf9103370ddcd951b515a9e9bfba903252f12fd067bb5e9"
         }
       ]
     }
