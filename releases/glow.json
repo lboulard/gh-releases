@@ -4,394 +4,408 @@
   "url": "https://github.com/charmbracelet/glow",
   "releases": [
     {
-      "title": "v1.5.1",
-      "description": "## What's Changed\r\n* fix: rm emoji from package description by @caarlos0 in https://github.com/charmbracelet/glow/pull/453\r\n* fix: improve editor handling by @caarlos0 in https://github.com/charmbracelet/glow/pull/449\r\n* fix: do not use deprecated func by @caarlos0 in https://github.com/charmbracelet/glow/pull/451\r\n* docs: fix typos by @kianmeng in https://github.com/charmbracelet/glow/pull/471\r\n* chore(deps): bump actions/setup-go from 3 to 4 by @dependabot in https://github.com/charmbracelet/glow/pull/478\r\n* fix: lazily init UI by @muesli in https://github.com/charmbracelet/glow/pull/494\r\n\r\n* * *\r\n\r\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\r\n\r\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
-      "tag": "v1.5.1",
+      "title": "v2.0.0",
+      "description": "# Hello v2!\r\n\r\nThis release contains a massive amount of bug fixes and rendering improvements, many of which come by way of [Glamour v0.8.0](https://github.com/charmbracelet/glamour/releases/tag/v0.8.0) which was released a few weeks ago. As a bonus, the latest version of Glamour includes support for Tokyo Night.\r\n\r\n```bash\r\nglow -s \"tokyo-night\"\r\n```\r\n\r\n<img alt=\"Tokyo Night x Glamour\" src=\"https://github.com/charmbracelet/glamour/blob/master/styles/gallery/tokyo-night.png\" width=\"600\">\r\n\r\nAdditionally, the stash feature has been removed.\r\n\r\n## Changelog\r\n\r\n### New!\r\n\r\n* d89d79a00ce257fca142b6b4d3b20ea25e377ca7: feat: --preserve-new-lines (#623) (@caarlos0)\r\n* b1d377237d81d8149f6c0dd3c70ddacd2ac2b5c5: feat: add 'r' to refresh list and document (#624) (@caarlos0)\r\n* 96d2a38e67d03c08cecb89e8317512bc401825d1: feat: allow --width=0 to disable wordwrap (#366) (@applejag)\r\n* fe066f214006c51cd87e0e36e86c06cf52dd97d5: feat: allow config from CHARM_CONFIG_HOME and XDG_CONFIG_HOME (#621) (@caarlos0)\r\n* 9ebe39cd090ac49d4345ba5c8459328ecd146b91: feat: improve gitlab/github readme url (#456) (@caarlos0)\r\n* f1cf0ba7856ec7d8f203a1a2c9b8597b3a0cdb14: feat: man pages (@caarlos0)\r\n* 597e56bad4599857dde4c36174ce7a5ec371b7cc: feat: open editor in current line (@caarlos0)\r\n* d7032fe57f7aa06e3e8f04f810db6796ed8fe42d: feat: shell completions (@caarlos0)\r\n* 2d5bd3b7995fc7af57d72646d41bb7ad204a6df9: feat: show line numbers configuration option (@caarlos0)\r\n* 0dcf1271dd6012d686998c6e42efe9c2fea1a476: feat: suspend (@caarlos0)\r\n* c991ec475d777f9656b29fd861ff4b38f5d8313c: feat: use x/editor (#543) (@caarlos0)\r\n\r\n### Fixed!\r\n\r\n* 9c79fa1b48d72ed8fdf60517d374790bb694a251: fix(ci): remove soft-serve workflow (@aymanbagabas)\r\n* bccf3d0cb7a8d87aff73061ba0b47873c3754ac5: fix(ci): update coverage workflow (@aymanbagabas)\r\n* 08c564c8588e972b920807cca8e5335ddbd6632f: fix: --all bypass .gitignore rules (#285) (#504) (@aitva)\r\n* 8e5139657547918b8e83c544cf68ec1e7e87b7c4: fix: check other possible readme paths/branches (#450) (@caarlos0)\r\n* 1133e5047b24cae6a932c15189f81897b74697a4: fix: config failing in tests (#625) (@caarlos0)\r\n* 2288311e82f616abe9d87f76dbefacd3f5bb0f99: fix: do not hard fail if no config (@caarlos0)\r\n* 821d51da131170be16469c0692a6dca8f3ccc540: fix: do not show absolute path as note (@caarlos0)\r\n* 247c707b25ad07808b5a8fc6830b78740fa89dca: fix: glow URL (@caarlos0)\r\n* a1a85636eafc36192eb1efe110f4f79c2b4eb74a: fix: handle not being able to create log file (@caarlos0)\r\n* b80e8312f214b662ac298fb9c20c26b903e0f9b2: fix: handle permission denied (@caarlos0)\r\n* 54dd62a2a43d36e10d075b2b3fe9b0f637f2e2b9: fix: handle running inside a snap (#527) (@caarlos0)\r\n* ad01f380bd85a9aee962050f83e22c1ad8069145: fix: improve line no (@caarlos0)\r\n* f44e5b5f5c431eaa6451aa62841659b4fdad00b3: fix: improve message (@caarlos0)\r\n* 7e471f17877ce2dd69a4f443f6b0c9bf0f95382d: fix: lint issue (@caarlos0)\r\n* e4cacf7319340b95d6d7d9059218c32251bf9b11: fix: mkdir cache dir (@caarlos0)\r\n* 1407793c5d11ceed9086c9779322617e633067a0: fix: pass color profile down to glamour (#626) (@caarlos0)\r\n* 9a3f7a19cbc8b5f272f798041f5f2917c3ccbb27: fix: replace string concatenation in loop with string builder (#505) (@appgurueu)\r\n* cd99146e9ea95e0b74f82e317f9d2cdb977d3684: fix: update codeowners (#637) (@caarlos0)\r\n* 3f9102d1162191c4523c1f9fcf109215e4dce6da: fix: yet another log handling fix (@caarlos0)\r\n\r\n### Deps\r\n\r\n* c89c8bd6e78de0e7d3a30d5b44b14e598ccb443e: feat: update glamour (#634) (@caarlos0)\r\n* 4578bc149a6d1400edb4ad84bcf0819a822556bc: feat: updating glamour (#631) (@caarlos0)\r\n\r\n### Other Stuff\r\n\r\n* d2e7742a6abb52866c69d71e430e3eee82785148: chore(ci): enable gofumpt (@aymanbagabas)\r\n* 736e77dbc66ac95913b77e06095311546e32e2cb: feat!: rename module to /v2 (#640) (@caarlos0)\r\n\r\n---\r\n\r\n<details>\r\n<summary>Verifying the artifacts</summary>\r\n\r\nFirst, download the [`checksums.txt` file](https://github.com/charmbracelet/glow/releases/download/2.0.0/checksums.txt), for example, with `wget`:\r\n\r\n```bash\r\nwget 'https://github.com/charmbracelet/glow/releases/download/v2.0.0/checksums.txt'\r\n```\r\n\r\nThen, verify it using [`cosign`](https://github.com/sigstore/cosign):\r\n\r\n```bash\r\ncosign verify-blob \\\r\n  --certificate-identity 'https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main' \\\r\n  --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \\\r\n  --cert 'https://github.com/charmbracelet/glow/releases/download/v2.0.0/checksums.txt.pem' \\\r\n  --signature 'https://github.com/charmbracelet/glow/releases/download/v2.0.0/checksums.txt.sig' \\\r\n  ./checksums.txt\r\n```\r\n\r\nIf the output is `Verified OK`, you can safely use it to verify the checksums of other artifacts you downloaded from the release using `sha256sum`:\r\n\r\n```bash\r\nsha256sum --ignore-missing -c checksums.txt\r\n```\r\n\r\nDone! You artifacts are now verified!\r\n\r\n</details>\r\n\r\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\r\n\r\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).\r\n\r\n",
+      "tag": "v2.0.0",
       "assets": [
         {
           "name": "checksums.txt",
-          "size": 4760,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/checksums.txt",
+          "size": 5300,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/checksums.txt",
           "content_type": "text/plain; charset=utf-8",
-          "checksum": "sha256:87a388801bc9dcee6eae7fe9d7e6b4b878a8ca17ab7aa4e965b9f669dbc3565b"
+          "checksum": "sha256:c19fbbad3f2e72a383bd43e22e2a3d40739ce79d96c40f21d9e34d7828dab8eb"
         },
         {
           "name": "checksums.txt.pem",
-          "size": 3156,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/checksums.txt.pem",
+          "size": 3200,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/checksums.txt.pem",
           "content_type": "application/x-x509-ca-cert",
-          "checksum": "sha256:b53455bdc4d9e10701dacde4b3f541611cb44f49d85cfc440d82c099f1e5acd9"
+          "checksum": "sha256:cccf0986613f9ddbc3eb891f1b0ffef3cb438f15d33365b5adcf12354828bbf1"
         },
         {
           "name": "checksums.txt.sig",
           "size": 96,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/checksums.txt.sig",
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/checksums.txt.sig",
           "content_type": "application/pgp-signature",
-          "checksum": "sha256:77f25dd08162f1d09dd9302b8f41552b7ca0d55c2c646d01038c60966d0f0a42"
+          "checksum": "sha256:4cb2bb58855602ca12703e88d2b542aa8da349d37605d47ff89d8e880203ae9b"
         },
         {
-          "name": "glow-1.5.1.aarch64.rpm",
-          "size": 6104031,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow-1.5.1.aarch64.rpm",
+          "name": "glow-2.0.0-1.aarch64.rpm",
+          "size": 5772466,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow-2.0.0-1.aarch64.rpm",
           "content_type": "application/x-rpm",
-          "checksum": "sha256:1fdfb9cb0c11d7da18571b494a95d57b31efd40acf55e997dc36760ff29a4ed3"
+          "checksum": "sha256:ed8e6282685bdbbec8d0c2ed4113790cf1ba063820a5f0f0bb888b04d95a7225"
         },
         {
-          "name": "glow-1.5.1.armv7hl.rpm",
-          "size": 6436917,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow-1.5.1.armv7hl.rpm",
+          "name": "glow-2.0.0-1.armv7hl.rpm",
+          "size": 5900617,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow-2.0.0-1.armv7hl.rpm",
           "content_type": "application/x-rpm",
-          "checksum": "sha256:633110c8cfebfb3acf3dc381b00c7a88f6eefcacf28f099adf0ead39f812e74d"
+          "checksum": "sha256:52dee73caa4a275475de949d9ade8f39328aa272faa7dc7e737fa003129016e1"
         },
         {
-          "name": "glow-1.5.1.i386.rpm",
-          "size": 6263851,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow-1.5.1.i386.rpm",
+          "name": "glow-2.0.0-1.i386.rpm",
+          "size": 5823274,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow-2.0.0-1.i386.rpm",
           "content_type": "application/x-rpm",
-          "checksum": "sha256:056cce8577e78f4f394f6f72fda3e56458396ab615df58e8b69bf4951e7e71e6"
+          "checksum": "sha256:7f002911cfde3f3779fdab126162b2d568f56b36379c7a36fff3fa16cc91b78d"
         },
         {
-          "name": "glow-1.5.1.tar.gz",
-          "size": 554314,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow-1.5.1.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:39018a314578f34e50e3132b9d9c103492422d17cc4a87740941786293f9188f"
-        },
-        {
-          "name": "glow-1.5.1.tar.gz.sbom",
-          "size": 39778,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow-1.5.1.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:4922681bdec1e34c164fce84b4868444dc570d4e2c8bd0d9969affb55771b427"
-        },
-        {
-          "name": "glow-1.5.1.x86_64.rpm",
-          "size": 6816824,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow-1.5.1.x86_64.rpm",
+          "name": "glow-2.0.0-1.x86_64.rpm",
+          "size": 6322367,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow-2.0.0-1.x86_64.rpm",
           "content_type": "application/x-rpm",
-          "checksum": "sha256:eed5a9b8c51d62fe3cd7bcaa9ce8d144d94316c218766b38cc9b124f5b909b4a"
+          "checksum": "sha256:abcc4696f830d981d935e23fb4ecff6f565a671a46d0bc136089d6bacd3bc980"
         },
         {
-          "name": "glow_1.5.1_aarch64.apk",
-          "size": 6111020,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_1.5.1_aarch64.apk",
+          "name": "glow-2.0.0.tar.gz",
+          "size": 522353,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow-2.0.0.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:dbdf2910d50865fab257f6f16130ca7c1106032bef159e1bf164327486cab24f"
+        },
+        {
+          "name": "glow-2.0.0.tar.gz.sbom.json",
+          "size": 95551,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow-2.0.0.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:7a71f3a48af74dfc0da7d55ed054a09653f7c15e810579d3780c0581d41a9b8e"
+        },
+        {
+          "name": "glow_2.0.0_aarch64.apk",
+          "size": 5768186,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_aarch64.apk",
           "content_type": "application/vnd.android.package-archive",
-          "checksum": "sha256:b02e46e6390112b1703d645e8ee41f79f003bf00655ef35a13a2264f6a3ed327"
+          "checksum": "sha256:748a64dfab3babe99711089dfeab83af73221ed7e716e56f7940e42e8b24fd3b"
         },
         {
-          "name": "glow_1.5.1_amd64.deb",
-          "size": 6812140,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_1.5.1_amd64.deb",
+          "name": "glow_2.0.0_amd64.deb",
+          "size": 6044646,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_amd64.deb",
           "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:99e904f9a599f8a007817d49814b2440ff4d95bb5fb9b26763cfc5bf58c579e2"
+          "checksum": "sha256:755c0d3bc8719af384fcc9585ea32e9611f80693cbe5d57ca5d7c5f0cf041669"
         },
         {
-          "name": "glow_1.5.1_arm64.deb",
-          "size": 6099158,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_1.5.1_arm64.deb",
+          "name": "glow_2.0.0_arm64.deb",
+          "size": 5553664,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_arm64.deb",
           "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:edb4cb7b4f9a531e85be0060109ca7c053d0d02761cc145482f72604f874fed9"
+          "checksum": "sha256:91b7900192b467da1b7030a0e8a73602e180e4128e591d15eec96ce69a2b5798"
         },
         {
-          "name": "glow_1.5.1_armhf.deb",
-          "size": 6422882,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_1.5.1_armhf.deb",
+          "name": "glow_2.0.0_armhf.deb",
+          "size": 5664428,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_armhf.deb",
           "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:70e97b26898dc9c57229ac0e48a8c6edc9f7bdd307ac6dfbf925676c05b629e2"
+          "checksum": "sha256:d545a228ca44865539fc4d4621fe430b6c4662b9d2f09b495741f20931f94d4a"
         },
         {
-          "name": "glow_1.5.1_armv7.apk",
-          "size": 6449791,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_1.5.1_armv7.apk",
+          "name": "glow_2.0.0_armv7.apk",
+          "size": 5879400,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_armv7.apk",
           "content_type": "application/vnd.android.package-archive",
-          "checksum": "sha256:3db41af9ca30c6a4d6068f8fde1c03654379438c9c9e674a955b0f2b519eeecc"
+          "checksum": "sha256:dae4fd491f57c24d865332e7c01fc3af8103f8531aa9d0f5aa5ee24f101fc89f"
         },
         {
-          "name": "glow_1.5.1_i386.deb",
-          "size": 6254370,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_1.5.1_i386.deb",
+          "name": "glow_2.0.0_Darwin_arm64.tar.gz",
+          "size": 5765743,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Darwin_arm64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:04175e0e7e949fd5a0a340cbb11be057c04ae7c49ea85f06679a71340cc4bcb6"
+        },
+        {
+          "name": "glow_2.0.0_Darwin_arm64.tar.gz.sbom.json",
+          "size": 97001,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Darwin_arm64.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:bd80bac13526ea7dbd8aa5f99f09bdf32c56b099d0fba80319b54be56e44b3d6"
+        },
+        {
+          "name": "glow_2.0.0_Darwin_x86_64.tar.gz",
+          "size": 6126736,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Darwin_x86_64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:64d892ca7866752f260722ca83f92746446a03e733cedbc2897c353951abe274"
+        },
+        {
+          "name": "glow_2.0.0_Darwin_x86_64.tar.gz.sbom.json",
+          "size": 97191,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Darwin_x86_64.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:362ee3e118b6b9e0906fa06478571b1fa25228bf22e0c18c05904da16e61ec59"
+        },
+        {
+          "name": "glow_2.0.0_Freebsd_arm.tar.gz",
+          "size": 5637265,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Freebsd_arm.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:a7e47b6d1984478d3166e6eb7be41ac1ad727c6f61e47ea8b2b30b6a449f0cd4"
+        },
+        {
+          "name": "glow_2.0.0_Freebsd_arm.tar.gz.sbom.json",
+          "size": 96811,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Freebsd_arm.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:80ca453d315cf32856f89c36c414ed328ca451fd07608cdfb079f3f916ca6c4e"
+        },
+        {
+          "name": "glow_2.0.0_Freebsd_arm64.tar.gz",
+          "size": 5523358,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Freebsd_arm64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:486ff50ab3d0f70c99f52391da88ba3d8b3c4d70841c6c778c7ff3b772510a3a"
+        },
+        {
+          "name": "glow_2.0.0_Freebsd_arm64.tar.gz.sbom.json",
+          "size": 97191,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Freebsd_arm64.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:bbeb9c6bf694a09b5f152165bc703fe3de3c9318dc6c67fedcf9deb588c67dde"
+        },
+        {
+          "name": "glow_2.0.0_Freebsd_i386.tar.gz",
+          "size": 5557782,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Freebsd_i386.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:e001387d433e17c2c82007e048302290a697763607a378e5eead860b97880e87"
+        },
+        {
+          "name": "glow_2.0.0_Freebsd_i386.tar.gz.sbom.json",
+          "size": 97001,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Freebsd_i386.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:384d3f7b3a9210439eb45341088cc74cf66b5c2e43db7589e7a6570e5135d417"
+        },
+        {
+          "name": "glow_2.0.0_Freebsd_x86_64.tar.gz",
+          "size": 6011506,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Freebsd_x86_64.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:c58bcf3c8ae1ad94627f24aefc4d5ef12c222b0bce2c45dcffa21b9f4daa8986"
+        },
+        {
+          "name": "glow_2.0.0_Freebsd_x86_64.tar.gz.sbom.json",
+          "size": 97381,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Freebsd_x86_64.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:be90f2f319474262835e82d27241887dcc19306a7db6bd45bbfc985ac6fc6b25"
+        },
+        {
+          "name": "glow_2.0.0_i386.deb",
+          "size": 5591594,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_i386.deb",
           "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:92745422cdf21f3277353ac89b9194bcbefbef1c80d7ae2a4776acbfaf841b99"
+          "checksum": "sha256:5de4ad5dc5330daa169a8156a5593492a2a602d26bc0c1155e36e854311d4943"
         },
         {
-          "name": "glow_1.5.1_x86.apk",
-          "size": 6256819,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_1.5.1_x86.apk",
-          "content_type": "application/vnd.android.package-archive",
-          "checksum": "sha256:b3efb52bae64c20b233cfeb66b9a7c670ada96ca05ef8b7abafd4cb9ae2b18ff"
-        },
-        {
-          "name": "glow_1.5.1_x86_64.apk",
-          "size": 6810125,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_1.5.1_x86_64.apk",
-          "content_type": "application/vnd.android.package-archive",
-          "checksum": "sha256:b5f140ca37205b0c20161b0e07f8018f9759c09c6b6c24687d0ef2718a693f79"
-        },
-        {
-          "name": "glow_Darwin_arm64.tar.gz",
-          "size": 6428195,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Darwin_arm64.tar.gz",
+          "name": "glow_2.0.0_Linux_arm.tar.gz",
+          "size": 5647866,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Linux_arm.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:08ed18eae66c7bba7f02952d69b0fdb8edcabb0830c85a98ad963f2422c3334e"
+          "checksum": "sha256:14ad9c47a788adac60f8a7af3bfc6500026befeb69cc49567f5a7f2e0dda3627"
         },
         {
-          "name": "glow_Darwin_arm64.tar.gz.sbom",
-          "size": 75965,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Darwin_arm64.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:996b5ec9a10edc468d64d3d2d9b1abf247581b2be513bffaad1fa7e6c643c156"
+          "name": "glow_2.0.0_Linux_arm.tar.gz.sbom.json",
+          "size": 96431,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Linux_arm.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:c4d3f31a6077c4c25a46c2e0bb4c3e715e1fa56f61be94d6d5d84a9811933da7"
         },
         {
-          "name": "glow_Darwin_x86_64.tar.gz",
-          "size": 6711272,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Darwin_x86_64.tar.gz",
+          "name": "glow_2.0.0_Linux_arm64.tar.gz",
+          "size": 5537976,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Linux_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:07f23d1609d502574df99259053f24372d8ba2315382528cb3be31661105ca44"
+          "checksum": "sha256:69317a393ee8e6c64e2eb49718d053d5d98e1bf3e67b89e8965ead0e8b12004c"
         },
         {
-          "name": "glow_Darwin_x86_64.tar.gz.sbom",
-          "size": 75971,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Darwin_x86_64.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:211b60ea71a6c17f49a6f4c7e2dc223f682395d023db796f5644bd88373ca206"
+          "name": "glow_2.0.0_Linux_arm64.tar.gz.sbom.json",
+          "size": 96811,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Linux_arm64.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:e867baa302e219b9c68c7d54b36a67914a321f4cd9aac607e02c7d1c1141f1f0"
         },
         {
-          "name": "glow_Freebsd_arm.tar.gz",
-          "size": 6212727,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Freebsd_arm.tar.gz",
+          "name": "glow_2.0.0_Linux_i386.tar.gz",
+          "size": 5576699,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Linux_i386.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:41d9af730a0c5896c96cbca6c3c25f268b08088d8b06a4803c9b33f8265926ef"
+          "checksum": "sha256:a9f1362d03d352024c0ddcd6a7261c57ee1ff09def23cda3137d42620a02f92b"
         },
         {
-          "name": "glow_Freebsd_arm.tar.gz.sbom",
-          "size": 75969,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Freebsd_arm.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:7010a517540e281e4139d962726bf95b1a88bdaf6c80a5439a7b4f93d959af85"
+          "name": "glow_2.0.0_Linux_i386.tar.gz.sbom.json",
+          "size": 96621,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Linux_i386.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:198b01636ff971ab24f755693d548ec44c7bdc2e16a7b27f811c3adebf184be6"
         },
         {
-          "name": "glow_Freebsd_arm64.tar.gz",
-          "size": 5863041,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Freebsd_arm64.tar.gz",
+          "name": "glow_2.0.0_Linux_x86_64.tar.gz",
+          "size": 6024417,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Linux_x86_64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:b0d1503b4648a428b2373a52197a0e2038c143d1ce12c7066e55c98dabf14e72"
+          "checksum": "sha256:c16067fc16455211d9a239e931b00982fb883aef4b2c89cfa30a992ef2058ae5"
         },
         {
-          "name": "glow_Freebsd_arm64.tar.gz.sbom",
-          "size": 75969,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Freebsd_arm64.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:1929e8c742ef93afa064b0806c4c644c690e4ac05108d26a4729efb53c6a83dc"
+          "name": "glow_2.0.0_Linux_x86_64.tar.gz.sbom.json",
+          "size": 97001,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Linux_x86_64.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:d54bd6966b8d5408f11c796337e5b1745022b864561dc211fb5fa85f3e1514d1"
         },
         {
-          "name": "glow_Freebsd_i386.tar.gz",
-          "size": 5955045,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Freebsd_i386.tar.gz",
+          "name": "glow_2.0.0_Netbsd_arm.tar.gz",
+          "size": 5628992,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Netbsd_arm.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:5aa219f0db29fccfac609ad69b7eac466946e2b1b7c39022db3450228097d7f8"
+          "checksum": "sha256:fdab64653c8295f0906d0409d590a829d18ac6de812aa2f1b2939366397cf4f4"
         },
         {
-          "name": "glow_Freebsd_i386.tar.gz.sbom",
-          "size": 75967,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Freebsd_i386.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:881c59d38490850e2ddebfcb7554c62c358dc79819daaae20d452b02065c0b99"
+          "name": "glow_2.0.0_Netbsd_arm.tar.gz.sbom.json",
+          "size": 96621,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Netbsd_arm.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:b35a7ea3ef97764ab9f15a5985e6e0b778eecdf97d4b6af9bdf52e3a5afeef57"
         },
         {
-          "name": "glow_Freebsd_x86_64.tar.gz",
-          "size": 6495934,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Freebsd_x86_64.tar.gz",
+          "name": "glow_2.0.0_Netbsd_arm64.tar.gz",
+          "size": 5521481,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Netbsd_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:a7b8670d08f52fbf23987da1bc431905f88308fba80d3d4036b23eafe47e87b9"
+          "checksum": "sha256:3af4b0937c94848f638a2507ef794011d828a7892d5c5eb7c7bed34715ac89b9"
         },
         {
-          "name": "glow_Freebsd_x86_64.tar.gz.sbom",
-          "size": 75971,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Freebsd_x86_64.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:54d3788dd425fe49300ff2343d7ca735fe071a91181f0d3fb801b6490b1857dd"
+          "name": "glow_2.0.0_Netbsd_arm64.tar.gz.sbom.json",
+          "size": 97001,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Netbsd_arm64.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:d7e8b007c09c3e4a78f985c1048fa6dfef7837d950941fbf439453619092cf20"
         },
         {
-          "name": "glow_Linux_arm.tar.gz",
-          "size": 6213023,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Linux_arm.tar.gz",
+          "name": "glow_2.0.0_Netbsd_i386.tar.gz",
+          "size": 5552068,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Netbsd_i386.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:4dc7ac48a4aedafcfa5766a97f757a90c78d4653f0e92b95eae2d350b45c5112"
+          "checksum": "sha256:b0d8e0c60e6a87acba4d2cc105ff6b552ddcd1f57bfbc2149baeb58f732c6073"
         },
         {
-          "name": "glow_Linux_arm.tar.gz.sbom",
-          "size": 75965,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Linux_arm.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:34a3f544907da9daf5226b3c6436020a181f588a1f0de46593f06016dc174999"
+          "name": "glow_2.0.0_Netbsd_i386.tar.gz.sbom.json",
+          "size": 96811,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Netbsd_i386.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:085f023bb569d2b4eafa93280f7a1ce673c798de7ac0f1778e9343e643b7a1e8"
         },
         {
-          "name": "glow_Linux_arm64.tar.gz",
-          "size": 5867364,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Linux_arm64.tar.gz",
+          "name": "glow_2.0.0_Netbsd_x86_64.tar.gz",
+          "size": 6006596,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Netbsd_x86_64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:33661a7d97925724339d4f06e633df7dbc98e8a70320668236895be1b4c8125f"
+          "checksum": "sha256:f5d4573fef485c94440a4407c4ac6b40bb11551cfae68abf5968433dd0ff79e9"
         },
         {
-          "name": "glow_Linux_arm64.tar.gz.sbom",
-          "size": 75965,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Linux_arm64.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:5370623faa9b715202262f131368c16c4c212f115b0769b8388522713713098f"
+          "name": "glow_2.0.0_Netbsd_x86_64.tar.gz.sbom.json",
+          "size": 97191,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Netbsd_x86_64.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:979de005fc4bb36d4dad1eefa9de55036af0532d4ef90dbb87bfa1e2fc2f8ec4"
         },
         {
-          "name": "glow_Linux_i386.tar.gz",
-          "size": 5957067,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Linux_i386.tar.gz",
+          "name": "glow_2.0.0_Openbsd_arm.tar.gz",
+          "size": 5640182,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Openbsd_arm.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:4f138ad9de58a9d08cd3645d873c0ba99518e4956b994326baed944e33959ed6"
+          "checksum": "sha256:d54d046b47ac76daee50321081a8b410cda295dcde555c61cc37c2b9f7019235"
         },
         {
-          "name": "glow_Linux_i386.tar.gz.sbom",
-          "size": 75963,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Linux_i386.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:2323ee42881b8e05c00b06ce347d87dce1bf4ae05c6bd7b0a1edca2fbcc6a638"
+          "name": "glow_2.0.0_Openbsd_arm.tar.gz.sbom.json",
+          "size": 96811,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Openbsd_arm.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:471975720aba08e213986ff6034c6a8a26eddca69e9fde3dfe3ea1209156f64e"
         },
         {
-          "name": "glow_Linux_x86_64.tar.gz",
-          "size": 6496371,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Linux_x86_64.tar.gz",
+          "name": "glow_2.0.0_Openbsd_arm64.tar.gz",
+          "size": 5527334,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Openbsd_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:d224be006fc4ee361c1d1a85dbd46c269372b76c5413e2a9bfd0f7fe52c66f78"
+          "checksum": "sha256:b4b6f5c5e1a64d587b5b1f4732843e0da55db59d32d25c8e48c6e8bcab171d50"
         },
         {
-          "name": "glow_Linux_x86_64.tar.gz.sbom",
-          "size": 75970,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Linux_x86_64.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:a000bd86e84f9789e8acc33af669f32d175d422037666c7ce6b9e2df83fe2b32"
+          "name": "glow_2.0.0_Openbsd_arm64.tar.gz.sbom.json",
+          "size": 97191,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Openbsd_arm64.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:6176c3f8b78cf7e9861ea5ef20798a004ee715069e30c4d99ac29f87f53d523d"
         },
         {
-          "name": "glow_Netbsd_arm.tar.gz",
-          "size": 6204119,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Netbsd_arm.tar.gz",
+          "name": "glow_2.0.0_Openbsd_i386.tar.gz",
+          "size": 5561224,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Openbsd_i386.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:c6621b0c87ae2014fd42641422297e6c2542a7e434ca0903ca58411fea59e538"
+          "checksum": "sha256:ed5627596568d4a01de74e479d3c59f59df42c6b68cd25759fb289253805b7c6"
         },
         {
-          "name": "glow_Netbsd_arm.tar.gz.sbom",
-          "size": 75969,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Netbsd_arm.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:6bac93647f35c910c803e6240a1f5ccde6cbe3cd2ae5af1624778de3c3c30832"
+          "name": "glow_2.0.0_Openbsd_i386.tar.gz.sbom.json",
+          "size": 97001,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Openbsd_i386.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:a7135fdab674233a9888fe4f309d15276d97e812b0e52ff7b0515a918f339ff8"
         },
         {
-          "name": "glow_Netbsd_i386.tar.gz",
-          "size": 5947205,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Netbsd_i386.tar.gz",
+          "name": "glow_2.0.0_Openbsd_x86_64.tar.gz",
+          "size": 6015518,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Openbsd_x86_64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:3b5e2f26a342f60a0a13f8dcc2145c5408862780bbd0846865ed265925002ff1"
+          "checksum": "sha256:d5e574d51f5ccb2fde4091138060658c835511d04d4c5d5db2a6dfa56dc06d5c"
         },
         {
-          "name": "glow_Netbsd_i386.tar.gz.sbom",
-          "size": 75965,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Netbsd_i386.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:1ed102069eb22ded842bfbb3865ac85baf032cdaa1da15d9d73ba7475690939b"
+          "name": "glow_2.0.0_Openbsd_x86_64.tar.gz.sbom.json",
+          "size": 97381,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Openbsd_x86_64.tar.gz.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:ab677411250e833e3466f6599503b9ff2ca8ef91e143dd96a4af0fb46d8263c0"
         },
         {
-          "name": "glow_Netbsd_x86_64.tar.gz",
-          "size": 6486116,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Netbsd_x86_64.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:1ab041eabf00de38c3da1d520d4cd031a9bdb4e9e70a4e784a24973ad12b2c68"
-        },
-        {
-          "name": "glow_Netbsd_x86_64.tar.gz.sbom",
-          "size": 75973,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Netbsd_x86_64.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:5173ead529a8a567feca31ddca13d95f36da93da9c561bd30ad12852ad04059f"
-        },
-        {
-          "name": "glow_Openbsd_arm.tar.gz",
-          "size": 6217813,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Openbsd_arm.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:bf9126b3f7f25c8cd8a193d4ad4bffafca8538de1561fe5b811ffb170048a9a1"
-        },
-        {
-          "name": "glow_Openbsd_arm.tar.gz.sbom",
-          "size": 75971,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Openbsd_arm.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:c268e3b214b9264379fbcfe8abcc686d94513b8d15f74c6b2127e7018f024be2"
-        },
-        {
-          "name": "glow_Openbsd_arm64.tar.gz",
-          "size": 5866156,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Openbsd_arm64.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:37577c3dd2f3e6844732ea00a25a92a32a1a305d67b9394d1ceea0734548e880"
-        },
-        {
-          "name": "glow_Openbsd_arm64.tar.gz.sbom",
-          "size": 75969,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Openbsd_arm64.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:e605b9bee68c7a97376353d831eb0fa81d573d77b10c8c8d7b88b7e57fd092cd"
-        },
-        {
-          "name": "glow_Openbsd_i386.tar.gz",
-          "size": 5959805,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Openbsd_i386.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:1e8f3f81033e28b75a476abd35e47056bdc03318a6b17b194c3f34a7464f47ee"
-        },
-        {
-          "name": "glow_Openbsd_i386.tar.gz.sbom",
-          "size": 75967,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Openbsd_i386.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:6e7633fb831576daf5752f9695128458d3c1a9db9437b7639371a17c2bf15167"
-        },
-        {
-          "name": "glow_Openbsd_x86_64.tar.gz",
-          "size": 6500781,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Openbsd_x86_64.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:a8ddf7e137244c19c601c205e6937bba4992729c4d3936959e091d88ed8aa49e"
-        },
-        {
-          "name": "glow_Openbsd_x86_64.tar.gz.sbom",
-          "size": 75975,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Openbsd_x86_64.tar.gz.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:f5e8dab88933d9e1491c7b79bb3eb57bc35184ebf2f42e912fea201490577471"
-        },
-        {
-          "name": "glow_Windows_i386.zip",
-          "size": 6332494,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Windows_i386.zip",
+          "name": "glow_2.0.0_Windows_i386.zip",
+          "size": 5856719,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Windows_i386.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:22ef6d17e9f46f56e6724f408fec850db67e712a1f0e4ee8b7f6bab2bf4c0b6e"
+          "checksum": "sha256:6910e2ef6f4a8d0ef97e4b8bf526bcc710bb3e573f05c0724b8ed792dae81afd"
         },
         {
-          "name": "glow_Windows_i386.zip.sbom",
-          "size": 77662,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Windows_i386.zip.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:fee6cb9910e348d2c466ca9debdce1d140bfa2c64dd6bd1b03f199a06cadb5a8"
+          "name": "glow_2.0.0_Windows_i386.zip.sbom.json",
+          "size": 102167,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Windows_i386.zip.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:6207ae69e0610fb7f4173471d58929c75ae8a025fbcb6805a0875300f5f85fb0"
         },
         {
-          "name": "glow_Windows_x86_64.zip",
-          "size": 6609268,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Windows_x86_64.zip",
+          "name": "glow_2.0.0_Windows_x86_64.zip",
+          "size": 6200153,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Windows_x86_64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:cc5b195457237385e6000fb61d471732cc1f89c10fcdfd20c0463ba7a5aa7a5d"
+          "checksum": "sha256:cdb2c65c57a4137097f2dfb5aa3af52364e3aeb26961a5ef84889f45ae1cc6c0"
         },
         {
-          "name": "glow_Windows_x86_64.zip.sbom",
-          "size": 77658,
-          "url": "https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_Windows_x86_64.zip.sbom",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:f30698521bee67624086974979b4f453aa004beed18cad821fcec149d2a0a171"
+          "name": "glow_2.0.0_Windows_x86_64.zip.sbom.json",
+          "size": 102565,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_Windows_x86_64.zip.sbom.json",
+          "content_type": "application/json",
+          "checksum": "sha256:60ce32637a6e068ff7a81fe4a99c729c085c00993c4114c287540cea6869c8b6"
+        },
+        {
+          "name": "glow_2.0.0_x86.apk",
+          "size": 5820365,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_x86.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:2d98c9a0982d05fa0475f30bec491dfffcc72e246b311d7cf1e426515a64be41"
+        },
+        {
+          "name": "glow_2.0.0_x86_64.apk",
+          "size": 6301737,
+          "url": "https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow_2.0.0_x86_64.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:3f0603a6ad9b19fc879a0fe233f89b009c5fe09d8aa3f50a892e8927b276c5a8"
         }
       ]
     }
