@@ -4,191 +4,191 @@
   "url": "https://github.com/go-task/task",
   "releases": [
     {
-      "title": "v3.39.1",
-      "description": "- Added Renovate configuration to automatically create PRs to keep dependencies up to date (#1783 by @vmaerten).\r\n- Fixed a bug where the help was displayed twice (#1805, #1806 by @vmaerten).\r\n- Fixed a bug where ZSH and PowerShell completions did not work when using the recommended method. (#1813, #1809 by @vmaerten and @shirayu)\r\n- Fix variables not working properly for a `defer:` statement (#1803, #1814 by @vmaerten and @andreynering).",
-      "tag": "v3.39.1",
+      "title": "v3.39.2",
+      "description": "- Fix dynamic variables not working properly for a defer: statement (#1803, #1818 by @vmaerten).\r\n",
+      "tag": "v3.39.2",
       "assets": [
         {
           "name": "task_checksums.txt",
           "size": 2212,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_checksums.txt",
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_checksums.txt",
           "content_type": "text/plain; charset=utf-8",
-          "checksum": "sha256:bc0c46e1552702f3a394c458d5ac050fa12f9d650e9949ba7dd78f008ca6988b"
+          "checksum": "sha256:0a981af05f464aef2fa080f3c1141b9829bac0e0a775b5bcf9afc7acf3bbe768"
         },
         {
           "name": "task_darwin_amd64.tar.gz",
-          "size": 4902077,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_darwin_amd64.tar.gz",
+          "size": 4902080,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_darwin_amd64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:bb42326d46e7ae7d731b12da1ba6c580cea2307881d94bae2f14ece7ad1a5dce"
+          "checksum": "sha256:c8d5066fb68797bd321a9e4f830731f4f0284426ee1b458ac91ef1bd70e8c418"
         },
         {
           "name": "task_darwin_arm64.tar.gz",
-          "size": 4637081,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_darwin_arm64.tar.gz",
+          "size": 4637083,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_darwin_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:5a62baf305ea4c357d07dbd3b92e7abb8bf96491083a9fc85323949f88de3cfb"
+          "checksum": "sha256:a75fcdaef9b6b3d8b502357a8dc7694b813d6c758aca0865380f495facb5f387"
         },
         {
           "name": "task_freebsd_386.tar.gz",
-          "size": 4522651,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_freebsd_386.tar.gz",
+          "size": 4522653,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_freebsd_386.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:1c1d701183eb6e82794d34e40d257282e96b75fcd93ea76e1611c5db98ecd2ee"
+          "checksum": "sha256:426ea820fdc133e0df0b484ff3b8943cb1aa9f3205f071f8a736c872927db473"
         },
         {
           "name": "task_freebsd_amd64.tar.gz",
-          "size": 4813791,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_freebsd_amd64.tar.gz",
+          "size": 4813793,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_freebsd_amd64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:4e6e250d1dea1153d141e81f10b2b094840eb8a8f6d00e06157d89cfba876ded"
+          "checksum": "sha256:247a72dc5a7198ed7ea04b0218555118b6b4d2802927bf221f2179dee170e995"
         },
         {
           "name": "task_freebsd_arm.tar.gz",
-          "size": 4549971,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_freebsd_arm.tar.gz",
+          "size": 4549976,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_freebsd_arm.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:b5f0a8854d52635a755ce12e90f40d50eb2afaa2df894feec2834cc45921fbfa"
+          "checksum": "sha256:4f853f423cc273118741db3e7942a257fbb3d6c858cea327fcfbffe4ee28ecc4"
         },
         {
           "name": "task_freebsd_arm64.tar.gz",
-          "size": 4451558,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_freebsd_arm64.tar.gz",
+          "size": 4451554,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_freebsd_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:575025244a8229392a25ce778d5006cdbc655d666efc547a57d79a7382892a15"
+          "checksum": "sha256:1238d7eb18091cffa2389f07948314dd70d9d6466d5baa5682c83073a0bb4562"
         },
         {
           "name": "task_linux_386.deb",
           "size": 4545358,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_386.deb",
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_386.deb",
           "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:8deb25ab6337b5ad3753703a2613b46a7dfd93112a871065a0c97857481f6380"
+          "checksum": "sha256:a3789feb018d78cc10f4cf4e1362c7427b7f51385b0c0fb8db618c092a220357"
         },
         {
           "name": "task_linux_386.rpm",
-          "size": 4732822,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_386.rpm",
+          "size": 4732823,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_386.rpm",
           "content_type": "application/x-rpm",
-          "checksum": "sha256:a8212b448d26fc8c51c845c83a12329278f0410b4a981f3cfd70e1e7e7eb6e27"
+          "checksum": "sha256:233ad985fcbf9f4dbd1498dc42dbcd63f95bf180e1f8c0b538eb05f74ff157e4"
         },
         {
           "name": "task_linux_386.tar.gz",
-          "size": 4533666,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_386.tar.gz",
+          "size": 4533654,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_386.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:e19990d48c40ec9b43a48bad4fd9a528189f5fe584a71ee753f653afbacb0d1a"
+          "checksum": "sha256:fca56dce3e08b3b42a607b7239f8246f4b1b806cb1012645fb7b9eebeb08b930"
         },
         {
           "name": "task_linux_amd64.deb",
-          "size": 4833474,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_amd64.deb",
+          "size": 4833486,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_amd64.deb",
           "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:f52e271502f1cc2adeee5fc920469a31d274ce4ba294cb7e09883ac678f89d3d"
+          "checksum": "sha256:d4ea84524cc4e0969e84f063fc99b9aba2090ec259c00a2e12d9ed1a182cf6af"
         },
         {
           "name": "task_linux_amd64.rpm",
-          "size": 5027020,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_amd64.rpm",
+          "size": 5027024,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_amd64.rpm",
           "content_type": "application/x-rpm",
-          "checksum": "sha256:5a88e0353e6797fe8587506b40214a021f2ebd7cdceab786f0ab7616f8abefc9"
+          "checksum": "sha256:319e5606c1c7de04ade04d5e36cd1367df09e675f8620a1d930cc1a0d34349be"
         },
         {
           "name": "task_linux_amd64.tar.gz",
-          "size": 4816867,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_amd64.tar.gz",
+          "size": 4816875,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_amd64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:18ff1549746a22edd1183874b4a02f3320636d340eab4a4b5a478cce2e776e49"
+          "checksum": "sha256:ba109e09e7235ed017e18a23775ed7f032ca436d8f913b2d40978b03e972f106"
         },
         {
           "name": "task_linux_arm.deb",
-          "size": 4563780,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_arm.deb",
+          "size": 4563776,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_arm.deb",
           "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:8eb25d89b4aefc02e2263437d8d5de7cb20ffd8b338e7c8114c33d8593262c5b"
+          "checksum": "sha256:29c3147569d4ba3203d83814a3369096bf5e3127ed51bc7215561fc4e4988165"
         },
         {
           "name": "task_linux_arm.rpm",
-          "size": 4740012,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_arm.rpm",
+          "size": 4740008,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_arm.rpm",
           "content_type": "application/x-rpm",
-          "checksum": "sha256:8ef66fb31cdfdae5af2a0dea8098c7a4801bbee23ef06a07f32a10a6a1c08736"
+          "checksum": "sha256:6d059941dc07633cc604d8086d5a3fdc95dbebf0ce7eabd6714a853712a16721"
         },
         {
           "name": "task_linux_arm.tar.gz",
-          "size": 4554228,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_arm.tar.gz",
+          "size": 4554225,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_arm.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:678d2f2a1d41b4c848a1a46cf7dbd39e9169927b11ab8c445d91873e9eb8a957"
+          "checksum": "sha256:a3548e84d2eb358cd3d250d004940c4d678ca79a98260190df2b45a2552e5748"
         },
         {
           "name": "task_linux_arm64.deb",
-          "size": 4471056,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_arm64.deb",
+          "size": 4471054,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_arm64.deb",
           "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:b29ca588f8bf1a258d011d42fb66ed9f2dd8671c88323737e981ab52d135b739"
+          "checksum": "sha256:2a5685880d1f0130e26ad27fbb556c01073b628247f46c79e4456d925ee5e44c"
         },
         {
           "name": "task_linux_arm64.rpm",
-          "size": 4640729,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_arm64.rpm",
+          "size": 4640725,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_arm64.rpm",
           "content_type": "application/x-rpm",
-          "checksum": "sha256:8b4ca452180b7d95d6f3051475e7befad19589654aba4e198c8b4a020f50f879"
+          "checksum": "sha256:97278ad639c93874655290ef70ff26652b3c6437b5759b043ed89cf16c343a60"
         },
         {
           "name": "task_linux_arm64.tar.gz",
-          "size": 4456737,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_arm64.tar.gz",
+          "size": 4456734,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:c67383e5b5b1c41a3e0fd8bb52c7220821eeec12068ea13323fa72cfe1867f7f"
+          "checksum": "sha256:5c6e73b7656d2e26050e2601c4702cbf5b6314ba001797e5ca8149890e205049"
         },
         {
           "name": "task_linux_riscv64.deb",
-          "size": 4497686,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_riscv64.deb",
+          "size": 4497702,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_riscv64.deb",
           "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:503283089817de9dfa4de5a215f0882a61b6e8a0b7454f831cc5c20265659535"
+          "checksum": "sha256:7bf4b5c68f4ef5fc2cc56f8d9f6b28b7483e0379fb0f8046d574a65e73c33e8b"
         },
         {
           "name": "task_linux_riscv64.rpm",
-          "size": 4676781,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_riscv64.rpm",
+          "size": 4676790,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_riscv64.rpm",
           "content_type": "application/x-rpm",
-          "checksum": "sha256:1d8e6a754093cc4b23c8306481d7a81acc1b1a8304ccdec824e60271071786e4"
+          "checksum": "sha256:2ec70970d88f0567fd460d5c0a6219ab965acc63e81d904fda5e0def244a77c8"
         },
         {
           "name": "task_linux_riscv64.tar.gz",
-          "size": 4481976,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_linux_riscv64.tar.gz",
+          "size": 4481974,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_linux_riscv64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:25acb8d8e23ef5295c46cf8bccf791c10e5892157511b43f235b7ddca3bc9cee"
+          "checksum": "sha256:165abebf19213fdd9737d02727033aa5397c4607d374d905158609c8736358d4"
         },
         {
           "name": "task_windows_386.zip",
-          "size": 4746463,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_windows_386.zip",
+          "size": 4746459,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_windows_386.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:1588ed9960a856972b985b7da01e6c027dd3e53e1d7536731180679f54ff3687"
+          "checksum": "sha256:314807bcaa92baea4fccb85467e6bda2d53eaa01c026f05695e67fc68659f69c"
         },
         {
           "name": "task_windows_amd64.zip",
-          "size": 4973239,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_windows_amd64.zip",
+          "size": 4973245,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_windows_amd64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:473b72a27dd57b2e51b5e74c2a70fe568774a1d8f2f23f4ec45cd67b8121636c"
+          "checksum": "sha256:011d4561698ee7a7df44eda24702f51b08d00bac0897940273173e05a8575d5b"
         },
         {
           "name": "task_windows_arm.zip",
-          "size": 4681187,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_windows_arm.zip",
+          "size": 4681176,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_windows_arm.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:a0ae52bdccb43c33a80a0f38ab15b2d79343e73d447004605bcfad429a11ff24"
+          "checksum": "sha256:7d56bbdb7fcc37c91d5e2f77369f631cb323b464d1ba077c332a5d8238a49c37"
         },
         {
           "name": "task_windows_arm64.zip",
-          "size": 4540925,
-          "url": "https://github.com/go-task/task/releases/download/v3.39.1/task_windows_arm64.zip",
+          "size": 4540916,
+          "url": "https://github.com/go-task/task/releases/download/v3.39.2/task_windows_arm64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:47a5fb4a09daca1448cd4f2761d902adeb6afd4af67c183bc1d0f68634b1e97f"
+          "checksum": "sha256:d4a4134ee67e74d165fda73722c5fde4291fca037cf02bda35df2bae372ecb98"
         }
       ]
     }
