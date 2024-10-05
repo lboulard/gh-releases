@@ -83,26 +83,25 @@ def _get_sha256(
 def get_sha256(
     url, session, cache=None
 ):  # type: (str, requests.Session, Cache|None) -> (int, str | None)
-    delay, slip = 60, 0
-    for tentative in (3, 2, 1, 0):
+    delay, delta = 10, 0
+    for tentative in (5, 4, 3, 2, 1, 0):
         try:
             return _get_sha256(url, timeout=30, session=session, cache=cache)
-        except requests.exceptions.Timeout as e:
+        except (
+            requests.exceptions.Timeout,
+            AuthenticationException,
+            GatewayException,
+        ) as e:
             if tentative == 0:
                 raise
-        except AuthenticationException as e:
-            if tentative == 0:
-                raise
-        except GatewayException as e:
-            if tentative == 0:
-                raise
+            print(" ** %s" % str(e))
         # safety belt: min 30s, max 10mn
         delay = max(10 * 60, min(30, delay))
         # introduce jitter of 30 seconds
-        wait = int(random.uniform(delay - 15, delay + 15)) + slip
-        slip = delay - wait
+        wait = delta + int(0.5 + random.uniform(delay - 5, delay + 5))
+        wait = max(1, wait)
+        delta = wait - delay
         delay *= 2
-        print(" ** %s" % str(e))
         print(
             " ** %d tentative%s left, retrying in %s..."
             % (tentative, "s" if tentative > 1 else "", timedelta(seconds=wait))
