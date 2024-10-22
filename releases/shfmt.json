@@ -5,71 +5,71 @@
   "releases": [
     {
       "title": "",
-      "description": "This release drops support for Go 1.21 and includes many fixes.\r\n\r\n- **cmd/shfmt**\r\n  - Switch the diff implementation to remove one dependency\r\n- **syntax**\r\n  - Protect against overflows in position offset integers\r\n- **interp**\r\n  - Use `os.Pipe` for stdin to prevent draining by subprocesses - #1085\r\n  - Support cancelling reads in builtins when stdin is a file - #1066\r\n  - Support the `nocaseglob` bash option - #1073\r\n  - Support the Bash 5.2 `@k` parameter expansion operator\r\n  - Support the `test -O` and `test -G` operators on non-Windows - #1080\r\n  - Support the `read -s` builtin flag - #1063\r\n- **expand**\r\n  - Add support for case insensitive globbing - #1073\r\n  - Don't panic when pattern words are nil - #1076\r\n\r\nA special thanks to @theclapp for their contributors to this release!\r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!\r\n\r\nBinaries built on `go version go1.23.0 linux/amd64` with:\r\n\r\n\tCGO_ENABLED=0 go build -trimpath -ldflags=\"-w -s -X=main.version=v3.9.0\"",
-      "tag": "v3.9.0",
+      "description": "- **cmd/shfmt**\r\n  - Report the correct language variant in parser error messages - #1102\r\n  - Move `--filename` out of the parser options category - #1079\r\n- **syntax**\r\n  - Parse all CRLF line endings as LF, including inside heredocs - #1088\r\n  - Count skipped backslashes inside backticks in position column numbers - #1098\r\n  - Count skipped null bytes in position column numbers for consistency\r\n- **interp**\r\n  - Fix a regression in `v3.9.0` which broke redirecting files to stdin - #1099\r\n  - Fix a regression in `v3.9.0` where `HandlerContext.Stdin` was never nil\r\n  - Add an `Interactive` option to be used by interactive shells - #1100\r\n  - Support closing stdin, stdout, and stderr via redirections like `<&-`\r\n\r\nConsider [becoming a sponsor](https://github.com/sponsors/mvdan) if you benefit from the work that went into this release!\r\n\r\nBinaries built on `go version go1.23.2 linux/amd64` with:\r\n\r\n\tCGO_ENABLED=0 go build -trimpath -ldflags=\"-w -s -X=main.version=v3.10.0\"",
+      "tag": "v3.10.0",
       "assets": [
         {
           "name": "sha256sums.txt",
-          "size": 736,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/sha256sums.txt",
+          "size": 744,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.10.0/sha256sums.txt",
           "content_type": "text/plain",
-          "checksum": "sha256:a96172626532925725c7741fee51a91a68edd80930bd7dadb5396b5ed923a20c"
+          "checksum": "sha256:511f697f9d8c66db64b90bbb60e05c81228e422cf262104eaa278ed256bc5e0b"
         },
         {
-          "name": "shfmt_v3.9.0_darwin_amd64",
-          "size": 2863408,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_darwin_amd64",
+          "name": "shfmt_v3.10.0_darwin_amd64",
+          "size": 2884336,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.10.0/shfmt_v3.10.0_darwin_amd64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:3e1ac72e91ba88ce483766e57a1aa41fa502a0f9d5a47f5f5cd3663badcecee4"
+          "checksum": "sha256:ef8d970b3f695a7e8e7d40730eedd2d935ab9599f78a365f319c515bc59d4c83"
         },
         {
-          "name": "shfmt_v3.9.0_darwin_arm64",
-          "size": 2836610,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_darwin_arm64",
+          "name": "shfmt_v3.10.0_darwin_arm64",
+          "size": 2870066,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.10.0/shfmt_v3.10.0_darwin_arm64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:7d89694369a516b2d5a68b31f8be2da04c91f50fb7cdd8e41003081b814ba3e8"
+          "checksum": "sha256:86030533a823c0a7cd92dee0f74094e5b901c3277b43def6337d5e19e56fe553"
         },
         {
-          "name": "shfmt_v3.9.0_linux_386",
-          "size": 2650264,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_linux_386",
+          "name": "shfmt_v3.10.0_linux_386",
+          "size": 2670744,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.10.0/shfmt_v3.10.0_linux_386",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:cfc2001f820d67224d78fdad3f26e35f4ebd2e7c2f9509522cb55c9b9eb896b3"
+          "checksum": "sha256:a49ee3616afd262796e6791711ba62759d424cc85808390a5ac516af8001aa72"
         },
         {
-          "name": "shfmt_v3.9.0_linux_amd64",
-          "size": 2826392,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_linux_amd64",
+          "name": "shfmt_v3.10.0_linux_amd64",
+          "size": 2850968,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.10.0/shfmt_v3.10.0_linux_amd64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d99b06506aee2ac9113daec3049922e70dc8cffb84658e3ae512c6a6cbe101b6"
+          "checksum": "sha256:1f57a384d59542f8fac5f503da1f3ea44242f46dff969569e80b524d64b71dbc"
         },
         {
-          "name": "shfmt_v3.9.0_linux_arm",
+          "name": "shfmt_v3.10.0_linux_arm",
           "size": 2818200,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_linux_arm",
+          "url": "https://github.com/mvdan/sh/releases/download/v3.10.0/shfmt_v3.10.0_linux_arm",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:8415577278cb535fbb348ab4db02123ad885d3539519a40f84ba4092ced52993"
+          "checksum": "sha256:493c612d8f07ad60b3030bd84d7870cca2dc87e0fb06d2fdd93b2264460668db"
         },
         {
-          "name": "shfmt_v3.9.0_linux_arm64",
+          "name": "shfmt_v3.10.0_linux_arm64",
           "size": 2818200,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_linux_arm64",
+          "url": "https://github.com/mvdan/sh/releases/download/v3.10.0/shfmt_v3.10.0_linux_arm64",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:5e511463068f3d27ae1b087fb597fb9e8ad865be2ac501964a222a834fc1c463"
+          "checksum": "sha256:9d23013d56640e228732fd2a04a9ede0ab46bc2d764bf22a4a35fb1b14d707a8"
         },
         {
-          "name": "shfmt_v3.9.0_windows_386.exe",
-          "size": 2857984,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_windows_386.exe",
+          "name": "shfmt_v3.10.0_windows_386.exe",
+          "size": 2880512,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.10.0/shfmt_v3.10.0_windows_386.exe",
           "content_type": "application/x-msdownload",
-          "checksum": "sha256:61ad0af789b3ed158f5d593d7ee3301318b7cba2d84c265d8c30af0837315f28"
+          "checksum": "sha256:695d43b600103d8e8beb7460764f43da1d679576e67130012507a38238ef7dbd"
         },
         {
-          "name": "shfmt_v3.9.0_windows_amd64.exe",
-          "size": 3072000,
-          "url": "https://github.com/mvdan/sh/releases/download/v3.9.0/shfmt_v3.9.0_windows_amd64.exe",
+          "name": "shfmt_v3.10.0_windows_amd64.exe",
+          "size": 3097600,
+          "url": "https://github.com/mvdan/sh/releases/download/v3.10.0/shfmt_v3.10.0_windows_amd64.exe",
           "content_type": "application/x-msdownload",
-          "checksum": "sha256:4ea136134248ac8ebbf9103370ddcd951b515a9e9bfba903252f12fd067bb5e9"
+          "checksum": "sha256:6e4c6acd38de7b4b1ba8f8082b9e688df8c9b861d3f8b2e7bb1b7270201a3587"
         }
       ]
     }
