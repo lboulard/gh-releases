@@ -4,37 +4,37 @@
   "url": "https://github.com/uncrustify/uncrustify",
   "releases": [
     {
-      "title": "Uncrustify 0.80.0",
-      "description": "### Pre compiled binaries for Windows\r\n\r\n64 bits: [uncrustify-0.80.0_f-win64.zip](https://github.com/user-attachments/files/17771374/uncrustify-0.80.0_f-win64.zip)\r\n32 bits: [uncrustify-0.80.0_f-win32.zip](https://github.com/user-attachments/files/17771401/uncrustify-0.80.0_f-win32.zip)\r\n\r\n### Source code\r\n\r\n[uncrustify-0.80.0.tar.gz](https://github.com/user-attachments/files/17771356/uncrustify-0.80.0.tar.gz)\r\n[uncrustify-0.80.0.zip](https://github.com/user-attachments/files/17771357/uncrustify-0.80.0.zip)\r\n\r\n### Building from source\r\n\r\nPlease refer to the [build](https://github.com/uncrustify/uncrustify#build) section in the README file for instructions on how to build Uncrustify from source.",
-      "tag": "uncrustify-0.80.0",
+      "title": "Uncrustify 0.80.1",
+      "description": "### Pre compiled binaries for Windows\r\n\r\n64 bits: [uncrustify-0.80.1_f-win64.zip](https://github.com/user-attachments/files/17790167/uncrustify-0.80.1_f-win64.zip)\r\n32 bits: [uncrustify-0.80.1_f-win32.zip](https://github.com/user-attachments/files/17790168/uncrustify-0.80.1_f-win32.zip)\r\n\r\n### Source code\r\n\r\n[uncrustify-0.80.1.tar.gz](https://github.com/user-attachments/files/17790169/uncrustify-0.80.1.tar.gz)\r\n[uncrustify-0.80.1.zip](https://github.com/user-attachments/files/17790170/uncrustify-0.80.1.zip)\r\n\r\n### Building from source\r\n\r\nPlease refer to the [build](https://github.com/uncrustify/uncrustify#build) section in the README file for instructions on how to build Uncrustify from source.",
+      "tag": "uncrustify-0.80.1",
       "assets": [
         {
-          "name": "uncrustify-0.80.0.tar.gz",
-          "size": 1773063,
-          "url": "https://github.com/uncrustify/uncrustify/releases/download/uncrustify-0.80.0/uncrustify-0.80.0.tar.gz",
+          "name": "uncrustify-0.80.1.tar.gz",
+          "size": 1771662,
+          "url": "https://github.com/uncrustify/uncrustify/releases/download/uncrustify-0.80.1/uncrustify-0.80.1.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:dcbb73028c087007ba470d052834d1cd0ddf2ac4242bbd97cd1bd97f3174b09e"
+          "checksum": "sha256:6bf662e05c4140dd4df5e45d6690cad96b4ef23c293b85813f5c725bbf1894d0"
         },
         {
-          "name": "uncrustify-0.80.0.zip",
-          "size": 3269568,
-          "url": "https://github.com/uncrustify/uncrustify/releases/download/uncrustify-0.80.0/uncrustify-0.80.0.zip",
+          "name": "uncrustify-0.80.1.zip",
+          "size": 3267894,
+          "url": "https://github.com/uncrustify/uncrustify/releases/download/uncrustify-0.80.1/uncrustify-0.80.1.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:1050570d9721313da500fdc28764fe83780d33113632d14f107fbcdade647ba5"
+          "checksum": "sha256:fd1b4324b27675bf9be85bc170b71570b1663e8f70d4c1bb445bc1cfda852677"
         },
         {
-          "name": "uncrustify-0.80.0_f-win32.zip",
-          "size": 1119682,
-          "url": "https://github.com/uncrustify/uncrustify/releases/download/uncrustify-0.80.0/uncrustify-0.80.0_f-win32.zip",
+          "name": "uncrustify-0.80.1_f-win32.zip",
+          "size": 1118991,
+          "url": "https://github.com/uncrustify/uncrustify/releases/download/uncrustify-0.80.1/uncrustify-0.80.1_f-win32.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:21973e1d6e16b567fccafe22679d4bf5b2c8cc3ccef785c59a56f5b86915e13b"
+          "checksum": "sha256:ae897c1656739d49baed3b35639454b47acd908d5c8aed9a02785383b699e844"
         },
         {
-          "name": "uncrustify-0.80.0_f-win64.zip",
-          "size": 1062576,
-          "url": "https://github.com/uncrustify/uncrustify/releases/download/uncrustify-0.80.0/uncrustify-0.80.0_f-win64.zip",
+          "name": "uncrustify-0.80.1_f-win64.zip",
+          "size": 1062312,
+          "url": "https://github.com/uncrustify/uncrustify/releases/download/uncrustify-0.80.1/uncrustify-0.80.1_f-win64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:984bfcaef8bebd79bbc18b9ff11d5748609627ec37f97369325da040b9512821"
+          "checksum": "sha256:b1ddf005f89852aecc6e6b0bd4391f93fce2d2c8777d79aafadc2823aa21193e"
         }
       ]
     }
