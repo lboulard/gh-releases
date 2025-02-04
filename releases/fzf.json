@@ -4,135 +4,135 @@
   "url": "https://github.com/junegunn/fzf",
   "releases": [
     {
-      "title": "0.58.0",
-      "description": "_Release highlights: https://junegunn.github.io/fzf/releases/0.58.0/_\r\n\r\nThis version introduces three new border types, `--list-border`, `--input-border`, and `--header-border`, offering much greater flexibility for customizing the user interface.\r\n\r\n<img src=\"https://raw.githubusercontent.com/junegunn/i/master/fzf-4-borders.png\" />\r\n\r\nAlso, fzf now offers \"style presets\" for quick customization, which can be activated using the `--style` option.\r\n\r\n| Preset    | Screenshot                                                                             |\r\n| :---      | :---                                                                                   |\r\n| `default` | <img src=\"https://raw.githubusercontent.com/junegunn/i/master/fzf-style-default.png\"/> |\r\n| `full`    | <img src=\"https://raw.githubusercontent.com/junegunn/i/master/fzf-style-full.png\"/>    |\r\n| `minimal` | <img src=\"https://raw.githubusercontent.com/junegunn/i/master/fzf-style-minimal.png\"/> |\r\n\r\n- Style presets (#4160)\r\n    - `--style=full[:BORDER_STYLE]`\r\n    - `--style=default`\r\n    - `--style=minimal`\r\n- Border and label for the list section (#4148)\r\n    - Options\r\n        - `--list-border[=STYLE]`\r\n        - `--list-label=LABEL`\r\n        - `--list-label-pos=COL[:bottom]`\r\n    - Colors\r\n        - `list-fg`\r\n        - `list-bg`\r\n        - `list-border`\r\n        - `list-label`\r\n    - Actions\r\n        - `change-list-label`\r\n        - `transform-list-label`\r\n- Border and label for the input section (prompt line and info line) (#4154)\r\n    - Options\r\n        - `--input-border[=STYLE]`\r\n        - `--input-label=LABEL`\r\n        - `--input-label-pos=COL[:bottom]`\r\n    - Colors\r\n        - `input-fg` (`query`)\r\n        - `input-bg`\r\n        - `input-border`\r\n        - `input-label`\r\n    - Actions\r\n        - `change-input-label`\r\n        - `transform-input-label`\r\n- Border and label for the header section (#4159)\r\n    - Options\r\n        - `--header-border[=STYLE]`\r\n        - `--header-label=LABEL`\r\n        - `--header-label-pos=COL[:bottom]`\r\n    - Colors\r\n        - `header-fg` (`header`)\r\n        - `header-bg`\r\n        - `header-border`\r\n        - `header-label`\r\n    - Actions\r\n        - `change-header-label`\r\n        - `transform-header-label`\r\n- Added `--preview-border[=STYLE]` as short for `--preview-window=border[-STYLE]`\r\n- Added new preview border style `line` which draws a single separator line between the preview window and the rest of the interface\r\n- fzf will now render a dashed line (`\u2508\u2508`) in each `--gap` for better visual separation.\r\n  ```sh\r\n  # All bash/zsh functions, highlighted\r\n  declare -f |\r\n    perl -0 -pe 's/^}\\n/}\\0/gm' |\r\n    bat --plain --language bash --color always |\r\n    fzf --read0 --ansi --layout reverse --multi --highlight-line --gap\r\n  ```\r\n  ![](https://github.com/user-attachments/assets/203bf377-28da-4abf-a19c-d456ab1a72bb)\r\n  - You can customize the line using `--gap-line[=STR]`.\r\n- You can specify `border-native` to `--tmux` so that native tmux border is used instead of `--border`. This can be useful if you start a different program from inside the popup.\r\n  ```sh\r\n  fzf --tmux border-native --bind 'enter:execute:less {}'\r\n  ```\r\n- Added `toggle-multi-line` action\r\n- Added `toggle-hscroll` action\r\n- Added `change-nth` action for dynamically changing the value of the `--nth` option\r\n  ```sh\r\n  # Start with --nth 1, then 2, then 3, then back to the default, 1\r\n  echo 'foo foobar foobarbaz' | fzf --bind 'space:change-nth(2|3|)' --nth 1 -q foo\r\n  ```\r\n- `--nth` parts of each line can now be rendered in a different text style\r\n  ```sh\r\n  # nth in a different style\r\n  ls -al | fzf --nth -1 --color nth:italic\r\n  ls -al | fzf --nth -1 --color nth:reverse\r\n  ls -al | fzf --nth -1 --color nth:reverse:bold\r\n\r\n  # Dim the other parts\r\n  ls -al | fzf --nth -1 --color nth:regular,fg:dim\r\n\r\n  # With 'change-nth'. The current nth option is exported as $FZF_NTH.\r\n  ps -ef | fzf --reverse --header-lines 1 --header-border bottom --input-border \\\r\n             --color nth:regular,fg:dim \\\r\n             --bind 'ctrl-n:change-nth(8..|1|2|3|4|5|6|7|)' \\\r\n             --bind 'result:transform-prompt:echo \"${FZF_NTH}> \"'\r\n  ```\r\n  ![](https://junegunn.github.io/fzf/images/fzf-change-nth.gif)\r\n- A single-character delimiter is now treated as a plain string delimiter rather than a regular expression delimiter, even if it's a regular expression meta-character.\r\n    - This means you can just write `--delimiter '|'` instead of escaping it as `--delimiter '\\|'`\r\n- Bug fixes\r\n- Bug fixes and improvements in fish scripts (thanks to @bitraid)\r\n\r\n",
-      "tag": "v0.58.0",
+      "title": "0.59.0",
+      "description": "_Release highlights: https://junegunn.github.io/fzf/releases/0.59.0/_\n\n- Prioritizing file name matches (#4192)\n    - Added a new tiebreak option `pathname` for prioritizing file name matches\n    - `--scheme=path` now sets `--tiebreak=pathname,length`\n    - fzf will automatically choose `path` scheme\n        * when the input is a TTY device, where fzf would start its built-in walker or run `$FZF_DEFAULT_COMMAND` which is usually a command for listing files,\n        * but not when `reload` or `transform` action is bound to `start` event, because in that case, fzf can't be sure of the input type.\n- Added `--header-lines-border` to display header from `--header-lines` with a separate border\n  ```sh\n  # Use --header-lines-border to separate two headers\n  ps -ef | fzf --style full --layout reverse --header-lines 1 \\\n               --bind 'ctrl-r:reload(ps -ef)' --header 'Press CTRL-R to reload' \\\n               --header-lines-border bottom --no-list-border\n  ```\n- `click-header` event now sets `$FZF_CLICK_HEADER_WORD` and `$FZF_CLICK_HEADER_NTH`. You can use them to implement a clickable header for changing the search scope using the new `transform-nth` action.\n  ```sh\n  # Click on the header line to limit search scope\n  ps -ef | fzf --style full --layout reverse --header-lines 1 \\\n               --header-lines-border bottom --no-list-border \\\n               --color fg:dim,nth:regular \\\n               --bind 'click-header:transform-nth(\n                         echo $FZF_CLICK_HEADER_NTH\n                       )+transform-prompt(\n                         echo \"$FZF_CLICK_HEADER_WORD> \"\n                       )'\n  ```\n    - `$FZF_KEY` was updated to expose the type of the click. e.g. `click`, `ctrl-click`, etc. You can use it to implement a more sophisticated behavior.\n    - `kill` completion for bash and zsh were updated to use this feature\n- Added `--no-input` option to completely disable and hide the input section\n  ```sh\n  # Click header to trigger search\n  fzf --header '[src] [test]' --no-input --layout reverse \\\n      --header-border bottom --input-border \\\n      --bind 'click-header:transform-search:echo ${FZF_CLICK_HEADER_WORD:1:-1}'\n\n  # Vim-like mode switch\n  fzf --layout reverse-list --no-input \\\n      --bind 'j:down,k:up,/:show-input+unbind(j,k,/)' \\\n      --bind 'enter,esc,ctrl-c:transform:\n        if [[ $FZF_INPUT_STATE = enabled ]]; then\n          echo \"rebind(j,k,/)+hide-input\"\n        elif [[ $FZF_KEY = enter ]]; then\n          echo accept\n        else\n          echo abort\n        fi\n      '\n  ```\n    - You can later show the input section using `show-input` or `toggle-input` action, and hide it again using `hide-input`, or `toggle-input`.\n- Extended `{q}` placeholder to support ranges. e.g. `{q:1}`, `{q:2..}`, etc.\n- Added `search(...)` and `transform-search(...)` action to trigger an fzf search with an arbitrary query string. This can be used to extend the search syntax of fzf. In the following example, fzf will use the first word of the query to trigger ripgrep search, and use the rest of the query to perform fzf search within the result.\n  ```sh\n  export TEMP=$(mktemp -u)\n  trap 'rm -f \"$TEMP\"' EXIT\n\n  TRANSFORMER='\n    rg_pat={q:1}      # The first word is passed to ripgrep\n    fzf_pat={q:2..}   # The rest are passed to fzf\n\n    if ! [[ -r \"$TEMP\" ]] || [[ $rg_pat != $(cat \"$TEMP\") ]]; then\n      echo \"$rg_pat\" > \"$TEMP\"\n      printf \"reload:sleep 0.1; rg --column --line-number --no-heading --color=always --smart-case %q || true\" \"$rg_pat\"\n    fi\n    echo \"+search:$fzf_pat\"\n  '\n  fzf --ansi --disabled \\\n    --with-shell 'bash -c' \\\n    --bind \"start,change:transform:$TRANSFORMER\"\n  ```\n- You can now bind actions to multiple keys and events at once by writing a comma-separated list of keys and events before the colon\n  ```sh\n  # Load 'ps -ef' output on start and reload it on CTRL-R\n  fzf --bind 'start,ctrl-r:reload:ps -ef'\n  ```\n- `--min-height` option now takes a number followed by `+`, which tells fzf to show at least that many items in the list section. The default value is now changed to `10+`.\n  ```sh\n  # You will only see the input section which takes 3 lines\n  fzf --style=full --height 1% --min-height 3\n\n  # You will see 3 items in the list section\n  fzf --style full --height 1% --min-height 3+\n  ```\n    - Shell integration scripts were updated to use `--min-height 20+` by default\n- `--header-lines` will be displayed at the top in `reverse-list` layout\n- Added `bell` action to ring the terminal bell\n  ```sh\n  # Press CTRL-Y to copy the current line to the clipboard and ring the bell\n  fzf --bind 'ctrl-y:execute-silent(echo -n {} | pbcopy)+bell'\n  ```\n- Added `toggle-bind` action\n- Bug fixes and improvements\n- Fixed fish script to support fish 3.1.2 or later (@bitraid)\n\n",
+      "tag": "v0.59.0",
       "assets": [
         {
-          "name": "fzf-0.58.0-darwin_amd64.tar.gz",
-          "size": 1678555,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-darwin_amd64.tar.gz",
+          "name": "fzf-0.59.0-darwin_amd64.tar.gz",
+          "size": 1692567,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-darwin_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:932817cf24a94db2ae737911e4923851b65ba2d630d7f4344a0c29495463230d"
+          "checksum": "sha256:f69f0b37de47bf1af3df1679dc89d18206d3f083f1041d97cf278f1f89cbc87d"
         },
         {
-          "name": "fzf-0.58.0-darwin_arm64.tar.gz",
-          "size": 1603633,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-darwin_arm64.tar.gz",
+          "name": "fzf-0.59.0-darwin_arm64.tar.gz",
+          "size": 1615683,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-darwin_arm64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:73338f93ec79cc221028e9dc5c14ea5d3d63941fadcf27587573c13ae9eb651b"
+          "checksum": "sha256:4451947ebaf54616f2dd4c6db7d681ffeffc7b96b1a61d4b9b9aa22c5b9c6880"
         },
         {
-          "name": "fzf-0.58.0-freebsd_amd64.tar.gz",
-          "size": 1576832,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-freebsd_amd64.tar.gz",
+          "name": "fzf-0.59.0-freebsd_amd64.tar.gz",
+          "size": 1588528,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-freebsd_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:30248c6e39fa92a19d5d0c76577fe6e9958ada0a64a62785d91c2f147160dccc"
+          "checksum": "sha256:e54f38dbf148ac4a0ed00684020a7e1b5baf8157350291a01d7aea53b18f1d8e"
         },
         {
-          "name": "fzf-0.58.0-linux_amd64.tar.gz",
-          "size": 1583664,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-linux_amd64.tar.gz",
+          "name": "fzf-0.59.0-linux_amd64.tar.gz",
+          "size": 1596980,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-linux_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:9b9a8ca8d45a041586323b355f613b94e3301dc6214a43adccfae225a783f0bc"
+          "checksum": "sha256:4957db97bb8d3af947745d8f0309572bd7867666de30367e9422d55761ad076a"
         },
         {
-          "name": "fzf-0.58.0-linux_arm64.tar.gz",
-          "size": 1470614,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-linux_arm64.tar.gz",
+          "name": "fzf-0.59.0-linux_arm64.tar.gz",
+          "size": 1483253,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-linux_arm64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a5394047156d09ba6fec7549b45fc7478a5527a799b4ec52e64950e762597eb3"
+          "checksum": "sha256:496fe77565d9008a684fff6ca9f23a48b41e674e8134e5f6cddee8e2cad129a9"
         },
         {
-          "name": "fzf-0.58.0-linux_armv5.tar.gz",
-          "size": 1544873,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-linux_armv5.tar.gz",
+          "name": "fzf-0.59.0-linux_armv5.tar.gz",
+          "size": 1557300,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-linux_armv5.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:091db1268d476725b4f1d8d9f7a6fb6d6e37820a4335e4ce00a2c163fc1bb0a9"
+          "checksum": "sha256:d92d628ee4474c0426db4baa17e1b6c272399dbcfcf1eb91b1f6ddb42df6e756"
         },
         {
-          "name": "fzf-0.58.0-linux_armv6.tar.gz",
-          "size": 1534134,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-linux_armv6.tar.gz",
+          "name": "fzf-0.59.0-linux_armv6.tar.gz",
+          "size": 1548787,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-linux_armv6.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:08a9020bce8acf147f780274cbd999ac286f7737203187c0b8359410e1e38777"
+          "checksum": "sha256:f8e734fb22382fbe60ee53201849e52769dcd0d0f03a5ddf96f29c23902aa869"
         },
         {
-          "name": "fzf-0.58.0-linux_armv7.tar.gz",
-          "size": 1531535,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-linux_armv7.tar.gz",
+          "name": "fzf-0.59.0-linux_armv7.tar.gz",
+          "size": 1546307,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-linux_armv7.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c34f6bcdc825fbeae4dff0db07b2c617e4de110d66626ca3973faba2c1be89a6"
+          "checksum": "sha256:cb03e48be03b3efc06d878738723bc434deb3b8f910ab8556566dee56477827f"
         },
         {
-          "name": "fzf-0.58.0-linux_loong64.tar.gz",
-          "size": 1538019,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-linux_loong64.tar.gz",
+          "name": "fzf-0.59.0-linux_loong64.tar.gz",
+          "size": 1548755,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-linux_loong64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:fb632a22edb13867ae78362c04d8a9f9e742daa707afd06ddfd62452a4e25cf1"
+          "checksum": "sha256:20d739c27404eb7b12cfaaf1bbe1d7ee6bb7cbffc77e25867c5d20549d2825e5"
         },
         {
-          "name": "fzf-0.58.0-linux_ppc64le.tar.gz",
-          "size": 1465309,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-linux_ppc64le.tar.gz",
+          "name": "fzf-0.59.0-linux_ppc64le.tar.gz",
+          "size": 1475593,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-linux_ppc64le.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:6f7fc7a8ff64f4969d6a32576d73f9ea0357772d6bcf0cbe94b5b26902df9151"
+          "checksum": "sha256:cf46cb2965964ac5a46da77a972ab4154bb5e26c91075dad793c6bb762892bc1"
         },
         {
-          "name": "fzf-0.58.0-linux_s390x.tar.gz",
-          "size": 1551900,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-linux_s390x.tar.gz",
+          "name": "fzf-0.59.0-linux_s390x.tar.gz",
+          "size": 1564565,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-linux_s390x.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:2177bd1e694879ee1056da6c3028c48c780b031cbf7bf8ab3531a04855d67edd"
+          "checksum": "sha256:ba3b018bfc8ee40b9b8307c8834748606cc4e9e6f0ba0422d86ae13587e7b3bb"
         },
         {
-          "name": "fzf-0.58.0-openbsd_amd64.tar.gz",
-          "size": 1579854,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-openbsd_amd64.tar.gz",
+          "name": "fzf-0.59.0-openbsd_amd64.tar.gz",
+          "size": 1592765,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-openbsd_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:f280862f3419d99edac1e6e8ec08d37ad874c774f71ce47fc025fba1232a2f7b"
+          "checksum": "sha256:c6f6200a3e0446436bfbc20ca315b18cc06d70d130cbf02908e208d07789a5cf"
         },
         {
-          "name": "fzf-0.58.0-windows_amd64.zip",
-          "size": 1805951,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-windows_amd64.zip",
+          "name": "fzf-0.59.0-windows_amd64.zip",
+          "size": 1818700,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-windows_amd64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:976e9fc67e841f76a95dbbde78f6355887696825220ac1726c81c6add2a978fb"
+          "checksum": "sha256:a13586ad8f889723ae76eb6c9e8faf8c8ee799cc273a10cd87e22b16496c37de"
         },
         {
-          "name": "fzf-0.58.0-windows_arm64.zip",
-          "size": 1681930,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-windows_arm64.zip",
+          "name": "fzf-0.59.0-windows_arm64.zip",
+          "size": 1692025,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-windows_arm64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:7436cd4944c290a8f9ecc86081a25f3cb4cc9533e44fac0a59730781bce9e912"
+          "checksum": "sha256:5d13e5eb55fd98ecf58ca9f46d1738b0735988eac5203cac9c3da5f4bbbb4175"
         },
         {
-          "name": "fzf-0.58.0-windows_armv5.zip",
-          "size": 1775163,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-windows_armv5.zip",
+          "name": "fzf-0.59.0-windows_armv5.zip",
+          "size": 1789331,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-windows_armv5.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:6a965fd5e7cbc4fc574f62b069ead47d376ed3ff39824bf4f5317d1b29cd1682"
+          "checksum": "sha256:132e12161e718b645f6bc96bcf8be61f7248206bbcfd1c96c01f24a621fbb0e3"
         },
         {
-          "name": "fzf-0.58.0-windows_armv6.zip",
-          "size": 1763393,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-windows_armv6.zip",
+          "name": "fzf-0.59.0-windows_armv6.zip",
+          "size": 1777705,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-windows_armv6.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:803e3e2f719fb911a5f1a54715e84eacc466ffbb559964b4ddf13973f4cdba47"
+          "checksum": "sha256:23bfb5f802cfacd13e91d6c235605965a4fd9e2d08914f0306188f8370f9f3e1"
         },
         {
-          "name": "fzf-0.58.0-windows_armv7.zip",
-          "size": 1758379,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-windows_armv7.zip",
+          "name": "fzf-0.59.0-windows_armv7.zip",
+          "size": 1771084,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf-0.59.0-windows_armv7.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:5a31fb9e72620b98dd5b6e8a47ac912a73d60890fa1434826ed7203e6e25e9c8"
+          "checksum": "sha256:96f442fa0df41dfdc4aabd9f38a5c59cb7e83e09248d2461885ed4cbc5b0a5fc"
         },
         {
-          "name": "fzf_0.58.0_checksums.txt",
+          "name": "fzf_0.59.0_checksums.txt",
           "size": 1637,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf_0.58.0_checksums.txt",
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.59.0/fzf_0.59.0_checksums.txt",
           "content_type": "text/plain; charset=utf-8",
-          "checksum": "sha256:96eb60c0f4f3af70ddc227d387c16eac8170177f53a9ef2233b97744ce0f3430"
+          "checksum": "sha256:7b778206fb2c779892e7c31013c51d0c1bbd32f3c5eb6d824578389e448cd579"
         }
       ]
     }
