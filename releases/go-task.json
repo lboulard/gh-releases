@@ -5,7 +5,7 @@
   "releases": [
     {
       "title": "v3.42.1",
-      "description": "- Fixed a bug where some special variables caused a type error when used global variables (#2106, #2107 by @pd93).\r\n",
+      "description": "- Fixed a bug where some special variables caused a type error when used in global variables (#2106, #2107 by @pd93).\r\n",
       "tag": "v3.42.1",
       "assets": [
         {
