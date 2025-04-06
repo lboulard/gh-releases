@@ -4,135 +4,135 @@
   "url": "https://github.com/junegunn/fzf",
   "releases": [
     {
-      "title": "0.61.0",
-      "description": "- Added `--ghost=TEXT` to display a ghost text when the input is empty\n  ```sh\n  # Display \"Type to search\" when the input is empty\n  fzf --ghost \"Type to search\"\n  ```\n- Added `change-ghost` and `transform-ghost` actions for dynamically changing the ghost text\n- Added `change-pointer` and `transform-pointer` actions for dynamically changing the pointer sign\n- Added `r` flag for placeholder expression (raw mode) for unquoted output\n- Bug fixes and improvements\n\n",
-      "tag": "v0.61.0",
+      "title": "0.61.1",
+      "description": "- Disable bracketed-paste mode on exit. This fixes issue where pasting breaks after running fzf on old bash versions that don't support the mode.\n\n",
+      "tag": "v0.61.1",
       "assets": [
         {
-          "name": "fzf-0.61.0-darwin_amd64.tar.gz",
-          "size": 1702241,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-darwin_amd64.tar.gz",
+          "name": "fzf-0.61.1-darwin_amd64.tar.gz",
+          "size": 1702818,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-darwin_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:1c7da66fc557d383220d0ccc5e37d5913c96b7ab326c1a4e557bbe7c08319767"
+          "checksum": "sha256:1bfead33f9401d6ddf4d6128c5a5f55266209557fbc1d9fd41b0abf78df1752b"
         },
         {
-          "name": "fzf-0.61.0-darwin_arm64.tar.gz",
-          "size": 1627569,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-darwin_arm64.tar.gz",
+          "name": "fzf-0.61.1-darwin_arm64.tar.gz",
+          "size": 1627831,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-darwin_arm64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d8230bb1a38817b7b7dc13100f9ef951fdc216e60df04e6c4015ee6acea54aeb"
+          "checksum": "sha256:addc2d9af3281b09661223ea87887c69599d4cf7b7bc9219d7320daadc8639a1"
         },
         {
-          "name": "fzf-0.61.0-freebsd_amd64.tar.gz",
-          "size": 1601114,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-freebsd_amd64.tar.gz",
+          "name": "fzf-0.61.1-freebsd_amd64.tar.gz",
+          "size": 1601464,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-freebsd_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:b41aa45f4c8dc412e54d3370462fad8b79f270149cd1014664e995c7e2bf688d"
+          "checksum": "sha256:49bd3ef0786ab03ca2f4ea07a3f975c39a84c680aac87889e8cde8b73aee0fb7"
         },
         {
-          "name": "fzf-0.61.0-linux_amd64.tar.gz",
-          "size": 1607471,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-linux_amd64.tar.gz",
+          "name": "fzf-0.61.1-linux_amd64.tar.gz",
+          "size": 1607605,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-linux_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:69767835a69f0eaef03d4ea4117b32197382ebb59cae358ea22f08b46c33fa50"
+          "checksum": "sha256:f728b94bbbf7008602581fc07ea00de5dccf55a2cb2bf9fd9a35f1071b3b9f6c"
         },
         {
-          "name": "fzf-0.61.0-linux_arm64.tar.gz",
-          "size": 1492724,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-linux_arm64.tar.gz",
+          "name": "fzf-0.61.1-linux_arm64.tar.gz",
+          "size": 1492973,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-linux_arm64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:760f4f62c30af0f722430af099c40af191b3fe5a55b8f850926dac406f6bf9fe"
+          "checksum": "sha256:25f6295f718b572ac2ff7de1ffa9e39e619f4f9587386d85bf5b647f0b98fd6b"
         },
         {
-          "name": "fzf-0.61.0-linux_armv5.tar.gz",
-          "size": 1566678,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-linux_armv5.tar.gz",
+          "name": "fzf-0.61.1-linux_armv5.tar.gz",
+          "size": 1566849,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-linux_armv5.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:ada13e8db8359590d70dbc45263229f50aecfea96c40ce94a6e4bbcb29120b3e"
+          "checksum": "sha256:48b8d99c4f389b3d2ecf36cc632bbde0bdae2aedac0606a4221aea66ccb5b93d"
         },
         {
-          "name": "fzf-0.61.0-linux_armv6.tar.gz",
-          "size": 1559414,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-linux_armv6.tar.gz",
+          "name": "fzf-0.61.1-linux_armv6.tar.gz",
+          "size": 1559617,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-linux_armv6.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:db9d287e70da0c6206378c61a7d715a052f30416f4cfcfd6df493dd95144011c"
+          "checksum": "sha256:b3b0469afcb29656a2d4c2bfdf0f7e927e6100f848898a2dd72e75ade0a56e01"
         },
         {
-          "name": "fzf-0.61.0-linux_armv7.tar.gz",
-          "size": 1555865,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-linux_armv7.tar.gz",
+          "name": "fzf-0.61.1-linux_armv7.tar.gz",
+          "size": 1555859,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-linux_armv7.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:5bfb372ec4431e5393ff53235cc28451a8f1bbed9c81e24acb2538aa82039d9a"
+          "checksum": "sha256:6472fdc1ede0156755badfefa2d3be487148189fe79feaeb175e9fae7eb96e01"
         },
         {
-          "name": "fzf-0.61.0-linux_loong64.tar.gz",
-          "size": 1562008,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-linux_loong64.tar.gz",
+          "name": "fzf-0.61.1-linux_loong64.tar.gz",
+          "size": 1562057,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-linux_loong64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:5e31b89a3c7f7e2b1245d1605f886ba0d1ded913a4e945560a686f97b758e876"
+          "checksum": "sha256:880ea384769525ed12be4797a88db116696a582686c1d684147738d9f8e56828"
         },
         {
-          "name": "fzf-0.61.0-linux_ppc64le.tar.gz",
-          "size": 1484258,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-linux_ppc64le.tar.gz",
+          "name": "fzf-0.61.1-linux_ppc64le.tar.gz",
+          "size": 1484496,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-linux_ppc64le.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:645f46f48e0d66b05f203ddb7676adf782f4a32bfcdf75d786b1ba4232ab2205"
+          "checksum": "sha256:92bcd14f2e9b1b710c9ed6a5a0b92d63438ac8e371477b102a781ba5cc3b2be6"
         },
         {
-          "name": "fzf-0.61.0-linux_s390x.tar.gz",
-          "size": 1575031,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-linux_s390x.tar.gz",
+          "name": "fzf-0.61.1-linux_s390x.tar.gz",
+          "size": 1575318,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-linux_s390x.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:c265253c622200cb2418735883e0189aaca917e9f61a308b82613fd3d107d03b"
+          "checksum": "sha256:4a4c3b03601dc140da74133fe20dd10c5e2fbc4b92907c410f3f4f9f36265cb8"
         },
         {
-          "name": "fzf-0.61.0-openbsd_amd64.tar.gz",
-          "size": 1605084,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-openbsd_amd64.tar.gz",
+          "name": "fzf-0.61.1-openbsd_amd64.tar.gz",
+          "size": 1605392,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-openbsd_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a524f8ff9345327b3155dc271b2c82d2744b7fd2dbd8e110e2a2bc407b8ee298"
+          "checksum": "sha256:983c8fde666dd811b894f6c32ef408aec028fe0637a5d07002bf7a667d5c003f"
         },
         {
-          "name": "fzf-0.61.0-windows_amd64.zip",
-          "size": 1831004,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-windows_amd64.zip",
+          "name": "fzf-0.61.1-windows_amd64.zip",
+          "size": 1831245,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-windows_amd64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:812e272e2038e969a370fd96ebe604d5ed4d29f465ae60412cfb3b768e0a1caf"
+          "checksum": "sha256:c757baaeb1d55f5666970a559ddd3b39307bd4ee5598f872940e8cccbacc5b6c"
         },
         {
-          "name": "fzf-0.61.0-windows_arm64.zip",
-          "size": 1703277,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-windows_arm64.zip",
+          "name": "fzf-0.61.1-windows_arm64.zip",
+          "size": 1703348,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-windows_arm64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:b75aeeec398bb8f7e8744b4b0eb76483b53b8dfc245ce665612872a25fffa2af"
+          "checksum": "sha256:520945ac04551316d1fbfeb8c62284be68ea4549322063e93fe4a127f3591452"
         },
         {
-          "name": "fzf-0.61.0-windows_armv5.zip",
-          "size": 1801321,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-windows_armv5.zip",
+          "name": "fzf-0.61.1-windows_armv5.zip",
+          "size": 1801629,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-windows_armv5.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:933a97bef6fd7910a750b2297f94b0234ece9c28943012cce96a21728b8da1bc"
+          "checksum": "sha256:ab560035d99132b0188687f0af639c6761908e47ab3a1c08ff96151550c49f10"
         },
         {
-          "name": "fzf-0.61.0-windows_armv6.zip",
-          "size": 1788565,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-windows_armv6.zip",
+          "name": "fzf-0.61.1-windows_armv6.zip",
+          "size": 1788630,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-windows_armv6.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:7f2d151a9046a63e6dd4591d19e92fabbc62e0f861aec25244ad3281e01c2c48"
+          "checksum": "sha256:58615649113a4b64972cf4a04b40e85f24522ed0b0b4a3e0bea7151307ff9a14"
         },
         {
-          "name": "fzf-0.61.0-windows_armv7.zip",
-          "size": 1781889,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf-0.61.0-windows_armv7.zip",
+          "name": "fzf-0.61.1-windows_armv7.zip",
+          "size": 1781912,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf-0.61.1-windows_armv7.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:09b92232eb14062a3e65ee33af05d0eb4601e30ac2844ac49734b45ee0968c1c"
+          "checksum": "sha256:d4ed2ed0c661d9f2b7aa773e5c73f65f177129dfc85e6b7b1994536cc1f2b03b"
         },
         {
-          "name": "fzf_0.61.0_checksums.txt",
+          "name": "fzf_0.61.1_checksums.txt",
           "size": 1637,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.0/fzf_0.61.0_checksums.txt",
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.61.1/fzf_0.61.1_checksums.txt",
           "content_type": "text/plain; charset=utf-8",
-          "checksum": "sha256:0a76795383214aa8fc478e1e8680b4dd9c5bdaaf7e95961031b9b7932207d96e"
+          "checksum": "sha256:97f4b28438239267e5152135cf7de0e513ee58fc906b64a72b835bec3841ad54"
         }
       ]
     }
