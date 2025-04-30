@@ -40,7 +40,7 @@ class GatewayException(HTTPError):
 
 def _get_sha256(
     url, timeout=None, session=None, cache=None
-):  # type: (str, int, requests.Session | None, Cache|None) -> (int, str | None)
+):  # type: (str, int, requests.Session | None, Cache|None) -> tuple[bool, int, str | None]
     headers = {
         "Accept": "application/octet-stream",
         "User-Agent": "curl/7.9.0",
@@ -89,7 +89,7 @@ def _get_sha256(
 
 def get_sha256(
     url, session, cache=None
-):  # type: (str, requests.Session, Cache|None) -> (int, str | None)
+):  # type: (str, requests.Session, Cache|None) -> tuple[bool, int, str | None]
     delay, delta = 10, 0
     for tentative in (5, 4, 3, 2, 1, 0):
         try:
