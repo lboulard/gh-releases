@@ -5,7 +5,7 @@ import logging
 import random
 import sys
 import time
-from datetime import timedelta, datetime
+from datetime import datetime, timedelta
 
 import requests
 
@@ -110,3 +110,5 @@ def get_sha256(
             % (tentative, "s" if tentative > 1 else "", timedelta(seconds=wait))
         )
         time.sleep(wait)
+    # you shall never reach this line
+    raise Exception("Unreachable code")
