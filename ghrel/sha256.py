@@ -16,15 +16,25 @@ def to_http_date(date):  # type: (datetime) -> str
     return date.strftime("%a, %d %b %Y %H:%M:%S GMT")
 
 
-class AuthenticationException(Exception):
+class HTTPError(Exception):
+    def __init__(self, url, status_code, reason):
+        self.url = url
+        self.status_code = status_code
+        self.reason = reason
+
+    def __str__(self):
+        return "%s returned %d (%s)" % (
+            self.url,
+            self.status_code,
+            self.reason,
+        )
+
+
+class AuthenticationException(HTTPError):
     pass
 
 
-class GetSha256Exception(Exception):
-    pass
-
-
-class GatewayException(Exception):
+class GatewayException(HTTPError):
     pass
 
 
@@ -48,7 +58,7 @@ def _get_sha256(
         logging.info(f"# {response}")
         sha256 = hashlib.new("SHA256")
         checksum, size = None, -1
-        if response.status_code == 200:
+        if response.status_code in range(200, 300):
             size = 0
             for chunk in response.iter_content(chunk_size=2**16):
                 size += len(chunk)
@@ -66,17 +76,14 @@ def _get_sha256(
                 checksum, size = entry.checksum, entry.size
         else:
             _ = response.content
-            message = "ERROR: %s returned %d (%s)" % (
-                url,
-                response.status_code,
-                response.reason,
-            )
-            print(message, file=sys.stderr)
+
             if response.status_code == 403:
-                raise AuthenticationException(message)
+                raise AuthenticationException(
+                    url, response.status_code, response.reason
+                )
             elif response.status_code in range(500, 600):
-                raise GatewayException(message)
-            raise GetSha256Exception(message)
+                raise GatewayException(url, response.status_code, response.reason)
+            raise HTTPError(url, response.status_code, response.reason)
         return from_cache, size, checksum
 
 
@@ -87,14 +94,10 @@ def get_sha256(
     for tentative in (5, 4, 3, 2, 1, 0):
         try:
             return _get_sha256(url, timeout=30, session=session, cache=cache)
-        except (
-            requests.exceptions.Timeout,
-            AuthenticationException,
-            GatewayException,
-        ) as e:
+        except (requests.exceptions.Timeout, HTTPError) as e:
             if tentative == 0:
                 raise
-            print(" ** %s" % str(e))
+            print(" ** %s\n ** retrying..." % str(e), file=sys.stderr, flush=True)
         # safety belt: min 30s, max 10mn
         delay = max(10 * 60, min(30, delay))
         # introduce jitter of 30 seconds
