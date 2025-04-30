@@ -98,12 +98,12 @@ def get_sha256(
             if tentative == 0:
                 raise
             print(" ** %s\n ** retrying..." % str(e), file=sys.stderr, flush=True)
-        # safety belt: min 30s, max 10mn
-        delay = max(10 * 60, min(30, delay))
-        # introduce jitter of 30 seconds
-        wait = delta + int(0.5 + random.uniform(delay - 5, delay + 5))
-        wait = max(1, wait)
-        delta = wait - delay
+        # safety belt: max 10 minutes
+        delay = max(10 * 60, delay)
+        # introduce jitter of 10%, with 10 seconds at least
+        jitter = min(5.0, delay * 0.05)
+        wait = delta + int(0.5 + random.uniform(delay - jitter, delay + jitter))
+        delta = delay - wait
         delay *= 2
         print(
             " ** %d tentative%s left, retrying in %s..."
