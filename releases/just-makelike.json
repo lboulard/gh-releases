@@ -4,79 +4,79 @@
   "url": "https://github.com/casey/just",
   "releases": [
     {
-      "title": "1.42.1",
-      "description": "### Fixed\r\n\r\n- Export variables to submodules ([#2816](https://github.com/casey/just/pull/2816) by [casey](https://github.com/casey))\r\n- Only override root-justfile variable assignments ([#2815](https://github.com/casey/just/pull/2815) by [casey](https://github.com/casey))",
-      "tag": "1.42.1",
+      "title": "1.42.2",
+      "description": "### Fixed\r\n- Fix scope lookup for nested submodules ([#2820](https://github.com/casey/just/pull/2820) by [casey](https://github.com/casey))",
+      "tag": "1.42.2",
       "assets": [
         {
           "name": "CHANGELOG.md",
-          "size": 143042,
-          "url": "https://github.com/casey/just/releases/download/1.42.1/CHANGELOG.md",
+          "size": 143328,
+          "url": "https://github.com/casey/just/releases/download/1.42.2/CHANGELOG.md",
           "content_type": "text/markdown",
-          "checksum": "sha256:1214ef308fa0beea35891364bfe8f9d3aaeeed990254e8343ea8809bfb95ba69"
+          "checksum": "sha256:683c0b9c810525c9149b1687dda8a633d568ca1acdefbbdb30cda3885aedb7ec"
         },
         {
-          "name": "just-1.42.1-aarch64-apple-darwin.tar.gz",
-          "size": 1700396,
-          "url": "https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-aarch64-apple-darwin.tar.gz",
+          "name": "just-1.42.2-aarch64-apple-darwin.tar.gz",
+          "size": 1699956,
+          "url": "https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:9ceb13235e6b86bee17fb4e90be498fa899a98d972e301bb4fa17099dd5367d5"
+          "checksum": "sha256:396570054711db93ffa1b216f54608ba37d98539a2fe7ddacbb0041dad20e738"
         },
         {
-          "name": "just-1.42.1-aarch64-pc-windows-msvc.zip",
-          "size": 1603323,
-          "url": "https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-aarch64-pc-windows-msvc.zip",
+          "name": "just-1.42.2-aarch64-pc-windows-msvc.zip",
+          "size": 1603820,
+          "url": "https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-aarch64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:8dad1e579301d9d3ee3d0f9ece8985c536b166736aec311b4af3e42b5777b77f"
+          "checksum": "sha256:9fee4ea5254630cb4c00a401a94e4dad65294d9596efd15d13c55e2bbd011fbf"
         },
         {
-          "name": "just-1.42.1-aarch64-unknown-linux-musl.tar.gz",
-          "size": 1827526,
-          "url": "https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-aarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.42.2-aarch64-unknown-linux-musl.tar.gz",
+          "size": 1827821,
+          "url": "https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-aarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:2dafc61f9181743faac79a775e0cced4a05174851d9366aab3bc623089fbdb60"
+          "checksum": "sha256:e75c611406ad9bc9ac8513a6212f68b2d2cd9c08a6f2c1e2cfbd3fa3f21c9378"
         },
         {
-          "name": "just-1.42.1-arm-unknown-linux-musleabihf.tar.gz",
-          "size": 1880187,
-          "url": "https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-arm-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.42.2-arm-unknown-linux-musleabihf.tar.gz",
+          "size": 1882386,
+          "url": "https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-arm-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:446e925fa90dd7adcd63ec662bd3d877d24a1aa6649bce5f21b496d4b0bcdf5e"
+          "checksum": "sha256:d40ceec8bd018184e4847bd7f85c38a440e71f494dd19840b044d41a14f2e659"
         },
         {
-          "name": "just-1.42.1-armv7-unknown-linux-musleabihf.tar.gz",
-          "size": 1848620,
-          "url": "https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-armv7-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.42.2-armv7-unknown-linux-musleabihf.tar.gz",
+          "size": 1849909,
+          "url": "https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-armv7-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:7aa1dd4a951aa08995cc59743e79587029f74d96e0af49b335ed88210e435c64"
+          "checksum": "sha256:509519024e4fd654826433d487c11f3990fce76f880db2e1168e0a96ffbc5b10"
         },
         {
-          "name": "just-1.42.1-x86_64-apple-darwin.tar.gz",
-          "size": 1836054,
-          "url": "https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-x86_64-apple-darwin.tar.gz",
+          "name": "just-1.42.2-x86_64-apple-darwin.tar.gz",
+          "size": 1836905,
+          "url": "https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-x86_64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:91f31906f26acfc13cb57abddaf091876331efed6dfbf7b53bd507d1e9eed8ec"
+          "checksum": "sha256:08af9277dcd6da43ffb807ddd0ad6df7f7c276b116536f5a8a39a3bd5d82cd4a"
         },
         {
-          "name": "just-1.42.1-x86_64-pc-windows-msvc.zip",
-          "size": 1753850,
-          "url": "https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-x86_64-pc-windows-msvc.zip",
+          "name": "just-1.42.2-x86_64-pc-windows-msvc.zip",
+          "size": 1753503,
+          "url": "https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:3c7c6a55d5866936009a5ee289faaf81cb5300b7498c563cc4827a59b4ae2c5a"
+          "checksum": "sha256:71556376af825617722a39bc536192dfbc6128dcaf6fbc9a9a43fee8c2cb2e7b"
         },
         {
-          "name": "just-1.42.1-x86_64-unknown-linux-musl.tar.gz",
-          "size": 2003495,
-          "url": "https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-x86_64-unknown-linux-musl.tar.gz",
+          "name": "just-1.42.2-x86_64-unknown-linux-musl.tar.gz",
+          "size": 2003553,
+          "url": "https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:079b2bba3d6299a5875f591fd5d14477de03d21aabd19c8c75c3d6802df1eb08"
+          "checksum": "sha256:ffb0f39509ef771b353060d40b3557a577549f25384c11132f90affcb0aeba09"
         },
         {
           "name": "SHA256SUMS",
           "size": 954,
-          "url": "https://github.com/casey/just/releases/download/1.42.1/SHA256SUMS",
+          "url": "https://github.com/casey/just/releases/download/1.42.2/SHA256SUMS",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d56725038b260eb843c2e56dbb2b590fffb01d930b7d13254344de56936330eb"
+          "checksum": "sha256:388c46c95e0a64bdb6572fa5b0d9b638a92ec261d21f65f90de6d4cb1e6b3bd6"
         }
       ]
     }
