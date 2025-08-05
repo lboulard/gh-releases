@@ -4,58 +4,58 @@
   "url": "https://github.com/koalaman/shellcheck",
   "releases": [
     {
-      "title": "Stable version v0.10.0",
-      "description": "This release is dedicated to LLMs, for finally fulfilling the promise of\r\n1960s scifi: systems you can hack using logic games and creative lies.",
-      "tag": "v0.10.0",
+      "title": "Stable version v0.11.0",
+      "description": "This release is dedicated to Satisfactory, even though my giant\n3D ball of rat's nest conveyor belt spaghetti is anything but.\n\n  CHANGELOG\n\n  ## v0.11.0 - 2025-08-03\n  ### Added\n  - SC2327/SC2328: Warn about capturing the output of redirected commands.\n  - SC2329: Warn when (non-escaping) functions are never invoked.\n  - SC2330: Warn about unsupported glob matches with [[ .. ]] in BusyBox.\n  - SC2331: Suggest using standard -e instead of unary -a in tests.\n  - SC2332: Warn about `[ ! -o opt ]` being unconditionally true in Bash.\n  - SC3062: Warn about bashism `[ -o opt ]`.\n  - Optional `avoid-negated-conditions`: suggest replacing `[ ! a -eq b ]`\n    with `[ a -ne b ]`, and similar for -ge/-lt/=/!=/etc (SC2335).\n  - Precompiled binaries for Linux riscv64 (linux.riscv64)\n\n  ### Changed\n  - SC2002 about Useless Use Of Cat is now disabled by default. It can be\n    re-enabled with `--enable=useless-use-of-cat` or equivalent directive.\n  - SC2236/SC2237 about replacing `[ ! -n .. ]` with `[ -z ]` and vice versa\n    is now optional under `avoid-negated-conditions`.\n  - SC2015 about `A && B || C` no longer triggers when B is a test command.\n  - SC3012: Do not warn about `\\<` and `\\>` in test/[] as specified in POSIX.1-2024\n  - Diff output now uses / as path separator on Windows\n\n  ### Fixed\n  - SC2218 about function use-before-define is now more accurate.\n  - SC2317 about unreachable commands is now less spammy for nested ones.\n  - SC2292, optional suggestion for [[ ]], now triggers for Busybox.\n  - Updates for Bash 5.3, including `${| cmd; }` and `source -p`\n\n  ### Removed\n  - SC3013: removed since the operators `-ot/-nt/-ef` are specified in POSIX.1-2024",
+      "tag": "v0.11.0",
       "assets": [
         {
-          "name": "shellcheck-v0.10.0.darwin.aarch64.tar.xz",
-          "size": 7205756,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.darwin.aarch64.tar.xz",
+          "name": "shellcheck-v0.11.0.darwin.aarch64.tar.xz",
+          "size": 7245972,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.darwin.aarch64.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:bbd2f14826328eee7679da7221f2bc3afb011f6a928b848c80c321f6046ddf81"
+          "checksum": "sha256:56affdd8de5527894dca6dc3d7e0a99a873b0f004d7aabc30ae407d3f48b0a79"
         },
         {
-          "name": "shellcheck-v0.10.0.darwin.x86_64.tar.xz",
-          "size": 4371632,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.darwin.x86_64.tar.xz",
+          "name": "shellcheck-v0.11.0.darwin.x86_64.tar.xz",
+          "size": 4393952,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.darwin.x86_64.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:ef27684f23279d112d8ad84e0823642e43f838993bbb8c0963db9b58a90464c2"
+          "checksum": "sha256:3c89db4edcab7cf1c27bff178882e0f6f27f7afdf54e859fa041fca10febe4c6"
         },
         {
-          "name": "shellcheck-v0.10.0.linux.aarch64.tar.xz",
-          "size": 4291764,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.linux.aarch64.tar.xz",
+          "name": "shellcheck-v0.11.0.linux.aarch64.tar.xz",
+          "size": 6811484,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.linux.aarch64.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:324a7e89de8fa2aed0d0c28f3dab59cf84c6d74264022c00c22af665ed1a09bb"
+          "checksum": "sha256:12b331c1d2db6b9eb13cfca64306b1b157a86eb69db83023e261eaa7e7c14588"
         },
         {
-          "name": "shellcheck-v0.10.0.linux.armv6hf.tar.xz",
-          "size": 1328236,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.linux.armv6hf.tar.xz",
+          "name": "shellcheck-v0.11.0.linux.armv6hf.tar.xz",
+          "size": 5921316,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.linux.armv6hf.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:1c89cb51e1412b580d7ba8aac240251ffb0b829788f83d2daa4a82da42d275e4"
+          "checksum": "sha256:8afc50b302d5feeac9381ea114d563f0150d061520042b254d6eb715797c8223"
         },
         {
-          "name": "shellcheck-v0.10.0.linux.riscv64.tar.xz",
-          "size": 9868420,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.linux.riscv64.tar.xz",
+          "name": "shellcheck-v0.11.0.linux.riscv64.tar.xz",
+          "size": 9297392,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.linux.riscv64.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:be1f2028951783424c7a5dc744ac0bab8d5b181189e80f640cc56f481f1e371e"
+          "checksum": "sha256:693c987777e7b524dd311d9b8c704885a39c889c9804bb1ef1fd29b48567b0b3"
         },
         {
-          "name": "shellcheck-v0.10.0.linux.x86_64.tar.xz",
-          "size": 2404716,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.linux.x86_64.tar.xz",
+          "name": "shellcheck-v0.11.0.linux.x86_64.tar.xz",
+          "size": 2559196,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.linux.x86_64.tar.xz",
           "content_type": "application/x-xz",
-          "checksum": "sha256:6c881ab0698e4e6ea235245f22832860544f17ba386442fe7e9d629f8cbedf87"
+          "checksum": "sha256:8c3be12b05d5c177a04c29e3c78ce89ac86f1595681cab149b65b97c4e227198"
         },
         {
-          "name": "shellcheck-v0.10.0.zip",
-          "size": 1628090,
-          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.10.0/shellcheck-v0.10.0.zip",
+          "name": "shellcheck-v0.11.0.zip",
+          "size": 8068167,
+          "url": "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:eb6cd53a54ea97a56540e9d296ce7e2fa68715aa507ff23574646c1e12b2e143"
+          "checksum": "sha256:8a4e35ab0b331c85d73567b12f2a444df187f483e5079ceffa6bda1faa2e740e"
         }
       ]
     }
