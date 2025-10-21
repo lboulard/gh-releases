@@ -4,156 +4,156 @@
   "url": "https://github.com/sharkdp/bat",
   "releases": [
     {
-      "title": "v0.25.0",
-      "description": "# v0.25.0\r\n\r\n## Features\r\n\r\n- Set terminal title to file names when Paging is not Paging::Never #2807 (@Oliver-Looney)\r\n- `bat --squeeze-blank`/`bat -s` will now squeeze consecutive empty lines, see #1441 (@eth-p) and #2665 (@einfachIrgendwer0815)\r\n- `bat --squeeze-limit` to set the maximum number of empty consecutive when using `--squeeze-blank`, see #1441 (@eth-p) and #2665 (@einfachIrgendwer0815)\r\n- `PrettyPrinter::squeeze_empty_lines` to support line squeezing for bat as a library, see #1441 (@eth-p) and #2665 (@einfachIrgendwer0815)\r\n- Syntax highlighting for JavaScript files that start with `#!/usr/bin/env bun` #2913 (@sharunkumar)\r\n- `bat --strip-ansi={never,always,auto}` to remove ANSI escape sequences from bat's input, see #2999 (@eth-p)\r\n- Add or remove individual style components without replacing all styles #2929 (@eth-p)\r\n- Automatically choose theme based on the terminal's color scheme, see #2896 (@bash)\r\n- Add option `--binary=as-text` for printing binary content, see issue #2974 and PR #2976 (@einfachIrgendwer0815)\r\n- Make shell completions available via `--completion <shell>`, see issue #2057 and PR #3126 (@einfachIrgendwer0815)\r\n- Syntax highlighting for puppet code blocks within Markdown files, see #3152 (@liliwilson)\r\n\r\n## Bugfixes\r\n\r\n- Fix long file name wrapping in header, see #2835 (@FilipRazek)\r\n- Fix `NO_COLOR` support, see #2767 (@acuteenvy)\r\n- Fix handling of inputs with OSC ANSI escape sequences, see #2541 and #2544 (@eth-p)\r\n- Fix handling of inputs with combined ANSI color and attribute sequences, see #2185 and #2856 (@eth-p)\r\n- Fix panel width when line 10000 wraps, see #2854 (@eth-p)\r\n- Fix compile issue of `time` dependency caused by standard library regression #3045 (@cyqsimon)\r\n- Fix override behavior of --plain and --paging, see issue #2731 and PR #3108 (@einfachIrgendwer0815)\r\n- Fix bugs in `$LESSOPEN` support, see #2805 (@Anomalocaridid)\r\n\r\n## Other\r\n\r\n- Upgrade to Rust 2021 edition #2748 (@cyqsimon)\r\n- Refactor and cleanup build script #2756 (@cyqsimon)\r\n- Checks changelog has been written to for PRs in CI #2766 (@cyqsimon)\r\n  - Use GitHub API to get correct PR submitter #2791 (@cyqsimon)\r\n- Minor benchmark script improvements #2768 (@cyqsimon)\r\n- Update Arch Linux package URL in README files #2779 (@brunobell)\r\n- Update and improve `zsh` completion, see #2772 (@okapia)\r\n- More extensible syntax mapping mechanism #2755 (@cyqsimon)\r\n- Use proper Architecture for Debian packages built for musl, see #2811 (@Enselic)\r\n- Pull in fix for unsafe-libyaml security advisory, see #2812 (@dtolnay)\r\n- Update git-version dependency to use Syn v2, see #2816 (@dtolnay)\r\n- Update git2 dependency to v0.18.2, see #2852 (@eth-p)\r\n- Improve performance when color output disabled, see #2397 and #2857 (@eth-p)\r\n- Relax syntax mapping rule restrictions to allow brace expansion #2865 (@cyqsimon)\r\n- Apply clippy fixes #2864 (@cyqsimon)\r\n- Faster startup by offloading glob matcher building to a worker thread #2868 (@cyqsimon)\r\n- Display which theme is the default one in basic output (no colors), see #2937 (@sblondon)\r\n- Display which theme is the default one in colored output, see #2838 (@sblondon)\r\n- Add aarch64-apple-darwin (\"Apple Silicon\") binary tarballs to releases, see #2967 (@someposer)\r\n- Update the Lisp syntax, see #2970 (@ccqpein)\r\n- Use bat's ANSI iterator during tab expansion, see #2998 (@eth-p)\r\n- Support 'statically linked binary' for aarch64 in 'Release' page, see #2992 (@tzq0301)\r\n- Update options in shell completions and the man page of `bat`, see #2995 (@akinomyoga)\r\n- Update nix dev-dependency to v0.29.0, see #3112 (@decathorpe)\r\n- Bump MSRV to [1.74](https://blog.rust-lang.org/2023/11/16/Rust-1.74.0.html), see #3154 (@keith-hall)\r\n- Update clircle dependency to remove winapi transitive dependency, see #3113 (@niklasmohrin)\r\n\r\n## Syntaxes\r\n\r\n- `cmd-help`: scope subcommands followed by other terms, and other misc improvements, see #2819 (@victor-gp)\r\n- Upgrade JQ syntax, see #2820 (@dependabot[bot])\r\n- Add syntax mapping for quadman quadlets #2866 (@cyqsimon)\r\n- Map containers .conf files to TOML syntax #2867 (@cyqsimon)\r\n- Associate `.xsh` files with `xonsh` syntax that is Python, see #2840 (@anki-code)\r\n- Associate JSON with Comments `.jsonc` with `json` syntax, see #2795 (@mxaddict)\r\n- Associate JSON-LD `.jsonld` files with `json` syntax, see #3037 (@vorburger)\r\n- Associate `.textproto` files with `ProtoBuf` syntax, see #3038 (@vorburger)\r\n- Associate GeoJSON `.geojson` files with `json` syntax, see #3084 (@mvaaltola)\r\n- Associate `.aws/{config,credentials}`, see #2795 (@mxaddict)\r\n- Associate Wireguard config `/etc/wireguard/*.conf`, see #2874 (@cyqsimon)\r\n- Add support for [CFML](https://www.adobe.com/products/coldfusion-family.html), see #3031 (@brenton-at-pieces)\r\n- Map `*.mkd` files to `Markdown` syntax, see issue #3060 and PR #3061 (@einfachIrgendwer0815)\r\n- Add syntax mapping for CITATION.cff, see #3103 (@Ugzuzg)\r\n- Add syntax mapping for kubernetes config files #3049 (@cyqsimon)\r\n- Adds support for pipe delimiter for CSV #3115 (@pratik-m)\r\n- Add syntax mapping for `/etc/pacman.conf` #2961 (@cyqsimon)\r\n- Associate `uv.lock` with `TOML` syntax, see #3132 (@fepegar)\r\n\r\n## Themes\r\n\r\n- Patched/improved themes for better Manpage syntax highlighting support, see #2994 (@keith-hall).\r\n\r\n## `bat` as a library\r\n\r\n- Changes to `syntax_mapping::SyntaxMapping` #2755 (@cyqsimon)\r\n  - `SyntaxMapping::get_syntax_for` is now correctly public\r\n  - [BREAKING] `SyntaxMapping::{empty,builtin}` are removed; use `SyntaxMapping::new` instead\r\n  - [BREAKING] `SyntaxMapping::mappings` is replaced by `SyntaxMapping::{builtin,custom,all}_mappings`\r\n- Make `Controller::run_with_error_handler`'s error handler `FnMut`, see #2831 (@rhysd)\r\n- Improve compile time by 20%, see #2815 (@dtolnay)\r\n- Add `theme::theme` for choosing an appropriate theme based on the\r\n  terminal's color scheme, see #2896 (@bash)\r\n  - [BREAKING] Remove `HighlightingAssets::default_theme`. Use `theme::default_theme` instead.\r\n- Add `PrettyPrinter::print_with_writer` for custom output destinations, see #3070 (@kojix2)\r\n",
-      "tag": "v0.25.0",
+      "title": "v0.26.0",
+      "description": "# v0.26.0\r\n\r\n## Features\r\n- Add build for windows/ARM64 platform. #3190 (@alcroito)\r\n- Add paging to `--list-themes`, see PR #3239 (@einfachIrgendwer0815)\r\n- Support negative relative line ranges, e.g. `bat -r :-10` / `bat -r='-10:'`, see #3068 (@ajesipow)\r\n- Support context in line ranges, e.g. `bat -r 30::5` /  `bat -r 30:40:5`, see #3345 (@cavanaug)\r\n- Add built-in 'minus' pager, e.g. `bat --pager=builtin` see PR #3402 (@academician)\r\n\r\n## Bugfixes\r\n\r\n- Fix UTF-8 BOM not being stripped for syntax detection, see #3314 (@krikera)\r\n- Fix `BAT_THEME_DARK` and `BAT_THEME_LIGHT` being ignored, see issue #3171 and PR #3168 (@bash)\r\n- Prevent `--list-themes` from outputting default theme info to stdout when it is piped, see #3189 (@einfachIrgendwer0815)\r\n- Rename some submodules to fix Dependabot submodule updates, see issue #3198 and PR #3201 (@victor-gp)\r\n- Make highlight tests fail when new syntaxes don't have fixtures PR #3255 (@dan-hipschman)\r\n- Fix crash for multibyte characters in file path, see issue #3230 and PR #3245 (@HSM95)\r\n- Add missing mappings for various bash/zsh files, see PR #3262 (@AdamGaskins)\r\n- Send all bat errors to stderr by default, see #3336 (@JerryImMouse)\r\n- Make --map-syntax target case insensitive to match --language, see #3206 (@keith-hall)\r\n- Correctly determine the end of the line in UTF16LE/BE input #3369 (@keith-hall)\r\n- `--style=changes` no longer prints a two-space indent when the file is unmodified, see issue #2710 and PR #3406 (@jyn514)\r\n- Add missing shell completions, see #3411 (@keith-hall)\r\n- Execute help/version/diagnostic commands even with invalid config/arguments present, see #3414 (@keith-hall)\r\n- Fixed line numbers (`-n`) and style components not printing when piping output, see issue #2935 and PR #3438 (@lmmx)\r\n\r\n## Other\r\n\r\n- Update base16 README links to community driven base16 work #2871 (@JamyGolden)\r\n- Work around build failures when building `bat` from vendored sources #3179 (@dtolnay)\r\n- CICD: Stop building for x86_64-pc-windows-gnu which fails #3261 (Enselic)\r\n- CICD:  CICD: replace windows-2019 runners with windows-2025 #3339 (@cyqsimon)\r\n- Build script: replace string-based codegen with quote-based codegen #3340 (@cyqsimon)\r\n- Improve code coverage of `--list-languages` parameter #2942 (@sblondon)\r\n- Only start offload worker thread when there's more than 1 core #2956 (@cyqsimon)\r\n- Update terminal-colorsaurus (the library used for dark/light detection) to 1.0, see #3347 (@bash)\r\n- Update console dependency to 0.16, see #3351 (@musicinmybrain)\r\n- Fixed some typos #3244 (@ssbarnea)\r\n- Update onig_sys dependency to 69.9.1 to fix a gcc build failure #3400 (@CosmicHorrorDev)\r\n- Add a cargo feature (`vendored-libgit2`) to build with vendored libgit2 version without depending on the system's one #3426 (@0x61nas)\r\n- Update syntect dependency to v5.3.0 to fix a few minor bugs, see #3410 (@keith-hall)\r\n\r\n## Syntaxes\r\n\r\n- Add syntax mapping for `paru` configuration files #3182 (@cyqsimon)\r\n- Add support for [Idris 2 programming language](https://www.idris-lang.org/) #3150 (@buzden)\r\n- Add syntax mapping for `nix`'s '`flake.lock` lockfiles #3196 (@odilf)\r\n- Improvements to CSV/TSV highlighting, with autodetection of delimiter and support for TSV files, see #3186 (@keith-\r\n- Improve (Sys)log error highlighting, see #3205 (@keith-hall)\r\n- Map `ndjson` extension to JSON syntax, see #3209 (@keith-hall)\r\n- Map files with `csproj`, `vbproj`, `props` and `targets` extensions to XML syntax, see #3213 (@keith-hall)\r\n- Add debsources syntax to highlight `/etc/apt/sources.list` files, see #3215 (@keith-hall)\r\n- Add syntax definition and test file for GDScript highlighting, see #3236 (@chetanjangir0)\r\n- Add syntax test file for Odin highlighting, see #3241 (@chetanjangir0)\r\n- Update quadlet syntax mapping rules to cover quadlets in subdirectories #3299 (@cyqsimon)\r\n- Add syntax Typst #3300 (@cskeeters)\r\n- Map `.mill` files to Scala syntax for Mill build tool configuration files #3311 (@krikera)\r\n- Add syntax highlighting for VHDL, see #3337 (@JerryImMouse)\r\n- Add syntax mapping for certbot certificate configuration #3338 (@cyqsimon)\r\n- Update Lean syntax from Lean 3 to Lean 4 #3322 (@YDX-2147483647)\r\n- Map `.flatpakref` and `.flatpakrepo` files to INI syntax #3353 (@Ferenc-)\r\n- Update hosts syntax #3368 (@keith-hall)\r\n- Map `.kshrc` files to Bash syntax #3364 (@ritoban23)\r\n- Map `/var/log/dmesg` files to Syslog syntax #3412 (@keith-hall)\r\n- Add syntax definition and test file for Go modules(`go.mod` and `go.sum`) highlighting, see #3424 (@DarkMatter-999)\r\n- Syntax highlighting for typescript code blocks within Markdown files, see #3435 (@MuntasirSZN)\r\n\r\n## Themes\r\n\r\n- Add Catppuccin, see #3317 (@SchweGELBin)\r\n- Updated Catppuccin, see #3333 (@SchweGELBin)\r\n- Updated gruvbox, see #3372 (@Nicholas42)\r\n- Updated GitHub theme, see #3382 (@CosmicHorrorDev)\r\n- Updated ANSI theme to highlight JSON object keys differently from values, see #3413 (@keith-hall)\r\n",
+      "tag": "v0.26.0",
       "assets": [
         {
-          "name": "bat-musl_0.25.0_arm64.deb",
-          "size": 2433760,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-musl_0.25.0_arm64.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:65ffcdb737e122ba3311041eff58def684fc3c825d7e6239c2a073aac91a5ca4"
+          "name": "bat-musl_0.26.0_arm64.deb",
+          "size": 2914408,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-musl_0.26.0_arm64.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:40ca427fd7fb3996e1af449cf63e39ea8e38114f595bfafa500f9f03a2346331"
         },
         {
-          "name": "bat-musl_0.25.0_musl-linux-amd64.deb",
-          "size": 2669668,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-musl_0.25.0_musl-linux-amd64.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:050a4054ebfc4b9fce48765c3bde9284b22f465a9167e722e84022d4ce67c11f"
+          "name": "bat-musl_0.26.0_musl-linux-amd64.deb",
+          "size": 3071632,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-musl_0.26.0_musl-linux-amd64.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:1f058cce7e84b46dfef687dd7e7194820f7b9b4cdfb7db3477fe578babcd1726"
         },
         {
-          "name": "bat-musl_0.25.0_musl-linux-i686.deb",
-          "size": 2691556,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-musl_0.25.0_musl-linux-i686.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:7825cfaac67d7e80504afb8c8fda44f4706eebd9ac2dd59fbef3bd0842606944"
+          "name": "bat-musl_0.26.0_musl-linux-i686.deb",
+          "size": 3071480,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-musl_0.26.0_musl-linux-i686.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:44d5330a847b46dc5adc79001638d1380235a7e77d619dc127ff694a308af65e"
         },
         {
-          "name": "bat-v0.25.0-aarch64-apple-darwin.tar.gz",
-          "size": 2942334,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-aarch64-apple-darwin.tar.gz",
+          "name": "bat-v0.26.0-aarch64-apple-darwin.tar.gz",
+          "size": 3219053,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:b3ed5a7515545445881f1036f0cc1b708c2b86cbce01c1b4033f38e0cfcc7b3c"
+          "checksum": "sha256:0b66666577b551e2adba9cdcf35a265ae595c5b8d4b500acb85817c4678d2f85"
         },
         {
-          "name": "bat-v0.25.0-aarch64-unknown-linux-gnu.tar.gz",
-          "size": 3045108,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-aarch64-unknown-linux-gnu.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:d155df218dc2d662da191e2dacddc71c90197b62ebe7e2923a659e5dd055d5cb"
-        },
-        {
-          "name": "bat-v0.25.0-aarch64-unknown-linux-musl.tar.gz",
-          "size": 3087818,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-aarch64-unknown-linux-musl.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:ee0f12cf6006a79cf4ccf75d2ddcf9f6ba124644503244b1af909c2f72a2a9f7"
-        },
-        {
-          "name": "bat-v0.25.0-arm-unknown-linux-gnueabihf.tar.gz",
-          "size": 3091127,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-arm-unknown-linux-gnueabihf.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:8248de4331da04d71fab8894af80077227e7e3f7429b9179bc5d28aaec51d4b4"
-        },
-        {
-          "name": "bat-v0.25.0-arm-unknown-linux-musleabihf.tar.gz",
-          "size": 3124937,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-arm-unknown-linux-musleabihf.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:99076c4e488ccfe8d964b03073584c7faf02e311bc363473cfb540a5ffdf6e57"
-        },
-        {
-          "name": "bat-v0.25.0-i686-pc-windows-msvc.zip",
-          "size": 3125128,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-i686-pc-windows-msvc.zip",
+          "name": "bat-v0.26.0-aarch64-pc-windows-msvc.zip",
+          "size": 3430555,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-aarch64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:28abbbeed9c35f7dca2d324f70b7f7fa573307c35453c582ca651987cfded09a"
+          "checksum": "sha256:8feb1582b5a141b2c6d63d1f1abfc496c97ff2255eb9b797d5444393d233232c"
         },
         {
-          "name": "bat-v0.25.0-i686-unknown-linux-gnu.tar.gz",
-          "size": 3266415,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-i686-unknown-linux-gnu.tar.gz",
+          "name": "bat-v0.26.0-aarch64-unknown-linux-gnu.tar.gz",
+          "size": 3349992,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-aarch64-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:9379470b5f674b82eaa1821dbda664ebe40f1953cca16786f3e403e8e3c85627"
+          "checksum": "sha256:eb8c96a2d9aaaf81cf7d8c3b7918a7336a06a1dec08878887963dc2cdd7db354"
         },
         {
-          "name": "bat-v0.25.0-i686-unknown-linux-musl.tar.gz",
-          "size": 3257614,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-i686-unknown-linux-musl.tar.gz",
+          "name": "bat-v0.26.0-aarch64-unknown-linux-musl.tar.gz",
+          "size": 3387869,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-aarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:e31193d082e1d82ac8c0d432feb306785ef274206dbf16bd2dc8e0a0043faa6c"
+          "checksum": "sha256:6ee11bd8a520c514e230669156d9298f0dd2b5afc788c0952a4b14fcec51eaee"
         },
         {
-          "name": "bat-v0.25.0-x86_64-apple-darwin.tar.gz",
-          "size": 3070925,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-apple-darwin.tar.gz",
+          "name": "bat-v0.26.0-arm-unknown-linux-gnueabihf.tar.gz",
+          "size": 3384808,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-arm-unknown-linux-gnueabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:b974aa834b6b65610090aed2bc7310d11c6f500105696d23a130aee24fd8380f"
+          "checksum": "sha256:a89852665ae4b91d2d3571a3d0920cfad0878bcc1370caba1ebc592a6ffad678"
         },
         {
-          "name": "bat-v0.25.0-x86_64-pc-windows-gnu.zip",
-          "size": 3404469,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-pc-windows-gnu.zip",
+          "name": "bat-v0.26.0-arm-unknown-linux-musleabihf.tar.gz",
+          "size": 3409448,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-arm-unknown-linux-musleabihf.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:d5171a367b30de0e75d43adb35cce0f3c9f45fc63ec2596956ddf7b8d0a68aa7"
+        },
+        {
+          "name": "bat-v0.26.0-i686-pc-windows-msvc.zip",
+          "size": 3364508,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-i686-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:bc825f7a902825fff8284bf4d669ee143a032038a2823eb4995202e1c7cdd01e"
+          "checksum": "sha256:d6f4f38815ae2f7f400d8091869ec487f930c36e3f6c189d104e4ddd9e81131d"
         },
         {
-          "name": "bat-v0.25.0-x86_64-pc-windows-msvc.zip",
-          "size": 3339506,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-pc-windows-msvc.zip",
+          "name": "bat-v0.26.0-i686-unknown-linux-gnu.tar.gz",
+          "size": 3572069,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-i686-unknown-linux-gnu.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:349bb5c11288bebbb28474663ed75f2a0a7d2c4596a08e46d11fd43ea82d2b60"
+        },
+        {
+          "name": "bat-v0.26.0-i686-unknown-linux-musl.tar.gz",
+          "size": 3543794,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-i686-unknown-linux-musl.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:6da1826441983ed8ce8f467979817b59a447b42f9b7c8e3520e4e6d19c28b0d7"
+        },
+        {
+          "name": "bat-v0.26.0-x86_64-apple-darwin.tar.gz",
+          "size": 3367829,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-x86_64-apple-darwin.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:24d5a93d50cbaeeb977484c63ce88208dd0436b6aaa751562add1daa9b295f21"
+        },
+        {
+          "name": "bat-v0.26.0-x86_64-pc-windows-msvc.zip",
+          "size": 3607304,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:1d5ced071ba9c765e16f4065877c178cefcfd2fe9581e9ddc92af265b73991bd"
+          "checksum": "sha256:a8a6862f14698b45e101b0932c69bc47a007f4c0456f3a129fdcef54d443d501"
         },
         {
-          "name": "bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz",
-          "size": 3234894,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz",
+          "name": "bat-v0.26.0-x86_64-unknown-linux-gnu.tar.gz",
+          "size": 3544021,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-x86_64-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:31bbbcc0d9f5abe16399425c98ffbf21aaa0ce190c7b75d4f32297696ff32b81"
+          "checksum": "sha256:7efed0c768fae36f18ddbbb4a38f5c4b64db7c55a170dfc89fd380805809a44b"
         },
         {
-          "name": "bat-v0.25.0-x86_64-unknown-linux-musl.tar.gz",
-          "size": 3275963,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-musl.tar.gz",
+          "name": "bat-v0.26.0-x86_64-unknown-linux-musl.tar.gz",
+          "size": 3579781,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat-v0.26.0-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:93f47d76abe328c402ef712e9ac92aa6d5bc84d5adcbcaf0bbc5665e5275a941"
+          "checksum": "sha256:26a683b038fbc526c6df4166db693ddc9e431e5bdc285d45ccd6b72f3cff5ffd"
         },
         {
-          "name": "bat_0.25.0_amd64.deb",
-          "size": 2631980,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat_0.25.0_amd64.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:7e6afdffaea04b394f466f6f719a1e0565572a4b59d6cb9969843355b684e2dc"
+          "name": "bat_0.26.0_amd64.deb",
+          "size": 3033648,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat_0.26.0_amd64.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:9ac368d45c926935cf692230b7ce412074069ca1393b0735e4a44f1f0b3ca958"
         },
         {
-          "name": "bat_0.25.0_arm64.deb",
-          "size": 2386468,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat_0.25.0_arm64.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:5218cbb36805e50583e02dd94141077db84acde4f617806e3a22a5f1dc320f23"
+          "name": "bat_0.26.0_arm64.deb",
+          "size": 2862046,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat_0.26.0_arm64.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:01ce3978efb66bed7d26b539de4bf21f136c5c4fa5b5770a48ad87b75aae58bf"
         },
         {
-          "name": "bat_0.25.0_armhf.deb",
-          "size": 2415520,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat_0.25.0_armhf.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:8d97dfc63fea4f370d5ee26603df4e200d56e060cb812134a202938612fa24f7"
+          "name": "bat_0.26.0_armhf.deb",
+          "size": 2911254,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat_0.26.0_armhf.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:eb9e0c2b9928d5a1fea7c4ee8dbe7fe1e15bd0f0507c81144f49c3988ae2a2ed"
         },
         {
-          "name": "bat_0.25.0_i686.deb",
-          "size": 2691360,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat_0.25.0_i686.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:82d4b4c503439b8af45119396c8ca4cb97ddf72334e618ecaffe1b65c387ec98"
+          "name": "bat_0.26.0_i686.deb",
+          "size": 3085570,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat_0.26.0_i686.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:20176faffefe33cf57fbb8b9451f6f7b31dd5c40dd27ab76bfa68320ec309b30"
         },
         {
-          "name": "bat_0.25.0_musl-linux-armhf.deb",
-          "size": 2447440,
-          "url": "https://github.com/sharkdp/bat/releases/download/v0.25.0/bat_0.25.0_musl-linux-armhf.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:e3add5a8a7dfa4496a3d8f8671f3ad1e700a181c085ec9e96fe73d7ad36ff4e5"
+          "name": "bat_0.26.0_musl-linux-armhf.deb",
+          "size": 2933952,
+          "url": "https://github.com/sharkdp/bat/releases/download/v0.26.0/bat_0.26.0_musl-linux-armhf.deb",
+          "content_type": "application/x-debian-package",
+          "checksum": "sha256:24d0e6bd5e4559aaa4a5ead2d7c40b16bcbdedd59d586f48a381b0387ef937b8"
         }
       ]
     }
