@@ -4,142 +4,142 @@
   "url": "https://github.com/junegunn/fzf",
   "releases": [
     {
-      "title": "0.66.0",
-      "description": "### Quick summary\r\n\r\nThis version introduces many new features centered around the new \"raw\" mode.\r\n\r\n| Type        | Class   | Name                | Description                                        |\r\n| :--         | :--     | :--                 | :--                                                |\r\n| New         | Option  | `--raw`             | Enable raw mode by default                         |\r\n| New         | Option  | `--gutter CHAR`     | Set the gutter column character                    |\r\n| New         | Option  | `--gutter-raw CHAR` | Set the gutter column character in raw mode        |\r\n| Enhancement | Option  | `--listen SOCKET`   | Added support for Unix domain sockets              |\r\n| New         | Action  | `toggle-raw`        | Toggle raw mode                                    |\r\n| New         | Action  | `enable-raw`        | Enable raw mode                                    |\r\n| New         | Action  | `disable-raw`       | Disable raw mode                                   |\r\n| New         | Action  | `up-match`          | Move up to the matching item                       |\r\n| New         | Action  | `down-match`        | Move down to the matching item                     |\r\n| New         | Action  | `best`              | Move to the  matching item with the best score     |\r\n| New         | Color Name  | `nomatch`           | Color for non-matching items in raw mode           |\r\n| New         | Color Attr  | `strip`           | Remove original colors           |\r\n| New         | Env Var | `FZF_RAW`           | Matching status in raw mode (0, 1, or undefined)   |\r\n| New         | Env Var | `FZF_DIRECTION`     | `up` or `down` depending on the layout             |\r\n| New         | Env Var | `FZF_SOCK`          | Path to the Unix domain socket fzf is listening on |\r\n| Enhancement | Key     | `CTRL-N`            | `down` -> `down-match`                             |\r\n| Enhancement | Key     | `CTRL-P`            | `up` -> `up-match`                                 |\r\n| Enhancement | Shell   | `CTRL-R` binding    | Toggle raw mode with `ALT-R`                       |\r\n| Enhancement | Shell   | `CTRL-R` binding    | Opt-out with an empty `FZF_CTRL_R_COMMAND`         |\r\n\r\n### 1. Introducing \"raw\" mode\r\n\r\n![](https://github.com/user-attachments/assets/9640ae11-b5f7-43fb-95f1-c29307fc17c2)\r\n\r\nThis version introduces a new \"raw\" mode (named so because it shows the list \"unfiltered\"). In raw mode, non-matching items stay in their original positions, but appear dimmed. This allows you to see the surrounding items of a match and better understand the context of it. You can enable raw mode by default with `--raw`, but it's often more useful when toggled dynamically with the `toggle-raw` action.\r\n\r\n```sh\r\ntree | fzf --reverse --bind alt-r:toggle-raw\r\n```\r\n\r\nWhile non-matching items are displayed in a dimmed color, they are treated just like matching items, so you can place the cursor on them and perform any action. If you prefer to navigate only through matching items, use the `down-match` and `up-match` actions, which are from now on bound to `CTRL-N` and `CTRL-P` respectively, and also to `ALT-DOWN` and `ALT-UP`.\r\n\r\n| Key        | Action       | With `--history` |\r\n| :--        | :--          | :--              |\r\n| `down`     | `down`       |                  |\r\n| `up`       | `up`         |                  |\r\n| `ctrl-j`   | `down`       |                  |\r\n| `ctrl-k`   | `up`         |                  |\r\n| `ctrl-n`   | `down-match` | `next-history`   |\r\n| `ctrl-p`   | `up-match`   | `prev-history`   |\r\n| `alt-down` | `down-match` |                  |\r\n| `alt-up`   | `up-match`   |                  |\r\n\r\n> [!NOTE]\r\n> `CTRL-N` and `CTRL-P` are bound to `next-history` and `prev-history` when `--history` option is enabled, so in that case, you'll need to manually bind them, or use `ALT-DOWN` and `ALT-UP` instead.\r\n\r\n> [!TIP]\r\n> `up-match` and `down-match` are equivalent to `up` and `down` when not in raw mode, so you can safely bind them to `up` and `arrow` keys if you prefer.\r\n> ```sh\r\n> fzf --bind up:up-match,down:down-match\r\n> ```\r\n\r\n#### Customizing the behavior\r\n\r\nIn raw mode, the input list is presented in its original order, unfiltered, and your cursor will not move to the matching item automatically. Here are ways to customize the behavior.\r\n\r\n```sh\r\n# When the result list is updated, move the cursor to the item with the best score\r\n# (assuming sorting is not disabled)\r\nfzf --raw --bind result:best\r\n\r\n# Move to the first matching item in the original list\r\n# - $FZF_RAW is set to 0 when raw mode is enabled and the current item is a non-match\r\n# - $FZF_DIRECTION is set to either 'up' or 'down' depending on the layout direction\r\nfzf --raw --bind 'result:first+transform:[[ $FZF_RAW = 0 ]] && echo $FZF_DIRECTION-match'\r\n```\r\n\r\n#### Customizing the look\r\n\r\n##### Gutter\r\n\r\nTo make the mode visually distinct, the gutter column is rendered in a dashed line using `\u2596` character. But you can customize it with the `--gutter-raw CHAR` option.\r\n\r\n```sh\r\n# Use a thinner gutter instead of the default dashed line\r\nfzf --bind alt-r:toggle-raw --gutter-raw \u258e\r\n```\r\n\r\n##### Color and style of non-matching items\r\n\r\nNon-matching items are displayed in a dimmed color by default, but you can change it with the `--color nomatch:...` option.\r\n\r\n```sh\r\nfzf --raw --color nomatch:red\r\nfzf --raw --color nomatch:red:dim\r\nfzf --raw --color nomatch:red:dim:strikethrough\r\nfzf --raw --color nomatch:red:dim:strikethrough:italic\r\n```\r\n\r\nFor colored input, dimming alone may not be enough, and you may prefer to remove colors entirely. For that case, a new special style attribute `strip` has been added.\r\n\r\n```sh\r\nfd --color always | fzf --ansi --raw --color nomatch:dim:strip:strikethrough\r\n```\r\n\r\n#### Conditional actions for raw mode\r\n\r\nYou may want to perform different actions depending on whether the current item is a match or not. For that, fzf now exports `$FZF_RAW` environment variable.\r\n\r\nIt's:\r\n\r\n- Undefined if raw mode is disabled\r\n- `1` if the current item is a match\r\n- `0` otherwise\r\n\r\n```sh\r\n# Do not allow selecting non-matching items\r\nfzf --raw --bind 'enter:transform:[[ ${FZF_RAW-1} = 1 ]] && echo accept || echo bell'\r\n```\r\n\r\n#### Leveraging raw mode in shell integration\r\n\r\nThe `CTRL-R` binding (command history) now lets you toggle raw mode with `ALT-R`.\r\n\r\n### 2. Style changes\r\n\r\nThe screenshot on the right shows the updated gutter style:\r\n\r\n![](https://github.com/user-attachments/assets/8ea7b5ef-c99e-4686-905b-22eb078b700a)\r\n\r\nThis version includes a few minor updates to fzf's classic visual style:\r\n\r\n- The gutter column is now narrower, rendered with the left-half block character (`\u258c`).\r\n- Markers no longer use background colors.\r\n- The `--color base16` theme (alias: `16`) has been updated for better compatibility with both dark and light themes.\r\n\r\n### 3. `--listen` now supports Unix domain sockets\r\n\r\nIf an argument to `--listen` ends with `.sock`, fzf will listen on a Unix domain socket at the specified path.\r\n\r\n```sh\r\nfzf --listen /tmp/fzf.sock --no-tmux\r\n\r\n# GET\r\ncurl --unix-socket /tmp/fzf.sock http\r\n\r\n# POST\r\ncurl --unix-socket /tmp/fzf.sock http -d up\r\n```\r\n\r\nNote that any existing file at the given path will be removed before creating the socket, so avoid using an important file path.\r\n\r\n### 4. Added options\r\n\r\n#### `--gutter CHAR`\r\n\r\nThe gutter column can now be customized using `--gutter CHAR` and styled with `--color gutter:...`. Examples:\r\n\r\n```sh\r\n# Right-aligned gutter\r\nfzf --gutter '\u2590'\r\n\r\n# Even thinner gutter\r\nfzf --gutter '\u258e'\r\n\r\n# Yellow checker pattern\r\nfzf --gutter '\u259a' --color gutter:yellow\r\n\r\n# Classic style\r\nfzf --gutter ' ' --color gutter:reverse\r\n```\r\n\r\n#### `--gutter-raw CHAR`\r\n\r\nAs noted above, the `--gutter-raw CHAR` option was also added for customizing the gutter column in raw mode.\r\n\r\n### 5. Added actions\r\n\r\nThe following actions were introduced to support working with raw mode:\r\n\r\n| Action        | Description                                                                                 |\r\n| :--           | :--                                                                                         |\r\n| `toggle-raw`  | Toggle raw mode                                                                             |\r\n| `enable-raw`  | Enable raw mode                                                                             |\r\n| `disable-raw` | Disable raw mode                                                                            |\r\n| `up-match`    | Move up to the matching item; identical to `up` if raw mode is disabled                     |\r\n| `down-match`  | Move down to the matching item; identical to `down` if raw mode is disabled                 |\r\n| `best`        | Move to the matching item with the best score; identical to `first` if raw mode is disabled |\r\n\r\n### 6. Added environment variables\r\n\r\n#### `$FZF_DIRECTION`\r\n\r\n`$FZF_DIRECTION` is now exported to child processes, indicating the list direction of the current layout:\r\n\r\n- `up` for the default layout\r\n- `down` for `reverse` or `reverse-list`\r\n\r\nThis simplifies writing transform actions involving layout-dependent actions like `{up,down}-match`, `{up,down}-selected`, and `toggle+{up,down}`.\r\n\r\n```sh\r\nfzf --raw --bind 'result:first+transform:[[ $FZF_RAW = 0 ]] && echo $FZF_DIRECTION-match'\r\n```\r\n\r\n#### `$FZF_SOCK`\r\n\r\nWhen fzf is listening on a Unix domain socket using `--listen`, the path to the socket is exported as `$FZF_SOCK`, analogous to `$FZF_PORT` for TCP sockets.\r\n\r\n#### `$FZF_RAW`\r\n\r\nAs described above, `$FZF_RAW` is now exported to child processes in raw mode, indicating whether the current item is a match (`1`) or not (`0`). It is not defined when not in raw mode.\r\n\r\n#### `$FZF_CTRL_R_COMMAND`\r\n\r\nYou can opt-out `CTRL-R` binding from the shell integration by setting `FZF_CTRL_R_COMMAND` to an empty string. Setting it to any other value is not supported and will result in a warning.\r\n\r\n```sh\r\n# Disable the CTRL-R binding from the shell integration\r\nFZF_CTRL_R_COMMAND= eval \"$(fzf --bash)\"\r\n```\r\n\r\n### 7. Added key support for `--bind`\r\n\r\nPull request [#3996](https://github.com/junegunn/fzf/pull/3996) added support for many additional keys for `--bind` option, such as `ctrl-backspace`.\r\n\r\n### 8. Breaking changes\r\n\r\n#### Hiding the gutter column\r\n\r\nIn the previous versions, the recommended way to hide the gutter column was to set `--color gutter:-1`. That's because the gutter column was just a space character, reversed. But now that it's using a visible character (`\u258c`), applying the default color is no longer enough to hide it. Instead, you can set it to a space character.\r\n\r\n```sh\r\n# Hide the gutter column\r\nfzf --gutter ' '\r\n\r\n# Classic style\r\nfzf --gutter ' ' --color gutter:reverse\r\n```\r\n\r\n#### `--color` option\r\n\r\nIn the previous versions, some elements had default style attributes applied and you would have to explicitly unset them with `regular` attribute if you wanted to reset them. This is no longer needed now, as the default style attributes are applied only when you do not specify any color or style for that element.\r\n\r\n```sh\r\n# No 'dim', just red and italic.\r\nfzf --ghost 'Type to search' --color ghost:red:italic\r\n```\r\n\r\n#### Compatibility changes\r\n\r\nStarting with this release, fzf is built with Go 1.23. Support for some old OS versions has been dropped.\r\n\r\nSee https://go.dev/wiki/MinimumRequirements.\r\n\r\n",
-      "tag": "v0.66.0",
+      "title": "0.66.1",
+      "description": "- Bug fixes\n    - Fixed a bug preventing 'ctrl-h' from being bound to an action (#4556)\n    - Fixed `--no-color` / `NO_COLOR` theme (#4561)\n\n",
+      "tag": "v0.66.1",
       "assets": [
         {
-          "name": "fzf-0.66.0-android_arm64.tar.gz",
-          "size": 1748375,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-android_arm64.tar.gz",
+          "name": "fzf-0.66.1-android_arm64.tar.gz",
+          "size": 1748333,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-android_arm64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:7a2b9a21bc1a33d0e2e41ac00e833c5a4a9ff8b5a979818f6646bce66079d0f4"
+          "checksum": "sha256:3146ce66d1322e4a9eec0db5168b015ad4dc7199951a1ac1c3b21333a992b557"
         },
         {
-          "name": "fzf-0.66.0-darwin_amd64.tar.gz",
-          "size": 1867701,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-darwin_amd64.tar.gz",
+          "name": "fzf-0.66.1-darwin_amd64.tar.gz",
+          "size": 1867545,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-darwin_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:de7a4c272682671ae2bb6b9d7fbf2103361ee3ee64cc1daeea87fa6e5de08cc2"
+          "checksum": "sha256:655aeaa4ab44926ee1b712c95107ba486eb4a1137539200180c08d21f92fc7fa"
         },
         {
-          "name": "fzf-0.66.0-darwin_arm64.tar.gz",
-          "size": 1747376,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-darwin_arm64.tar.gz",
+          "name": "fzf-0.66.1-darwin_arm64.tar.gz",
+          "size": 1747511,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-darwin_arm64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:b64a9862f30f3d4568c0433dd5a23bc626fa1ede2c6e1a5e8e680bbf96725ea6"
+          "checksum": "sha256:0f44db428cb65a0b646e99a506422a59f4b2fc3d3973b35387f78bba48c79c16"
         },
         {
-          "name": "fzf-0.66.0-freebsd_amd64.tar.gz",
-          "size": 1781828,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-freebsd_amd64.tar.gz",
+          "name": "fzf-0.66.1-freebsd_amd64.tar.gz",
+          "size": 1781810,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-freebsd_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:d6aa2890f04868f75c96b919ae0491f0408cb7bb4bffe41ba8567d5871242a40"
+          "checksum": "sha256:8e3b9f74198b9fc04c9b252ed568283032b8e722fa0b659403547479e680d8a3"
         },
         {
-          "name": "fzf-0.66.0-linux_amd64.tar.gz",
-          "size": 1799208,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-linux_amd64.tar.gz",
+          "name": "fzf-0.66.1-linux_amd64.tar.gz",
+          "size": 1799252,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-linux_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:362d5f92187560a87338b427dbe573d1e1bf8b4fb4bab1f44aca6a8f7fe8070f"
+          "checksum": "sha256:eca8d793061283122d79ff81baf996535c0bfbf7058253142aaf2578e56943ef"
         },
         {
-          "name": "fzf-0.66.0-linux_arm64.tar.gz",
-          "size": 1680021,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-linux_arm64.tar.gz",
+          "name": "fzf-0.66.1-linux_arm64.tar.gz",
+          "size": 1680172,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-linux_arm64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:e0ebb2e4d2549cc4c693d80cb6cd16467652ab2385b2ebbb5cbaee3b63fd2904"
+          "checksum": "sha256:b099ee8468d91d12c0feef1801409d441d0e0cd44ec47e0c265952aa14e4fc0f"
         },
         {
-          "name": "fzf-0.66.0-linux_armv5.tar.gz",
-          "size": 1715922,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-linux_armv5.tar.gz",
+          "name": "fzf-0.66.1-linux_armv5.tar.gz",
+          "size": 1716026,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-linux_armv5.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:4e8d6b33879614ff643b75eed44516de1d70dd70c5c66a7a8157c3b020390778"
+          "checksum": "sha256:192ef0e6ccb313acf0fd0584b73ae76e04d272709e27ee395465f98b95ce1fc1"
         },
         {
-          "name": "fzf-0.66.0-linux_armv6.tar.gz",
-          "size": 1706825,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-linux_armv6.tar.gz",
+          "name": "fzf-0.66.1-linux_armv6.tar.gz",
+          "size": 1706758,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-linux_armv6.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:4a3e98da9133fb04467b184981c27ae26061d09b5b84f7c2a76f6468157805c6"
+          "checksum": "sha256:8458ef11c333934528af97b5a037368522d91d92551024204b9be0bf369f2024"
         },
         {
-          "name": "fzf-0.66.0-linux_armv7.tar.gz",
-          "size": 1703705,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-linux_armv7.tar.gz",
+          "name": "fzf-0.66.1-linux_armv7.tar.gz",
+          "size": 1703624,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-linux_armv7.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a8bc72d9765709cfd974ff3fd4bd3fc69265d5dc6473ff05d3034590c0270fe4"
+          "checksum": "sha256:88ac3b2b34d57de430df468f0518e7d3c3ea9edbd01b4ef764c9a68207f24c39"
         },
         {
-          "name": "fzf-0.66.0-linux_loong64.tar.gz",
-          "size": 1722664,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-linux_loong64.tar.gz",
+          "name": "fzf-0.66.1-linux_loong64.tar.gz",
+          "size": 1722629,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-linux_loong64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:10278d3d493eb5a0fd7efc0185c5b42c711f0e41d4a933526bbda744366f00a6"
+          "checksum": "sha256:8cccf109fcff74bfc864893e98719b4917abe48eda328fdb19664c770466667c"
         },
         {
-          "name": "fzf-0.66.0-linux_ppc64le.tar.gz",
-          "size": 1679274,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-linux_ppc64le.tar.gz",
+          "name": "fzf-0.66.1-linux_ppc64le.tar.gz",
+          "size": 1679179,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-linux_ppc64le.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:528d6fab3fb881bc6e616bb649e1eab01dca0ef1184ae90d4d452d8d2e0fc8d8"
+          "checksum": "sha256:70080fd07a01088c6a94ad3790eb61ff102a0d54106aed625f5c592160f54033"
         },
         {
-          "name": "fzf-0.66.0-linux_s390x.tar.gz",
-          "size": 1745947,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-linux_s390x.tar.gz",
+          "name": "fzf-0.66.1-linux_s390x.tar.gz",
+          "size": 1746158,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-linux_s390x.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:b53e31778924cda5956ab26b6c2728260e7b3746db5568a8ddc950590d5893f1"
+          "checksum": "sha256:4976a89432a8de4d00b84c4a564190a1c3ef032feab3109ce69d87dd651a273d"
         },
         {
-          "name": "fzf-0.66.0-openbsd_amd64.tar.gz",
-          "size": 1780435,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-openbsd_amd64.tar.gz",
+          "name": "fzf-0.66.1-openbsd_amd64.tar.gz",
+          "size": 1780343,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-openbsd_amd64.tar.gz",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:6e901a0a31c5fd9bec7758116df58824d21d191a42d3ed19f6178d2fb3281ccd"
+          "checksum": "sha256:cf2b7e764d04d38a7117768b875497d2a277a3794a24d4f2a8fbde20318a6ae8"
         },
         {
-          "name": "fzf-0.66.0-windows_amd64.zip",
-          "size": 1977762,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-windows_amd64.zip",
+          "name": "fzf-0.66.1-windows_amd64.zip",
+          "size": 1977691,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-windows_amd64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:9d2a1bc6e38665d0a15d846703a2c9ef1f5fe2630a9f972f9832712709c18823"
+          "checksum": "sha256:f88dee72cff13dbdfb41a049b6fb92bcf71eecc4a3504494e8f82607fc96cbe7"
         },
         {
-          "name": "fzf-0.66.0-windows_arm64.zip",
-          "size": 1829079,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-windows_arm64.zip",
+          "name": "fzf-0.66.1-windows_arm64.zip",
+          "size": 1828979,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-windows_arm64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:a8a20ecc6e5b49645269b4ad34a8bb34317e753282d9ce463d90be31b5cee659"
+          "checksum": "sha256:eb937aa0f9a57f7e11c90c31fe48b30988c2b80c6cf7edc173168949534e0143"
         },
         {
-          "name": "fzf-0.66.0-windows_armv5.zip",
-          "size": 1888652,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-windows_armv5.zip",
+          "name": "fzf-0.66.1-windows_armv5.zip",
+          "size": 1888537,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-windows_armv5.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:b62cfbb1e38493bb9baf86ec5095de19fbd41345bdf00e078ea152c8ab32fef1"
+          "checksum": "sha256:c3d6be08f3dfc7d2779cc928c73da062a3ad9a153cb848806547393c4aaf8de3"
         },
         {
-          "name": "fzf-0.66.0-windows_armv6.zip",
-          "size": 1878611,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-windows_armv6.zip",
+          "name": "fzf-0.66.1-windows_armv6.zip",
+          "size": 1878753,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-windows_armv6.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:19243df3ab47478b00de541e8bc29c07640b6ae9073dda85e419616afd8225b1"
+          "checksum": "sha256:6d05c3edda5e692c3f111cc49445dfd969daf53d5933e528f33f44f50b42be1e"
         },
         {
-          "name": "fzf-0.66.0-windows_armv7.zip",
-          "size": 1869551,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-windows_armv7.zip",
+          "name": "fzf-0.66.1-windows_armv7.zip",
+          "size": 1869416,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf-0.66.1-windows_armv7.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:590d7cca9dc8d00cc47c231ce46a770edf0ac00de1eefb1ad8814efad24a7f7f"
+          "checksum": "sha256:09f92722b1a26d888abf72d1b4ca55e4267c6714ef075ae6c52539ab38c6b0d4"
         },
         {
-          "name": "fzf_0.66.0_checksums.txt",
+          "name": "fzf_0.66.1_checksums.txt",
           "size": 1735,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf_0.66.0_checksums.txt",
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.66.1/fzf_0.66.1_checksums.txt",
           "content_type": "text/plain; charset=utf-8",
-          "checksum": "sha256:c2363898c2cf2d5b05743a167505c6beb0652e780e8e13c36f2e4f56016d0ec9"
+          "checksum": "sha256:ce0c0b003cdcc7bb559ae09532c3401549a9a3c51ae6c19ebb9afb336d1f43de"
         }
       ]
     }
