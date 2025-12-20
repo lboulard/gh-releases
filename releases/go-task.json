@@ -4,226 +4,226 @@
   "url": "https://github.com/go-task/task",
   "releases": [
     {
-      "title": "v3.45.5",
-      "description": "- Fixed bug that made a generic message, instead of an useful one, appear when a Taskfile could not be found (#2431 by @andreynering).\r\n- Fixed a bug that caused an error when including a Remote Git Taskfile (#2438 by @twelvelabs).\r\n- Fixed issue where `.taskrc.yml` was not returned if reading it failed, and corrected handling of remote entrypoint Taskfiles (#2460, #2461 by @vmaerten).\r\n- Improved performance of `--list` and `--list-all` by introducing a faster compilation method that skips source globbing and checksum updates (#1322, #2053 by @vmaerten).\r\n- Fixed a concurrency bug with `output: group`. This ensures that begin/end parts won't be mixed up from different tasks (#1208, #2349, #2350 by @trulede).\r\n- Do not re-evaluate variables for `defer:` (#2244, #2418 by @trulede).\r\n- Improve error message when a Taskfile is not found (#2441, #2494 by @vmaerten).\r\n- Fixed generic error message `exit status 1` when a dependency task failed (#2286 by @GrahamDennis).\r\n- Fixed YAML library from the unmaintained `gopkg.in/yaml.v3` to the new fork maintained by the official YAML org (#2171, #2434 by @andreynering).\r\n- On Windows, the built-in version of the `rm` core utils contains a fix related to the `-f` flag (#2426, [u-root/u-root#3464](https://github.com/u-root/u-root/pull/3464), [mvdan/sh#1199](https://github.com/mvdan/sh/pull/1199), #2506 by @andreynering).",
-      "tag": "v3.45.5",
+      "title": "v3.46.3",
+      "description": "- Fixed regression in completion script for zsh (#2593, #2594 by @vmaerten).",
+      "tag": "v3.46.3",
       "assets": [
         {
+          "name": "task_3.46.3_linux_386.apk",
+          "size": 10281536,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_386.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:2abaa9a75797508ffd3b1bf6d91accb74ce514e6b394e8ac2e0fd1441de09db9"
+        },
+        {
+          "name": "task_3.46.3_linux_386.deb",
+          "size": 9875068,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_386.deb",
+          "content_type": "application/vnd.debian.binary-package",
+          "checksum": "sha256:4012845a72e61467428ca3bf68ce45d3fdb4a305f204429ea2eb030f8ac1abf8"
+        },
+        {
+          "name": "task_3.46.3_linux_386.rpm",
+          "size": 10295753,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_386.rpm",
+          "content_type": "application/x-rpm",
+          "checksum": "sha256:3c3c7b836241c3ea44e9458a2d4c4568b3f3c9e2ae87fde70830071a1890821e"
+        },
+        {
+          "name": "task_3.46.3_linux_amd64.apk",
+          "size": 10997052,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_amd64.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:b1a8a39a56882568885839e1a158ebe874c556e3d8013a3bfb77eb701c14644b"
+        },
+        {
+          "name": "task_3.46.3_linux_amd64.deb",
+          "size": 10565378,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_amd64.deb",
+          "content_type": "application/vnd.debian.binary-package",
+          "checksum": "sha256:3df690b9d68547e5a84733603a2f195835b883b911edcce60590af46b97d5118"
+        },
+        {
+          "name": "task_3.46.3_linux_amd64.rpm",
+          "size": 11012838,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_amd64.rpm",
+          "content_type": "application/x-rpm",
+          "checksum": "sha256:95739382aa9f9837da34dc39ebb012d03445d392a352b11e8b18f9cd59da1564"
+        },
+        {
+          "name": "task_3.46.3_linux_arm.apk",
+          "size": 10249111,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_arm.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:8481e118bbe804392f3a1fc8e51b1f817cd522e7d839448238f207f600af90bd"
+        },
+        {
+          "name": "task_3.46.3_linux_arm.deb",
+          "size": 9884718,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_arm.deb",
+          "content_type": "application/vnd.debian.binary-package",
+          "checksum": "sha256:92e59a98233a3d06c0ed0e72e9f2123edf85f580c85f2765d91ac257b97aecd6"
+        },
+        {
+          "name": "task_3.46.3_linux_arm.rpm",
+          "size": 10244503,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_arm.rpm",
+          "content_type": "application/x-rpm",
+          "checksum": "sha256:ebc92b54ac03e0f537f821e26f517d542cc8704f99b6f8df4a16fdf2ef871ea6"
+        },
+        {
+          "name": "task_3.46.3_linux_arm64.apk",
+          "size": 9921482,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_arm64.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:9dfd1691eb54eb29c27e032ba30797dcc3b9de35d5f4d801de6700dcabb10587"
+        },
+        {
+          "name": "task_3.46.3_linux_arm64.deb",
+          "size": 9589120,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_arm64.deb",
+          "content_type": "application/vnd.debian.binary-package",
+          "checksum": "sha256:77cfd2165c2a9161895ce183ceac427a4e0f4d69b536ec5e8856a37ef4a4c503"
+        },
+        {
+          "name": "task_3.46.3_linux_arm64.rpm",
+          "size": 9907208,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_arm64.rpm",
+          "content_type": "application/x-rpm",
+          "checksum": "sha256:8a3c8fcb3422ee1880df47d018b6cfb951900c2796ca5af2eee991e8777b2bb6"
+        },
+        {
+          "name": "task_3.46.3_linux_riscv64.apk",
+          "size": 10510621,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_riscv64.apk",
+          "content_type": "application/vnd.android.package-archive",
+          "checksum": "sha256:79445d6c53140256cccfe9eb75b79c5c952e02ff9cff3fa834b9ffe88addae85"
+        },
+        {
+          "name": "task_3.46.3_linux_riscv64.deb",
+          "size": 10093418,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_riscv64.deb",
+          "content_type": "application/vnd.debian.binary-package",
+          "checksum": "sha256:54a45e384ad1210442a315d1e42e7062b374112ae7951b20d20e76d64b02bd32"
+        },
+        {
+          "name": "task_3.46.3_linux_riscv64.rpm",
+          "size": 10470418,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_3.46.3_linux_riscv64.rpm",
+          "content_type": "application/x-rpm",
+          "checksum": "sha256:7636afdd9c967f7fa698513d99b767c80de818daddc82630fe3454ba1e877ce8"
+        },
+        {
           "name": "task_checksums.txt",
-          "size": 2645,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_checksums.txt",
+          "size": 2750,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_checksums.txt",
           "content_type": "text/plain; charset=utf-8",
-          "checksum": "sha256:093f9dd1fb4edab77e84f060286b0de4dace5e58b7850ebeb48f6a22d2b484d8"
+          "checksum": "sha256:ebfc2a80d4c212a24b5ed14d4d3f51b2999cf83f6c33e9b42e770065aa718715"
         },
         {
           "name": "task_darwin_amd64.tar.gz",
-          "size": 7411216,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_darwin_amd64.tar.gz",
+          "size": 10752721,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_darwin_amd64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:5a06e2266b4c4a679c48582922ec06a25f81365b5f65298ef11dcafb9d379c2b"
+          "checksum": "sha256:9eed0990b84788d314d5f3c98f0215624be8421eabf8acaa064405d30050fb62"
         },
         {
           "name": "task_darwin_arm64.tar.gz",
-          "size": 6886549,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_darwin_arm64.tar.gz",
+          "size": 10017017,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_darwin_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:c76ec08ad1e64b012884f3be0084b149882cb6d77741c2d94f2aebf34805703c"
+          "checksum": "sha256:35bc981a7dc4c83f11abcd33846bcd5ad80e873b67c9c9f794055fdb90aed71a"
         },
         {
           "name": "task_freebsd_386.tar.gz",
-          "size": 6962374,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_freebsd_386.tar.gz",
+          "size": 9799658,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_freebsd_386.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:12e9ae9bfb25ae8077c3aefb517b3beb124bcae6cb2cfbce7e1f61c8879f95b8"
+          "checksum": "sha256:3424bc7e44237ebf9a7e9f81e93c3e7db2ef8b552122292198f94f264b20bb05"
         },
         {
           "name": "task_freebsd_amd64.tar.gz",
-          "size": 7267718,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_freebsd_amd64.tar.gz",
+          "size": 10489288,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_freebsd_amd64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:afde215334ae653e5e213981b40408350f86e4e24d8ed411b0519eede4bb019e"
+          "checksum": "sha256:0c9b66b99d5f1006883993ee593b9f6dadc7d5a180a2fa6122bf3f883005b8a5"
         },
         {
           "name": "task_freebsd_arm.tar.gz",
-          "size": 6949869,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_freebsd_arm.tar.gz",
+          "size": 9831787,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_freebsd_arm.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:153acb4c86671b37f6e6276615a52a52aaf55b488ff2dbfd4169b308838119c0"
+          "checksum": "sha256:855b431badbd25e3970d4069c29ff0a421e478c892db32b1b777a99b47dfdacd"
         },
         {
           "name": "task_freebsd_arm64.tar.gz",
-          "size": 6602307,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_freebsd_arm64.tar.gz",
+          "size": 9524068,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_freebsd_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:ef92190d447acaa7f655fc525ea92a589c4da6fd227b10a2d07c5b51cdfa78b4"
-        },
-        {
-          "name": "task_linux_386.apk",
-          "size": 7288083,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_386.apk",
-          "content_type": "application/vnd.android.package-archive",
-          "checksum": "sha256:83ea0edf132098011a0204b31bd4720285ac53e503f5499cf7e20fb0e788208b"
-        },
-        {
-          "name": "task_linux_386.deb",
-          "size": 7020942,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_386.deb",
-          "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:b75de3a0a41df4dbc3030a0622bf3fed4455391063ead798f889eaa3c216e446"
-        },
-        {
-          "name": "task_linux_386.rpm",
-          "size": 7291347,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_386.rpm",
-          "content_type": "application/x-rpm",
-          "checksum": "sha256:e8ea75fc7d5e5c1d19d1143eec9bf6c9f78f7a857161063088e9ec583a201c2d"
+          "checksum": "sha256:d6666c1dbb42b7a43db392f5bc8e7abab2e5843ca2a7b1d39e7184cb6ec5e55d"
         },
         {
           "name": "task_linux_386.tar.gz",
-          "size": 7002895,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_386.tar.gz",
+          "size": 9847875,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_linux_386.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:016e718cee7d0b1529e43b8b80c6612d6dde143461e211d2ef3917a45a099cb0"
-        },
-        {
-          "name": "task_linux_amd64.apk",
-          "size": 7630467,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_amd64.apk",
-          "content_type": "application/vnd.android.package-archive",
-          "checksum": "sha256:c477f7e5b9f527d4b0620d6d99798bed450c056f77cc48c462d71f52dec6bf53"
-        },
-        {
-          "name": "task_linux_amd64.deb",
-          "size": 7330664,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_amd64.deb",
-          "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:9b79e95bbb56c922d77a64aa095847cee0ce967f36dd5046554b77176aa2e295"
-        },
-        {
-          "name": "task_linux_amd64.rpm",
-          "size": 7613444,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_amd64.rpm",
-          "content_type": "application/x-rpm",
-          "checksum": "sha256:c74d7e5c7b78cb249f4223d010ee83ccadb453ced943e9394b9e012189739825"
+          "checksum": "sha256:3088f541fd59d0f2ad35b30bdc2b934ab996f80de5fc0c33c579f567a64c6035"
         },
         {
           "name": "task_linux_amd64.tar.gz",
-          "size": 7305870,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_amd64.tar.gz",
+          "size": 10523367,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_linux_amd64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:e547ea2a47f5240657fdc89ea776baa90d628a1f2748242eaa7478fd92bffd40"
-        },
-        {
-          "name": "task_linux_arm.apk",
-          "size": 7225393,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_arm.apk",
-          "content_type": "application/vnd.android.package-archive",
-          "checksum": "sha256:671cea229fc4f103db2c9a79934882487493564ff97bfcf46cbba106a1f46882"
-        },
-        {
-          "name": "task_linux_arm.deb",
-          "size": 6998892,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_arm.deb",
-          "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:2a56556a012508ebe5b79cb7b5d4aeb18d345572b0886b7ecf4c2b3b1f9ba057"
-        },
-        {
-          "name": "task_linux_arm.rpm",
-          "size": 7232054,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_arm.rpm",
-          "content_type": "application/x-rpm",
-          "checksum": "sha256:70d9685cbe83179ff2c18e9659710941cfae492531481c13675b3c79cf15bebf"
+          "checksum": "sha256:6f4f2038d2da967d5a921a78f120e1e64d6338865459ffeaf82fb6888cba4b73"
         },
         {
           "name": "task_linux_arm.tar.gz",
-          "size": 6985480,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_arm.tar.gz",
+          "size": 9861878,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_linux_arm.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:88a25708d8d93c6579fe89bdd47f5ae2feac0ee8143d4faaa67edd2c991d66a4"
-        },
-        {
-          "name": "task_linux_arm64.apk",
-          "size": 6897797,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_arm64.apk",
-          "content_type": "application/vnd.android.package-archive",
-          "checksum": "sha256:6f00fdc2b0781447b76b2fcfbfd928c89aa6180c9523cd812819cdd1e908fe27"
-        },
-        {
-          "name": "task_linux_arm64.deb",
-          "size": 6664560,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_arm64.deb",
-          "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:b08f226c6aa3731e97af61b7685fea7360a0714c33112e101ebe4c29ecf7db26"
-        },
-        {
-          "name": "task_linux_arm64.rpm",
-          "size": 6868616,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_arm64.rpm",
-          "content_type": "application/x-rpm",
-          "checksum": "sha256:e2cc86466e20c0a991d5bfdca07359ef231426bb271b9be444a257079b122cfa"
+          "checksum": "sha256:9f94bce989f9bd3e090024fe319d6c9b5100bfbcab265884a437dd249d8adee8"
         },
         {
           "name": "task_linux_arm64.tar.gz",
-          "size": 6643024,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_arm64.tar.gz",
+          "size": 9555023,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_linux_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:f15170659a8f538b976967e281537031693643ee63fc41c2cfcac63efcdf25e7"
-        },
-        {
-          "name": "task_linux_riscv64.apk",
-          "size": 7212606,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_riscv64.apk",
-          "content_type": "application/vnd.android.package-archive",
-          "checksum": "sha256:0374b810945a5930de17ba083372bb6ed47c69a20da81b11827fcda9f8d43724"
-        },
-        {
-          "name": "task_linux_riscv64.deb",
-          "size": 6947396,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_riscv64.deb",
-          "content_type": "application/vnd.debian.binary-package",
-          "checksum": "sha256:07c18f37b8c7e621001e6850b6b9d8412130089642620c662189bc18dd87a659"
-        },
-        {
-          "name": "task_linux_riscv64.rpm",
-          "size": 7197003,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_riscv64.rpm",
-          "content_type": "application/x-rpm",
-          "checksum": "sha256:9facb4e115806dd34826c485593f9247062562fa875410cdeac6fa1cdaa53066"
+          "checksum": "sha256:b7c9ce48967bd7065ccd2d85f657500c092e21e7f664300a807461828f7d0878"
         },
         {
           "name": "task_linux_riscv64.tar.gz",
-          "size": 6923226,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_linux_riscv64.tar.gz",
+          "size": 10056361,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_linux_riscv64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:abd4dabe47e6de38a5eeea04ba92b89dc927b13ef65efabc6f072003d0c680e9"
+          "checksum": "sha256:f8d9155e4866370e2ac524fa011022a6b0377782bc9a75d1bf420aed730b2aef"
         },
         {
           "name": "task_windows_386.zip",
-          "size": 7309603,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_windows_386.zip",
+          "size": 10318455,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_windows_386.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:e5309d0769555668b514ced50b3e7973c3fb4b5904b2e98387f46d5b9064d21f"
+          "checksum": "sha256:0e1af4b90f23ce4bbb8a69b7d3fe18ae032f7afbac9df484a85e9997b60d8250"
         },
         {
           "name": "task_windows_amd64.zip",
-          "size": 7522825,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_windows_amd64.zip",
+          "size": 10804150,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_windows_amd64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:462687c285a07450de17f2af696d12c3c9536651e3d0085e483d56ab6cd0db4f"
+          "checksum": "sha256:86db2cfd7f6ff8ecaf6a64985a0af16191838ca68ee426594029825b8f4eda2f"
         },
         {
           "name": "task_windows_arm.zip",
-          "size": 7164530,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_windows_arm.zip",
+          "size": 10081197,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_windows_arm.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:ee406958f145d0c4c84b00786ec0548a8a3af59ca6753c4984e91378e64e4b58"
+          "checksum": "sha256:3fdb680604eda89b5db0a5b1f7ee1a72e9411e3d7d031847099888451245f5f5"
         },
         {
           "name": "task_windows_arm64.zip",
-          "size": 6749560,
-          "url": "https://github.com/go-task/task/releases/download/v3.45.5/task_windows_arm64.zip",
+          "size": 9672894,
+          "url": "https://github.com/go-task/task/releases/download/v3.46.3/task_windows_arm64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:2a9b3bec36c188ed0bae5c1e65f7518cea8cca763b9c56268886c548ef5cecf4"
+          "checksum": "sha256:4872d30a999320e8db7446437ca50f99568c33253a3e26d4bc0b1f75a82e95ff"
         }
       ]
     }
