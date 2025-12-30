@@ -4,58 +4,58 @@
   "url": "https://github.com/FiloSottile/age",
   "releases": [
     {
-      "title": "age v1.3.0: post-quantum (and more)!",
-      "description": "<p align=\"center\"><img alt=\"The age logo, a wireframe of St. Peters dome in Rome, with the text: age, file encryption\" width=\"600\" src=\"https://user-images.githubusercontent.com/1225294/132245842-fda4da6a-1cea-4738-a3da-2dc860861c98.png\"></p>\r\n\r\nExactly six years after [the first age beta release](https://github.com/FiloSottile/age/releases/tag/v1.0.0-beta1), v1.3.0 brings post-quantum resistance to age, along with a couple long-requested features, built-in support for recipients compatible with hardware plugins, I/O API improvements, and many usability enhancements.\r\n\r\n### Post-quantum recipients\r\n\r\nage now has native post-quantum recipients based on HPKE with a hybrid ML-KEM-768 KEM. The recipients start with `age1pq1...`, and the identities start with `AGE-SECRET-KEY-PQ-1...`.\r\n\r\nTo generate a post-quantum keypair:\r\n\r\n```\r\n$ age-keygen -pq\r\n```\r\n\r\nIf you have your own age implementation, C2SP has [the specification](http://c2sp.org/age#the-mlkem768-x25519-ie-x-wing-hybrid-post-quantum-recipient-type), and CCTV has [test vectors](https://github.com/C2SP/CCTV/tree/main/age) for the new hybrid recipient types.\r\n\r\n(If you are using an older age client, [an optional plugin](https://github.com/FiloSottile/age/tree/main/extra/age-plugin-pq) is available that provides out-of-the-box support for encryption to hybrid recipients. Hybrid identities can be converted to work with the plugin with `age-plugin-pq -identity`.)\r\n\r\n### New I/O APIs\r\n\r\nThe new [DecryptReaderAt](https://filippo.io/age#DecryptReaderAt) API implements seeking decryption, which can be used with [zip.NewReader](https://pkg.go.dev/archive/zip#NewReader).\r\n\r\nThe new [EncryptReader](https://filippo.io/age#EncryptReader) API implements pull-based encryption by wrapping an io.Reader, as opposed to wrapping an io.Writer like [Encrypt](https://filippo.io/age#Encrypt).\r\n\r\n### age-inspect\r\n\r\nThe new [age-inspect(1) tool](https://htmlpreview.github.io/?https://github.com/FiloSottile/age/blob/main/doc/age-inspect.1.html) presents the metadata of an age file without decrypting it.\r\n\r\n```\r\nhello.age is an age file, version \"age-encryption.org/v1\".\r\n\r\nThis file is ASCII-armored.\r\n\r\nThis file is encrypted to the following recipient types:\r\n  - \"mlkem768x25519\"\r\n\r\nThis file uses post-quantum encryption.\r\n\r\nSize breakdown (assuming it decrypts successfully):\r\n\r\n    Header                      1627 bytes\r\n    Armor overhead              1350 bytes\r\n    Encryption overhead           32 bytes\r\n    Payload                     1959 bytes\r\n                        -------------------\r\n    Total                       4968 bytes\r\n\r\nTip: for machine-readable output, use --json.\r\n```\r\n\r\n### Built-in recipients compatible with hardware plugins\r\n\r\nage(1) now supports encrypting to `age1tag1...` and `age1tagpq1...` recipients, which are compatible with hardware plugins. The latest or upcoming versions of age-plugin-yubikey, age-plugin-tpm, and age-plugin-se will support producing these recipients for existing and new keys, and decrypting files encrypted to them.\r\n\r\nThe [filippo.io/age/tag](https://filippo.io/age/tag) package provides an implementation, including a [Recipient.Tag](https://filippo.io/age/tag#Recipient.Tag) method useful to plugin implementations.\r\n\r\nC2SP has [the specification](https://c2sp.org/age#the-tagged-recipient-types) for these recipient types.\r\n\r\n(For users that are using older age clients, there are [compatiblity plugins](https://github.com/FiloSottile/age/tree/main/extra) that can be shipped along with the hardware plugins.)\r\n\r\n### Non-interactive passphrase input\r\n\r\nWe have long resisted implementing non-interactive CLI passphrase input, because most use cases are more securely and/or efficiently served by native keys or passphrase-encrypted identities. However, there are some residual use cases.\r\n\r\nThis is now available through the [batchpass plugin](https://htmlpreview.github.io/?https://github.com/FiloSottile/age/blob/main/doc/age-plugin-batchpass.1.html), but we invite everyone to read the warning in the man page and help text.\r\n\r\n### Go framework for implementing plugins\r\n\r\nThe [filippo.io/age/plugin](https://filippo.io/age/plugin) package now provides a framework for exposing [age.Recipient](https://filippo.io/age#Recipient) and [age.Identity](https://filippo.io/age#Identity) implementations as standalone CLI plugins.\r\n\r\nFor example, this is the entire age-plugin-tagpq compatibility implementation:\r\n\r\n```go\r\npackage main\r\n\r\nimport (\r\n\t\"log\"\r\n\t\"os\"\r\n\r\n\t\"filippo.io/age\"\r\n\t\"filippo.io/age/plugin\"\r\n\t\"filippo.io/age/tag\"\r\n)\r\n\r\nfunc main() {\r\n\tp, err := plugin.New(\"tagpq\")\r\n\tif err != nil {\r\n\t\tlog.Fatal(err)\r\n\t}\r\n\tp.HandleRecipient(func(b []byte) (age.Recipient, error) {\r\n\t\treturn tag.NewHybridRecipient(b)\r\n\t})\r\n\tos.Exit(p.Main())\r\n}\r\n```\r\n\r\nMoreover, the new [plugin.NewTerminalUI](https://filippo.io/age/plugin#NewTerminalUI) function provides a ready-to-use terminal-based [ClientUI](https://filippo.io/age#ClientUI) implementation for the existing plugin client API.\r\n\r\n### Armor fixes\r\n\r\nThe CLI now allows some leading whitespace before the armor header, as the API always did. The API and CLI now reject empty lines in armored data, as required by the spec.\r\n\r\n### Detached headers\r\n\r\nThe new set of APIs [ExtractHeader](https://filippo.io/age#ExtractHeader), [DecryptHeader](https://filippo.io/age#DecryptHeader), and [NewInjectedFileKeyIdentity](https://filippo.io/age#NewInjectedFileKeyIdentity) allow working with detached age headers, where the file key is unwrapped separately from the actual file decryption. This can be useful for efficiency or to delegate unwrapping without exposing the file contents.\r\n\r\n### Usability improvements\r\n\r\nThe CLI will now refuse to output decrypted binary data to the terminal. (We did this before attending the [gpg.fail](https://gpg.fail/) talk!)\r\n\r\nNative identities are now tried first when decrypting through both the CLI and the API, since they can't require interaction. Order is otherwise preserved.\r\n\r\n[NoIdentityMatchError](https://filippo.io/age#NoIdentityMatchError) now exposes the stanza types of the header, unwraps to the errors returned by the [Identity.Unwrap](https://filippo.io/age#Identity.Unwrap) method calls, and prints the underlying error if only one identity was provided.\r\n\r\nVirtual terminal processing is now enabled on Windows terminals that don't enable it by default, so that ANSI escape sequences work as expected.\r\n\r\nMany improved and more proactively helpful error messages.\r\n\r\nThe release artifacts now include a source tarball with vendored dependencies.\r\n",
-      "tag": "v1.3.0",
+      "title": "v1.3.1",
+      "description": "v1.3.1 is a minor release to restore version injection from downstream package build processes.\r\n\r\nSee [the v1.3.0 release notes](https://github.com/FiloSottile/age/releases/tag/v1.3.0) for an overview of recent additions.",
+      "tag": "v1.3.1",
       "assets": [
         {
-          "name": "age-v1.3.0-darwin-arm64.tar.gz",
-          "size": 9668273,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.0/age-v1.3.0-darwin-arm64.tar.gz",
+          "name": "age-v1.3.1-darwin-arm64.tar.gz",
+          "size": 9685129,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-darwin-arm64.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:4cd58304a79fbcd554d5ba99ec1cba872cf7ef84b9ac34ebbc5e77bd1fa9f5f6"
+          "checksum": "sha256:01120ea2cbf0463d4c6bd767f99f3271bbed1cdc8a9aa718a76ba1fe4f01998b"
         },
         {
-          "name": "age-v1.3.0-freebsd-amd64.tar.gz",
-          "size": 9901949,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.0/age-v1.3.0-freebsd-amd64.tar.gz",
+          "name": "age-v1.3.1-freebsd-amd64.tar.gz",
+          "size": 9922482,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-freebsd-amd64.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:a52f85147a58e9721cae94af059c66819cb481d2cc5bc32761f9aff0f2751eec"
+          "checksum": "sha256:3d597b093d6b21f78b465a55cef748cdd357bddc43128527d3aacec4649caa63"
         },
         {
-          "name": "age-v1.3.0-linux-amd64.tar.gz",
-          "size": 10247290,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.0/age-v1.3.0-linux-amd64.tar.gz",
+          "name": "age-v1.3.1-linux-amd64.tar.gz",
+          "size": 10263766,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-linux-amd64.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:2635f17e469b8c829055151dcbf77effe1fbefe182cb7b308aee5d0e5d923aae"
+          "checksum": "sha256:bdc69c09cbdd6cf8b1f333d372a1f58247b3a33146406333e30c0f26e8f51377"
         },
         {
-          "name": "age-v1.3.0-linux-arm.tar.gz",
-          "size": 10251070,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.0/age-v1.3.0-linux-arm.tar.gz",
+          "name": "age-v1.3.1-linux-arm.tar.gz",
+          "size": 10268911,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-linux-arm.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:94480f6dcc81a9612f63b445fe37b8b94053ab0f9ed7a24df63c801671cb6375"
+          "checksum": "sha256:0af5d0dd1664d43dda955938280a668fdd298ad0df90058b409067dfdec74ba3"
         },
         {
-          "name": "age-v1.3.0-linux-arm64.tar.gz",
-          "size": 9453673,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.0/age-v1.3.0-linux-arm64.tar.gz",
+          "name": "age-v1.3.1-linux-arm64.tar.gz",
+          "size": 9466344,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-linux-arm64.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:5c78a4de6aa89e86045e4c05fec5773f3c419a5c209cd7cb381fec0f5e8fa936"
+          "checksum": "sha256:c6878a324421b69e3e20b00ba17c04bc5c6dab0030cfe55bf8f68fa8d9e9093a"
         },
         {
-          "name": "age-v1.3.0-source.tar.gz",
-          "size": 2385247,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.0/age-v1.3.0-source.tar.gz",
+          "name": "age-v1.3.1-source.tar.gz",
+          "size": 2387687,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-source.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:149237164bd5942d8e52053218a8f4cc80e1cf830aaf4a98b625baf1a777cf7e"
+          "checksum": "sha256:b68e47184fff9ad18ea344063b1f5b195e279e19fd13b26c1998c8385695d8f6"
         },
         {
-          "name": "age-v1.3.0-windows-amd64.zip",
-          "size": 10723321,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.0/age-v1.3.0-windows-amd64.zip",
+          "name": "age-v1.3.1-windows-amd64.zip",
+          "size": 10741348,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-windows-amd64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:53bec974398358dd1505122b99abdd21c3f3d9a3174dacb71826bbb04f29b54d"
+          "checksum": "sha256:c56e8ce22f7e80cb85ad946cc82d198767b056366201d3e1a2b93d865be38154"
         }
       ]
     }
