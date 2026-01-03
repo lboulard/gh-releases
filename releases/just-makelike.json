@@ -4,86 +4,86 @@
   "url": "https://github.com/casey/just",
   "releases": [
     {
-      "title": "1.45.0",
-      "description": "### Added\r\n- Allow requiring recipe arguments to match regular expression patterns ([#3000](https://github.com/casey/just/pull/3000) by [casey](https://github.com/casey))\r\n\r\n### Fixed\r\n- Allow shell-expanded strings in attributes ([#3007](https://github.com/casey/just/pull/3007) by [casey](https://github.com/casey))\r\n- Fix arg pattern anchoring ([#3002](https://github.com/casey/just/pull/3002) by [casey](https://github.com/casey))\r\n\r\n### Misc\r\n- Use non-capturing group in arg pattern regex ([#3006](https://github.com/casey/just/pull/3006) by [casey](https://github.com/casey))\r\n- Remove redundant type annotation ([#3004](https://github.com/casey/just/pull/3004) by [casey](https://github.com/casey))\r\n",
-      "tag": "1.45.0",
+      "title": "1.46.0",
+      "description": "### Fixed\r\n- Don't leak signal handler pipe into child processes ([#3035](https://github.com/casey/just/pull/3035) by [rjmac](https://github.com/rjmac))\r\n\r\n### Added\r\n- Allow `long` to default to to parameter name ([#3041](https://github.com/casey/just/pull/3041) by [casey](https://github.com/casey))\r\n- Allow const expressions in all settings ([#3037](https://github.com/casey/just/pull/3037) by [casey](https://github.com/casey))\r\n- Allow const expressions in `working-directory` ([#3033](https://github.com/casey/just/pull/3033) by [casey](https://github.com/casey))\r\n- Add --usage subcommand and argument help strings ([#3031](https://github.com/casey/just/pull/3031) by [casey](https://github.com/casey))\r\n- Add flags without values ([#3029](https://github.com/casey/just/pull/3029) by [casey](https://github.com/casey))\r\n- Allow passing arguments as short `-x` options ([#3028](https://github.com/casey/just/pull/3028) by [casey](https://github.com/casey))\r\n- Allow recipes to take `--long` options ([#3026](https://github.com/casey/just/pull/3026) by [casey](https://github.com/casey))\r\n\r\n### Misc\r\n- Add original token to string literal ([#3042](https://github.com/casey/just/pull/3042) by [casey](https://github.com/casey))\r\n- Remove string literal lifetime ([#3036](https://github.com/casey/just/pull/3036) by [casey](https://github.com/casey))\r\n- Move overrides into config ([#3032](https://github.com/casey/just/pull/3032) by [casey](https://github.com/casey))\r\n- Test that options are passed as positional arguments ([#3030](https://github.com/casey/just/pull/3030) by [casey](https://github.com/casey))\r\n- Group arguments by parameter ([#3025](https://github.com/casey/just/pull/3025) by [casey](https://github.com/casey))\r\n- Add OpenBSD package to readme ([#2900](https://github.com/casey/just/pull/2900) by [vext01](https://github.com/vext01))\r\n- Re-enable mdbook-linkcheck ([#3011](https://github.com/casey/just/pull/3011) by [casey](https://github.com/casey))\r\n- Disable dependabot ([#3010](https://github.com/casey/just/pull/3010) by [casey](https://github.com/casey))\r\n- Fix pre-release check in pages deploy job ([#3009](https://github.com/casey/just/pull/3009) by [casey](https://github.com/casey))",
+      "tag": "1.46.0",
       "assets": [
         {
           "name": "CHANGELOG.md",
-          "size": 150223,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/CHANGELOG.md",
+          "size": 152572,
+          "url": "https://github.com/casey/just/releases/download/1.46.0/CHANGELOG.md",
           "content_type": "text/markdown",
-          "checksum": "sha256:da45c0a92b5fde053044234b6f699a6dc0efb7a53109609c6964b800755116a6"
+          "checksum": "sha256:9ca9f7a1cef98ad6b63c58786ad4e28c9ada23d3ae68f448a21625e2ad95d9b6"
         },
         {
-          "name": "just-1.45.0-aarch64-apple-darwin.tar.gz",
-          "size": 1670167,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-aarch64-apple-darwin.tar.gz",
+          "name": "just-1.46.0-aarch64-apple-darwin.tar.gz",
+          "size": 1693949,
+          "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:5bcffd1e4b2b24f71a2acff52a604e9da03615679c0b3045a8c921c95cf1532c"
+          "checksum": "sha256:438eaf6468a115aa7db93e501cc7e3272f453f6b7083be3863adfab546b23358"
         },
         {
-          "name": "just-1.45.0-aarch64-pc-windows-msvc.zip",
-          "size": 1572959,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-aarch64-pc-windows-msvc.zip",
+          "name": "just-1.46.0-aarch64-pc-windows-msvc.zip",
+          "size": 1596594,
+          "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-aarch64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:94688802f782e4e6d0212ecbaa91ce5b5dd75d8481441976d3b18ca105893deb"
+          "checksum": "sha256:ecbaca1e77eee3b5299980c4aff2aad0e37fcc8e7521426e470f853075c742ef"
         },
         {
-          "name": "just-1.45.0-aarch64-unknown-linux-musl.tar.gz",
-          "size": 1809302,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-aarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.46.0-aarch64-unknown-linux-musl.tar.gz",
+          "size": 1834096,
+          "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-aarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:e9d629d3903ea2b6b2bbcb569e69d62bc80b0e6adcce280094c8ffb6dbdf83d2"
+          "checksum": "sha256:b81970c8247fa64cfb30d2a3da0e487e4253f9f2d01865ed5e7d53cdc7b02188"
         },
         {
-          "name": "just-1.45.0-arm-unknown-linux-musleabihf.tar.gz",
-          "size": 1841013,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-arm-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.46.0-arm-unknown-linux-musleabihf.tar.gz",
+          "size": 1858887,
+          "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-arm-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:fd87ba1ff3f6da71b8bc2d75e53e4879f809fcae2fb8def0df32370d49556f5f"
+          "checksum": "sha256:eb5a00bbb5ab7937cf56e7e4f241dfa323ed63e519c787900841b499963c25f6"
         },
         {
-          "name": "just-1.45.0-armv7-unknown-linux-musleabihf.tar.gz",
-          "size": 1811297,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.46.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "size": 1828092,
+          "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-armv7-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:642b25b41adbf6901f507260298e67075bc71d3cc06582097a0e4f01aead399a"
+          "checksum": "sha256:61f970d8b78ca8d81ad2d1a5fe47d9e149f4dd3f201ae85d9c4b0a18fc41a7e3"
         },
         {
-          "name": "just-1.45.0-loongarch64-unknown-linux-musl.tar.gz",
-          "size": 1815724,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-loongarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.46.0-loongarch64-unknown-linux-musl.tar.gz",
+          "size": 1837798,
+          "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-loongarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:8bc9e9e9c4884f6fb7cea6221197d8c31a467781370435178acb0111fd45cadb"
+          "checksum": "sha256:bbd5aebdf2f449d67f8b827b6e652b31be7b378d69cbc4e031ee15c2aa289d45"
         },
         {
-          "name": "just-1.45.0-x86_64-apple-darwin.tar.gz",
-          "size": 1808937,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-x86_64-apple-darwin.tar.gz",
+          "name": "just-1.46.0-x86_64-apple-darwin.tar.gz",
+          "size": 1834940,
+          "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-x86_64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:913c4fdd5b15b9a74529ecec80d06eb21a2ff8936b2deebc69c0f4d495126553"
+          "checksum": "sha256:ec54dd60ac876261b7318f1852ef9c0319fede1e5a73c14f56d908a8edf595b8"
         },
         {
-          "name": "just-1.45.0-x86_64-pc-windows-msvc.zip",
-          "size": 1720978,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-x86_64-pc-windows-msvc.zip",
+          "name": "just-1.46.0-x86_64-pc-windows-msvc.zip",
+          "size": 1751006,
+          "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:cf5c1684de8b8c00b0edeac40f47a3fbba9df2830e2451dd9b26f99ec4d8b788"
+          "checksum": "sha256:f0acf3f8ccbcf360b481baae9cae4c921774c89d5d932012481d3e0bda78ab39"
         },
         {
-          "name": "just-1.45.0-x86_64-unknown-linux-musl.tar.gz",
-          "size": 1976463,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-x86_64-unknown-linux-musl.tar.gz",
+          "name": "just-1.46.0-x86_64-unknown-linux-musl.tar.gz",
+          "size": 2007171,
+          "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:dc3f958aaf8c6506dd90426e9b03f86dd15e74a6467ee0e54929f750af3d9e49"
+          "checksum": "sha256:79966e6e353f535ee7d1c6221641bcc8e3381c55b0d0a6dc6e54b34f9db36eaa"
         },
         {
           "name": "SHA256SUMS",
           "size": 1070,
-          "url": "https://github.com/casey/just/releases/download/1.45.0/SHA256SUMS",
+          "url": "https://github.com/casey/just/releases/download/1.46.0/SHA256SUMS",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:60bca78f9e2f9031b60009b69230d57bb97a2326a154e271cab9f239ba2ecba1"
+          "checksum": "sha256:8ea5d64801cd8cbe2d3cbe00ed16abc5eeef8a780f203fc5a92bfebd65ce683b"
         }
       ]
     }
