@@ -4,114 +4,114 @@
   "url": "https://github.com/jesseduffield/lazygit",
   "releases": [
     {
-      "title": "v0.57.0",
-      "description": "<!-- Release notes generated using configuration in .github/release.yml at v0.57.0 -->\n\n## What's Changed\n### Enhancements \ud83d\udd25\n* Open pull requests in browser with extra leading slashes removed by @hrzlgnm in https://github.com/jesseduffield/lazygit/pull/5018\n* Allow using SelectedSubmodule in CustomCommands by @rlkandela in https://github.com/jesseduffield/lazygit/pull/5015\n* Don't allow empty input in most prompts by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5043\n* Suppress output from background fetch (unless there were errors) by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5044\n* feat: add fork remote command by @karolzwolak in https://github.com/jesseduffield/lazygit/pull/4831\n* Trigger immediate background fetch when switching repos by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5047\n### Fixes \ud83d\udd27\n* Keep cursor at top/bottom when navigating by page by @RaphaeleL in https://github.com/jesseduffield/lazygit/pull/5019\n* Switch to branches view when checking out a commit by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5048\n* Fix deleting a remote tag when a remote branch with the same name exists, or vice versa by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5075\n* Show fixup base commits in correct order in ctrl-f error message by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5073\n* Band-aid fix for rare crashes when refreshing files by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5074\n* Fix to support creating MRs for repositories cloned with SSH alias by @roveo in https://github.com/jesseduffield/lazygit/pull/5082\n### Maintenance \u2699\ufe0f\n* Keep config and schema unchanged during a release by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5010\n* Modernize all codes by @phanen in https://github.com/jesseduffield/lazygit/pull/5036\n* Bump golang.org/x/crypto from 0.37.0 to 0.45.0 by @dependabot[bot] in https://github.com/jesseduffield/lazygit/pull/5054\n* Don't use \"HEADLESS\" environment variable for running tests by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5064\n* refactor: use strings.Builder and strings.Repeat to simplify code by @boqishan in https://github.com/jesseduffield/lazygit/pull/5068\n* chore: fix function name in comment by @riyueguang in https://github.com/jesseduffield/lazygit/pull/4481\n### Docs \ud83d\udcd6\n* Add a \"Commit history\" section to CONTRIBUTING.md by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5022\n* Update table of contents in README.md by @madscientist16 in https://github.com/jesseduffield/lazygit/pull/5045\n* Update docs and schema for release by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5091\n### I18n \ud83c\udf0e\n* Update translations from Crowdin by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5090\n### Performance Improvements \ud83d\udcca\n* Fix and speed up the file list for the \"Enter path to filter by\" feature by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5056\n\n## New Contributors\n* @hrzlgnm made their first contribution in https://github.com/jesseduffield/lazygit/pull/5018\n* @RaphaeleL made their first contribution in https://github.com/jesseduffield/lazygit/pull/5019\n* @rlkandela made their first contribution in https://github.com/jesseduffield/lazygit/pull/5015\n* @phanen made their first contribution in https://github.com/jesseduffield/lazygit/pull/5036\n* @madscientist16 made their first contribution in https://github.com/jesseduffield/lazygit/pull/5045\n* @karolzwolak made their first contribution in https://github.com/jesseduffield/lazygit/pull/4831\n* @boqishan made their first contribution in https://github.com/jesseduffield/lazygit/pull/5068\n* @riyueguang made their first contribution in https://github.com/jesseduffield/lazygit/pull/4481\n* @roveo made their first contribution in https://github.com/jesseduffield/lazygit/pull/5082\n\n**Full Changelog**: https://github.com/jesseduffield/lazygit/compare/v0.56.0...v0.57.0\n\n",
-      "tag": "v0.57.0",
+      "title": "v0.58.0",
+      "description": "<!-- Release notes generated using configuration in .github/release.yml at v0.58.0 -->\n\n## What's Changed\n### Enhancements \ud83d\udd25\n* Add keys for command log menu items by @PeterCardenas in https://github.com/jesseduffield/lazygit/pull/5096\n* Add Codeberg as a supported git hosting service by @yaadata in https://github.com/jesseduffield/lazygit/pull/5130\n* Change keybinding of \"keep\" item in Merge Conflict menu back to 'k' by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5132\n* Support custom keybindings in custom command menu prompts by @HerrNaN in https://github.com/jesseduffield/lazygit/pull/5129\n* Show an error when checking out a file would overwrite local modifications by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5154\n### Fixes \ud83d\udd27\n* Remove confirmation for opening the merge tool by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5094\n* Allow using 'j', 'k', 'H', or 'L' as keybindings in custom command menus by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5131\n* Prevent many hyperlinks from launching while mouse moving by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5133\n* Fix the main view display after reverting a commit by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5138\n* Avoid scrolling the selection into view on refresh by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5134\n* Fix rendering of certain emojis by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5116\n### Docs \ud83d\udcd6\n* Fix small issues with the Breaking Changes texts by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5114\n* Add a note about delta's `--navigate` option not working in lazygit by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5155\n* Update docs and schema for release by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5168\n### I18n \ud83c\udf0e\n* Update translations from Crowdin by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5167\n### Performance Improvements \ud83d\udcca\n* Fix annoying UI stalls after refresh (e.g. background fetch) when the reflog is very long by @stefanhaller in https://github.com/jesseduffield/lazygit/pull/5135\n\n## New Contributors\n* @yaadata made their first contribution in https://github.com/jesseduffield/lazygit/pull/5130\n* @HerrNaN made their first contribution in https://github.com/jesseduffield/lazygit/pull/5129\n\n**Full Changelog**: https://github.com/jesseduffield/lazygit/compare/v0.57.0...v0.58.0\n\n",
+      "tag": "v0.58.0",
       "assets": [
         {
           "name": "checksums.txt",
           "size": 1413,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/checksums.txt",
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/checksums.txt",
           "content_type": "text/plain; charset=utf-8",
-          "checksum": "sha256:1eb12b7a2560f18aa9ef341f0684477bf61b6e7e7108d7131f7b8c3c67a1ba6f"
+          "checksum": "sha256:ec4feb557199f1d32b0ddbf3347d8ebef452258787783abf62ac50266e321b6a"
         },
         {
-          "name": "lazygit_0.57.0_darwin_arm64.tar.gz",
-          "size": 7469422,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_darwin_arm64.tar.gz",
+          "name": "lazygit_0.58.0_darwin_arm64.tar.gz",
+          "size": 7469197,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_darwin_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:e90dd90c37bb012f1fe708e7f3d32d28747c8638c75a45268734c5e33277c3d0"
+          "checksum": "sha256:7e6c4794f18fbae11ccb75131a71f0216846847a772f702e4f78d26eb2137d35"
         },
         {
-          "name": "lazygit_0.57.0_darwin_x86_64.tar.gz",
-          "size": 8053211,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_darwin_x86_64.tar.gz",
+          "name": "lazygit_0.58.0_darwin_x86_64.tar.gz",
+          "size": 8046701,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_darwin_x86_64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:c34dd41ba01007b3684fd84761f7103dba4af087785200fa1d355a253acd31a2"
+          "checksum": "sha256:22a16c6a6db258a448ede340d81e32b56ab3a6d51ffdfa763f5c9af27188b4ee"
         },
         {
-          "name": "lazygit_0.57.0_freebsd_32-bit.tar.gz",
-          "size": 7467231,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_freebsd_32-bit.tar.gz",
+          "name": "lazygit_0.58.0_freebsd_32-bit.tar.gz",
+          "size": 7473726,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_freebsd_32-bit.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:dcc1fff595d8cfee2dd13b9700414a008ecbb80d09d770ffa282bea914d7b955"
+          "checksum": "sha256:0f291e439401281db1b52634da72bb2c6952a306388856179a2d74ce62934c83"
         },
         {
-          "name": "lazygit_0.57.0_freebsd_arm64.tar.gz",
-          "size": 7136361,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_freebsd_arm64.tar.gz",
+          "name": "lazygit_0.58.0_freebsd_arm64.tar.gz",
+          "size": 7133391,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_freebsd_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:05f52e0d0456b80d574f0b9e517735701b6b79a0aa5b90ac077dde132c5a4c23"
+          "checksum": "sha256:43a985961d6eaf8b57fb0870f54051798df2e6cdb0e7b6ddc9a8542c2f8e44a2"
         },
         {
-          "name": "lazygit_0.57.0_freebsd_armv6.tar.gz",
-          "size": 7465212,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_freebsd_armv6.tar.gz",
+          "name": "lazygit_0.58.0_freebsd_armv6.tar.gz",
+          "size": 7457286,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_freebsd_armv6.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:259e8f9bd1bcc0050ffda2952e5eb92c63ef104a4001cc64fa1658220d58e758"
+          "checksum": "sha256:14ddb4d7116b9aea7ac2f3302a0d99979ec5fccd1eef18f8165fc44da8dbecc8"
         },
         {
-          "name": "lazygit_0.57.0_freebsd_x86_64.tar.gz",
-          "size": 7880410,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_freebsd_x86_64.tar.gz",
+          "name": "lazygit_0.58.0_freebsd_x86_64.tar.gz",
+          "size": 7876673,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_freebsd_x86_64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:06debf31a411b40c23685897e4f1d094cbe72d8317bc9984121a1f28d38f309f"
+          "checksum": "sha256:adb711b7c0ad2861689291a145f7b8a1a1aa89387a731bb9e54ee93aa5037781"
         },
         {
-          "name": "lazygit_0.57.0_linux_32-bit.tar.gz",
-          "size": 7512845,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_linux_32-bit.tar.gz",
+          "name": "lazygit_0.58.0_linux_32-bit.tar.gz",
+          "size": 7518910,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_linux_32-bit.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:cd5c17dab07b0db999ab4691f5e6bcdd700b3402d30d3f447ba1e88f84f2de49"
+          "checksum": "sha256:45026c4296ff75e19b5b71176af6e8cae10b3c5f51004a96ebf246caf5c38046"
         },
         {
-          "name": "lazygit_0.57.0_linux_arm64.tar.gz",
-          "size": 7180136,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_linux_arm64.tar.gz",
+          "name": "lazygit_0.58.0_linux_arm64.tar.gz",
+          "size": 7177927,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_linux_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:6bc14dcfafe943363226ed2a2c222d5dda68247acc9bdc382d129dd7fe98f985"
+          "checksum": "sha256:0e3bf5ae9688763198a63e4bc3d0306fa0199e74a28c7ccb42a8b316cd69529c"
         },
         {
-          "name": "lazygit_0.57.0_linux_armv6.tar.gz",
-          "size": 7502995,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_linux_armv6.tar.gz",
+          "name": "lazygit_0.58.0_linux_armv6.tar.gz",
+          "size": 7496249,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_linux_armv6.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:2984e480923f8685b5184f497c14e5fe9d4b7890e70ef50fdead3d5846212ae6"
+          "checksum": "sha256:440adfbe7c9dc0d4fd63eb4407c4b213a8032ee10eb8eddd2dc189a553ce986b"
         },
         {
-          "name": "lazygit_0.57.0_linux_x86_64.tar.gz",
-          "size": 7922113,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_linux_x86_64.tar.gz",
+          "name": "lazygit_0.58.0_linux_x86_64.tar.gz",
+          "size": 7919100,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_linux_x86_64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:ced011ecd1459d069c66128fbf172b7248c8b99d8983fa17d84a247a98146d5e"
+          "checksum": "sha256:6161fa717cd07d133f7f1c53fe6e49de97d718dbb4b9e1481604dca6f3b8c647"
         },
         {
-          "name": "lazygit_0.57.0_windows_32-bit.zip",
-          "size": 7784061,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_windows_32-bit.zip",
+          "name": "lazygit_0.58.0_windows_32-bit.zip",
+          "size": 7850186,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_windows_32-bit.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:e9fa61798ff05b0a82fe1a8bc0f1398f84ce2079e191fe4ed7d83e4b807ac1d3"
+          "checksum": "sha256:30cd32592112e95c415631e1aabca9366724956d1374276d3da5ebb45d2685d7"
         },
         {
-          "name": "lazygit_0.57.0_windows_arm64.zip",
-          "size": 7232801,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_windows_arm64.zip",
+          "name": "lazygit_0.58.0_windows_arm64.zip",
+          "size": 7288066,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_windows_arm64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:38d53ab577bb29ec6bedbd094a56f45fa01b4f42ba01be21d00416323661d4c6"
+          "checksum": "sha256:5a00649cf1627e0795591a37cabfa20be89e331c590e064a3ee09aa45c4b9778"
         },
         {
-          "name": "lazygit_0.57.0_windows_armv6.zip",
-          "size": 7629048,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_windows_armv6.zip",
+          "name": "lazygit_0.58.0_windows_armv6.zip",
+          "size": 7687426,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_windows_armv6.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:598f0ba1475bbe06545da5ea3a9a00530568821833ab5a98e52211d5e7d27da1"
+          "checksum": "sha256:790553febb760eb90052313bc4fe0a5350461643ff2ff26ccf629d8bf95705c9"
         },
         {
-          "name": "lazygit_0.57.0_windows_x86_64.zip",
-          "size": 8113854,
-          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_windows_x86_64.zip",
+          "name": "lazygit_0.58.0_windows_x86_64.zip",
+          "size": 8179483,
+          "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_windows_x86_64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:775a210b3becd262a067d75be33d3d0ecd58cbc2dde3a36ca74e4757b080618c"
+          "checksum": "sha256:dd7c87030d4e4e7d1d1a5f72b6193be6bbe5d03d4409eec32de85b9f57dee5bb"
         }
       ]
     }
