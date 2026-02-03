@@ -16,6 +16,13 @@
           "checksum": "sha256:2b233301ad21ab7b1eabd9ae1198a164005fa4928fcdd745d47c39f8593209d7"
         },
         {
+          "name": "age-v1.3.1-darwin-amd64.tar.gz.proof",
+          "size": 4444,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-darwin-amd64.tar.gz.proof",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:80a34238ccb136699febf3ea1971046b524a7e6d82c4a8b1fc6f6eb5e35dc240"
+        },
+        {
           "name": "age-v1.3.1-darwin-arm64.tar.gz",
           "size": 9685129,
           "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-darwin-arm64.tar.gz",
