@@ -4,86 +4,86 @@
   "url": "https://github.com/casey/just",
   "releases": [
     {
-      "title": "1.47.0",
-      "description": "### Added\r\n- Add lazy evaluation setting ([#3083](https://github.com/casey/just/pull/3083) by [casey](https://github.com/casey))\r\n- Add guard sigil `?` ([#2547](https://github.com/casey/just/pull/2547) by [casey](https://github.com/casey))\r\n- Add `--group` flag to filter `--list` output by group ([#3117](https://github.com/casey/just/pull/3117) by [terror](https://github.com/terror))\r\n- Add attributes for DragonFly BSD, FreeBSD, and NetBSD ([#3115](https://github.com/casey/just/pull/3115) by [jakewilliami](https://github.com/jakewilliami))\r\n- Add `[env(NAME, VALUE)` recipe attribute ([#2957](https://github.com/casey/just/pull/2957) by [neunenak](https://github.com/neunenak))\r\n\r\n### Changed\r\n- Make `--timestamp` print timestamps unconditionally ([#3114](https://github.com/casey/just/pull/3114) by [casey](https://github.com/casey))\r\n- Print `--timestamps` with script recipes ([#3050](https://github.com/casey/just/pull/3050) by [casey](https://github.com/casey))\r\n- `[private]` modules are excluded from `--list` output ([#2889](https://github.com/casey/just/pull/2889) by [Scott-Guest](https://github.com/Scott-Guest))\r\n\r\n### Misc\r\n- Fix readme typo ([#3122](https://github.com/casey/just/pull/3122) by [Rohan5commit](https://github.com/Rohan5commit))\r\n- Move choose and run into match statement ([#3120](https://github.com/casey/just/pull/3120) by [casey](https://github.com/casey))\r\n- Add uv install instructions to readme ([#3062](https://github.com/casey/just/pull/3062) by [npikall](https://github.com/npikall))\r\n- Suppress error when --choose is cancelled by user ([#3098](https://github.com/casey/just/pull/3098) by [cobyfrombrooklyn-bot](https://github.com/cobyfrombrooklyn-bot))\r\n- Test formatting justfile with undefined variable succeeds ([#3110](https://github.com/casey/just/pull/3110) by [casey](https://github.com/casey))\r\n- Format without compiling ([#3103](https://github.com/casey/just/pull/3103) by [terror](https://github.com/terror))\r\n- Fix Gentoo installation instructions ([#3085](https://github.com/casey/just/pull/3085) by [DarthGandalf](https://github.com/DarthGandalf))\r\n- Deny unreachable pub ([#3080](https://github.com/casey/just/pull/3080) by [casey](https://github.com/casey))\r\n- Fix readme typo ([#3079](https://github.com/casey/just/pull/3079) by [pvinis](https://github.com/pvinis))\r\n- Include blank chapters in book ([#3076](https://github.com/casey/just/pull/3076) by [casey](https://github.com/casey))\r\n- Clean up build script ([#3078](https://github.com/casey/just/pull/3078) by [casey](https://github.com/casey))\r\n- Increase stack size on Windows ([#3077](https://github.com/casey/just/pull/3077) by [casey](https://github.com/casey))\r\n- Fix readme typo ([#3066](https://github.com/casey/just/pull/3066) by [kenden](https://github.com/kenden))\r\n- Remove dependency on executable-path ([#3058](https://github.com/casey/just/pull/3058) by [casey](https://github.com/casey))\r\n- Fix typos ([#3056](https://github.com/casey/just/pull/3056) by [galenseilis](https://github.com/galenseilis))\r\n- Avoid conditional compilation in integration tests ([#3055](https://github.com/casey/just/pull/3055) by [casey](https://github.com/casey))\r\n- Assert exit status last in `Test` builder ([#3054](https://github.com/casey/just/pull/3054) by [casey](https://github.com/casey))\r\n- Remove makedeb/MPR installation instructions ([#3053](https://github.com/casey/just/pull/3053) by [Chengings](https://github.com/Chengings))\r\n- Handle errors when checking for files ([#3051](https://github.com/casey/just/pull/3051) by [casey](https://github.com/casey))",
-      "tag": "1.47.0",
+      "title": "1.47.1",
+      "description": "### Fixed\r\n- Block on running parallel dependencies ([#3139](https://github.com/casey/just/pull/3139) by [casey](https://github.com/casey))\r\n- Fix setting-exported assignment visibility in child modules ([#3128](https://github.com/casey/just/pull/3128) by [casey](https://github.com/casey))\r\n\r\n### Added\r\n- Add `eager` keyword to force evaluation of unused assignments ([#3131](https://github.com/casey/just/pull/3131) by [casey](https://github.com/casey))\r\n\r\n### Changed\r\n- Only evaluate used variables in --evaluate and --command ([#3130](https://github.com/casey/just/pull/3130) by [casey](https://github.com/casey))\r\n\r\n### Misc\r\n- Make eager assignments unstable ([#3140](https://github.com/casey/just/pull/3140) by [casey](https://github.com/casey))\r\n- Include path to .env file in error messages ([#3135](https://github.com/casey/just/pull/3135) by [casey](https://github.com/casey))\r\n- Consolidate override checking ([#3127](https://github.com/casey/just/pull/3127) by [casey](https://github.com/casey))\r\n- Update readme version references ([#3126](https://github.com/casey/just/pull/3126) by [casey](https://github.com/casey))",
+      "tag": "1.47.1",
       "assets": [
         {
           "name": "CHANGELOG.md",
-          "size": 156274,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/CHANGELOG.md",
+          "size": 157543,
+          "url": "https://github.com/casey/just/releases/download/1.47.1/CHANGELOG.md",
           "content_type": "text/markdown",
-          "checksum": "sha256:50d074f24a2483d92ccc97739ede97ea074323f4e9b646e4064f66310070a452"
+          "checksum": "sha256:95d8dcd1f346e5fe33a81dfa610517909a18755dd2c28eb40121d98f7be5a6e5"
         },
         {
-          "name": "just-1.47.0-aarch64-apple-darwin.tar.gz",
-          "size": 1673932,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-aarch64-apple-darwin.tar.gz",
+          "name": "just-1.47.1-aarch64-apple-darwin.tar.gz",
+          "size": 1674001,
+          "url": "https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:1ed67e695278af17108fc01befdde77b9819280c706cb1f7c792b95ddbdeb0a6"
+          "checksum": "sha256:630390f3cfe131f5153c336cb5d5e9714c49ff27bee38d090da0a5901fd660e5"
         },
         {
-          "name": "just-1.47.0-aarch64-pc-windows-msvc.zip",
-          "size": 1581868,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-aarch64-pc-windows-msvc.zip",
+          "name": "just-1.47.1-aarch64-pc-windows-msvc.zip",
+          "size": 1581219,
+          "url": "https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-aarch64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:7f649ddb05e986be309e93b52473d33ebdc63cc39111ea4dfca0e4a0ac8d3112"
+          "checksum": "sha256:70f742b951f6c157b30b4f2b592000687dab841b4a8f9a65e882305cdb24089b"
         },
         {
-          "name": "just-1.47.0-aarch64-unknown-linux-musl.tar.gz",
-          "size": 1815558,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-aarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.47.1-aarch64-unknown-linux-musl.tar.gz",
+          "size": 1816355,
+          "url": "https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-aarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:ce47b6d5c27a5884c8983d3ebbc53ef9149c789349b8d62ba72ee592f53ae07d"
+          "checksum": "sha256:e6321ac6d0499bfe849cf28869e34bffbee246b8d450ffbb9a6792aea3084f72"
         },
         {
-          "name": "just-1.47.0-arm-unknown-linux-musleabihf.tar.gz",
-          "size": 1838638,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-arm-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.47.1-arm-unknown-linux-musleabihf.tar.gz",
+          "size": 1840058,
+          "url": "https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-arm-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:c799bed866f547b4a529e9703bd028b13204ae8de9bd57b0e4eeecf8ba9e98b7"
+          "checksum": "sha256:ded7749424d5f7e9f99ba4f66ee688ba6c9cc47e1b48701596fa55f641b35c85"
         },
         {
-          "name": "just-1.47.0-armv7-unknown-linux-musleabihf.tar.gz",
-          "size": 1811078,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.47.1-armv7-unknown-linux-musleabihf.tar.gz",
+          "size": 1812192,
+          "url": "https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-armv7-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:31d9bf02abb5ff87a5fd0d9ea299c2f6639b97446a235fdc8d1966cb8848165c"
+          "checksum": "sha256:9f45eb32a4d64d62f70996e1059eddefa69cfd6f8872995c22ed2887b3edbecb"
         },
         {
-          "name": "just-1.47.0-loongarch64-unknown-linux-musl.tar.gz",
-          "size": 1824082,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-loongarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.47.1-loongarch64-unknown-linux-musl.tar.gz",
+          "size": 1825308,
+          "url": "https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-loongarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:d06452c55ca90ac4a95cce3175bf71e167e0f34098e0440aa83bd19fb466671f"
+          "checksum": "sha256:8bf293ff7312870423683d5afa256d16bfd6fe57aef8c9fc6eaf41c328cf91fa"
         },
         {
-          "name": "just-1.47.0-x86_64-apple-darwin.tar.gz",
-          "size": 1818945,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-x86_64-apple-darwin.tar.gz",
+          "name": "just-1.47.1-x86_64-apple-darwin.tar.gz",
+          "size": 1822197,
+          "url": "https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-x86_64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:1e41a27ddd929a9e06e976060c0c575d97ebd73c531d4087fbeba31a91e2c4a3"
+          "checksum": "sha256:9e0bd11c96f4947d0b8c52240e0a0cdfd6c93728d5912bb903c01b9c24b9a9ed"
         },
         {
-          "name": "just-1.47.0-x86_64-pc-windows-msvc.zip",
-          "size": 1739027,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-x86_64-pc-windows-msvc.zip",
+          "name": "just-1.47.1-x86_64-pc-windows-msvc.zip",
+          "size": 1742794,
+          "url": "https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:e4a04996723dbef3baec96067a5b767300624c90df34904c774a0483f0889d3a"
+          "checksum": "sha256:0f059a129049e4efaff5ff645182972edb07180248f769c5153a90765643bb7b"
         },
         {
-          "name": "just-1.47.0-x86_64-unknown-linux-musl.tar.gz",
-          "size": 1989196,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-x86_64-unknown-linux-musl.tar.gz",
+          "name": "just-1.47.1-x86_64-unknown-linux-musl.tar.gz",
+          "size": 1990561,
+          "url": "https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:8fade096b572733d978eaf9bd2178c9a6e706858efce19f8771a4108784eeea6"
+          "checksum": "sha256:3cb931ae25860f261ee373f32ede3b772ac91f14f588e4071576d3ffcf1a16fd"
         },
         {
           "name": "SHA256SUMS",
           "size": 1070,
-          "url": "https://github.com/casey/just/releases/download/1.47.0/SHA256SUMS",
+          "url": "https://github.com/casey/just/releases/download/1.47.1/SHA256SUMS",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:51eee4b0fce346249ff1ff1384fad93f05a085b453e67de70cbfb42e59bf5508"
+          "checksum": "sha256:b4c4979f67fd788db691dde464df6e0c599d0a8973690bce9d70b7a7f7f85751"
         }
       ]
     }
