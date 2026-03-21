@@ -4,100 +4,37 @@
   "url": "https://github.com/dandavison/delta",
   "releases": [
     {
-      "title": "0.18.2",
-      "description": "This patch release fixes various panics reported by users that were due to v0.1.13 of the `unicode-width` crate. See https://github.com/dandavison/delta/pull/1858 and https://github.com/unicode-rs/unicode-width/issues/66.\r\n\r\n## What's Changed\r\n* Move AmbiguousDiffMinusCounter to hunk_header by @dandavison in https://github.com/dandavison/delta/pull/1825\r\n* Fix `Catppuccin Latte` name in `LIGHT_SYNTAX_THEMES` list by @injust in https://github.com/dandavison/delta/pull/1823\r\n* Handle quoted file paths in hunk headers by @th1000s in https://github.com/dandavison/delta/pull/1840\r\n* Fix clippy warnings by @bash in https://github.com/dandavison/delta/pull/1851\r\n* Allow `--dark` to override dark/light detected from syntax theme by @bash in https://github.com/dandavison/delta/pull/1843\r\n* Upgrade and pin unicode-width to v0.1.12 by @th1000s in https://github.com/dandavison/delta/pull/1858\r\n\r\n\r\n**Full Changelog**: https://github.com/dandavison/delta/compare/0.18.1...0.18.2",
-      "tag": "0.18.2",
+      "title": "0.19.0",
+      "description": "Tons of improvements; thanks very much to all delta contributors.\r\n\r\n## What's Changed\r\n* Do not double panic in FakeParentArgs::drop by @dvermd in https://github.com/dandavison/delta/pull/1856\r\n* Improve blame file type detection (#1803) by @dvermd in https://github.com/dandavison/delta/pull/1829\r\n* Use same example config in manual as README by @dandavison in https://github.com/dandavison/delta/pull/1879\r\n* Clarify grep highlighter-related code by @dandavison in https://github.com/dandavison/delta/pull/1877\r\n* Don't set colorMoved in introductory instructions by @dandavison in https://github.com/dandavison/delta/pull/1884\r\n* Recommend zdiff3 merge.conflictStyle by @adamchainz in https://github.com/dandavison/delta/pull/1260\r\n* Add themes `weeping-willow`, `mirthful-willow` by @lvdh in https://github.com/dandavison/delta/pull/1864\r\n* CI: switch to macos-13, as 12 will be unsupported soon by @th1000s in https://github.com/dandavison/delta/pull/1890\r\n* Add optional capture-output writer to run_app() by @th1000s in https://github.com/dandavison/delta/pull/1889\r\n* Center-align README content by @dandavison in https://github.com/dandavison/delta/pull/1893\r\n* Redundant Option Checks, Unwrap Safety by @sharma-shray in https://github.com/dandavison/delta/pull/1892\r\n* Add console commands for git configuration by @harmtemolder in https://github.com/dandavison/delta/pull/1896\r\n* Honor pager path when checking less version by @dandavison in https://github.com/dandavison/delta/pull/1903\r\n* Rename some variables by @dandavison in https://github.com/dandavison/delta/pull/1904\r\n* Delete now-unused pricate homebrew formula step from Makefile (III) by @dvermd in https://github.com/dandavison/delta/pull/1830\r\n* Support {host} in hyperlinks by @dandavison in https://github.com/dandavison/delta/pull/1901\r\n* Allow multiple hyperlinks per line by @th1000s in https://github.com/dandavison/delta/pull/1909\r\n* Clippy 1.83 by @th1000s in https://github.com/dandavison/delta/pull/1918\r\n* Support external subcommands: rg, diff, git-show (etc.) by @th1000s in https://github.com/dandavison/delta/pull/1769\r\n* Don't keep subcommand stdout around by @th1000s in https://github.com/dandavison/delta/pull/1920\r\n* hyperlink commit hashes of length 7 as well by @th1000s in https://github.com/dandavison/delta/pull/1924\r\n* clippy 1.84 fix by @th1000s in https://github.com/dandavison/delta/pull/1938\r\n* chore(deps): update git2 to use libgit2 1.9 by @chenrui333 in https://github.com/dandavison/delta/pull/1930\r\n* Suggest minimum bat version in manual by @ernstki in https://github.com/dandavison/delta/pull/1941\r\n* Upgrade unicode-width to v0.1.14 (but still < 0.2.0) by @th1000s in https://github.com/dandavison/delta/pull/1937\r\n* Update terminal-colorsaurus version to 0.4.8 by @rashil2000 in https://github.com/dandavison/delta/pull/1936\r\n* Fix index out of bounds crash for '@@  @@' hunk header by @adamchainz in https://github.com/dandavison/delta/pull/1995\r\n* Tune themes weeping-willow, mirthful-willow by @lvdh in https://github.com/dandavison/delta/pull/2011\r\n* clippy 1.88 fixes by @injust in https://github.com/dandavison/delta/pull/2016\r\n* Fix diff output when a diff ends with a mode change by @th1000s in https://github.com/dandavison/delta/pull/2023\r\n* fix: `cargo install git-delta --locked` fails on systems with GCC 15 by @tquin in https://github.com/dandavison/delta/pull/2007\r\n* Normalize `merge.conflictStyle` casing by @injust in https://github.com/dandavison/delta/pull/2015\r\n* Styled zero lines fix by @th1000s in https://github.com/dandavison/delta/pull/1916\r\n* config: add setup instructions for Jujutsu (jj) vcs by @arjunmahishi in https://github.com/dandavison/delta/pull/2048\r\n* all: fix clippy complaints by @charlievieth in https://github.com/dandavison/delta/pull/2038\r\n* Cache the Git remote URL to speed up rendering hyperlinks by @charlievieth in https://github.com/dandavison/delta/pull/1940\r\n* deps: update cc by @ognevny in https://github.com/dandavison/delta/pull/2053\r\n* rg json handling: fix line comment highlighting by @th1000s in https://github.com/dandavison/delta/pull/2057\r\n* Update dirs dependency to version 6 by @musicinmybrain in https://github.com/dandavison/delta/pull/2063\r\n* default line number to 1 for hyperlinks by @schpet in https://github.com/dandavison/delta/pull/2061\r\n* Fix line numbers showing filename when hyperlinks enabled by @tsvikas in https://github.com/dandavison/delta/pull/2058\r\n* less hist file: look at xdg paths by @th1000s in https://github.com/dandavison/delta/pull/2065\r\n* CI: remove x86 apple/macOS by @th1000s in https://github.com/dandavison/delta/pull/2074\r\n* Update bat dependency from 0.24 to 0.26 by @dandavison in https://github.com/dandavison/delta/pull/2115\r\n\r\n## New Contributors\r\n* @dvermd made their first contribution in https://github.com/dandavison/delta/pull/1856\r\n* @lvdh made their first contribution in https://github.com/dandavison/delta/pull/1864\r\n* @sharma-shray made their first contribution in https://github.com/dandavison/delta/pull/1892\r\n* @harmtemolder made their first contribution in https://github.com/dandavison/delta/pull/1896\r\n* @ernstki made their first contribution in https://github.com/dandavison/delta/pull/1941\r\n* @tquin made their first contribution in https://github.com/dandavison/delta/pull/2007\r\n* @arjunmahishi made their first contribution in https://github.com/dandavison/delta/pull/2048\r\n* @charlievieth made their first contribution in https://github.com/dandavison/delta/pull/2038\r\n* @ognevny made their first contribution in https://github.com/dandavison/delta/pull/2053\r\n* @musicinmybrain made their first contribution in https://github.com/dandavison/delta/pull/2063\r\n* @schpet made their first contribution in https://github.com/dandavison/delta/pull/2061\r\n* @tsvikas made their first contribution in https://github.com/dandavison/delta/pull/2058\r\n\r\n**Full Changelog**: https://github.com/dandavison/delta/compare/0.18.2...0.19.0",
+      "tag": "0.19.0",
       "assets": [
         {
-          "name": "delta-0.18.2-aarch64-apple-darwin.tar.gz",
-          "size": 2926279,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-aarch64-apple-darwin.tar.gz",
+          "name": "delta-0.19.0-aarch64-apple-darwin.tar.gz",
+          "size": 3027290,
+          "url": "https://github.com/dandavison/delta/releases/download/0.19.0/delta-0.19.0-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:6ba38dce9f91ee1b9a24aa4aede1db7195258fe176c3f8276ae2d4457d8170a0"
+          "checksum": "sha256:b7c04ef8ebac03096e995b11fcdd38664ea0866bde0ff095e0f23f18d2b99ba5"
         },
         {
-          "name": "delta-0.18.2-aarch64-unknown-linux-gnu.tar.gz",
-          "size": 3040795,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-aarch64-unknown-linux-gnu.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:adf7674086daa4582f598f74ce9caa6b70c1ba8f4a57d2911499b37826b014f9"
-        },
-        {
-          "name": "delta-0.18.2-arm-unknown-linux-gnueabihf.tar.gz",
-          "size": 3059809,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-arm-unknown-linux-gnueabihf.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:10c08eb1758908baa159a291967c8de8c291d65c74ea178a68b0cc6cf03aea46"
-        },
-        {
-          "name": "delta-0.18.2-i686-unknown-linux-gnu.tar.gz",
-          "size": 3435988,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-i686-unknown-linux-gnu.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:3da4353b2f06ad48cedee46f3b5da04b1f09431b8ff82a26e974e27d2a472c66"
-        },
-        {
-          "name": "delta-0.18.2-x86_64-apple-darwin.tar.gz",
-          "size": 3039146,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-x86_64-apple-darwin.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:e9b5c4a9e73d2119c687e074f0d97f188e30e5fe8ae0e6d455755f74bb5cc0cf"
-        },
-        {
-          "name": "delta-0.18.2-x86_64-pc-windows-msvc.zip",
-          "size": 3336017,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-x86_64-pc-windows-msvc.zip",
+          "name": "delta-0.19.0-x86_64-pc-windows-msvc.zip",
+          "size": 3427993,
+          "url": "https://github.com/dandavison/delta/releases/download/0.19.0/delta-0.19.0-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:6ea59864091b4cfca89d9ee38388ff1a3ccdc8244b6e1cdd5201259de89b0b06"
+          "checksum": "sha256:c704699d76def630edfd65bf356e710c28acd147ca30a4f425762c934e8e107d"
         },
         {
-          "name": "delta-0.18.2-x86_64-unknown-linux-gnu.tar.gz",
-          "size": 3209048,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-x86_64-unknown-linux-gnu.tar.gz",
+          "name": "delta-0.19.0-x86_64-unknown-linux-musl.tar.gz",
+          "size": 3403505,
+          "url": "https://github.com/dandavison/delta/releases/download/0.19.0/delta-0.19.0-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:99607c43238e11a77fe90a914d8c2d64961aff84b60b8186c1b5691b39955b0f"
+          "checksum": "sha256:b4096cf910255e64941e06f217b87bbfbdd9ab7c0a1a9e373d3220b98055170c"
         },
         {
-          "name": "delta-0.18.2-x86_64-unknown-linux-musl.tar.gz",
-          "size": 3301354,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-x86_64-unknown-linux-musl.tar.gz",
-          "content_type": "application/gzip",
-          "checksum": "sha256:b7ea845004762358a00ef9127dd9fd723e333c7e4b9cb1da220c3909372310ee"
-        },
-        {
-          "name": "git-delta-musl_0.18.2_amd64.deb",
-          "size": 2582764,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/git-delta-musl_0.18.2_amd64.deb",
+          "name": "git-delta-musl_0.19.0_amd64.deb",
+          "size": 2683356,
+          "url": "https://github.com/dandavison/delta/releases/download/0.19.0/git-delta-musl_0.19.0_amd64.deb",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:f04829170d70f0dadf1511c31ee39df6f6ecd3c5b8d8a98c757ec69a3aff46b1"
-        },
-        {
-          "name": "git-delta_0.18.2_amd64.deb",
-          "size": 2504860,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_amd64.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:1658c7b61825d411b50734f34016101309e4b6e7f5799944cf8e4ac542cebd7f"
-        },
-        {
-          "name": "git-delta_0.18.2_arm64.deb",
-          "size": 2292336,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_arm64.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:937781aa7788e1510858743fff6c9a8b4a69fe0a22a7c8a69493e633227939a9"
-        },
-        {
-          "name": "git-delta_0.18.2_armhf.deb",
-          "size": 2286516,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_armhf.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:12cdf198b75aeb91a8d70e0c8b6a48db920a057654ae9b4161656853adf4b475"
-        },
-        {
-          "name": "git-delta_0.18.2_i386.deb",
-          "size": 2691360,
-          "url": "https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_i386.deb",
-          "content_type": "application/octet-stream",
-          "checksum": "sha256:4239be9f968eb8565afe1d3eff58db97032902c9fcd038ce0f57bcc6f34895d9"
+          "checksum": "sha256:2a3897d2fc87edbf632bc65dd6ab9c742748cc79a526b78fb60eb946a6cdd140"
         }
       ]
     }
