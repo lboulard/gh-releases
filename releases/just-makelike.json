@@ -4,86 +4,93 @@
   "url": "https://github.com/casey/just",
   "releases": [
     {
-      "title": "1.48.1",
-      "description": "- Fix bash completion of command lines containing `:` ([#3205](https://github.com/casey/just/pull/3205) by [casey](https://github.com/casey))\r\n- Call zsh completion function when first auto-loaded ([#3199](https://github.com/casey/just/pull/3199) by [casey](https://github.com/casey))\r\n- Fix `--set` missing value error message interpolation ([#3198](https://github.com/casey/just/pull/3198) by [cuiweixie](https://github.com/cuiweixie))\r\n- Add `#compdef` to zsh completion script ([#3197](https://github.com/casey/just/pull/3197) by [casey](https://github.com/casey))\r\n- Add instructions for alias completions in bash ([#3190](https://github.com/casey/just/pull/3190) by [casey](https://github.com/casey))\r\n- Remove redundant clap derive attributes ([#3183](https://github.com/casey/just/pull/3183) by [casey](https://github.com/casey))\r\n- Move files into etc/ ([#3182](https://github.com/casey/just/pull/3182) by [casey](https://github.com/casey))\r\n- Update stable features in readme ([#3181](https://github.com/casey/just/pull/3181) by [casey](https://github.com/casey))",
-      "tag": "1.48.1",
+      "title": "1.49.0",
+      "description": "### Added\r\n- Add `--time` to print recipe execution time ([#3099](https://github.com/casey/just/pull/3099) by [GeorgeLS](https://github.com/GeorgeLS))\r\n- Add user-defined functions ([#3247](https://github.com/casey/just/pull/3247) by [casey](https://github.com/casey))\r\n- Add just skill for agents ([#3241](https://github.com/casey/just/pull/3241) by [casey](https://github.com/casey))\r\n- Allow expressions in confirm attribute ([#3238](https://github.com/casey/just/pull/3238) by [begoon](https://github.com/begoon))\r\n- Add `--complete-aliases` ([#3235](https://github.com/casey/just/pull/3235) by [casey](https://github.com/casey))\r\n- Add `--justfile-name` to configure justfile filename ([#3234](https://github.com/casey/just/pull/3234) by [casey](https://github.com/casey))\r\n- Add `runtime_directory()` function ([#3226](https://github.com/casey/just/pull/3226) by [barskern](https://github.com/barskern))\r\n- Add `--evaluate-format` ([#3221](https://github.com/casey/just/pull/3221) by [casey](https://github.com/casey))\r\n- Allow passing variable and module paths to `--evaluate` ([#3219](https://github.com/casey/just/pull/3219) by [casey](https://github.com/casey))\r\n- Add `--indentation` ([#3215](https://github.com/casey/just/pull/3215) by [casey](https://github.com/casey))\r\n- Add `module_file()` and `module_directory()` to readme ([#2965](https://github.com/casey/just/pull/2965) by [cspotcode](https://github.com/cspotcode))\r\n- Add Nix flake ([#2972](https://github.com/casey/just/pull/2972) by [neunenak](https://github.com/neunenak))\r\n\r\n### Fixed\r\n- Allow reading `.env` from special files ([#3250](https://github.com/casey/just/pull/3250) by [casey](https://github.com/casey))\r\n- Load environment files in submodules ([#3243](https://github.com/casey/just/pull/3243) by [casey](https://github.com/casey))\r\n- Avoid process substitution in bash completion script ([#3217](https://github.com/casey/just/pull/3217) by [casey](https://github.com/casey))\r\n- Dont pass shell name to powershell ([#3209](https://github.com/casey/just/pull/3209) by [casey](https://github.com/casey))\r\n\r\n### Misc\r\n- Add just implementation of rule110 ([#3249](https://github.com/casey/just/pull/3249) by [casey](https://github.com/casey))\r\n- Add instructions for skill to readme ([#3245](https://github.com/casey/just/pull/3245) by [casey](https://github.com/casey))\r\n- Remove comma in readme ([#3244](https://github.com/casey/just/pull/3244) by [casey](https://github.com/casey))\r\n- Move bash completion registration script into etc/ ([#3242](https://github.com/casey/just/pull/3242) by [casey](https://github.com/casey))\r\n- Avoid to_string_lossy in directory function tests ([#3232](https://github.com/casey/just/pull/3232) by [casey](https://github.com/casey))\r\n- Add installation overview ([#3231](https://github.com/casey/just/pull/3231) by [casey](https://github.com/casey))\r\n- Warn if invocation directory or justfile path is not Unicode ([#3230](https://github.com/casey/just/pull/3230) by [casey](https://github.com/casey))\r\n- Don't use make syntax highlighting in vim ([#2906](https://github.com/casey/just/pull/2906) by [alerque](https://github.com/alerque))\r\n- Fix Name Display impl to pad correctly ([#3222](https://github.com/casey/just/pull/3222) by [casey](https://github.com/casey))\r\n- Rename `evaluate_target` to `evaluation_target` ([#3220](https://github.com/casey/just/pull/3220) by [casey](https://github.com/casey))\r\n- Include recipe path in verbose output ([#3213](https://github.com/casey/just/pull/3213) by [behnam-oneschema](https://github.com/behnam-oneschema))\r\n- Move recipe methods onto resolved recipe ([#3214](https://github.com/casey/just/pull/3214) by [casey](https://github.com/casey))\r\n- Document that `semver_matches()` returns strings ([#3212](https://github.com/casey/just/pull/3212) by [casey](https://github.com/casey))\r\n- Build riscv64 release binaries ([#3210](https://github.com/casey/just/pull/3210) by [gounthar](https://github.com/gounthar))\r\n- Include shell name in I/O error messages ([#3208](https://github.com/casey/just/pull/3208) by [casey](https://github.com/casey))\r\n- Don't print signal error message if recipe has `[no-exit-message]` ([#3200](https://github.com/casey/just/pull/3200) by [imp-joshi](https://github.com/imp-joshi))",
+      "tag": "1.49.0",
       "assets": [
         {
           "name": "CHANGELOG.md",
-          "size": 162621,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/CHANGELOG.md",
+          "size": 167010,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/CHANGELOG.md",
           "content_type": "text/markdown",
-          "checksum": "sha256:b7020a75b83c72c667a53226ed0028bcbdc8c936384241a86933f3b4a0781c69"
+          "checksum": "sha256:0ad29476a8c20367c400929b06486e03b6a7a8164b4d5d209f0fc0a53f317e11"
         },
         {
-          "name": "just-1.48.1-aarch64-apple-darwin.tar.gz",
-          "size": 1771432,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-aarch64-apple-darwin.tar.gz",
+          "name": "just-1.49.0-aarch64-apple-darwin.tar.gz",
+          "size": 1897872,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:03a73339ff55bcf7411a3c940cdcb0a726d98134b87203c83a9008575434e2a8"
+          "checksum": "sha256:d21b20df01ec9b9762b0ef08e56ae8dccf3738770edeafa8d2b3a750aee06d78"
         },
         {
-          "name": "just-1.48.1-aarch64-pc-windows-msvc.zip",
-          "size": 1679116,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-aarch64-pc-windows-msvc.zip",
+          "name": "just-1.49.0-aarch64-pc-windows-msvc.zip",
+          "size": 1794892,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-aarch64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:ed9cd54e46d65770bf0b79c051761b29f0b89a88e56e8cae4454ec7246c82160"
+          "checksum": "sha256:e73cd7b3c4fb363f703f99caaa71d4ab114a92205b2ef313212f3b2085d3ee64"
         },
         {
-          "name": "just-1.48.1-aarch64-unknown-linux-musl.tar.gz",
-          "size": 1917773,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-aarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.49.0-aarch64-unknown-linux-musl.tar.gz",
+          "size": 2044910,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-aarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:3308721b991cf88cf2b9bbb3b31ac40550ec61a0c9b6fc011564e25e87964030"
+          "checksum": "sha256:993b78f51004248114af22368f69715541542b3c9941c80e02f8ae10eb404ae0"
         },
         {
-          "name": "just-1.48.1-arm-unknown-linux-musleabihf.tar.gz",
-          "size": 1946238,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-arm-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.49.0-arm-unknown-linux-musleabihf.tar.gz",
+          "size": 2091147,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-arm-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:19a49c9f092043384e2e66c56b185b7127179010de4094c6b96a9512e5972f0c"
+          "checksum": "sha256:36cfc6db5b42674f08d8e0982c6aac3c113e4e80b634e51fa1a121f3d3d184cb"
         },
         {
-          "name": "just-1.48.1-armv7-unknown-linux-musleabihf.tar.gz",
-          "size": 1918037,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-armv7-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.49.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "size": 2058093,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-armv7-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:b30a0c70697fba964891e819b62819177e5ac41e15c02e21566d8aca990d0602"
+          "checksum": "sha256:3367d8c2def14cf926252fea1ab480b110251f2ebd4f60dabd5020610ebf71f2"
         },
         {
-          "name": "just-1.48.1-loongarch64-unknown-linux-musl.tar.gz",
-          "size": 1937993,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-loongarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.49.0-loongarch64-unknown-linux-musl.tar.gz",
+          "size": 2064044,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-loongarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:f2d0d8cba184dae10fc5671f7ba12c02ba8dffe3791d8a1be624fa01d6cec8ad"
+          "checksum": "sha256:2a3e7a13d5baf4a334154eec496d3bae8472f071fafa82a2f8466fc6e0752cec"
         },
         {
-          "name": "just-1.48.1-x86_64-apple-darwin.tar.gz",
-          "size": 1917972,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-x86_64-apple-darwin.tar.gz",
+          "name": "just-1.49.0-riscv64gc-unknown-linux-musl.tar.gz",
+          "size": 2129218,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-riscv64gc-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:4c3e9c880b8fc93d7fc24abfde3c36b0cc59f6e9f8b31f7175095700f64125a7"
+          "checksum": "sha256:22e6602cb6f9b535f6af5f4d68daca20d57bf206318d8fe39d173d60ce7dd1e7"
         },
         {
-          "name": "just-1.48.1-x86_64-pc-windows-msvc.zip",
-          "size": 1844511,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-x86_64-pc-windows-msvc.zip",
+          "name": "just-1.49.0-x86_64-apple-darwin.tar.gz",
+          "size": 2053847,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-x86_64-apple-darwin.tar.gz",
+          "content_type": "application/gzip",
+          "checksum": "sha256:e0b83a9352952ab25e5cf13f6cb03dd1872416e5d89388b56d6ca58f11b0a3a8"
+        },
+        {
+          "name": "just-1.49.0-x86_64-pc-windows-msvc.zip",
+          "size": 1973890,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:368cd9ca827cba04d9e6fc00f7ad840773c4605b6f64b9f87bdb00325d351029"
+          "checksum": "sha256:657338772efd17a31d67285bb5ed691da87741e44311c0366273c6cb7d913b15"
         },
         {
-          "name": "just-1.48.1-x86_64-unknown-linux-musl.tar.gz",
-          "size": 2102695,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-x86_64-unknown-linux-musl.tar.gz",
+          "name": "just-1.49.0-x86_64-unknown-linux-musl.tar.gz",
+          "size": 2241668,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:9293e553ce401d1b524bf4e104918f72f268e3f9c6827e0055fe98d84a1b2522"
+          "checksum": "sha256:05eb2f068b641b06e5b318796c2e27d4dcca608e65b34329a08c1b9f582611bd"
         },
         {
           "name": "SHA256SUMS",
-          "size": 1070,
-          "url": "https://github.com/casey/just/releases/download/1.48.1/SHA256SUMS",
+          "size": 1184,
+          "url": "https://github.com/casey/just/releases/download/1.49.0/SHA256SUMS",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:6bc90244d4847f38dd61cde957a8f042686d62c281ed3436bb5b2af37b1aa0ca"
+          "checksum": "sha256:bf8759080d15ffbb0368a0c41d10ef3304ab2d3ea64894d6589db80dab9f6518"
         }
       ]
     }
