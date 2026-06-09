@@ -4,93 +4,93 @@
   "url": "https://github.com/casey/just",
   "releases": [
     {
-      "title": "1.51.0",
-      "description": "### Added\r\n- Add `no-cd` setting ([#2981](https://github.com/casey/just/pull/2981) by [hans-d](https://github.com/hans-d))\r\n\r\n### Changed\r\n- Allow `[env]` attribute to take expressions ([#3329](https://github.com/casey/just/pull/3329) by [casey](https://github.com/casey))\r\n- Allow using expressions with `[working-directory]` ([#3326](https://github.com/casey/just/pull/3326) by [casey](https://github.com/casey))\r\n- Read justfile from standard input with `--justfile -` ([#3325](https://github.com/casey/just/pull/3325) by [casey](https://github.com/casey))\r\n- Make `parent_directory()` of bare filename return `.` ([#3313](https://github.com/casey/just/pull/3313) by [casey](https://github.com/casey))\r\n- Make `[env]` override module-level exports ([#3312](https://github.com/casey/just/pull/3312) by [casey](https://github.com/casey))\r\n\r\n### Fixed\r\n- Fail on deep recursion instead of overflowing stack ([#3319](https://github.com/casey/just/pull/3319) by [casey](https://github.com/casey))\r\n- Invoke chooser selections separately ([#3311](https://github.com/casey/just/pull/3311) by [casey](https://github.com/casey))\r\n- Don't evaluate unused assertions ([#3310](https://github.com/casey/just/pull/3310) by [casey](https://github.com/casey))\r\n- Respect lazy setting in submodules ([#3308](https://github.com/casey/just/pull/3308) by [casey](https://github.com/casey))\r\n- Fix overrides not being visible in user-defined functions ([#3307](https://github.com/casey/just/pull/3307) by [casey](https://github.com/casey))\r\n- Don't panic on invalid datetime format string ([#3304](https://github.com/casey/just/pull/3304) by [casey](https://github.com/casey))\r\n\r\n### Misc\r\n- Use `cargo-limit` commands in justfile ([#3331](https://github.com/casey/just/pull/3331) by [casey](https://github.com/casey))\r\n- Simplify code more ([#3330](https://github.com/casey/just/pull/3330) by [casey](https://github.com/casey))\r\n- Update install-dev-deps recipe with compatible mdbook ([#3328](https://github.com/casey/just/pull/3328) by [casey](https://github.com/casey))\r\n- Simplify code ([#3327](https://github.com/casey/just/pull/3327) by [casey](https://github.com/casey))\r\n- Link to duplicate recipe issue in readme ([#3321](https://github.com/casey/just/pull/3321) by [casey](https://github.com/casey))\r\n- Remove periods from error messages ([#3316](https://github.com/casey/just/pull/3316) by [casey](https://github.com/casey))\r\n- Avoid multi-sentence error messagess ([#3315](https://github.com/casey/just/pull/3315) by [casey](https://github.com/casey))\r\n- Make error messages lowercase ([#3314](https://github.com/casey/just/pull/3314) by [casey](https://github.com/casey))\r\n- Actually bump version to 1.50.0 ([#3303](https://github.com/casey/just/pull/3303) by [casey](https://github.com/casey))",
-      "tag": "1.51.0",
+      "title": "1.52.0",
+      "description": "### Added\r\n- Add `[shell]` attribute to override `default-script` setting ([#3359](https://github.com/casey/just/pull/3359) by [casey](https://github.com/casey))\r\n- Add `default-script` setting ([#3354](https://github.com/casey/just/pull/3354) by [casey](https://github.com/casey))\r\n- Add `--default-list` flag ([#3350](https://github.com/casey/just/pull/3350) by [casey](https://github.com/casey))\r\n- Add `default-list` setting ([#3337](https://github.com/casey/just/pull/3337) by [casey](https://github.com/casey))\r\n\r\n### Changed\r\n- Disable aliases that depend on absent modules ([#3358](https://github.com/casey/just/pull/3358) by [casey](https://github.com/casey))\r\n- Print formatted justfile to stdout when source is stdin ([#3356](https://github.com/casey/just/pull/3356) by [casey](https://github.com/casey))\r\n- Allow search directory with more subcommands ([#3353](https://github.com/casey/just/pull/3353) by [casey](https://github.com/casey))\r\n- Disable recipes that depend on absent modules ([#3352](https://github.com/casey/just/pull/3352) by [casey](https://github.com/casey))\r\n\r\n### Misc\r\n- Improve absent optional module error messages ([#3357](https://github.com/casey/just/pull/3357) by [casey](https://github.com/casey))\r\n- Alphabetize Attribute derive macro order ([#3355](https://github.com/casey/just/pull/3355) by [casey](https://github.com/casey))\r\n- Include UTF-8 byte-order mark in PowerShell scripts ([#3347](https://github.com/casey/just/pull/3347) by [casey](https://github.com/casey))\r\n- Remove options from `--list` output ([#3346](https://github.com/casey/just/pull/3346) by [casey](https://github.com/casey))\r\n- Switch from ansi_term to nu_ansi_term ([#3344](https://github.com/casey/just/pull/3344) by [casey](https://github.com/casey))\r\n- Remove redundant argument parser attributes ([#3340](https://github.com/casey/just/pull/3340) by [casey](https://github.com/casey))",
+      "tag": "1.52.0",
       "assets": [
         {
           "name": "CHANGELOG.md",
-          "size": 173587,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/CHANGELOG.md",
+          "size": 175621,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/CHANGELOG.md",
           "content_type": "text/markdown",
-          "checksum": "sha256:7e8de833b167c9fc43ce0a4677ee66173a6dbd838a664853e83a4cfeb11aa5a4"
+          "checksum": "sha256:e3765c690c5cabaf4db2e77c39d5a60a47fdf0d1386f56500066d938bdee32e2"
         },
         {
-          "name": "just-1.51.0-aarch64-apple-darwin.tar.gz",
-          "size": 1903835,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-aarch64-apple-darwin.tar.gz",
+          "name": "just-1.52.0-aarch64-apple-darwin.tar.gz",
+          "size": 1926119,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:61e3f1b8a545ff064b091eab4b6e14f8cc743ff15549be293b1e92f5b1467002"
+          "checksum": "sha256:1538caf566c9d8dd99286a21c0e1224b89f6676b70c16a4bcbeb52dd21fc78f5"
         },
         {
-          "name": "just-1.51.0-aarch64-pc-windows-msvc.zip",
-          "size": 1794271,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-aarch64-pc-windows-msvc.zip",
+          "name": "just-1.52.0-aarch64-pc-windows-msvc.zip",
+          "size": 1812298,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-aarch64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:12bf56b5b3463e20a1dbb61e3d14748efaefb49231223ef465fbec4d442e2d20"
+          "checksum": "sha256:640816eb5ef85da89447831fcccc416c039edf35c191632e948d7d992ac30c71"
         },
         {
-          "name": "just-1.51.0-aarch64-unknown-linux-musl.tar.gz",
-          "size": 2054214,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-aarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.52.0-aarch64-unknown-linux-musl.tar.gz",
+          "size": 2074494,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-aarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:ed7ec466b77709198fd4afed253dba0270203ba5eb1c006bee2b0139090284f5"
+          "checksum": "sha256:41af45372c49c404ca7b9a318ae9de5564636e39c6520cc4d42bf678f3bfb1bc"
         },
         {
-          "name": "just-1.51.0-arm-unknown-linux-musleabihf.tar.gz",
-          "size": 2101971,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-arm-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.52.0-arm-unknown-linux-musleabihf.tar.gz",
+          "size": 2121358,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-arm-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:a7db4d635cbef44862aadf9e000a6d9d90b3eac572143356614f5993d29b1038"
+          "checksum": "sha256:6806401d18b94cb9112353e73acf9e3e3ff5fdd85a67d41c86fc3b92a17a102b"
         },
         {
-          "name": "just-1.51.0-armv7-unknown-linux-musleabihf.tar.gz",
-          "size": 2074233,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.52.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "size": 2084383,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-armv7-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:dd54b8bea7a5e5eaac16032e5311f1c3ef6225068f1fdc5718b98687702e23ef"
+          "checksum": "sha256:f721cba326663f16b4e71631222d3e72c1577b9ec89ce8a26d3d87cd5aa19ce8"
         },
         {
-          "name": "just-1.51.0-loongarch64-unknown-linux-musl.tar.gz",
-          "size": 2076635,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-loongarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.52.0-loongarch64-unknown-linux-musl.tar.gz",
+          "size": 2087706,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-loongarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:afab5eb3443123ac68e8cab22de1c866a20783b4c9eee880b00dca89104c2f79"
+          "checksum": "sha256:921e0334b78b65cd03b74731d871b97675d858abe02a216bd64039e621005841"
         },
         {
-          "name": "just-1.51.0-riscv64gc-unknown-linux-musl.tar.gz",
-          "size": 2137271,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-riscv64gc-unknown-linux-musl.tar.gz",
+          "name": "just-1.52.0-riscv64gc-unknown-linux-musl.tar.gz",
+          "size": 2141725,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-riscv64gc-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:556fc0b3b597e17214fd3bae3051e466462e4a136cdb39c3615e7ada21deaf12"
+          "checksum": "sha256:e8a13db80fb7880c0143dec7293080cce0130eedd8a7bf35b63a8d82e28b611c"
         },
         {
-          "name": "just-1.51.0-x86_64-apple-darwin.tar.gz",
-          "size": 2056221,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-x86_64-apple-darwin.tar.gz",
+          "name": "just-1.52.0-x86_64-apple-darwin.tar.gz",
+          "size": 2087262,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-x86_64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:d583e45f1f9fcdd26069ad2fe3bb9dea414756d8d0752eb9093974cb5c0246f0"
+          "checksum": "sha256:52e4b7dc45d5934e9bc3b8f1ad3fe78bb92d0df1bca477de0c5449c59ac7a562"
         },
         {
-          "name": "just-1.51.0-x86_64-pc-windows-msvc.zip",
-          "size": 1974630,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-x86_64-pc-windows-msvc.zip",
+          "name": "just-1.52.0-x86_64-pc-windows-msvc.zip",
+          "size": 1996739,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:09d1138b6845e73f04bff5e26be3f57663bddca25e36fe6241d28a5aa310b64e"
+          "checksum": "sha256:ac53a7da91a33e344042dbec11e4bf1e1ec1d65ca4b695fe71398206d2a1630d"
         },
         {
-          "name": "just-1.51.0-x86_64-unknown-linux-musl.tar.gz",
-          "size": 2257502,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-x86_64-unknown-linux-musl.tar.gz",
+          "name": "just-1.52.0-x86_64-unknown-linux-musl.tar.gz",
+          "size": 2270564,
+          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:c8f085ca3e885723c341d06243fc291b5abfdc8bbe3b2c076b117de490387b59"
+          "checksum": "sha256:e0a712614574d45625332529c864754e26782422b7c7db931466180a618f092d"
         },
         {
           "name": "SHA256SUMS",
           "size": 1184,
-          "url": "https://github.com/casey/just/releases/download/1.51.0/SHA256SUMS",
+          "url": "https://github.com/casey/just/releases/download/1.52.0/SHA256SUMS",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:00d8e0876f5fa089b2f6b8c8e48f9ee8888078a45ea0902a63b863d03feb0b13"
+          "checksum": "sha256:7cf32dea0790b66f476aea16c78798131450f70351a59661db18ff8a02e7ab30"
         }
       ]
     }
