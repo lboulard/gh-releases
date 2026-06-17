@@ -4,93 +4,93 @@
   "url": "https://github.com/casey/just",
   "releases": [
     {
-      "title": "1.52.0",
-      "description": "### Added\r\n- Add `[shell]` attribute to override `default-script` setting ([#3359](https://github.com/casey/just/pull/3359) by [casey](https://github.com/casey))\r\n- Add `default-script` setting ([#3354](https://github.com/casey/just/pull/3354) by [casey](https://github.com/casey))\r\n- Add `--default-list` flag ([#3350](https://github.com/casey/just/pull/3350) by [casey](https://github.com/casey))\r\n- Add `default-list` setting ([#3337](https://github.com/casey/just/pull/3337) by [casey](https://github.com/casey))\r\n\r\n### Changed\r\n- Disable aliases that depend on absent modules ([#3358](https://github.com/casey/just/pull/3358) by [casey](https://github.com/casey))\r\n- Print formatted justfile to stdout when source is stdin ([#3356](https://github.com/casey/just/pull/3356) by [casey](https://github.com/casey))\r\n- Allow search directory with more subcommands ([#3353](https://github.com/casey/just/pull/3353) by [casey](https://github.com/casey))\r\n- Disable recipes that depend on absent modules ([#3352](https://github.com/casey/just/pull/3352) by [casey](https://github.com/casey))\r\n\r\n### Misc\r\n- Improve absent optional module error messages ([#3357](https://github.com/casey/just/pull/3357) by [casey](https://github.com/casey))\r\n- Alphabetize Attribute derive macro order ([#3355](https://github.com/casey/just/pull/3355) by [casey](https://github.com/casey))\r\n- Include UTF-8 byte-order mark in PowerShell scripts ([#3347](https://github.com/casey/just/pull/3347) by [casey](https://github.com/casey))\r\n- Remove options from `--list` output ([#3346](https://github.com/casey/just/pull/3346) by [casey](https://github.com/casey))\r\n- Switch from ansi_term to nu_ansi_term ([#3344](https://github.com/casey/just/pull/3344) by [casey](https://github.com/casey))\r\n- Remove redundant argument parser attributes ([#3340](https://github.com/casey/just/pull/3340) by [casey](https://github.com/casey))",
-      "tag": "1.52.0",
+      "title": "1.53.0",
+      "description": "### Added\r\n- Add `recipe_name()` function ([#3366](https://github.com/casey/just/pull/3366) by [casey](https://github.com/casey))\r\n- Support markdown justfiles ([#3361](https://github.com/casey/just/pull/3361) by [casey](https://github.com/casey))\r\n\r\n### Changed\r\n- Allow omitting `assert()` message ([#3423](https://github.com/casey/just/pull/3423) by [casey](https://github.com/casey))\r\n- Preserve bare `[arg]` long key when formatting ([#3397](https://github.com/casey/just/pull/3397) by [casey](https://github.com/casey))\r\n\r\n### Lists\r\n- Add list concatenation operator ([#3427](https://github.com/casey/just/pull/3427) by [casey](https://github.com/casey))\r\n- Do not export empty lists ([#3424](https://github.com/casey/just/pull/3424) by [casey](https://github.com/casey))\r\n- Add `split()` function ([#3420](https://github.com/casey/just/pull/3420) by [casey](https://github.com/casey))\r\n- Make `which()` require `set lists` ([#3418](https://github.com/casey/just/pull/3418) by [casey](https://github.com/casey))\r\n- Make `env()` functions work with lists ([#3416](https://github.com/casey/just/pull/3416) by [casey](https://github.com/casey))\r\n- Make `+` and `/` work with lists ([#3415](https://github.com/casey/just/pull/3415) by [casey](https://github.com/casey))\r\n- Allow lists as regex operands of `=~` and `!~` ([#3414](https://github.com/casey/just/pull/3414) by [casey](https://github.com/casey))\r\n- Allow multiple `--dotenv-filename` and `--dotenv-path` options ([#3413](https://github.com/casey/just/pull/3413) by [casey](https://github.com/casey))\r\n- Load multiple `.env` files ([#3412](https://github.com/casey/just/pull/3412) by [casey](https://github.com/casey))\r\n- Flatten interpreter settings ([#3410](https://github.com/casey/just/pull/3410) by [casey](https://github.com/casey))\r\n- Make `[env]` work with lists ([#3409](https://github.com/casey/just/pull/3409) by [casey](https://github.com/casey))\r\n- Join lists in `assert()` and `[confirm]` messages ([#3408](https://github.com/casey/just/pull/3408) by [casey](https://github.com/casey))\r\n- Join lists in interpolations ([#3407](https://github.com/casey/just/pull/3407) by [casey](https://github.com/casey))\r\n- Using lists in string contexts is an error ([#3406](https://github.com/casey/just/pull/3406) by [casey](https://github.com/casey))\r\n- `assert(condition)` evaluates to `condition` ([#3405](https://github.com/casey/just/pull/3405) by [casey](https://github.com/casey))\r\n- Make `assert()` evaluate to `\"true\"` when `set lists` is enabled ([#3404](https://github.com/casey/just/pull/3404) by [casey](https://github.com/casey))\r\n- Make `=~` and `!~` work with lists ([#3403](https://github.com/casey/just/pull/3403) by [casey](https://github.com/casey))\r\n- `if` without `else` evalutes to `[]` when false ([#3401](https://github.com/casey/just/pull/3401) by [casey](https://github.com/casey))\r\n- Check structural equality in `!=` and `==` ([#3402](https://github.com/casey/just/pull/3402) by [casey](https://github.com/casey))\r\n- Add `flag` `[arg]` attribute ([#3398](https://github.com/casey/just/pull/3398) by [casey](https://github.com/casey))\r\n- Make `show()` require `set lists` ([#3392](https://github.com/casey/just/pull/3392) by [casey](https://github.com/casey))\r\n- Add `bool()` function ([#3391](https://github.com/casey/just/pull/3391) by [casey](https://github.com/casey))\r\n- Add negation operator `!` ([#3389](https://github.com/casey/just/pull/3389) by [casey](https://github.com/casey))\r\n- Allow conditions to be used in arbitrary expressions ([#3387](https://github.com/casey/just/pull/3387) by [casey](https://github.com/casey))\r\n- Add `show()` function ([#3383](https://github.com/casey/just/pull/3383) by [casey](https://github.com/casey))\r\n- Print lists in `--evaluate` ([#3382](https://github.com/casey/just/pull/3382) by [casey](https://github.com/casey))\r\n- Reform booleans ([#3381](https://github.com/casey/just/pull/3381) by [casey](https://github.com/casey))\r\n- Add list literals ([#3380](https://github.com/casey/just/pull/3380) by [casey](https://github.com/casey))\r\n- Allow mapping dependencies over lists ([#3379](https://github.com/casey/just/pull/3379) by [casey](https://github.com/casey))\r\n- Forwards lists to dependencies ([#3378](https://github.com/casey/just/pull/3378) by [casey](https://github.com/casey))\r\n- Map `append()` and `prepend()` over lists ([#3375](https://github.com/casey/just/pull/3375) by [casey](https://github.com/casey))\r\n- Map `absolute_path()` over lists ([#3374](https://github.com/casey/just/pull/3374) by [casey](https://github.com/casey))\r\n- Add `set lists` ([#3372](https://github.com/casey/just/pull/3372) by [casey](https://github.com/casey))\r\n- Preserve variadic arguments as lists of strings ([#3362](https://github.com/casey/just/pull/3362) by [casey](https://github.com/casey))\r\n\r\n### Misc\r\n- Improve broken WSL bash workaround ([#3426](https://github.com/casey/just/pull/3426) by [casey](https://github.com/casey))\r\n- Fix `[arg]` attribute examples in readme ([#3422](https://github.com/casey/just/pull/3422) by [casey](https://github.com/casey))\r\n- Organize lists readme section ([#3421](https://github.com/casey/just/pull/3421) by [casey](https://github.com/casey))\r\n- Remove extra detail from most list in string context errors ([#3417](https://github.com/casey/just/pull/3417) by [casey](https://github.com/casey))\r\n- Add tokens to `[env]` and `[working-directory]` string context errors ([#3411](https://github.com/casey/just/pull/3411) by [casey](https://github.com/casey))\r\n- Reduce parser test churn ([#3400](https://github.com/casey/just/pull/3400) by [casey](https://github.com/casey))\r\n- Add example using `[parallel]` with mapped dependencies ([#3399](https://github.com/casey/just/pull/3399) by [casey](https://github.com/casey))\r\n- Use `StringResult` and `ValueResult` instead of `FunctionResult` ([#3396](https://github.com/casey/just/pull/3396) by [casey](https://github.com/casey))\r\n- Allow stable calls to user-defined functions that shadow unstable functions ([#3395](https://github.com/casey/just/pull/3395) by [casey](https://github.com/casey))\r\n- Replace rule 110 with rule 124 ([#3394](https://github.com/casey/just/pull/3394) by [casey](https://github.com/casey))\r\n- Consolidate list feature errors ([#3393](https://github.com/casey/just/pull/3393) by [casey](https://github.com/casey))\r\n- Simplify `Lexer::lex_choices()` ([#3390](https://github.com/casey/just/pull/3390) by [casey](https://github.com/casey))\r\n- Consolidate list feature tracking ([#3388](https://github.com/casey/just/pull/3388) by [casey](https://github.com/casey))\r\n- Refactor function context retrieval ([#3386](https://github.com/casey/just/pull/3386) by [casey](https://github.com/casey))\r\n- Remove `summary` module ([#3385](https://github.com/casey/just/pull/3385) by [casey](https://github.com/casey))\r\n- Use `show()` and `--evaluate` in tests ([#3384](https://github.com/casey/just/pull/3384) by [casey](https://github.com/casey))\r\n- Include number in counts ([#3376](https://github.com/casey/just/pull/3376) by [casey](https://github.com/casey))\r\n- Improve list tests ([#3373](https://github.com/casey/just/pull/3373) by [casey](https://github.com/casey))\r\n- Add `rule110` recipe to `demo` group ([#3368](https://github.com/casey/just/pull/3368) by [casey](https://github.com/casey))\r\n- Move doc comments above long recipe signatures in `--list` ([#3367](https://github.com/casey/just/pull/3367) by [casey](https://github.com/casey))\r\n- Propagate `is_dependency` to defined function evaluators ([#3365](https://github.com/casey/just/pull/3365) by [casey](https://github.com/casey))\r\n- Use `value` consistently in functions ([#3364](https://github.com/casey/just/pull/3364) by [casey](https://github.com/casey))",
+      "tag": "1.53.0",
       "assets": [
         {
           "name": "CHANGELOG.md",
-          "size": 175621,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/CHANGELOG.md",
+          "size": 183468,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/CHANGELOG.md",
           "content_type": "text/markdown",
-          "checksum": "sha256:e3765c690c5cabaf4db2e77c39d5a60a47fdf0d1386f56500066d938bdee32e2"
+          "checksum": "sha256:63155f990adb5b932ba7cb2fc2827fad6c7568138d07e945ec7ea2f09e345838"
         },
         {
-          "name": "just-1.52.0-aarch64-apple-darwin.tar.gz",
-          "size": 1926119,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-aarch64-apple-darwin.tar.gz",
+          "name": "just-1.53.0-aarch64-apple-darwin.tar.gz",
+          "size": 2050537,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:1538caf566c9d8dd99286a21c0e1224b89f6676b70c16a4bcbeb52dd21fc78f5"
+          "checksum": "sha256:27f1361f2e4fb5d733837f1a9f80f85c237e5a36c75ee14961e59141713aa4ed"
         },
         {
-          "name": "just-1.52.0-aarch64-pc-windows-msvc.zip",
-          "size": 1812298,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-aarch64-pc-windows-msvc.zip",
+          "name": "just-1.53.0-aarch64-pc-windows-msvc.zip",
+          "size": 1938332,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-aarch64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:640816eb5ef85da89447831fcccc416c039edf35c191632e948d7d992ac30c71"
+          "checksum": "sha256:b4cce34e56633d1659207412f59826eea60fcbc06ee09ceb133f6a13fc32b979"
         },
         {
-          "name": "just-1.52.0-aarch64-unknown-linux-musl.tar.gz",
-          "size": 2074494,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-aarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.53.0-aarch64-unknown-linux-musl.tar.gz",
+          "size": 2213668,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-aarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:41af45372c49c404ca7b9a318ae9de5564636e39c6520cc4d42bf678f3bfb1bc"
+          "checksum": "sha256:f29d8e72380bc144465f632c7d59da311205eef2923d57511708b05b82f2e64f"
         },
         {
-          "name": "just-1.52.0-arm-unknown-linux-musleabihf.tar.gz",
-          "size": 2121358,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-arm-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.53.0-arm-unknown-linux-musleabihf.tar.gz",
+          "size": 2265853,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-arm-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:6806401d18b94cb9112353e73acf9e3e3ff5fdd85a67d41c86fc3b92a17a102b"
+          "checksum": "sha256:e0f3692346c362ed5ed66d0b9beca9e47c834fd59eb81926d134780b57acbd26"
         },
         {
-          "name": "just-1.52.0-armv7-unknown-linux-musleabihf.tar.gz",
-          "size": 2084383,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "name": "just-1.53.0-armv7-unknown-linux-musleabihf.tar.gz",
+          "size": 2221763,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-armv7-unknown-linux-musleabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:f721cba326663f16b4e71631222d3e72c1577b9ec89ce8a26d3d87cd5aa19ce8"
+          "checksum": "sha256:0d9fe56a02d231e3d18196f5cda74a8792ee45975f6a399da2db67131d4cd245"
         },
         {
-          "name": "just-1.52.0-loongarch64-unknown-linux-musl.tar.gz",
-          "size": 2087706,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-loongarch64-unknown-linux-musl.tar.gz",
+          "name": "just-1.53.0-loongarch64-unknown-linux-musl.tar.gz",
+          "size": 2219025,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-loongarch64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:921e0334b78b65cd03b74731d871b97675d858abe02a216bd64039e621005841"
+          "checksum": "sha256:65e8dcfc008a0af807db8447380ed93f78ba013cdc013f68184cfbeb8d65c05d"
         },
         {
-          "name": "just-1.52.0-riscv64gc-unknown-linux-musl.tar.gz",
-          "size": 2141725,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-riscv64gc-unknown-linux-musl.tar.gz",
+          "name": "just-1.53.0-riscv64gc-unknown-linux-musl.tar.gz",
+          "size": 2286632,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-riscv64gc-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:e8a13db80fb7880c0143dec7293080cce0130eedd8a7bf35b63a8d82e28b611c"
+          "checksum": "sha256:5597b4b91d9ea68fb06e209c5ff4d35785b3464b13330fe2c4840f05bd3675ef"
         },
         {
-          "name": "just-1.52.0-x86_64-apple-darwin.tar.gz",
-          "size": 2087262,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-x86_64-apple-darwin.tar.gz",
+          "name": "just-1.53.0-x86_64-apple-darwin.tar.gz",
+          "size": 2218542,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-x86_64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:52e4b7dc45d5934e9bc3b8f1ad3fe78bb92d0df1bca477de0c5449c59ac7a562"
+          "checksum": "sha256:bc345a26d40ae4697cb6b2f2ca04cdf1fbdc8c50eba1b40684c8bf3f98555d72"
         },
         {
-          "name": "just-1.52.0-x86_64-pc-windows-msvc.zip",
-          "size": 1996739,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-x86_64-pc-windows-msvc.zip",
+          "name": "just-1.53.0-x86_64-pc-windows-msvc.zip",
+          "size": 2128128,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:ac53a7da91a33e344042dbec11e4bf1e1ec1d65ca4b695fe71398206d2a1630d"
+          "checksum": "sha256:02308af0c174d3e0286f6bfc2b020258a3e12cd0c52c1d16fac8ef2c12dea0af"
         },
         {
-          "name": "just-1.52.0-x86_64-unknown-linux-musl.tar.gz",
-          "size": 2270564,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-x86_64-unknown-linux-musl.tar.gz",
+          "name": "just-1.53.0-x86_64-unknown-linux-musl.tar.gz",
+          "size": 2420438,
+          "url": "https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:e0a712614574d45625332529c864754e26782422b7c7db931466180a618f092d"
+          "checksum": "sha256:7fedeb22c7e14d9ef1551e8b793700866d80f409f9884b0e80ebb65c11d4874d"
         },
         {
           "name": "SHA256SUMS",
           "size": 1184,
-          "url": "https://github.com/casey/just/releases/download/1.52.0/SHA256SUMS",
+          "url": "https://github.com/casey/just/releases/download/1.53.0/SHA256SUMS",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:7cf32dea0790b66f476aea16c78798131450f70351a59661db18ff8a02e7ab30"
+          "checksum": "sha256:51dbe09a6f121f0772a442dcded2e8375790c275233506c78398bc874776be25"
         }
       ]
     }
