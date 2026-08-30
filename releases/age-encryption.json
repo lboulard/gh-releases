@@ -4,121 +4,135 @@
   "url": "https://github.com/FiloSottile/age",
   "releases": [
     {
-      "title": "v1.3.1",
-      "description": "v1.3.1 is a minor release to restore version injection from downstream package build processes.\r\n\r\nSee [the v1.3.0 release notes](https://github.com/FiloSottile/age/releases/tag/v1.3.0) for an overview of recent additions.",
-      "tag": "v1.3.1",
+      "title": "age v1.3.2",
+      "description": "age v1.3.2 is a minor release with a wide range of fixes and hardening improvements.\r\n\r\nSome previously-accepted inputs are now rejected: headers over 2 MiB or 1024 recipients, malformed SSH keys in recipients files, and non-UTF-8 plaintext written to a terminal (force with `-o -`).\r\n\r\nPre-built binaries now cover windows/arm64 and darwin/amd64, and release archives include the compatibility plugins (age-plugin-pq, age-plugin-tag, and age-plugin-tagpq).",
+      "tag": "v1.3.2",
       "assets": [
         {
-          "name": "age-v1.3.1-darwin-amd64.tar.gz",
-          "size": 10288093,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-darwin-amd64.tar.gz",
+          "name": "age-v1.3.2-darwin-amd64.tar.gz",
+          "size": 19376787,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-darwin-amd64.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:2b233301ad21ab7b1eabd9ae1198a164005fa4928fcdd745d47c39f8593209d7"
+          "checksum": "sha256:1d1e4bc66e1427edad7739ae7616157de0e79db8b6d2a1497d7d9925fb06a539"
         },
         {
-          "name": "age-v1.3.1-darwin-amd64.tar.gz.proof",
-          "size": 4444,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-darwin-amd64.tar.gz.proof",
+          "name": "age-v1.3.2-darwin-amd64.tar.gz.proof",
+          "size": 1921,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-darwin-amd64.tar.gz.proof",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:80a34238ccb136699febf3ea1971046b524a7e6d82c4a8b1fc6f6eb5e35dc240"
+          "checksum": "sha256:b6930f50fd0e253c351b66d91239cf15d6c3d35282b1ec18ce63a525d5da2e28"
         },
         {
-          "name": "age-v1.3.1-darwin-arm64.tar.gz",
-          "size": 9685129,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-darwin-arm64.tar.gz",
+          "name": "age-v1.3.2-darwin-arm64.tar.gz",
+          "size": 18106798,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-darwin-arm64.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:01120ea2cbf0463d4c6bd767f99f3271bbed1cdc8a9aa718a76ba1fe4f01998b"
+          "checksum": "sha256:e2020b073c44f692685a24d6abc378817eb81ffaaf49fd0531ef8565f767f2f5"
         },
         {
-          "name": "age-v1.3.1-darwin-arm64.tar.gz.proof",
-          "size": 1694,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-darwin-arm64.tar.gz.proof",
+          "name": "age-v1.3.2-darwin-arm64.tar.gz.proof",
+          "size": 1921,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-darwin-arm64.tar.gz.proof",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:e53545de98acd8fb17aca18ab4940e46edd032418df352b7387be4bc5379a0ac"
+          "checksum": "sha256:26e3fcc371f19e35c7d37500baf8e82c4386538dc6f47e66f4e0fefec50531e4"
         },
         {
-          "name": "age-v1.3.1-freebsd-amd64.tar.gz",
-          "size": 9922482,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-freebsd-amd64.tar.gz",
+          "name": "age-v1.3.2-freebsd-amd64.tar.gz",
+          "size": 18782171,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-freebsd-amd64.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:3d597b093d6b21f78b465a55cef748cdd357bddc43128527d3aacec4649caa63"
+          "checksum": "sha256:d4687997d3ebfcc352ac529208e953edff68a652786de2701a03fec701a1e798"
         },
         {
-          "name": "age-v1.3.1-freebsd-amd64.tar.gz.proof",
-          "size": 1694,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-freebsd-amd64.tar.gz.proof",
+          "name": "age-v1.3.2-freebsd-amd64.tar.gz.proof",
+          "size": 1921,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-freebsd-amd64.tar.gz.proof",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:0aac95e9bcf78d2e056bbdbd46e6c50cbb9849ea7bf20cc960b3ba0400e53e0f"
+          "checksum": "sha256:d9f8d2b1821d7eed00bb99e52c0b33b8681fbde204d5e0fd4737ebd19a3dfda5"
         },
         {
-          "name": "age-v1.3.1-linux-amd64.tar.gz",
-          "size": 10263766,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-linux-amd64.tar.gz",
+          "name": "age-v1.3.2-linux-amd64.tar.gz",
+          "size": 19405817,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-linux-amd64.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:bdc69c09cbdd6cf8b1f333d372a1f58247b3a33146406333e30c0f26e8f51377"
+          "checksum": "sha256:cbe24006683f8eb669266162894b9a522a1af52f2665fbc63a4bb032ed26ac10"
         },
         {
-          "name": "age-v1.3.1-linux-amd64.tar.gz.proof",
-          "size": 1694,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-linux-amd64.tar.gz.proof",
+          "name": "age-v1.3.2-linux-amd64.tar.gz.proof",
+          "size": 1921,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-linux-amd64.tar.gz.proof",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:91331dc8ed9b5a0f4317ef6e7c261e49dfc2f11249a1775120a81361349d4c92"
+          "checksum": "sha256:98402fa59b4e433426156b4a7e74a32e44902e0434c61158f7de18ffc84f1f97"
         },
         {
-          "name": "age-v1.3.1-linux-arm.tar.gz",
-          "size": 10268911,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-linux-arm.tar.gz",
+          "name": "age-v1.3.2-linux-arm.tar.gz",
+          "size": 19035952,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-linux-arm.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:0af5d0dd1664d43dda955938280a668fdd298ad0df90058b409067dfdec74ba3"
+          "checksum": "sha256:0ceba62c92701b30b3336abf064714c1a6ea5fa0c75ee367ce36d4f9c0f8e6ce"
         },
         {
-          "name": "age-v1.3.1-linux-arm.tar.gz.proof",
-          "size": 1694,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-linux-arm.tar.gz.proof",
+          "name": "age-v1.3.2-linux-arm.tar.gz.proof",
+          "size": 1921,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-linux-arm.tar.gz.proof",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:8b8471a66c6c326df56473840e9c20457222be3a628966bcf4f0b4385171e6d7"
+          "checksum": "sha256:3314961d6a928428a1e00ee8c31583dc9c16b8bcc73125356905ae634650b298"
         },
         {
-          "name": "age-v1.3.1-linux-arm64.tar.gz",
-          "size": 9466344,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-linux-arm64.tar.gz",
+          "name": "age-v1.3.2-linux-arm64.tar.gz",
+          "size": 17771923,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-linux-arm64.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:c6878a324421b69e3e20b00ba17c04bc5c6dab0030cfe55bf8f68fa8d9e9093a"
+          "checksum": "sha256:6b8dc4333c53a5a57c9e5834e3a48f92605d7154014cd07269ff3327db5d37f4"
         },
         {
-          "name": "age-v1.3.1-linux-arm64.tar.gz.proof",
-          "size": 1694,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-linux-arm64.tar.gz.proof",
+          "name": "age-v1.3.2-linux-arm64.tar.gz.proof",
+          "size": 1921,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-linux-arm64.tar.gz.proof",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:a3ab812404ff1848a7c950a882d899b676e8501c078ff6277e2771368b764e97"
+          "checksum": "sha256:a174de2bf22a72efedd1a779cbee8b7d5605b41a25fae085807003b4abf5688e"
         },
         {
-          "name": "age-v1.3.1-source.tar.gz",
-          "size": 2387687,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-source.tar.gz",
+          "name": "age-v1.3.2-source.tar.gz",
+          "size": 2402764,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-source.tar.gz",
           "content_type": "application/x-gtar",
-          "checksum": "sha256:b68e47184fff9ad18ea344063b1f5b195e279e19fd13b26c1998c8385695d8f6"
+          "checksum": "sha256:c160d6f907992561413a28818f7d7585b35977cdbc449f3e96c4f8c99d22d21e"
         },
         {
-          "name": "age-v1.3.1-source.tar.gz.proof",
-          "size": 1694,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-source.tar.gz.proof",
+          "name": "age-v1.3.2-source.tar.gz.proof",
+          "size": 1921,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-source.tar.gz.proof",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:1e78306e9fc878a14ea0d4199fd48b4cc31f21ae2fcd64176b668f5e4a739dba"
+          "checksum": "sha256:ac5c43c88c9d0ddf887045bb5a61a931e2c57b8053f1d4701a9d0cd3ea5e7e58"
         },
         {
-          "name": "age-v1.3.1-windows-amd64.zip",
-          "size": 10741348,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-windows-amd64.zip",
+          "name": "age-v1.3.2-windows-amd64.zip",
+          "size": 20250704,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-windows-amd64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:c56e8ce22f7e80cb85ad946cc82d198767b056366201d3e1a2b93d865be38154"
+          "checksum": "sha256:f48d8f8f9ebe903ab5027ed067652f2cc1db94bc206976430133b905dcd8e8c7"
         },
         {
-          "name": "age-v1.3.1-windows-amd64.zip.proof",
-          "size": 1544,
-          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-windows-amd64.zip.proof",
+          "name": "age-v1.3.2-windows-amd64.zip.proof",
+          "size": 1921,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-windows-amd64.zip.proof",
           "content_type": "application/octet-stream",
-          "checksum": "sha256:223a4bf46d6bae52b13cee6c7e384c2d3228e9055aecfe77c5d2b59413cefabc"
+          "checksum": "sha256:00ae35a24a47b9bace52ec62f06d402f38f6ecba4ca099d060a137e82ef0bc1d"
+        },
+        {
+          "name": "age-v1.3.2-windows-arm64.zip",
+          "size": 18467630,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-windows-arm64.zip",
+          "content_type": "application/zip",
+          "checksum": "sha256:fae351336c8d5f30f93cc3ccdec16d1ed7851d68cdd6656d41955cc31a447c9d"
+        },
+        {
+          "name": "age-v1.3.2-windows-arm64.zip.proof",
+          "size": 1696,
+          "url": "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-windows-arm64.zip.proof",
+          "content_type": "application/octet-stream",
+          "checksum": "sha256:62af308da80e3bac3e0d019922cba5011c3025a0293a95530d70a235490f014f"
         }
       ]
     }
