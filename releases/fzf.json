@@ -4,191 +4,191 @@
   "url": "https://github.com/junegunn/fzf",
   "releases": [
     {
-      "title": "0.74.4",
-      "description": "### Demo: Non-blocking fzf vim plugin on tmux floating pane\r\n\r\nhttps://github.com/user-attachments/assets/77f3e303-e230-4669-ae05-08a19fa84ea3\r\n\r\n---\r\n\r\n- Fixed an escape sequence split across reads being parsed as a fragment, which leaked the rest into the query (#4899)\r\n    - e.g. A terminal answering the startup `DECRQM` query late left `?2004;2$y`, CTRL-UP left `5A`, and SGR mouse input left `0;1;1M`\r\n- Fixed `--tiebreak=pathname` not detecting the last path separator when the line contains a non-ASCII character before it (#4902)\r\n- Fixed `progress` in the `--listen` status payload staying at 100 while a new search was running, which made a snapshot with a new query and the previous result set look complete (#4903)\r\n    - It is now reset when a search starts and reaches 100 on the final result, so `progress` of 100 means the matches belong to the query reported next to them\r\n- Fixed adaptive height not reserving a line for the divider of an inline header or footer border, so the list came up one line short for each of them (#4904)\r\n    - e.g. `seq 10 | fzf --height=~100% --list-border --header-lines=1 --header-lines-border=inline`\r\n- Fixed fzf erasing the line the prompt was on when it exits, which made the last line of the prompt flicker in fish, bash, and nushell (#4913)\r\n- Fixed fzf exiting with status 2 while waiting for a key, when `--listen` is used and 100+ signals interrupt the wait (#4917)\r\n- Vim plugin\r\n    - fzf no longer blocks the editor, so live previews keep working while fzf is open\r\n        - `fzf#run` returns an empty list when it runs fzf asynchronously. Use `sink`, `sinklist`, or `exit` to get the result\r\n    - The popup layout now works under Zellij\r\n    - Added `popup` as a synonym of the `tmux` layout key\r\n      ```vim\r\n      let g:fzf_layout = { 'popup': '90%,70%' }\r\n      ```\r\n    - fzf now opens in a tmux or Zellij floating pane by default, so the window it was started from stays visible and can be used while fzf is running\r\n        - Requires tmux 3.7+ or Zellij 0.44+\r\n        - Set `g:fzf_layout` to pick a different layout\r\n- fish\r\n    - Fixed custom CTRL-T command not using the prefixed target directory in some cases (#4498) (@bitraid)\r\n    - Optimized description alignment of completion items (#4910) (@bitraid)\r\n- nushell\r\n    - Added key bindings for Helix editing modes, on nushell 0.115.0 or above (#4914) (@sim590)\r\n    - Fixed CTRL-T inserting the selected paths unquoted\r\n        - p4p3r (@P4P3R-HAK) reported the security vulnerability and suggested the fix\r\n\r\n",
-      "tag": "v0.74.4",
+      "title": "0.74.5",
+      "description": "- Fixed `--popup` unzooming the window when opened over a zoomed pane on tmux 3.8 or above (#4927, junegunn/fzf.vim#1625) (@jereviikari)\n    - On tmux 3.7, the window is still unzoomed, as tmux 3.7b crashes when a floating pane is created over a zoomed window\n- Fixed `--gap-line` cutting a grapheme cluster when filling the last cells of the line (#4920)\n- Fixed an escape sequence fzf does not recognize being partly consumed, which leaked the rest into the query (#4926)\n- Fixed a key lost when it arrived in the same read as an escape sequence\n- Fixed `focus` event not triggered after `reload` when the new item is at the same position as the previous one (#4930)\n    - With `--id-nth`, the event is not triggered if the focus moves directly from an item to another item with the same key\n    - A `focus` binding that runs `reload` now triggers itself again after each reload, unless `--id-nth` is set and the key does not change\n- Security fixes\n    - fzf-tmux no longer evaluates an attached layout size (e.g. `-l50`) via bash arithmetic, which could run commands or inject tmux flags (GHSA-w6x2-f5m4-xw82)\n    - zsh completion now creates its FIFO in a private `mktemp -d` directory instead of a predictable `/tmp` path (GHSA-7rj6-7pqx-v7rm)\n    - Reported by Sai Sreewathsa Kovalluri, Shon Babu, and Kannan K (Researchers) of Innspark Solutions\n\n",
+      "tag": "v0.74.5",
       "assets": [
         {
-          "name": "fzf-0.74.4-android_arm64.tar.gz",
-          "size": 2166509,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-android_arm64.tar.gz",
+          "name": "fzf-0.74.5-android_arm64.tar.gz",
+          "size": 2171304,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-android_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:dc32053d375160bdd55c001545884ca8333edff69f25defe8a658ad42ea24858"
+          "checksum": "sha256:3116a74c4c518083a97d5e0bf998456cf6959759b023099ddb66cac44aa87b7c"
         },
         {
-          "name": "fzf-0.74.4-darwin_amd64.tar.gz",
-          "size": 2358031,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-darwin_amd64.tar.gz",
+          "name": "fzf-0.74.5-darwin_amd64.tar.gz",
+          "size": 2362114,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-darwin_amd64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:2d392b50be66e2ab104ccd52a6072df692b1f9b9c5b449a9c098de885f32c4c5"
+          "checksum": "sha256:aca6cab692e6c069e724a43070a448e18586c7c0fdd1139f6d487ec1680599ed"
         },
         {
-          "name": "fzf-0.74.4-darwin_arm64.tar.gz",
-          "size": 2148967,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-darwin_arm64.tar.gz",
+          "name": "fzf-0.74.5-darwin_arm64.tar.gz",
+          "size": 2154490,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-darwin_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:4f6a113bfc0c7959e0005c78d566a51afc4fcefc956f43735c62a9deb19e92ae"
+          "checksum": "sha256:ada808c7401b9949ce8842274ac16a6b6193fd32dcada396884a6a9a89e5985a"
         },
         {
-          "name": "fzf-0.74.4-freebsd_amd64.tar.gz",
-          "size": 2255433,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-freebsd_amd64.tar.gz",
+          "name": "fzf-0.74.5-freebsd_amd64.tar.gz",
+          "size": 2261218,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-freebsd_amd64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:ecefbaa7cb0f85da5b653257a77d804e95cd9d2e203a96c03197adc1badd64b1"
+          "checksum": "sha256:a1740d86e8e061d99d13925ba85432948d23d9cf9d0a9d0f7ab547931a2d6fdb"
         },
         {
-          "name": "fzf-0.74.4-linux_amd64.tar.gz",
-          "size": 2286563,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_amd64.tar.gz",
+          "name": "fzf-0.74.5-linux_amd64.tar.gz",
+          "size": 2291079,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_amd64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:05e6813a337cc722c3ed07e54a764b75cc5d671e2e60459db0ba696ee5fa7504"
+          "checksum": "sha256:d47d7f882972c7d674dbbba998ffa4116e68379616ffac7695d0671e9a722c5f"
         },
         {
-          "name": "fzf-0.74.4-linux_arm64.tar.gz",
-          "size": 2074969,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_arm64.tar.gz",
+          "name": "fzf-0.74.5-linux_arm64.tar.gz",
+          "size": 2078357,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_arm64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:5d673b849f494f0d64ec471d8640b153ca8849e3846a31da17abdcfce8df6b46"
+          "checksum": "sha256:cf058001da21724a469b714a29cf4aab9cbe860d218a0d6c1b5b661efad7784c"
         },
         {
-          "name": "fzf-0.74.4-linux_armv5.tar.gz",
-          "size": 2158908,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_armv5.tar.gz",
+          "name": "fzf-0.74.5-linux_armv5.tar.gz",
+          "size": 2163034,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_armv5.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:77129c282703503b90b942d0271200b61515a41e3fc489bdf7bbfb97f2256969"
+          "checksum": "sha256:a07b37eef2c14654b6f21bc67524bca3e2eafe0e7ddba1bf9acb3f51f185ae1b"
         },
         {
-          "name": "fzf-0.74.4-linux_armv6.tar.gz",
-          "size": 2151356,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_armv6.tar.gz",
+          "name": "fzf-0.74.5-linux_armv6.tar.gz",
+          "size": 2155367,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_armv6.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:4054cf53067a26203f8e342ff5276dd1e239f4db6a8c06c0ae16c2b5c6f1bb04"
+          "checksum": "sha256:8615ce6e3eadcae3be9b38aaee8d432361a39c2983e0ab94cea6254492b70eaf"
         },
         {
-          "name": "fzf-0.74.4-linux_armv7.tar.gz",
-          "size": 2145117,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_armv7.tar.gz",
+          "name": "fzf-0.74.5-linux_armv7.tar.gz",
+          "size": 2150362,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_armv7.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:0c6e61c89e0932e65b89e6db414c67803b5c10c374ed6a3ab1e14e805eea8486"
+          "checksum": "sha256:dbf45f895a6b272725679b0aa46b5fc4683cc869ec89bbbd1c3a661304cecc34"
         },
         {
-          "name": "fzf-0.74.4-linux_loong64.tar.gz",
-          "size": 2183510,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_loong64.tar.gz",
+          "name": "fzf-0.74.5-linux_loong64.tar.gz",
+          "size": 2189434,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_loong64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:a8ae97cbe9c32c122c795b6f29b8da0394de412f709f226d37b9e99b76cb85c2"
+          "checksum": "sha256:adf086a78bcfbf4cda432078e92b5517d648b9fd50551465cc2eeb9df28f594f"
         },
         {
-          "name": "fzf-0.74.4-linux_ppc64le.tar.gz",
-          "size": 2105928,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_ppc64le.tar.gz",
+          "name": "fzf-0.74.5-linux_ppc64le.tar.gz",
+          "size": 2111483,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_ppc64le.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:471e15730fc639ff8e7e6fee63e375420ff652ab50837dc6d6d5076698292188"
+          "checksum": "sha256:54308760da12847f3100d312dadadea1e839b61a4bdd7c082fa417e3df4aef3f"
         },
         {
-          "name": "fzf-0.74.4-linux_riscv64.tar.gz",
-          "size": 2144810,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_riscv64.tar.gz",
+          "name": "fzf-0.74.5-linux_riscv64.tar.gz",
+          "size": 2150796,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_riscv64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:cf2ef1932cbbde52914068c2d1f000a60ff76f4a21b328bfbb576cf78add00ee"
+          "checksum": "sha256:6ca2259cd2002ea7dd23e53c484d966b10c759cf0dae022359c681234dc81e74"
         },
         {
-          "name": "fzf-0.74.4-linux_s390x.tar.gz",
-          "size": 2196613,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_s390x.tar.gz",
+          "name": "fzf-0.74.5-linux_s390x.tar.gz",
+          "size": 2199750,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_s390x.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:cc6dd54e81bb16219f6e49e2e35ced2dc8c2c8f29e1e36374a75c10066248f2c"
+          "checksum": "sha256:89e6cd91dcc519422a06449262772aa8daaa7f0e842e574001c1cb2e57c3fd54"
         },
         {
-          "name": "fzf-0.74.4-openbsd_amd64.tar.gz",
-          "size": 2252100,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-openbsd_amd64.tar.gz",
+          "name": "fzf-0.74.5-openbsd_amd64.tar.gz",
+          "size": 2257187,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-openbsd_amd64.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:9ce54b78cd0300ced4e2c793b01ed5801fb06245d32427aa9a43883e06c3b715"
+          "checksum": "sha256:9af584480f741b0b63b6a37caa162caffeea84c73a1a490266a8bf06cf235304"
         },
         {
-          "name": "fzf-0.74.4-windows_amd64.zip",
-          "size": 2540684,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-windows_amd64.zip",
+          "name": "fzf-0.74.5-windows_amd64.zip",
+          "size": 2544236,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-windows_amd64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:5e63c0e798406fcb9c51a9fed4988398e25fdabf8c670e32c16caf7b4a7ed02d"
+          "checksum": "sha256:01f854ec8b9b47c99a7d78023638f7d2056cfb0af56b72dabd112032eed3993e"
         },
         {
-          "name": "fzf-0.74.4-windows_arm64.zip",
-          "size": 2290923,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-windows_arm64.zip",
+          "name": "fzf-0.74.5-windows_arm64.zip",
+          "size": 2292730,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-windows_arm64.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:558df4dac9c65a63c732909a06abc1891a42adcae4d6be92a9b0ccc0ef05b4ff"
+          "checksum": "sha256:45d8f69b7660ac0c59118c9ccaccdea305d56fdd74a3599aa357cbb374ebd61e"
         },
         {
-          "name": "fzf_0.74.4_amd64.deb",
-          "size": 2316048,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf_0.74.4_amd64.deb",
+          "name": "fzf_0.74.5_amd64.deb",
+          "size": 2320404,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf_0.74.5_amd64.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:0e8a33f32c89c4d7d2daa4975eaa15e302da8d35b846796aef2dd6461101051b"
+          "checksum": "sha256:0f9f693c12eeabf776c05430e082bda62dac8207fdc85ae3d1b06ac27daedec7"
         },
         {
-          "name": "fzf_0.74.4_arm64.deb",
-          "size": 2103304,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf_0.74.4_arm64.deb",
+          "name": "fzf_0.74.5_arm64.deb",
+          "size": 2107444,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf_0.74.5_arm64.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:0c76a0b2dbe54a8e880b731724a52f6b09b0a5b695e0026035ed0d1e0d5732fa"
+          "checksum": "sha256:a5063ad3eb0eb184fabbc07c9929dd14e77eb9c1586de19afb37c4686f855426"
         },
         {
-          "name": "fzf_0.74.4_armv5.deb",
-          "size": 2186872,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf_0.74.4_armv5.deb",
+          "name": "fzf_0.74.5_armv5.deb",
+          "size": 2191406,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf_0.74.5_armv5.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:9f4f7707be9e0442c2e60c9fdd572dbd1855c274f586bc2074d50301ae2f0f46"
+          "checksum": "sha256:4c2ffd181468ebdd91da97c3413666eda9f6e711499cfc938b2d6d7d57932b6f"
         },
         {
-          "name": "fzf_0.74.4_armv6.deb",
-          "size": 2178426,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf_0.74.4_armv6.deb",
+          "name": "fzf_0.74.5_armv6.deb",
+          "size": 2182890,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf_0.74.5_armv6.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:93cfdaf0b4b4ec83ac33678769aecbdf763ed360c6ee0382bdc669cf2b3514a4"
+          "checksum": "sha256:7c8523c44244c40bc540ea98e8c9231dd3f24c31c8fd88de28b2e3f619c21fb2"
         },
         {
-          "name": "fzf_0.74.4_armv7.deb",
-          "size": 2172092,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf_0.74.4_armv7.deb",
+          "name": "fzf_0.74.5_armv7.deb",
+          "size": 2177408,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf_0.74.5_armv7.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:bee1123d2e1e6823d0a1f5609e3c8effc9c9e9a7c9e111140d4992bd32495da6"
+          "checksum": "sha256:803605073ed5c1f6151e4d10a4887ce4eead61576d1e8b677df52f217f4438bd"
         },
         {
-          "name": "fzf_0.74.4_checksums.txt",
+          "name": "fzf_0.74.5_checksums.txt",
           "size": 2337,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf_0.74.4_checksums.txt",
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf_0.74.5_checksums.txt",
           "content_type": "text/plain; charset=utf-8",
-          "checksum": "sha256:93b9cb6e68b97601268cc7afe17d89ce9364f6277f30b4193c725aa7dc3ededf"
+          "checksum": "sha256:c0538a65abaaafce561513dfbe80e38961fe866933aedd6c5b06232e7583c477"
         },
         {
-          "name": "fzf_0.74.4_loong64.deb",
-          "size": 2212566,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf_0.74.4_loong64.deb",
+          "name": "fzf_0.74.5_loong64.deb",
+          "size": 2219044,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf_0.74.5_loong64.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:bd5ac9f9e6bace043e26070ebc5948f63802764ddcd9993af6fbf9bddd3c9bee"
+          "checksum": "sha256:22ed52bb8cfd5b0cd15879644db5a5a7c70d5df80062c89bb22998e092f81b65"
         },
         {
-          "name": "fzf_0.74.4_ppc64le.deb",
-          "size": 2134048,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf_0.74.4_ppc64le.deb",
+          "name": "fzf_0.74.5_ppc64le.deb",
+          "size": 2139194,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf_0.74.5_ppc64le.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:99954e94c0edc357eda0789ea06cc45e8cba7027c4994cdbacd894ee990c1855"
+          "checksum": "sha256:b9875cebe48380697d3e2656e6786bf4e979153fe382cc97141359b1d280dd66"
         },
         {
-          "name": "fzf_0.74.4_riscv64.deb",
-          "size": 2174206,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf_0.74.4_riscv64.deb",
+          "name": "fzf_0.74.5_riscv64.deb",
+          "size": 2179564,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf_0.74.5_riscv64.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:19252375aae420e09aeb2025ee1d90a3a11bb132aa12f9d9fae0f304cedd2f06"
+          "checksum": "sha256:f7c92764cef7427f5a3b0dd5c0925782c62c3250e7de75e12aaf404382e750ca"
         },
         {
-          "name": "fzf_0.74.4_s390x.deb",
-          "size": 2224110,
-          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf_0.74.4_s390x.deb",
+          "name": "fzf_0.74.5_s390x.deb",
+          "size": 2227802,
+          "url": "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf_0.74.5_s390x.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:d7ba81e81a3c7adfe6047ae27773596e0762ce6b1aee96faedb0978915e031ce"
+          "checksum": "sha256:ef201e04c1bee0bc5053ba7bf987c7570d0af24be8558ed764fa3ad1016324dc"
         }
       ]
     }
