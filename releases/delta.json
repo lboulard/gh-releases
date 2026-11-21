@@ -4,93 +4,93 @@
   "url": "https://github.com/dandavison/delta",
   "releases": [
     {
-      "title": "0.21.1",
-      "description": "With this release, delta can be used as a TUI. It's based on a fork of [gitu](https://github.com/altsem/gitu), and has many keybindings for exploring `git diff`, `git show`, and `git log views`, the ability to stage directly from delta-rendered diffs (including side-by-side), reorder and fixup commits in your native log view, diff folding, and all of gitu's other git operations (commit, push, pull, rebase, etc). See the manual https://dandavison.github.io/delta/tui.html and the [README](https://github.com/dandavison/delta/blob/main/README.md#tui-mode) for documentation and videos. Many thanks to @altsem for their encouragement to fork the gitu codebase for this purpose. Also to @stefanhaller for his work on the [OSC1717 spec](https://github.com/stefanhaller/diff-line-metadata-spec), which is what allows the TUI to understand delta's output.\r\n\r\nhttps://github.com/user-attachments/assets/8fc87bdd-ddca-4465-acd2-c1b8682b66f3\r\n\r\n## What's Changed\r\n\r\nThanks to @pablospe,  @axsaucedo, and @nolith for several PRs and issue / review help.\r\n\r\n\r\n* feat: Adds min-width parameter to enable toggling of side-by-side based on terminal width by @axsaucedo in https://github.com/dandavison/delta/pull/2084\r\n* Allow CLI --side-by-side to disable a feature enabled in git config by @dandavison in https://github.com/dandavison/delta/pull/2319\r\n* Bug fix: syntax-highlight deleted files where appropriate by @dandavison in https://github.com/dandavison/delta/pull/2322\r\n* Side by side hunk by @nolith in https://github.com/dandavison/delta/pull/2304\r\n* Correct tmux hyperlink support documentation by @cosgroveb in https://github.com/dandavison/delta/pull/2324\r\n* Let --side-by-side keep the line-number formats from the user's features by @pablospe in https://github.com/dandavison/delta/pull/2321\r\n* Keep the user's settings when using builtin features by @dandavison in https://github.com/dandavison/delta/pull/2326\r\n* Update colibri theme and add colibri-colorblind by @pablospe in https://github.com/dandavison/delta/pull/2329\r\n* Switch feature fixes by @dandavison in https://github.com/dandavison/delta/pull/2330\r\n* Bug fix: make a style feature in a features list work by @dandavison in https://github.com/dandavison/delta/pull/2331\r\n* Paint line numbers in the style of their line by @pablospe in https://github.com/dandavison/delta/pull/2332\r\n* Emit the h record when the hunk header row is skipped by @kaygaaf in https://github.com/dandavison/delta/pull/2334\r\n* Add a TUI based on a fork of gitu  by @dandavison in https://github.com/dandavison/delta/pull/2323\r\n* delta-gitu v0.1.19 by @dandavison in https://github.com/dandavison/delta/pull/2339\r\n* Fix the dead macOS download link in the installation docs by @farisbasha in https://github.com/dandavison/delta/pull/2342\r\n* Fix tests failing when run in a terminal by @dandavison in https://github.com/dandavison/delta/pull/2343\r\n\r\n## New Contributors\r\n* @axsaucedo made their first contribution in https://github.com/dandavison/delta/pull/2084\r\n* @nolith made their first contribution in https://github.com/dandavison/delta/pull/2304\r\n* @cosgroveb made their first contribution in https://github.com/dandavison/delta/pull/2324\r\n* @kaygaaf made their first contribution in https://github.com/dandavison/delta/pull/2334\r\n* @farisbasha made their first contribution in https://github.com/dandavison/delta/pull/2342\r\n\r\n**Full Changelog**: https://github.com/dandavison/delta/compare/0.20.1...0.21.1",
-      "tag": "0.21.1",
+      "title": "0.21.2",
+      "description": "This is mainly a bug fix release that allows the TUI to use editors such as `vim` and `emacs -nw`. See https://github.com/dandavison/gitu/pull/7. It also contains improvements to submodule display.\r\n\r\n## What's Changed\r\n* Show TUI setup in the README by @dandavison in https://github.com/dandavison/delta/pull/2335\r\n* Indicate submodule dirty state by @Tegrask in https://github.com/dandavison/delta/pull/2349\r\n\r\n## New Contributors\r\n* @Tegrask made their first contribution in https://github.com/dandavison/delta/pull/2349\r\n\r\n**Full Changelog**: https://github.com/dandavison/delta/compare/0.21.1...0.21.2",
+      "tag": "0.21.2",
       "assets": [
         {
-          "name": "delta-0.21.1-aarch64-apple-darwin.tar.gz",
-          "size": 4361621,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/delta-0.21.1-aarch64-apple-darwin.tar.gz",
+          "name": "delta-0.21.2-aarch64-apple-darwin.tar.gz",
+          "size": 4363718,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/delta-0.21.2-aarch64-apple-darwin.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:410442570af59c7d8d7f1303abfdc41ba8abc7527a1be697fd03546edeaba9d6"
+          "checksum": "sha256:ac78b8953c5087852437bfa0abfcc7908db1f7a7b7ab0e39e114a9454bb335a4"
         },
         {
-          "name": "delta-0.21.1-aarch64-unknown-linux-gnu.tar.gz",
-          "size": 4818247,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/delta-0.21.1-aarch64-unknown-linux-gnu.tar.gz",
+          "name": "delta-0.21.2-aarch64-unknown-linux-gnu.tar.gz",
+          "size": 4825945,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/delta-0.21.2-aarch64-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:efe38626967f550c1d3bbe2014990dff5c8028a0a65a3f9b9b6c4a3bb53bfa28"
+          "checksum": "sha256:36dca3ddb293d2fa635aa2bf9c53c0ba2d38dcd749290d81c6685974cf3799c4"
         },
         {
-          "name": "delta-0.21.1-arm-unknown-linux-gnueabihf.tar.gz",
-          "size": 4803121,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/delta-0.21.1-arm-unknown-linux-gnueabihf.tar.gz",
+          "name": "delta-0.21.2-arm-unknown-linux-gnueabihf.tar.gz",
+          "size": 4815041,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/delta-0.21.2-arm-unknown-linux-gnueabihf.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:2628f3905360ead815a91dcc53693b763675f250d075b520180420b9aab82118"
+          "checksum": "sha256:03107ecfb58994afb9f0cedf5cd55cd2cb286d3d87da031426a6f737e919e676"
         },
         {
-          "name": "delta-0.21.1-i686-unknown-linux-gnu.tar.gz",
-          "size": 5521863,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/delta-0.21.1-i686-unknown-linux-gnu.tar.gz",
+          "name": "delta-0.21.2-i686-unknown-linux-gnu.tar.gz",
+          "size": 5533080,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/delta-0.21.2-i686-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:89b46b2d0f0f482f34ea1773fea361ecaf341efa5d011811d2bde5b78986e08d"
+          "checksum": "sha256:b9d024050d9fd65b59a33d7211e857080c8366251e220d742f325da6415e17ad"
         },
         {
-          "name": "delta-0.21.1-x86_64-pc-windows-msvc.zip",
-          "size": 4714925,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/delta-0.21.1-x86_64-pc-windows-msvc.zip",
+          "name": "delta-0.21.2-x86_64-pc-windows-msvc.zip",
+          "size": 4718925,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/delta-0.21.2-x86_64-pc-windows-msvc.zip",
           "content_type": "application/zip",
-          "checksum": "sha256:9645f8a04c700aec5113b946a922ecf8df7568bbbcd7f13b9514f02996035b86"
+          "checksum": "sha256:494af2013670f0304320d5e3ab5496274e5dd95cb1ce442181e3ce677f56af3d"
         },
         {
-          "name": "delta-0.21.1-x86_64-unknown-linux-gnu.tar.gz",
-          "size": 5160212,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/delta-0.21.1-x86_64-unknown-linux-gnu.tar.gz",
+          "name": "delta-0.21.2-x86_64-unknown-linux-gnu.tar.gz",
+          "size": 5164932,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/delta-0.21.2-x86_64-unknown-linux-gnu.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:d3fa53f78b8d63f2c0620aad591441e7d47b5c77e552869aa6fe21fd08b21ff6"
+          "checksum": "sha256:5d41046c4ada17e7d080e1e5dbbd46544146bb5597e2ab56881a8c594272cd06"
         },
         {
-          "name": "delta-0.21.1-x86_64-unknown-linux-musl.tar.gz",
-          "size": 5204447,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/delta-0.21.1-x86_64-unknown-linux-musl.tar.gz",
+          "name": "delta-0.21.2-x86_64-unknown-linux-musl.tar.gz",
+          "size": 5209255,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/delta-0.21.2-x86_64-unknown-linux-musl.tar.gz",
           "content_type": "application/gzip",
-          "checksum": "sha256:5cdb719bf6f7c7503ef8bcf181a31577eeca58a8167234f0955f48dd4a92e989"
+          "checksum": "sha256:d4c55c9b9991c308cad84412e8a8afdc990779e4dd021f6ebb277a4249719b9f"
         },
         {
-          "name": "git-delta-musl_0.21.1_amd64.deb",
-          "size": 3930852,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/git-delta-musl_0.21.1_amd64.deb",
+          "name": "git-delta-musl_0.21.2_amd64.deb",
+          "size": 3934276,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/git-delta-musl_0.21.2_amd64.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:bcf47915938dfa4bb1070af443703a9efcae955da62e0cdaa71b57f77a603e18"
+          "checksum": "sha256:c7e9b90f89eea79405e7a9edd90079ef1fc529d9b4c88186dd911ec69aad7bb8"
         },
         {
-          "name": "git-delta_0.21.1_amd64.deb",
-          "size": 3880524,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/git-delta_0.21.1_amd64.deb",
+          "name": "git-delta_0.21.2_amd64.deb",
+          "size": 3885172,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/git-delta_0.21.2_amd64.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:99b9d704800da7269cb1a1ab7a4c950f1b53832f691ed49282d75101ef39811e"
+          "checksum": "sha256:a4e159f91f97ebee8db223b697a81356c0cfedd312af6f1c161bdc4176b03d9d"
         },
         {
-          "name": "git-delta_0.21.1_arm64.deb",
-          "size": 3457544,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/git-delta_0.21.1_arm64.deb",
+          "name": "git-delta_0.21.2_arm64.deb",
+          "size": 3459672,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/git-delta_0.21.2_arm64.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:47de8a6999f829ea81b4206f26adee9390c56adb6a6489a3e7c28bac265fe456"
+          "checksum": "sha256:fe53d5a3d07687a8f444e419a0ae4ed1098792658af58e4006b012e5c5c198b0"
         },
         {
-          "name": "git-delta_0.21.1_armhf.deb",
-          "size": 3432264,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/git-delta_0.21.1_armhf.deb",
+          "name": "git-delta_0.21.2_armhf.deb",
+          "size": 3435068,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/git-delta_0.21.2_armhf.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:3d54009705874442936d694da49dbedd7c5da844c7068009c650fa6aef58154b"
+          "checksum": "sha256:8788da12138c65418ad2ec5832f1e7d5fa228e09ede93eb3191f47109b6a5c9b"
         },
         {
-          "name": "git-delta_0.21.1_i386.deb",
-          "size": 4192372,
-          "url": "https://github.com/dandavison/delta/releases/download/0.21.1/git-delta_0.21.1_i386.deb",
+          "name": "git-delta_0.21.2_i386.deb",
+          "size": 4199792,
+          "url": "https://github.com/dandavison/delta/releases/download/0.21.2/git-delta_0.21.2_i386.deb",
           "content_type": "application/x-debian-package",
-          "checksum": "sha256:a4c779282067d258f509c2cbc59175f1fa501236cb37ad0e1968d82ca819459c"
+          "checksum": "sha256:f8d4844d101cc65f5310166975d0cb13074b9932252552c78340599aac377bfd"
         }
       ]
     }
